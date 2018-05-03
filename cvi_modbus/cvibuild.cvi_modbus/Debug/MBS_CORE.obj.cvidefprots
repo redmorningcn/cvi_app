@@ -1,0 +1,12 @@
+[MBS_FCxx_Handler]
+Class="Function"
+Prototype="unsigned char MBS_FCxx_Handler(struct modbus_ch *pch);"
+
+[MBS_StatInit]
+Class="Function"
+Prototype="void MBS_StatInit(struct modbus_ch *pch);"
+
+[MBS_RxTask]
+Class="Function"
+Prototype="void MBS_RxTask(struct modbus_ch *pch);"
+

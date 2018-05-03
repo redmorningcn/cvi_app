@@ -1,0 +1,8 @@
+[MB_RTU_RxCalcCRC]
+Class="Function"
+Prototype="unsigned short MB_RTU_RxCalcCRC(struct modbus_ch *pch);"
+
+[MB_RTU_TxCalcCRC]
+Class="Function"
+Prototype="unsigned short MB_RTU_TxCalcCRC(struct modbus_ch *pch);"
+

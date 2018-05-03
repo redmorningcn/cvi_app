@@ -1,0 +1,8 @@
+[wordtodata]
+Class="Function"
+Prototype="short wordtodata(char *word, char format);"
+
+[stringtobuf]
+Class="Function"
+Prototype="int stringtobuf(char *string, short *buf, char format);"
+

@@ -1,0 +1,2017 @@
+[struct HINSTANCE__]
+Class="struct"
+
+[HINSTANCE]
+Class="Typedef"
+CanonicalType="struct HINSTANCE__ *"
+
+[BOOL]
+Class="Typedef"
+CanonicalType="int"
+
+[DWORD]
+Class="Typedef"
+CanonicalType="unsigned long"
+
+[LPVOID]
+Class="Typedef"
+CanonicalType="void *"
+
+[LPSTR]
+Class="Typedef"
+CanonicalType="char *"
+
+[HANDLE]
+Class="Typedef"
+CanonicalType="void *"
+
+[intptr_t]
+Class="Typedef"
+CanonicalType="int"
+
+[uintptr_t]
+Class="Typedef"
+CanonicalType="unsigned int"
+
+[size_t]
+Class="Typedef"
+CanonicalType="unsigned int"
+
+[ssize_t]
+Class="Typedef"
+CanonicalType="int"
+
+
+
+
+[va_list]
+Class="Typedef"
+CanonicalType="char *"
+
+[__gnuc_va_list]
+Class="Typedef"
+CanonicalType="char *"
+
+[AsyncTimerCallbackPtr]
+Class="Typedef"
+CanonicalType="int (*)(int, int, int, void *, int, int)"
+
+
+
+
+
+
+
+
+
+
+[wchar_t]
+Class="Typedef"
+CanonicalType="unsigned short"
+
+[sdk_wchar_t]
+Class="Typedef"
+CanonicalType="unsigned short"
+
+[struct div_t]
+Class="struct"
+quot="int"
+rem="int"
+
+[div_t]
+Class="Typedef"
+CanonicalType="struct div_t"
+
+[struct ldiv_t]
+Class="struct"
+quot="long"
+rem="long"
+
+[ldiv_t]
+Class="Typedef"
+CanonicalType="struct ldiv_t"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[CmtTSQHandle]
+Class="Typedef"
+CanonicalType="int"
+
+[CmtTSQCallbackID]
+Class="Typedef"
+CanonicalType="int"
+
+[CmtTSQCallbackPtr]
+Class="Typedef"
+CanonicalType="void (*)(int, unsigned int, int, void *)"
+
+[CmtThreadPoolHandle]
+Class="Typedef"
+CanonicalType="int"
+
+[CmtThreadPoolCallbackID]
+Class="Typedef"
+CanonicalType="int"
+
+[CmtThreadFunctionID]
+Class="Typedef"
+CanonicalType="int"
+
+[CmtThreadFunctionCallbackPtr]
+Class="Typedef"
+CanonicalType="void (*)(int, int, unsigned int, int, void *)"
+
+[CmtThreadPoolCallbackPtr]
+Class="Typedef"
+CanonicalType="void (*)(int, unsigned int, int, void *)"
+
+[CmtThreadFunctionPtr]
+Class="Typedef"
+CanonicalType="int (*)(void *)"
+
+[enum CmtThreadFunctionExecutionStatus]
+Class="enum"
+kCmtThreadFunctionWaitingToExecute = <implicit>
+kCmtThreadFunctionPreExecution = <implicit>
+kCmtThreadFunctionExecuting = <implicit>
+kCmtThreadFunctionPostExecution = <implicit>
+kCmtThreadFunctionComplete = <implicit>
+kCmtThreadFunctionThreadTerminated = <implicit>
+kCmtThreadFunctionStatus_ForceSizeToFourBytes = -1
+
+[CmtThreadFunctionExecutionStatus]
+Class="Typedef"
+CanonicalType="enum CmtThreadFunctionExecutionStatus"
+
+[CmtTLVHandle]
+Class="Typedef"
+CanonicalType="int"
+
+[CmtTLVCallbackPtr]
+Class="Typedef"
+CanonicalType="void (*)(void *, int, void *, unsigned int)"
+
+[CmtTSVHandle]
+Class="Typedef"
+CanonicalType="int"
+
+[CmtThreadLockHandle]
+Class="Typedef"
+CanonicalType="int"
+
+[enum CmtError]
+Class="enum"
+kCmtInvalidHandle = -14901
+kCmtInvalidParameter = -14902
+kCmtInvalidAttribute = -14903
+kCmtInvalidEvent = -14904
+kCmtOutOfMemory = -14905
+kCmtTimeOut = -14906
+kCmtEventCallbackAlreadyRegistered = -14907
+kCmtInvalidCallbackID = -14908
+kCmtInvalidThreadID = -14909
+kCmtSystemError = -14910
+kCmtTSQAnotherReaderActive = -14911
+kCmtTSQAnotherWriterActive = -14912
+kCmtTSQQueueFull = -14913
+kCmtTSQQueueEmpty = -14914
+kCmtTSQUserReadTooMuch = -14915
+kCmtTSQUserWroteTooMuch = -14916
+kCmtTSQTooManyItemsForAutoFlush = -14917
+kCmtTSQAccessDenied = -14918
+kCmtTSQCannotResizeFromThread = -14919
+kCmtTSQReleaseFromWrongThread = -14920
+kCmtTPAttrNotSetableWhenThreadsExist = -14921
+kCmtTPThreadPriorityInvalid = -14922
+kCmtTPInvalidFnID = -14923
+kCmtTPFnIDOwnedByPool = -14924
+kCmtTPFnAttrUnavailable = -14925
+kCmtTPNotAThreadPoolThread = -14926
+kCmtTPDefaultPoolNotAllowed = -14927
+kCmtTPCantReduceNumThrds = -14928
+kCmtTSVReleaseFromWrongThread = -14929
+kCmtTLReleaseFromWrongThread = -14930
+kCmtTLDiscardOwnedLock = -14931
+kCmtTLReleaseWhenNotAcquired = -14932
+kCmtTLOperationNotSupported = -14933
+
+[CmtError]
+Class="Typedef"
+CanonicalType="enum CmtError"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[struct RTControllerInfo]
+Class="struct"
+serialNumber="unsigned long"
+ipAddress="char [16]"
+status="char [32]"
+modelDescription="char [32]"
+hostName="char [32]"
+macAddress="char [6]"
+
+[RTControllerInfo]
+Class="Typedef"
+CanonicalType="struct RTControllerInfo"
+
+
+
+
+[enum RealTimeTargetErrors]
+Class="enum"
+kRTTargetIsInInstallMode = -14981
+kRTTargetIsLocked = -14982
+kRTTargetOtherError = -14983
+
+[RealTimeTargetErrors]
+Class="Typedef"
+CanonicalType="enum RealTimeTargetErrors"
+
+
+
+
+
+
+
+
+[struct CVITime]
+Class="struct"
+lsb="unsigned long long"
+msb="long long"
+
+[CVITime]
+Class="Typedef"
+CanonicalType="struct CVITime"
+
+[union CVIAbsoluteTime]
+Class="union"
+cviTime="CVITime"
+u32Data="unsigned int [4]"
+
+[CVIAbsoluteTime]
+Class="Typedef"
+CanonicalType="union CVIAbsoluteTime"
+
+[union CVITimeInterval]
+Class="union"
+cviTime="CVITime"
+u32Data="unsigned int [4]"
+
+[CVITimeInterval]
+Class="Typedef"
+CanonicalType="union CVITimeInterval"
+
+[enum CVITimeUnit]
+Class="enum"
+CVITimeUnitBase = 919263129
+CVITimeUnitAttoseconds = 919263159
+CVITimeUnitFemtoseconds = 919263162
+CVITimeUnitPicoseconds = 919263165
+CVITimeUnitNanoseconds = 919263168
+CVITimeUnit100Nanoseconds = 919263170
+CVITimeUnitMicroseconds = 919263171
+CVITimeUnitMilliseconds = 919263174
+CVITimeUnitSeconds = 919263177
+CVITimeUnitMinutes = 919263179
+CVITimeUnitHours = 919263181
+CVITimeUnitDays = 919263183
+
+[CVITimeUnit]
+Class="Typedef"
+CanonicalType="enum CVITimeUnit"
+
+[enum CVITimeRoundMethod]
+Class="enum"
+CVITimeRoundMethodNear = 1
+CVITimeRoundMethodTruncate = <implicit>
+CVITimeRoundMethodUp = <implicit>
+CVITimeRoundMethodDown = <implicit>
+CVITimeRoundForceSizeToFourBytes = -1
+
+[CVITimeRoundMethod]
+Class="Typedef"
+CanonicalType="enum CVITimeRoundMethod"
+
+[enum CVITimeError]
+Class="enum"
+kCVITimeInvalidArgumentError = -1
+kCVITimeNullPointerError = -2
+kCVITimeOverflowError = -3
+kCVITimeDateOutOfRangeError = -4
+kCVITimeOperationFailedError = -5
+
+[CVITimeError]
+Class="Typedef"
+CanonicalType="enum CVITimeError"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[enum _errnoType]
+Class="enum"
+ENOERR = 0
+EPERM = 1
+ENOENT = 2
+ESRCH = 3
+EINTR = 4
+EIO = 5
+ENXIO = 6
+E2BIG = 7
+ENOEXEC = 8
+EBADF = 9
+ECHILD = 10
+EAGAIN = 11
+ENOMEM = 12
+EACCES = 13
+EFAULT = 14
+ENOTBLK = 15
+EBUSY = 16
+EEXIST = 17
+EXDEV = 18
+ENODEV = 19
+ENOTDIR = 20
+EISDIR = 21
+EINVAL = 22
+ENFILE = 23
+EMFILE = 24
+ENOTTY = 25
+ETXTBSY = 26
+EFBIG = 27
+ENOSPC = 28
+ESPIPE = 29
+EROFS = 30
+EMLINK = 31
+EPIPE = 32
+EDOM = 33
+ERANGE = 34
+ENAMETOOLONG = 35
+_errnoTypeUnused = 2147483647
+
+[_errnoType]
+Class="Typedef"
+CanonicalType="enum _errnoType"
+
+
+[struct lconv]
+Class="struct"
+decimal_point="char *"
+thousands_sep="char *"
+grouping="char *"
+int_curr_symbol="char *"
+currency_symbol="char *"
+mon_decimal_point="char *"
+mon_thousands_sep="char *"
+mon_grouping="char *"
+positive_sign="char *"
+negative_sign="char *"
+int_frac_digits="char"
+frac_digits="char"
+p_cs_precedes="char"
+p_sep_by_space="char"
+n_cs_precedes="char"
+n_sep_by_space="char"
+p_sign_posn="char"
+n_sign_posn="char"
+
+
+
+[union ]
+Class="union"
+a="unsigned char [8]"
+val="double"
+
+[_DoubleConst_t]
+Class="Typedef"
+CanonicalType="union <anonymous at c:\program files (x86)\national instruments\cvi2017\include\ansi\math.h:30:15>"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[jmp_buf]
+Class="Typedef"
+CanonicalType="char [204]"
+
+
+
+[sig_atomic_t]
+Class="Typedef"
+CanonicalType="int"
+
+
+
+[ptrdiff_t]
+Class="Typedef"
+CanonicalType="int"
+
+[size_t]
+Class="Typedef"
+CanonicalType="unsigned int"
+
+[sdk_wchar_t]
+Class="Typedef"
+CanonicalType="unsigned short"
+
+[wint_t]
+Class="Typedef"
+CanonicalType="unsigned short"
+
+[wctype_t]
+Class="Typedef"
+CanonicalType="unsigned short"
+
+[int64_t]
+Class="Typedef"
+CanonicalType="long long"
+
+[uint64_t]
+Class="Typedef"
+CanonicalType="unsigned long long"
+
+[int_least64_t]
+Class="Typedef"
+CanonicalType="long long"
+
+[uint_least64_t]
+Class="Typedef"
+CanonicalType="unsigned long long"
+
+[int_fast64_t]
+Class="Typedef"
+CanonicalType="long long"
+
+[uint_fast64_t]
+Class="Typedef"
+CanonicalType="unsigned long long"
+
+[int32_t]
+Class="Typedef"
+CanonicalType="int"
+
+[uint32_t]
+Class="Typedef"
+CanonicalType="unsigned int"
+
+[int_least32_t]
+Class="Typedef"
+CanonicalType="int"
+
+[uint_least32_t]
+Class="Typedef"
+CanonicalType="unsigned int"
+
+[int_fast32_t]
+Class="Typedef"
+CanonicalType="int"
+
+[uint_fast32_t]
+Class="Typedef"
+CanonicalType="unsigned int"
+
+[int16_t]
+Class="Typedef"
+CanonicalType="short"
+
+[uint16_t]
+Class="Typedef"
+CanonicalType="unsigned short"
+
+[int_least16_t]
+Class="Typedef"
+CanonicalType="short"
+
+[uint_least16_t]
+Class="Typedef"
+CanonicalType="unsigned short"
+
+[int_fast16_t]
+Class="Typedef"
+CanonicalType="short"
+
+[uint_fast16_t]
+Class="Typedef"
+CanonicalType="unsigned short"
+
+[int8_t]
+Class="Typedef"
+CanonicalType="signed char"
+
+[uint8_t]
+Class="Typedef"
+CanonicalType="unsigned char"
+
+[int_least8_t]
+Class="Typedef"
+CanonicalType="signed char"
+
+[uint_least8_t]
+Class="Typedef"
+CanonicalType="unsigned char"
+
+[int_fast8_t]
+Class="Typedef"
+CanonicalType="signed char"
+
+[uint_fast8_t]
+Class="Typedef"
+CanonicalType="unsigned char"
+
+[intptr_t]
+Class="Typedef"
+CanonicalType="int"
+
+[uintptr_t]
+Class="Typedef"
+CanonicalType="unsigned int"
+
+[intmax_t]
+Class="Typedef"
+CanonicalType="long long"
+
+[uintmax_t]
+Class="Typedef"
+CanonicalType="unsigned long long"
+
+
+
+
+
+[struct lldiv_t]
+Class="struct"
+quot="long long"
+rem="long long"
+
+[lldiv_t]
+Class="Typedef"
+CanonicalType="struct lldiv_t"
+
+
+
+
+
+
+
+[struct fpos_t]
+Class="struct"
+_offset="unsigned int"
+
+[fpos_t]
+Class="Typedef"
+CanonicalType="struct fpos_t"
+
+[struct _mode]
+Class="struct"
+read="unsigned int"
+write="unsigned int"
+append="unsigned int"
+binary="unsigned int"
+create="unsigned int"
+truncate="unsigned int"
+fdopen="unsigned int"
+reserved="unsigned int"
+
+[struct _state]
+Class="struct"
+bufalloc="unsigned int"
+filealloc="unsigned int"
+eof="unsigned int"
+error="unsigned int"
+linebuf="unsigned int"
+nobuf="unsigned int"
+wasread="unsigned int"
+waswritten="unsigned int"
+InUse="unsigned int"
+reserved="unsigned int"
+
+[struct FILE]
+Class="struct"
+mode="struct _mode"
+state="struct _state"
+handle="int"
+buffer="unsigned char *"
+bufferEnd="unsigned char *"
+next="unsigned char *"
+readEnd="unsigned char *"
+writeEnd="unsigned char *"
+readEndSave="unsigned char *"
+pushedBack="unsigned char [6]"
+numPushedBack="char"
+defaultBuf="unsigned char"
+tmpname="unsigned char *"
+lock="void *"
+consoleHandle="int"
+
+[FILE]
+Class="Typedef"
+CanonicalType="struct FILE"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[clock_t]
+Class="Typedef"
+CanonicalType="unsigned int"
+
+[time_t]
+Class="Typedef"
+CanonicalType="unsigned int"
+
+[struct tm]
+Class="struct"
+tm_sec="int"
+tm_min="int"
+tm_hour="int"
+tm_mday="int"
+tm_mon="int"
+tm_year="int"
+tm_wday="int"
+tm_yday="int"
+tm_isdst="int"
+
+
+
+
+
+
+
+
+
+
+[struct ColorMapEntry]
+Class="struct"
+="NULL TYPE"
+dataValue="union <anonymous union at c:\program files (x86)\national instruments\cvi2017\include\userint.h:1814:2>"
+color="int"
+
+[ColorMapEntry]
+Class="Typedef"
+CanonicalType="struct ColorMapEntry"
+
+[struct Rect]
+Class="struct"
+top="int"
+left="int"
+height="int"
+width="int"
+
+[Rect]
+Class="Typedef"
+CanonicalType="struct Rect"
+
+[struct Point]
+Class="struct"
+x="int"
+y="int"
+
+[Point]
+Class="Typedef"
+CanonicalType="struct Point"
+
+[struct _GUID]
+Class="struct"
+Data1="unsigned long"
+Data2="unsigned short"
+Data3="unsigned short"
+Data4="unsigned char [8]"
+
+[GUID]
+Class="Typedef"
+CanonicalType="struct _GUID"
+
+[IID]
+Class="Typedef"
+CanonicalType="struct _GUID"
+
+[LPIID]
+Class="Typedef"
+CanonicalType="struct _GUID *"
+
+[CLSID]
+Class="Typedef"
+CanonicalType="struct _GUID"
+
+[LPCLSID]
+Class="Typedef"
+CanonicalType="struct _GUID *"
+
+[FMTID]
+Class="Typedef"
+CanonicalType="struct _GUID"
+
+[LPFMTID]
+Class="Typedef"
+CanonicalType="struct _GUID *"
+
+[CAObjHandle]
+Class="Typedef"
+CanonicalType="int"
+
+[HRESULT]
+Class="Typedef"
+CanonicalType="long"
+
+[enum UIError]
+Class="enum"
+UIENoError = 0
+UIEManagerCouldNotOpen = -1
+UIESystemFontCouldNotBeLoaded = -2
+UIEOperationInvalidDuringPopUp = -3
+UIEHandleInvalid = -4
+UIEAttemptToMovePanelToInvalidLocation = -5
+UIEAttemptedToMakeInoperableCtrlActive = -6
+UIEOperationRequirePanelBeLoaded = -7
+UIEOperationRequiresPopUpBeActive = -8
+UIEOperationRequiresMenuBeLoaded = -9
+UIEControlNotTypeExpectedByFunction = -10
+UIEInvalidMenuItemId = -11
+UIEOutOfMemory = -12
+UIEInvalidControlId = -13
+UIEValueIsInvalidOrOutOfRange = -14
+UIEFileIsNotUserInterfaceFileOrIsBad = -15
+UIEFileFormatIsOutOfDate = -16
+UIEImageIsBadOrNotSupported = -17
+UIENoUserEventPossibleWithCurrentSetup = -18
+UIEUnableToOpenFile = -19
+UIEErrorReadingFile = -20
+UIEErrorWritingFile = -21
+UIEErrorClosingFile = -22
+UIEPanelStateFileHasInvalidFormat = -23
+UIEInvalidIDinResourceFile = -24
+UIEHardCopyError = -25
+UIEInvalidDefaultDirSelectedInFSPopup = -26
+UIEOperationIsInvalidForSpecifiedObject = -27
+UIECantFindMenuString = -28
+UIEPalleteItemsMustBeAddedAtEnd = -29
+UIEMaxNumberOfMenusPerBarExceeded = -30
+UIECantSetSeparatorCheckMark = -31
+UIESeparatorCantHaveSubMenu = -32
+UIEItemMustBeASeparator = -33
+UIEItemCantBeASeparator = -34
+UIEItemAlreadyHasSubMenu = -35
+UIEItemDoesNotHaveASubMenu = -36
+UIECtrlIdIsNotAMenuOrMenuItemIdOrNull = -37
+UIECtrlIdIsNotAMenuOrMenuItemId = -38
+UIENotASubMenuId = -39
+UIEInvalidMenuId = -40
+UIENotAMenuBarHandle = -41
+UIENotAPanelHandle = -42
+UIEOperationInvalidWhileThisPopupIsActive = -43
+UIEAttributeNotAppropriateForSpecifiedControlOrPanelOrMenu = -44
+UIEInvalidControlType = -45
+UIEInvalidAttribute = -46
+UIESlideMustHaveFillAboveOrBelow = -47
+UIEScaleMustHaveFillAboveOrBelow = -48
+UIESlideMustBeLinear = -49
+UIEScaleMustBeLinear = -50
+UIESlideDoesntHaveIncDecArrows = -51
+UIEScaleDoesntHaveIncDecArrows = -52
+UIEInvalidDataType = -53
+UIEInvalidAttrForDataType = -54
+UIEIndexOutOfRange = -55
+UIENoItemsInList = -56
+UIEBufTooSmall = -57
+UIECtrlDoesNotHaveAValue = -58
+UIEValueNotInListCtrl = -59
+UIENotListCtrl = -60
+UIENotListCtrlOrBinary = -61
+UIENotStringDataType = -62
+UIEAttributeNotSettable = -63
+UIEInvalidCtrlMode = -64
+UIENullPointerPassed = -65
+UIECantSetGetTextBGColorOfMenuRing = -66
+UIERingMustBeMenuStyle = -67
+UIECantColorTextTransparent = -68
+UIEInvalidValueInListControl = -69
+UIEInvalidTabbingOrderPosition = -70
+UIECantSetTabOrderOfAnIndicator = -71
+UIENotAValidNumber = -72
+UIEPanelDoesntHaveAMenuBar = -73
+UIENotTextBox = -74
+UIEInvalidChartStyle = -75
+UIEInvalidImageType = -76
+UIENotATopLevelPanelAttribute = -77
+UIEListCtrlNotInCheckMode = -78
+UIEPanelDataDoesNotFitIntoPanel = -79
+UIEAxisRangeError = -80
+UIENonExistantCursor = -81
+UIENotAValidPlot = -82
+UIEOutsidePlotArea = -83
+UIEStringTooLarge = -84
+UIECallbackFuncIsWrongType = -85
+UIECantFindCallbackFunc = -86
+UIEZeroCursors = -87
+UIEInvalidChartScaling = -88
+UIEFontNotInFontTable = -89
+UIEBadAttributeValue = -90
+UIETooManyFilesOpen = -91
+UIEfEOF = -92
+UIEIOError = -93
+UIEFileWasNotFound = -94
+UIEAccessDenied = -95
+UIEFileAccessNotEnabled = -96
+UIEDiskFull = -97
+UIEFileAlreadyExists = -98
+UIEFileAlreadyOpen = -99
+UIEBadPathnameMsg = -100
+UIEResourceNotFound = -101
+UIEOldUnsupportedUIResourceFormat = -102
+UIEFileIsCorrupted = -103
+UIEOperationFailed = -104
+UIESlideMustBeRound = -105
+UIEScaleMustBeRound = -106
+UIECountOutOfRange = -107
+UIENotAValidKeycode = -108
+UIESlideDoesntHaveFrame = -109
+UIECantColorPanelBGTransparent = -110
+UIECantColorTitleBGTransparent = -111
+UIEMemPrintError = -112
+UIEReservedHotKey = -113
+UIEFileFormatIsTooNew = -114
+UIESystemPrintError = -115
+UIEDriverPrintError = -116
+UIEDefCallBackQueueFull = -117
+UIEInvalidMouseCursor = -118
+UIEPrintReentranceError = -119
+UIEOutOfGDISpace = -120
+UIEHiddenPanelError = -121
+UIEHiddenCtrlError = -122
+UIEInvalidAttrForPlot = -123
+UIECantColorPlotTransparent = -124
+UIEInvalidColor = -125
+UIECallbackNameIsAmbiguous = -126
+UIEInvalidBitmap = -127
+UIENoImagePresent = -128
+UIEMustBeInTopLevelPanelThread = -129
+UIEPanelNotInTUIFile = -130
+UIEMenuBarNotInTUIFile = -131
+UIECtrlStyleNotInTUIFile = -132
+UIETagOrValueMissingInTUIFile = -133
+UIESubFileReadingOrParsingError = -134
+UIENoPrintersInstalled = -135
+UIEInitialCellOutOfRange = -136
+UIEInvalidCellType = -137
+UIECellTypeMismatch = -138
+UIECtrlDoesNotHaveMenu = -139
+UIECannotDiscardBuiltInCtrlMenuItem = -140
+UIECantSetSeparatorBold = -141
+UIEMustPassEventData2 = -142
+UIEActiveXError = -143
+UIEObjHandleDoesNotReferToActiveXCtrl = -144
+UIEActiveXCtrlNotRegistered = -145
+UIEActiveXPersistenceError = -146
+UIEInvalidMenuButtonId = -147
+UIECannotModifyBuiltInCtrlMenuItem = -148
+UIEDataSocketError = -149
+UIECtrlAlreadyBound = -150
+UIECtrlNeedsActiveBinding = -151
+UIEAttachedPanelMustBeChild = -152
+UIEItemIsAttached = -153
+UIEItemIsNotAttached = -154
+UIECannotSizeCtrl = -155
+UIECannotSelfAttach = -156
+UIEOperationInvalidOnMaskedBitmap = -157
+UIEOperationInvalidOnAlphaBitmap = -158
+UIEOperationRequiresMaskedBitmap = -159
+UIEOperationRequiresAlphaBitmap = -160
+UIENonExistantAnnotation = -161
+UIEOperationInvalidOnTabPanel = -162
+UIEAttrValidOnMenubarOnly = -163
+UIEAttrValidOnMenuItemOnly = -164
+UIEAttrValidOnMenuAndSubmenusOnly = -165
+UIEImageFeatureNotSupported = -166
+UIEImageCompressionSchemeNotSupported = -167
+UIEActiveXCtrlNotLicensed = -168
+UIEMXBFileFormatNotRecognized = -169
+UIEAttrValidOnMenuItemAndSubmenuOnly = -170
+UIECannotAssignContextMenuItemShortcutKey = -171
+UIECannotPauseUnlessContinuousMode = -172
+UIEAttrFixedPlotAreaNotEnabled = -173
+UIEStaleData = -174
+UIEDataBindingNotSupportedIn64Bit = -175
+UIEActiveXWrongConcurrencyModelForThread = -176
+UIECtrlNotOnPanelAssocWithCtrlArray = -177
+UIEInvalidAngleInMetaFont = -178
+UIECellCannotBeMadeActive = -179
+UIEErrorLimit = -180
+
+[UIError]
+Class="Typedef"
+CanonicalType="enum UIError"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[PanelCallbackPtr]
+Class="Typedef"
+CanonicalType="int (*)(int, int, void *, int, int)"
+
+[CtrlCallbackPtr]
+Class="Typedef"
+CanonicalType="int (*)(int, int, int, void *, int, int)"
+
+[MenuCallbackPtr]
+Class="Typedef"
+CanonicalType="void (*)(int, int, void *, int)"
+
+[MenuDimmerCallbackPtr]
+Class="Typedef"
+CanonicalType="void (*)(int, int)"
+
+[MainCallbackPtr]
+Class="Typedef"
+CanonicalType="int (*)(int, int, int, void *, int, int)"
+
+[DeferredCallbackPtr]
+Class="Typedef"
+CanonicalType="void (*)(void *)"
+
+[CellCompareCallbackPtr]
+Class="Typedef"
+CanonicalType="int (*)(int, int, Point, Point, void *)"
+
+[TreeCellCompareCallbackPtr]
+Class="Typedef"
+CanonicalType="int (*)(int, int, int, int, int, void *)"
+
+[CtrlMenuCallbackPtr]
+Class="Typedef"
+CanonicalType="void (*)(int, int, int, void *)"
+
+[WinMsgWParam]
+Class="Typedef"
+CanonicalType="unsigned int"
+
+[WinMsgLParam]
+Class="Typedef"
+CanonicalType="unsigned long"
+
+[WinMsgCallbackPtr]
+Class="Typedef"
+CanonicalType="void (*)(unsigned int, unsigned long, void *)"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[DSHandle]
+Class="Typedef"
+CanonicalType="int"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[enum FmtIOErrType]
+Class="enum"
+FmtIONoErr = 0
+FmtIONoFileErr = 1
+FmtIOGenErr = 2
+FmtIOBadHandleErr = 3
+FmtIOInsuffMemErr = 4
+FmtIOFileExistsErr = 5
+FmtIOAccessErr = 6
+FmtIOInvalArgErr = 7
+FmtIOMaxFilesErr = 8
+FmtIODiskFullErr = 9
+FmtIONameTooLongErr = 10
+FmtIOStrTooLongErr = 11
+_unusedFmtIOErrType = 2147483647
+
+[FmtIOErrType]
+Class="Typedef"
+CanonicalType="enum FmtIOErrType"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[struct _stcCsnrProtocolPara_]
+Class="struct"
+sourceaddr="unsigned char"
+destaddr="unsigned char"
+framnum="unsigned char"
+framcode="unsigned char"
+databuf="unsigned char *"
+rxtxbuf="unsigned char *"
+datalen="unsigned char"
+rxtxlen="unsigned char"
+tmp="unsigned char [2]"
+
+[stcCsnrProtocolPara]
+Class="Typedef"
+CanonicalType="struct _stcCsnrProtocolPara_"
+
+
+
+
+
+[struct _stcAnsyTimerMgr_]
+Class="struct"
+flg="short"
+startflg="short"
+Settime="short"
+ptimeout="int *"
+poverFlg="int *"
+
+[stcAnsyTimerMgr]
+Class="Typedef"
+CanonicalType="struct _stcAnsyTimerMgr_"
+
+
+
+
+
+
+
+
+
+[struct _stcUartConfig_]
+Class="struct"
+port="char"
+bits="char"
+parity="char"
+stops="char"
+baut="int"
+open="char"
+config="char"
+tmp="char [2]"
+
+[stcUartConfig]
+Class="Typedef"
+CanonicalType="struct _stcUartConfig_"
+
+[struct _stcUartContrl_]
+Class="struct"
+rdbuf="char [512]"
+wrbuf="char [512]"
+rdlen="int"
+wrlen="int"
+p_rd="char *"
+p_wr="char *"
+timeout="int"
+rdend="int"
+sConfig="stcUartConfig"
+AnsyTimer="stcAnsyTimerMgr"
+
+[stcUartContrl]
+Class="Typedef"
+CanonicalType="struct _stcUartContrl_"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[struct stcRecvCtrl]
+Class="struct"
+DestAddr="unsigned char"
+SourceAddr="unsigned char"
+FramNum="unsigned char"
+Len="unsigned char"
+FrameCode="unsigned char"
+recvflg="unsigned char"
+printflg="unsigned char"
+Tmp="unsigned char [1]"
+DataCode="unsigned int"
+
+[struct stcConnCtrl]
+Class="struct"
+ConnFlg="unsigned char"
+RecvEndFlg="unsigned char"
+TimeOut="unsigned char"
+ErrFlg="unsigned char"
+DestAddr="unsigned char"
+sourceaddr="unsigned char"
+SendFramNum="unsigned char"
+SendFlg="unsigned char"
+FrameCode="unsigned char"
+sendlen="int"
+
+[struct _stcThreadCommCtrl_]
+Class="struct"
+wr="unsigned char [256]"
+rd="unsigned char [256]"
+RxCtrl="struct stcRecvCtrl"
+ConnCtrl="struct stcConnCtrl"
+sCom="stcUartContrl *"
+ThreadID="int"
+ThreadExit="int"
+
+[stcThreadCommCtrl]
+Class="Typedef"
+CanonicalType="struct _stcThreadCommCtrl_"
+
+
+
+[uint8]
+Class="Typedef"
+CanonicalType="unsigned char"
+
+[int8]
+Class="Typedef"
+CanonicalType="char"
+
+[uint16]
+Class="Typedef"
+CanonicalType="unsigned short"
+
+[int16]
+Class="Typedef"
+CanonicalType="short"
+
+[uint32]
+Class="Typedef"
+CanonicalType="unsigned int"
+
+[int32]
+Class="Typedef"
+CanonicalType="int"
+
+[fp32]
+Class="Typedef"
+CanonicalType="float"
+
+[fp64]
+Class="Typedef"
+CanonicalType="double"
+
+[UINT8]
+Class="Typedef"
+CanonicalType="unsigned char"
+
+[INT8]
+Class="Typedef"
+CanonicalType="signed char"
+
+[UINT16]
+Class="Typedef"
+CanonicalType="unsigned short"
+
+[INT16]
+Class="Typedef"
+CanonicalType="short"
+
+[UINT32]
+Class="Typedef"
+CanonicalType="unsigned int"
+
+[INT32]
+Class="Typedef"
+CanonicalType="int"
+
+[FP32]
+Class="Typedef"
+CanonicalType="float"
+
+[FP64]
+Class="Typedef"
+CanonicalType="double"
+
+[struct _stcSysCtrl]
+Class="struct"
+PC="stcThreadCommCtrl"
+
+[stcSysCtrl]
+Class="Typedef"
+CanonicalType="struct _stcSysCtrl"
+
+
+[Thread_CommRecvAndSendCtrl]
+Class="Function"
+Prototype="static int Thread_CommRecvAndSendCtrl(void *functionData);"
+IsStatic=1
+IsVariadic=0
+ArgSize=4
+ResultType="int"
+CanonicalResultType="int"
+CallingConvention="cdecl"
+
+[cvi_InitBspComm]
+Class="Function"
+Prototype="int cvi_InitBspComm(stcThreadCommCtrl *T_Ctrl);"
+IsStatic=0
+IsVariadic=0
+ArgSize=4
+ResultType="int"
+CanonicalResultType="int"
+CallingConvention="default"
+
+[cvi_CloseBspComm]
+Class="Function"
+Prototype="int cvi_CloseBspComm(stcThreadCommCtrl *T_Ctrl);"
+IsStatic=0
+IsVariadic=0
+ArgSize=4
+ResultType="int"
+CanonicalResultType="int"
+CallingConvention="default"
+

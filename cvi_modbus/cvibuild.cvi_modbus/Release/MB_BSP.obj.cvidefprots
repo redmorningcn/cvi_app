@@ -1,0 +1,56 @@
+[MB_CommExit]
+Class="Function"
+Prototype="void MB_CommExit();"
+
+[MB_CommPortCfg]
+Class="Function"
+Prototype="void MB_CommPortCfg(struct modbus_ch *pch, unsigned char port_nbr, unsigned int baud, unsigned char bits, unsigned char parity, unsigned char stops);"
+
+[MB_CommRxIntDis]
+Class="Function"
+Prototype="void MB_CommRxIntDis(struct modbus_ch *pch);"
+
+[MB_CommRxIntEn]
+Class="Function"
+Prototype="void MB_CommRxIntEn(struct modbus_ch *pch);"
+
+[MB_CommTx1]
+Class="Function"
+Prototype="void MB_CommTx1(struct modbus_ch *pch, unsigned char c);"
+
+[MB_CommTxIntDis]
+Class="Function"
+Prototype="void MB_CommTxIntDis(struct modbus_ch *pch);"
+
+[MB_CommTxIntEn]
+Class="Function"
+Prototype="void MB_CommTxIntEn(struct modbus_ch *pch);"
+
+[MB_RTU_TmrExit]
+Class="Function"
+Prototype="void MB_RTU_TmrExit();"
+
+[MB_RTU_TmrISR_Handler]
+Class="Function"
+Prototype="void MB_RTU_TmrISR_Handler();"
+
+[mb_AnsyTimerCallback]
+Class="Function"
+Prototype="int mb_AnsyTimerCallback(int reserved, int theTimerId, int event, void *callbackData, int eventData1, int eventData2);"
+
+[MB_RTU_TmrInit]
+Class="Function"
+Prototype="void MB_RTU_TmrInit();"
+
+[MB_getPseudo]
+Class="Function"
+Prototype="unsigned short MB_getPseudo();"
+
+[ReadMbComConfigFromFile]
+Class="Function"
+Prototype="int ReadMbComConfigFromFile(struct _stcUartConfig_ *sUartConfig);"
+
+[WriteMbComConfigToFile]
+Class="Function"
+Prototype="void WriteMbComConfigToFile(struct _stcUartConfig_ *sUartConfig);"
+

@@ -1,0 +1,12 @@
+[InitModelTableCtrl]
+Class="Function"
+Prototype="void InitModelTableCtrl();"
+
+[CreateModelToTableMap]
+Class="Function"
+Prototype="int CreateModelToTableMap(struct _stcTableCtrl_ *stable);"
+
+[ReadModelFromTable]
+Class="Function"
+Prototype="int ReadModelFromTable(int keyval);"
+

@@ -1,0 +1,8 @@
+[GetMathOilVal]
+Class="Function"
+Prototype="unsigned short GetMathOilVal(short hig);"
+
+[GetMathHigVal]
+Class="Function"
+Prototype="unsigned short GetMathHigVal(short oil);"
+

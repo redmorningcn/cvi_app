@@ -1,0 +1,28 @@
+[MB_OS_Init]
+Class="Function"
+Prototype="void MB_OS_Init();"
+
+[MB_OS_Exit]
+Class="Function"
+Prototype="void MB_OS_Exit();"
+
+[MB_OS_ExitSlave]
+Class="Function"
+Prototype="void MB_OS_ExitSlave();"
+
+[MB_OS_RxSignal]
+Class="Function"
+Prototype="void MB_OS_RxSignal(struct modbus_ch *pch);"
+
+[MB_OS_RxWait]
+Class="Function"
+Prototype="void MB_OS_RxWait(struct modbus_ch *pch, unsigned short *perr);"
+
+[MB_OS_TxWait]
+Class="Function"
+Prototype="void MB_OS_TxWait(struct modbus_ch *pch, unsigned short *perr);"
+
+[MB_OS_TxOver]
+Class="Function"
+Prototype="void MB_OS_TxOver(struct modbus_ch *pch);"
+

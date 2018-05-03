@@ -1,0 +1,14 @@
+
+CallCC.bat 4 "f:\cvi\project\CSNC\csnc_debug\cvi_bspComm.c" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_bspComm.obj" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_bspComm.obj.cvidefprots" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_bspComm.obj.out" 
+
+CallCC.bat 5 "f:\cvi\project\CSNC\opencom\source\cvi_com1.c" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_com1.obj" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_com1.obj.cvidefprots" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_com1.obj.out" 
+
+CallCC.bat 6 "f:\cvi\project\CSNC\opencom\source\cvi_com_operate.c" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_com_operate.obj" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_com_operate.obj.cvidefprots" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_com_operate.obj.out" 
+
+CallCC.bat 8 "f:\cvi\project\CSNC\csnc_iap\openfile\cvi_file.c" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_file.obj" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_file.obj.cvidefprots" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_file.obj.out" 
+
+CallCC.bat 10 "f:\cvi\project\CSNC\csnc_iap\iap\send_IAP.c" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\send_IAP.obj" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\send_IAP.obj.cvidefprots" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\send_IAP.obj.out" 
+
+CallRC.bat "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\resources.in.rc" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\resources.res"
+
+CallLink.bat -cmd:link_options.txt

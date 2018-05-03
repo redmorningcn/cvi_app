@@ -1,0 +1,21 @@
+CrcCheck.obj
+csnr_package_deal.obj
+cvi_ansytimer.obj
+cvi_bspComm.obj
+cvi_com1.obj
+cvi_com_operate.obj
+databaseoperate.obj
+main.obj
+modeltable.obj
+oilmath.obj
+oilmodel_db.obj
+setpara.obj
+cvi.lib
+cvi_db.lib
+cvistart.lib
+asynctmr.obj
+kernel32.lib
+user32.lib
+EXE Symbol Module
+Exports Module
+Resource Module

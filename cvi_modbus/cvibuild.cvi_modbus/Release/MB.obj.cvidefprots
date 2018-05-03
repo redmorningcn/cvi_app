@@ -1,0 +1,72 @@
+[MB_Init]
+Class="Function"
+Prototype="void MB_Init(unsigned int freq);"
+
+[MB_Exit]
+Class="Function"
+Prototype="void MB_Exit();"
+
+[MB_CfgCh]
+Class="Function"
+Prototype="struct modbus_ch *MB_CfgCh(unsigned char node_addr, unsigned char master_slave, unsigned int rx_timeout, unsigned char modbus_mode, unsigned char port_nbr, unsigned int baud, unsigned char bits, unsigned char parity, unsigned char stops, unsigned char wr_en);"
+
+[MB_MasterTimeoutSet]
+Class="Function"
+Prototype="void MB_MasterTimeoutSet(struct modbus_ch *pch, unsigned int timeout);"
+
+[MB_ModeSet]
+Class="Function"
+Prototype="void MB_ModeSet(struct modbus_ch *pch, unsigned char master_slave, unsigned char mode);"
+
+[MB_NodeAddrSet]
+Class="Function"
+Prototype="void MB_NodeAddrSet(struct modbus_ch *pch, unsigned char node_addr);"
+
+[MB_WrEnSet]
+Class="Function"
+Prototype="void MB_WrEnSet(struct modbus_ch *pch, unsigned char wr_en);"
+
+[MB_ChToPortMap]
+Class="Function"
+Prototype="void MB_ChToPortMap(struct modbus_ch *pch, unsigned char port_nbr);"
+
+[MB_RxByte]
+Class="Function"
+Prototype="void MB_RxByte(struct modbus_ch *pch, unsigned char rx_byte);"
+
+[MB_RxTask]
+Class="Function"
+Prototype="void MB_RxTask(struct modbus_ch *pch);"
+
+[MB_Tx]
+Class="Function"
+Prototype="void MB_Tx(struct modbus_ch *pch);"
+
+[MB_TxByte]
+Class="Function"
+Prototype="void MB_TxByte(struct modbus_ch *pch);"
+
+[MB_RTU_RxByte]
+Class="Function"
+Prototype="void MB_RTU_RxByte(struct modbus_ch *pch, unsigned char rx_byte);"
+
+[MB_RTU_Rx]
+Class="Function"
+Prototype="unsigned char MB_RTU_Rx(struct modbus_ch *pch);"
+
+[MB_RTU_Tx]
+Class="Function"
+Prototype="void MB_RTU_Tx(struct modbus_ch *pch);"
+
+[MB_RTU_TmrReset]
+Class="Function"
+Prototype="void MB_RTU_TmrReset(struct modbus_ch *pch);"
+
+[MB_RTU_TmrResetAll]
+Class="Function"
+Prototype="void MB_RTU_TmrResetAll();"
+
+[MB_RTU_TmrUpdate]
+Class="Function"
+Prototype="void MB_RTU_TmrUpdate();"
+

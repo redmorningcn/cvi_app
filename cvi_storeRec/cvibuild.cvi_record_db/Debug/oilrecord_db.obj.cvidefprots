@@ -1,0 +1,32 @@
+[OpenOilRecordPandelCallback]
+Class="Function"
+Prototype="int OpenOilRecordPandelCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[CreateDBTableMapOilRecord]
+Class="Function"
+Prototype="int CreateDBTableMapOilRecord(int *hmap, struct _stcFlshRecSql *sFlshRecSql);"
+
+[ChangeRecordValueOilRecord]
+Class="Function"
+Prototype="void ChangeRecordValueOilRecord(struct _stcFlshRec *sFlshRec, struct _stcFlshRecSql *sFlshRecSql);"
+
+[InsertoilRecToDB]
+Class="Function"
+Prototype="int InsertoilRecToDB(char *tabelname, struct _stcFlshRec *sFlshRec);"
+
+[storerectofile]
+Class="Function"
+Prototype="void storerectofile(unsigned char *buf, int len);"
+
+[ICRecvOilCallBack]
+Class="Function"
+Prototype="int ICRecvOilCallBack(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[RecordTimerCallBack]
+Class="Function"
+Prototype="int RecordTimerCallBack(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[oilmodelPB]
+Class="Function"
+Prototype="int oilmodelPB(int panel, int event, void *callbackData, int eventData1, int eventData2);"
+

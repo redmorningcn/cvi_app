@@ -1,0 +1,13 @@
+databaseoperate.obj
+main.obj
+modeltable.obj
+oilmath.obj
+oilmodel_db.obj
+cvi.lib
+cvi_db.lib
+cvistart.lib
+kernel32.lib
+user32.lib
+EXE Symbol Module
+Exports Module
+Resource Module

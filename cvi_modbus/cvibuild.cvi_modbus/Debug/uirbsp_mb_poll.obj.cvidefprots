@@ -1,0 +1,28 @@
+[OpenPollCallback]
+Class="Function"
+Prototype="int OpenPollCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[mb_PollPanelCB]
+Class="Function"
+Prototype="int mb_PollPanelCB(int panel, int event, void *callbackData, int eventData1, int eventData2);"
+
+[CVI_MBPollPanelHandle]
+Class="Function"
+Prototype="void CVI_MBPollPanelHandle(int panel);"
+
+[MB_PollOperate]
+Class="Function"
+Prototype="void MB_PollOperate();"
+
+[MBPollTimerCallback]
+Class="Function"
+Prototype="int MBPollTimerCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[RunCallback]
+Class="Function"
+Prototype="int RunCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[AutoRunTimerCallback]
+Class="Function"
+Prototype="int AutoRunTimerCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

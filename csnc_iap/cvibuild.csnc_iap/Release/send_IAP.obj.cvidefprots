@@ -1,0 +1,16 @@
+[SendCsnrIapDataDeal]
+Class="Function"
+Prototype="void SendCsnrIapDataDeal(char *buf, int len);"
+
+[InitIPACtrl]
+Class="Function"
+Prototype="void InitIPACtrl();"
+
+[SendIapTask]
+Class="Function"
+Prototype="void SendIapTask();"
+
+[IapRecTask]
+Class="Function"
+Prototype="void IapRecTask();"
+

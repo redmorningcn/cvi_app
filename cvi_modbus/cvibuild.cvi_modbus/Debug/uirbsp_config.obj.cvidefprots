@@ -1,0 +1,24 @@
+[QuitCom1Panel]
+Class="Function"
+Prototype="void QuitCom1Panel(int panel);"
+
+[ConfigMbComWithFile]
+Class="Function"
+Prototype="void ConfigMbComWithFile();"
+
+[Com1ConfigOkCallback]
+Class="Function"
+Prototype="int Com1ConfigOkCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[Com1PanelCB]
+Class="Function"
+Prototype="int Com1PanelCB(int panel, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SetCviCtrlMbComConfig]
+Class="Function"
+Prototype="void SetCviCtrlMbComConfig(struct _stcUartConfig_ *sUartConfig);"
+
+[OpenCom1Callback]
+Class="Function"
+Prototype="int OpenCom1Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

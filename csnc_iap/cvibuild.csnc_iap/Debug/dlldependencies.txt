@@ -1,0 +1,12 @@
+omp.lib
+cvi_omp.dll
+cvi.lib
+cvirte.dll
+advapi32.lib
+ADVAPI32.dll
+gdi32.lib
+GDI32.dll
+kernel32.lib
+KERNEL32.dll
+user32.lib
+USER32.dll

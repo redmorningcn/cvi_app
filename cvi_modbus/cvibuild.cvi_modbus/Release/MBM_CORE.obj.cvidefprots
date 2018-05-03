@@ -1,0 +1,36 @@
+[MBM_FCxx_Handler]
+Class="Function"
+Prototype="unsigned char MBM_FCxx_Handler(struct modbus_ch *pch);"
+
+[MBM_TxCmd]
+Class="Function"
+Prototype="void MBM_TxCmd(struct modbus_ch *pch);"
+
+[MBM_RxReply]
+Class="Function"
+Prototype="unsigned char MBM_RxReply(struct modbus_ch *pch);"
+
+[MBM_FC01_CoilRd]
+Class="Function"
+Prototype="unsigned short MBM_FC01_CoilRd(struct modbus_ch *pch, unsigned char slave_node, unsigned short slave_addr, unsigned char *p_coil_tbl, unsigned short nbr_coils);"
+
+[MBM_FC05_CoilWr]
+Class="Function"
+Prototype="unsigned short MBM_FC05_CoilWr(struct modbus_ch *pch, unsigned char slave_node, unsigned short slave_addr, unsigned char coil_val);"
+
+[MBM_FC03_HoldingRegRd]
+Class="Function"
+Prototype="unsigned short MBM_FC03_HoldingRegRd(struct modbus_ch *pch, unsigned char slave_node, unsigned short slave_addr, unsigned short *p_reg_tbl, unsigned short nbr_regs);"
+
+[MBM_FC06_HoldingRegWr]
+Class="Function"
+Prototype="unsigned short MBM_FC06_HoldingRegWr(struct modbus_ch *pch, unsigned char slave_node, unsigned short slave_addr, unsigned short reg_val);"
+
+[MBM_FC15_CoilWr]
+Class="Function"
+Prototype="unsigned short MBM_FC15_CoilWr(struct modbus_ch *pch, unsigned char slave_node, unsigned short slave_addr, unsigned char *p_coil_tbl, unsigned short nbr_coils);"
+
+[MBM_FC16_HoldingRegWrN]
+Class="Function"
+Prototype="unsigned short MBM_FC16_HoldingRegWrN(struct modbus_ch *pch, unsigned char slave_node, unsigned short slave_addr, unsigned short *p_reg_tbl, unsigned short nbr_regs);"
+

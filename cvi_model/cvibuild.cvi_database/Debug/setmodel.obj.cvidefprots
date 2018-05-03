@@ -1,0 +1,4 @@
+[OpenOilModelCallback]
+Class="Function"
+Prototype="int OpenOilModelCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

@@ -1,0 +1,72 @@
+[OpenOilModelCallback]
+Class="Function"
+Prototype="int OpenOilModelCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[ModelDistoPanle]
+Class="Function"
+Prototype="void ModelDistoPanle();"
+
+[DisplayModelTabl]
+Class="Function"
+Prototype="void DisplayModelTabl(int panel);"
+
+[refreshmodlecallback]
+Class="Function"
+Prototype="int refreshmodlecallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[oilmodelPB]
+Class="Function"
+Prototype="int oilmodelPB(int panel, int event, void *callbackData, int eventData1, int eventData2);"
+
+[GetModelPanelVal]
+Class="Function"
+Prototype="void GetModelPanelVal(int panel);"
+
+[MathAndSetPanel]
+Class="Function"
+Prototype="void MathAndSetPanel(int panel);"
+
+[InitOilPara]
+Class="Function"
+Prototype="void InitOilPara();"
+
+[ModelTimerCallBack]
+Class="Function"
+Prototype="int ModelTimerCallBack(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[hightToOilCallback]
+Class="Function"
+Prototype="int hightToOilCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[OilToHightCallback]
+Class="Function"
+Prototype="int OilToHightCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[sclopeCallback]
+Class="Function"
+Prototype="int sclopeCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[modefyHigCallback]
+Class="Function"
+Prototype="int modefyHigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[modefyCallback]
+Class="Function"
+Prototype="int modefyCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SetModelCallBack]
+Class="Function"
+Prototype="int SetModelCallBack(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[ConfigOkCallback]
+Class="Function"
+Prototype="int ConfigOkCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[ModefyModelTableCallback]
+Class="Function"
+Prototype="int ModefyModelTableCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[PotNumCallback]
+Class="Function"
+Prototype="int PotNumCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

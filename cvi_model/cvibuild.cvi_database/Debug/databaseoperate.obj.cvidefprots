@@ -1,0 +1,8 @@
+[ConnectDB]
+Class="Function"
+Prototype="void ConnectDB();"
+
+[CloseDB]
+Class="Function"
+Prototype="void CloseDB();"
+

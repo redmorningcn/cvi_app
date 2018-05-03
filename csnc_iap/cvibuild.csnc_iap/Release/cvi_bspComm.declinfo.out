@@ -1,0 +1,4 @@
+f:\cvi\project\CSNC\csnc_debug\cvi_bspComm.c:61:21: warning: assigning to 'unsigned char *' from 'char [256]' converts between pointers to integer types with different sign [-Wpointer-sign]
+f:\cvi\project\CSNC\csnc_debug\cvi_bspComm.c:62:23: warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wint-conversion]
+f:\cvi\project\CSNC\csnc_debug\cvi_bspComm.c:102:31: warning: passing 'unsigned char *' to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+f:\cvi\project\CSNC\opencom\source\cvi_com_operate.h:111:43: note: passing argument to parameter 'buf' here

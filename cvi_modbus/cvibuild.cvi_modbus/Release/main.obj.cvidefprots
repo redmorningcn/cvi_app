@@ -1,0 +1,20 @@
+[ReadFC03Callback]
+Class="Function"
+Prototype="int ReadFC03Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[mb_mainPanelCB]
+Class="Function"
+Prototype="int mb_mainPanelCB(int panel, int event, void *callbackData, int eventData1, int eventData2);"
+
+[main]
+Class="Function"
+Prototype="int main(int argc, char **argv);"
+
+[CVI_MainPanelHandle]
+Class="Function"
+Prototype="void CVI_MainPanelHandle(int panel);"
+
+[MainTimerCallback]
+Class="Function"
+Prototype="int MainTimerCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

@@ -1,0 +1,16 @@
+[OpenSlaveCallback]
+Class="Function"
+Prototype="int OpenSlaveCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[mb_SlavePanelCB]
+Class="Function"
+Prototype="int mb_SlavePanelCB(int panel, int event, void *callbackData, int eventData1, int eventData2);"
+
+[CVI_MBSlavePanelHandle]
+Class="Function"
+Prototype="void CVI_MBSlavePanelHandle(int panel);"
+
+[MBSlaveTimerCallback]
+Class="Function"
+Prototype="int MBSlaveTimerCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

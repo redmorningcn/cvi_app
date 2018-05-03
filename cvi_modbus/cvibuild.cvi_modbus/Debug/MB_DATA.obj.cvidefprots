@@ -1,0 +1,36 @@
+[MB_CoilRd]
+Class="Function"
+Prototype="unsigned char MB_CoilRd(unsigned short coil, unsigned short *perr);"
+
+[MB_CoilWr]
+Class="Function"
+Prototype="void MB_CoilWr(unsigned short coil, unsigned char coil_val, unsigned short *perr);"
+
+[MB_DIRd]
+Class="Function"
+Prototype="unsigned char MB_DIRd(unsigned short di, unsigned short *perr);"
+
+[MB_InRegRd]
+Class="Function"
+Prototype="unsigned short MB_InRegRd(unsigned short reg, unsigned short *perr);"
+
+[MB_InRegRdFP]
+Class="Function"
+Prototype="float MB_InRegRdFP(unsigned short reg, unsigned short *perr);"
+
+[MB_HoldingRegRd]
+Class="Function"
+Prototype="unsigned short MB_HoldingRegRd(unsigned short reg, unsigned short *perr);"
+
+[MB_HoldingRegRdFP]
+Class="Function"
+Prototype="float MB_HoldingRegRdFP(unsigned short reg, unsigned short *perr);"
+
+[MB_HoldingRegWr]
+Class="Function"
+Prototype="void MB_HoldingRegWr(unsigned short reg, unsigned short reg_val, unsigned short *perr);"
+
+[MB_HoldingRegWrFP]
+Class="Function"
+Prototype="void MB_HoldingRegWrFP(unsigned short reg, float reg_val_fp, unsigned short *perr);"
+
