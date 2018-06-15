@@ -6,6 +6,11 @@
 #include <modbus_poll.h>
 #include <MB_BSP.h>
 
+#include <mb_poll.h>
+#include <mb_salve.h>
+#include <cvi_comm.h>
+
+
 
 extern	stcUartConfig		mb_com1config;
 extern	int					gCom1PanelHandle;
@@ -185,4 +190,23 @@ int CVICALLBACK OpenCom1Callback (int panel, int control, int event,
 			break;	
 	}
 	return 0;
+}
+
+extern	int	    	gPollPanelHandle ;
+extern	int	    	gSlavePanelHandle ;
+
+//在INFO窗口打印接收的内容
+void	printrecinfo(char *string)
+{
+	if( gPollPanelHandle )				//poll面板有效，在poll面板显示
+	{
+	   SetCtrlVal(gPollPanelHandle,MB_POLL_INFO,string);
+
+	}
+		
+	if( gSlavePanelHandle )				//poll面板有效，在poll面板显示
+	{
+	   SetCtrlVal(gSlavePanelHandle,MB_SLAVE_INFO,string);
+	   //printf(string);
+	}
 }

@@ -22,3 +22,7 @@ Prototype="void SetCviCtrlMbComConfig(struct _stcUartConfig_ *sUartConfig);"
 Class="Function"
 Prototype="int OpenCom1Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
 
+[printrecinfo]
+Class="Function"
+Prototype="void printrecinfo(char *string);"
+

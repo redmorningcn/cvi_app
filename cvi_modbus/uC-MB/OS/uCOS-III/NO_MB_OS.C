@@ -43,6 +43,8 @@
 #include <utility.h>
 #include "includes.h"
 #include "mb_poll.h"
+#include "uirbsp_config.h"
+
 
 /*
 *********************************************************************************************************
@@ -273,7 +275,6 @@ void  MB_OS_ExitSlave (void)
 
 void  MB_OS_RxSignal (MODBUS_CH *pch)
 {
-	
 	if(PollRxSignalFlg == 0)				//从机应答
 	{
 		RxSignalFlg  = 1;
@@ -282,6 +283,9 @@ void  MB_OS_RxSignal (MODBUS_CH *pch)
 	{
 		PollRxSignalFlg  = 0;
 	}
+	
+	//在窗口显示字符,接收结束
+	printrecinfo("\r\n");
 }
 
 /*$PAGE*/
@@ -341,7 +345,9 @@ void  MB_OS_TxWait (MODBUS_CH   *pch,
 
 void  MB_OS_TxOver (MODBUS_CH   *pch )
 {
-	PollRxSignalFlg = 0;				//置从机接收模式，从机能正常接收数据	
+	PollRxSignalFlg = 0;				//置从机接收模式，从机能正常接收数据
+	
+
 }
 /*$PAGE*/
 /*

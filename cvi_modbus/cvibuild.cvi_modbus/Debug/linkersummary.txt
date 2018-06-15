@@ -1,4 +1,5 @@
 cvi_ansytimer.obj
+cvi_comm.obj
 main.obj
 MB.obj
 MB_BSP.obj

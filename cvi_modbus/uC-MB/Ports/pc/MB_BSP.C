@@ -42,6 +42,8 @@
 #include "includes.h"
 #include "MB_BSP.h"
 #include "formatio.h"
+#include "uirbsp_config.h"
+
 
 //串口允许标识
 typedef	struct	_strUartEnable_
@@ -97,6 +99,8 @@ void  MB_CommExit (void)
 
 void CVICALLBACK mb_Com1RecvAndSend (int portNo,int eventMask,void *callbackData) ;
 
+//
+
 int	mb_ThreadID = 0;
 static int CVICALLBACK Thread_CommCallback (void *functionData)
 {
@@ -106,18 +110,23 @@ static int CVICALLBACK Thread_CommCallback (void *functionData)
 	{
 		if(mb_com1config.open == 1)										//串口打开
 		{
-			if(GetOutQLen(mb_com1config.port)==0 && sEnableFlg.send)						//发送数据(数据空，调用发送函数)
+			if(GetOutQLen(mb_com1config.port)==0 && sEnableFlg.send)	//发送数据(数据空，调用发送函数)
 			{
 				MB_ChPortMap[0]->TxCtr++;
 			    MB_TxByte(MB_ChPortMap[0]);                          	/* Send next byte                                       */
 			}
 
 
-			while(GetInQLen(mb_com1config.port) && sEnableFlg.rec)						//有数据未取（有数据，取数）
+			while(GetInQLen(mb_com1config.port) && sEnableFlg.rec)	   //有数据未取（有数据，取数）
 			{
 				rx_data = (char)ComRdByte (mb_com1config.port);
 				MB_ChPortMap[0]->RxCtr++;
 				MB_RxByte(MB_ChPortMap[0], rx_data);                   /* Pass character to Modbus to process                  */
+				
+				//在窗口显示字符
+				char	string[16];
+				sprintf(string,"%02x ",(unsigned char)rx_data);
+				printrecinfo(string);
 			}
 		}
 	}

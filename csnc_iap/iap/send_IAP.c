@@ -120,7 +120,7 @@ void	SendIapTask(void)
 			len += sizeof(uint32);			
 			//增加crc
 			
-			SendCsnrIapDataDeal(buf,len);											//发送数据
+			//SendCsnrIapDataDeal(buf,len);											//发送数据
 			
 			int i = 100000;
 			while(i--);
@@ -184,10 +184,10 @@ void	SendIapTask(void)
 				memcpy(&buf[len],(char *)&crc32,sizeof(uint32));
 				len += sizeof(uint32);
 				//增加crc
-				
+				printftext(gBinFilePanelHandle,IAP_PANEL_INFOTEXTBOX,"发送序号:%03d，数据发送完成\r\n",gsIapCtrl.sendnum);	
+
 				SendCsnrIapDataDeal(buf,len);									//发送数据
 				
-				printftext(gBinFilePanelHandle,IAP_PANEL_INFOTEXTBOX,"发送序号:%03d，数据发送完成\r\n",gsIapCtrl.sendnum);	
 			}
 		}
 		else if(gsIapCtrl.resendflg)											//未收到正确指令，重发
@@ -218,7 +218,7 @@ void	SendIapTask(void)
 *******************************************************************************************/
 void	IapRecTask(void)
 {
-	unsigned short	tmp16;
+	unsigned char	tmp16;
 	
 	if(	sCtrl.PC.RxCtrl.recvflg 			&&		//有数据接收
 		sCtrl.PC.RxCtrl.DestAddr == MY_ADDR &&		//地址有效

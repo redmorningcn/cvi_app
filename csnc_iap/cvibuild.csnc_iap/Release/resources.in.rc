@@ -1,7 +1,7 @@
 #include "C:\Program Files (x86)\National Instruments\Shared\MSDTRedistributables\SDKHeaderFiles\8.1\winver.h"
 
 2 ICON "h:\\м╪ф╛йсфа\\обть.ico"
-1 24 "f:\\cvi\\project\\CSNC\\csnc_iap\\cvibuild.csnc_iap\\Release\\manifest.xml"
+1 24 "f:\\cvi\\app\\csnc_iap\\cvibuild.csnc_iap\\Release\\manifest.xml"
 
 
 STRINGTABLE DISCARDABLE

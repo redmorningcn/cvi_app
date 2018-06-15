@@ -1,28 +1,28 @@
 -nologo
--out:f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\app_iap.exe
+-out:f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\app_iap.exe
 -arch:x86
 -timestamp
 -loadextmod
--res:f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\resources.res
+-res:f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\resources.res
 -entry:_CVIWinMainStartupCode@0
 -base:0x400000
--linked:f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\linkersummary.txt
--dlldeps:f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\dlldependencies.txt
--licensing:f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\linkerlicensing.txt
--browsedeps:f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\moduledependencies.txt
+-linked:f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\linkersummary.txt
+-dlldeps:f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\dlldependencies.txt
+-licensing:f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\linkerlicensing.txt
+-browsedeps:f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\moduledependencies.txt
 -stackreserve:1048576
 -stackcommit:4096
 -in:c:\ProgramData\National Instruments\CVI2017\bin\msvc\analysis.lib
 -in:c:\Program Files (x86)\National Instruments\CVI2017\toolslib\toolbox\msvc\asynctmr.obj
--in:f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\CrcCheck.obj
--in:f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\csnr_package_deal.obj
--in:f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_ansytimer.obj
--in:f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_bspComm.obj
--in:f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_com1.obj
--in:f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_com_operate.obj
--in:f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_comm.obj
+-in:f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\CrcCheck.obj
+-in:f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\csnr_package_deal.obj
+-in:f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\cvi_ansytimer.obj
+-in:f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\cvi_bspComm.obj
+-in:f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\cvi_com1.obj
+-in:f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\cvi_com_operate.obj
+-in:f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\cvi_comm.obj
 -in:c:\Program Files (x86)\National Instruments\Shared\CVI\Bin\msvc\cvi_db.lib
--in:f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_file.obj
+-in:f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\cvi_file.obj
 -in:c:\Program Files (x86)\National Instruments\CVI2017\bin\msvc\cviauto.lib
 -in:c:\Program Files (x86)\National Instruments\CVI2017\bin\msvc\cvidotnet.lib
 -in:c:\Program Files (x86)\National Instruments\CVI2017\bin\msvc\cvinetstreams.lib
@@ -30,10 +30,10 @@
 -in:c:\Program Files (x86)\National Instruments\CVI2017\bin\msvc\cvintwrk.lib
 -in:c:\Program Files (x86)\National Instruments\CVI2017\bin\msvc\cvitdms.lib
 -in:c:\Program Files (x86)\National Instruments\CVI2017\bin\msvc\gpib.lib
--in:f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\main.obj
+-in:f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\main.obj
 -in:c:\Program Files (x86)\National Instruments\CVI2017\bin\msvc\nivxi.lib
 -in:c:\Program Files (x86)\National Instruments\CVI2017\bin\msvc\omp.lib
--in:f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\send_IAP.obj
+-in:f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\send_IAP.obj
 -in:c:\Program Files (x86)\National Instruments\CVI2017\toolslib\toolbox\msvc\toolbox.obj
 -in:c:\Program Files (x86)\National Instruments\Shared\CVI\Bin\msvc\visa.lib
 -more:c:\program files (x86)\national instruments\cvi2017\bin\msvc\cvistart.lib
