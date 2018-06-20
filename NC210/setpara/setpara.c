@@ -56,7 +56,7 @@ void     ReadTime(stcTime * sTime)
 
 
 stcCalcModel	gsCalcModel;	//油箱模型（运算用）
-extern	int   g_com1systictimes;
+extern	int   	g_com1systictimes;
 /********************************************************************************************/
 /* 串口设置参数      																		*/
 //通过l_eqiupmentcode变量控制设置过程。
@@ -96,17 +96,7 @@ void Com_SetParaTask(void)
 							  datalen += sizeof(sTime);
 
 							  break; 
-			case FIX_CARD:  
-//							  locotype = gstrProductInfo.sLocoId.Type;	//车型
-//							  loconum  = gstrProductInfo.sLocoId.Num;	//编号
 
-							  memcpy(&buf[datalen],(unsigned char *)&locotype,sizeof(locotype));
-							  datalen += sizeof(locotype);
-							 
-							  memcpy(&buf[datalen],(unsigned char *)&loconum,sizeof(loconum));
-							  datalen += sizeof(loconum);							  
-							  
-				     		  break; 
 			case COPY_FRAM_CARD:  
 							  break; 
 			case EXPAND_CARD:  	

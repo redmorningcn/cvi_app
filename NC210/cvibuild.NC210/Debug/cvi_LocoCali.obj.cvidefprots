@@ -1,0 +1,68 @@
+[LoadLocoCaliPanel]
+Class="Function"
+Prototype="void LoadLocoCaliPanel();"
+
+[OpenLocoCaliCallback]
+Class="Function"
+Prototype="int OpenLocoCaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[QuitLocoCaliPanel]
+Class="Function"
+Prototype="void QuitLocoCaliPanel();"
+
+[LocoCaliPanelCB]
+Class="Function"
+Prototype="int LocoCaliPanelCB(int panel, int event, void *callbackData, int eventData1, int eventData2);"
+
+[LocoCaliTimerCallback]
+Class="Function"
+Prototype="int LocoCaliTimerCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[V110LowCallback]
+Class="Function"
+Prototype="int V110LowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[QYLowCallback]
+Class="Function"
+Prototype="int QYLowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[ZDLowCallback]
+Class="Function"
+Prototype="int ZDLowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[XQLowCallback]
+Class="Function"
+Prototype="int XQLowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[XHLowCallback]
+Class="Function"
+Prototype="int XHLowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[LWLowCallback]
+Class="Function"
+Prototype="int LWLowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[LWCaliCallback]
+Class="Function"
+Prototype="int LWCaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[XHCaliCallback]
+Class="Function"
+Prototype="int XHCaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[XQCaliCallback]
+Class="Function"
+Prototype="int XQCaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[ZDCaliCallback]
+Class="Function"
+Prototype="int ZDCaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[QYCaliCallback]
+Class="Function"
+Prototype="int QYCaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[V110CaliCallback]
+Class="Function"
+Prototype="int V110CaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

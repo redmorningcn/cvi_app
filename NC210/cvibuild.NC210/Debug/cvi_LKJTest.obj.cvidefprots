@@ -1,0 +1,28 @@
+[LoadLKJTestPanel]
+Class="Function"
+Prototype="void LoadLKJTestPanel();"
+
+[OpenLKJTestCallback]
+Class="Function"
+Prototype="int OpenLKJTestCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[QuitLKJTestPanel]
+Class="Function"
+Prototype="void QuitLKJTestPanel();"
+
+[LKJTestPanelCB]
+Class="Function"
+Prototype="int LKJTestPanelCB(int panel, int event, void *callbackData, int eventData1, int eventData2);"
+
+[LKJTestTimerCallback]
+Class="Function"
+Prototype="int LKJTestTimerCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[ReadRecordCallback]
+Class="Function"
+Prototype="int ReadRecordCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[ClearRecordCallback]
+Class="Function"
+Prototype="int ClearRecordCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

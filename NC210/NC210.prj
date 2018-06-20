@@ -1,6 +1,6 @@
 [Project Header]
 Version = 1700
-Pathname = "/f/cvi/app/NC210A/csnc_setpara.prj"
+Pathname = "/f/cvi/app/NC210/NC210.prj"
 Project Label = "NC210"
 CVI Dir = "/c/program files (x86)/national instruments/cvi2017"
 CVI Shared Dir = "/C/Program Files (x86)/National Instruments/Shared/CVI"
@@ -10,7 +10,7 @@ IVI Standard Root Dir = "/C/Program Files (x86)/IVI Foundation/IVI"
 VXIplug&play Framework Dir = "/C/Program Files (x86)/IVI Foundation/VISA/winnt"
 IVI Standard Root 64-bit Dir = "/C/Program Files/IVI Foundation/IVI"
 VXIplug&play Framework 64-bit Dir = "/C/Program Files/IVI Foundation/VISA/win64"
-Number of Files = 27
+Number of Files = 34
 Target Type = "Executable"
 Flags = 2064
 Copied From Locked InstrDrv Directory = False
@@ -58,8 +58,8 @@ File Type = "User Interface Resource"
 Res Id = 2
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "setpara/cvi_setpara.uir"
-Path = "/f/cvi/app/NC210A/setpara/cvi_setpara.uir"
+Path Rel Path = "LKJ_test/cvi_LKJTest.uir"
+Path = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTest.uir"
 Exclude = False
 Project Flags = 0
 Folder = "uir"
@@ -70,16 +70,64 @@ File Type = "User Interface Resource"
 Res Id = 3
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "mian.uir"
-Path = "/f/cvi/app/NC210A/mian.uir"
+Path Rel Path = "locoCali/cvi_LocoCali.uir"
+Path = "/f/cvi/app/NC210/locoCali/cvi_LocoCali.uir"
 Exclude = False
 Project Flags = 0
 Folder = "uir"
 Folder Id = 0
 
 [File 0004]
-File Type = "CSource"
+File Type = "User Interface Resource"
 Res Id = 4
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "setpara/cvi_setpara.uir"
+Path = "/f/cvi/app/NC210/setpara/cvi_setpara.uir"
+Exclude = False
+Project Flags = 0
+Folder = "uir"
+Folder Id = 0
+
+[File 0005]
+File Type = "User Interface Resource"
+Res Id = 5
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "speedCali/cvi_SpeedCali.uir"
+Path = "/f/cvi/app/NC210/speedCali/cvi_SpeedCali.uir"
+Exclude = False
+Project Flags = 0
+Folder = "uir"
+Folder Id = 0
+
+[File 0006]
+File Type = "User Interface Resource"
+Res Id = 6
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../csnc_iap/iap/IAP.uir"
+Path = "/f/cvi/app/csnc_iap/iap/IAP.uir"
+Exclude = False
+Project Flags = 0
+Folder = "uir"
+Folder Id = 0
+
+[File 0007]
+File Type = "User Interface Resource"
+Res Id = 7
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "main.uir"
+Path = "/f/cvi/app/NC210/main.uir"
+Exclude = False
+Project Flags = 0
+Folder = "uir"
+Folder Id = 0
+
+[File 0008]
+File Type = "CSource"
+Res Id = 8
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "../c_comm/crccheck/CrcCheck.c"
@@ -90,9 +138,9 @@ Project Flags = 0
 Folder = "source/globe"
 Folder Id = 2
 
-[File 0005]
+[File 0009]
 File Type = "CSource"
-Res Id = 5
+Res Id = 9
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "../c_comm/csnr_package_deal/csnr_package_deal.c"
@@ -103,65 +151,13 @@ Project Flags = 0
 Folder = "source/globe"
 Folder Id = 2
 
-[File 0006]
-File Type = "CSource"
-Res Id = 6
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "../ansytime/cvi_ansytimer.c"
-Path = "/f/cvi/app/ansytime/cvi_ansytimer.c"
-Exclude = False
-Compile Into Object File = False
-Project Flags = 0
-Folder = "source/cvi_bsp"
-Folder Id = 3
-
-[File 0007]
-File Type = "CSource"
-Res Id = 7
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "../csnc_debug/cvi_bspComm.c"
-Path = "/f/cvi/app/csnc_debug/cvi_bspComm.c"
-Exclude = False
-Compile Into Object File = False
-Project Flags = 0
-Folder = "source/cvi_bsp"
-Folder Id = 3
-
-[File 0008]
-File Type = "CSource"
-Res Id = 8
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "../opencom/source/cvi_com1.c"
-Path = "/f/cvi/app/opencom/source/cvi_com1.c"
-Exclude = False
-Compile Into Object File = False
-Project Flags = 0
-Folder = "source/cvi_bsp"
-Folder Id = 3
-
-[File 0009]
-File Type = "CSource"
-Res Id = 9
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "../opencom/source/cvi_com_operate.c"
-Path = "/f/cvi/app/opencom/source/cvi_com_operate.c"
-Exclude = False
-Compile Into Object File = False
-Project Flags = 0
-Folder = "source/cvi_bsp"
-Folder Id = 3
-
 [File 0010]
 File Type = "CSource"
 Res Id = 10
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "../cvi_comm/cvi_comm.c"
-Path = "/f/cvi/app/cvi_comm/cvi_comm.c"
+Path Rel Path = "../ansytime/cvi_ansytimer.c"
+Path = "/f/cvi/app/ansytime/cvi_ansytimer.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
@@ -173,131 +169,138 @@ File Type = "CSource"
 Res Id = 11
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "setpara/setpara.c"
-Path = "/f/cvi/app/NC210A/setpara/setpara.c"
+Path Rel Path = "../csnc_debug/cvi_bspComm.c"
+Path = "/f/cvi/app/csnc_debug/cvi_bspComm.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
-Folder = "source/cvi_app"
-Folder Id = 4
+Folder = "source/cvi_bsp"
+Folder Id = 3
 
 [File 0012]
 File Type = "CSource"
 Res Id = 12
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "setpara/cvi_setpara.c"
-Path = "/f/cvi/app/NC210A/setpara/cvi_setpara.c"
+Path Rel Path = "../opencom/source/cvi_com1.c"
+Path = "/f/cvi/app/opencom/source/cvi_com1.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
-Folder = "source"
-Folder Id = 1
+Folder = "source/cvi_bsp"
+Folder Id = 3
 
 [File 0013]
 File Type = "CSource"
 Res Id = 13
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "main.c"
-Path = "/f/cvi/app/NC210A/main.c"
+Path Rel Path = "../opencom/source/cvi_com_operate.c"
+Path = "/f/cvi/app/opencom/source/cvi_com_operate.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "source/cvi_bsp"
+Folder Id = 3
+
+[File 0014]
+File Type = "CSource"
+Res Id = 14
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../cvi_comm/cvi_comm.c"
+Path = "/f/cvi/app/cvi_comm/cvi_comm.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "source/cvi_bsp"
+Folder Id = 3
+
+[File 0015]
+File Type = "CSource"
+Res Id = 15
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "LKJ_test/cvi_LKJTest.c"
+Path = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTest.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "source/cvi_bsp"
+Folder Id = 3
+
+[File 0016]
+File Type = "CSource"
+Res Id = 16
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "locoCali/cvi_LocoCali.c"
+Path = "/f/cvi/app/NC210/locoCali/cvi_LocoCali.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "source/cvi_bsp"
+Folder Id = 3
+
+[File 0017]
+File Type = "CSource"
+Res Id = 17
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "speedCali/cvi_SpeedCali.c"
+Path = "/f/cvi/app/NC210/speedCali/cvi_SpeedCali.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "source/cvi_bsp"
+Folder Id = 3
+
+[File 0018]
+File Type = "CSource"
+Res Id = 18
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "setpara/setpara.c"
+Path = "/f/cvi/app/NC210/setpara/setpara.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+Folder = "source/cvi_app"
+Folder Id = 4
+
+[File 0019]
+File Type = "CSource"
+Res Id = 19
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "setpara/cvi_setpara.c"
+Path = "/f/cvi/app/NC210/setpara/cvi_setpara.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
 Folder = "source"
 Folder Id = 1
 
-[File 0014]
-File Type = "Include"
-Res Id = 14
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "../opencom/uir/comconfig.h"
-Path = "/f/cvi/app/opencom/uir/comconfig.h"
-Exclude = False
-Project Flags = 0
-Folder = "head"
-Folder Id = 5
-
-[File 0015]
-File Type = "Include"
-Res Id = 15
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "../c_comm/crccheck/CrcCheck.h"
-Path = "/f/cvi/app/c_comm/crccheck/CrcCheck.h"
-Exclude = False
-Project Flags = 0
-Folder = "head"
-Folder Id = 5
-
-[File 0016]
-File Type = "Include"
-Res Id = 16
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "../c_comm/csnr_package_deal/csnr_package_deal.h"
-Path = "/f/cvi/app/c_comm/csnr_package_deal/csnr_package_deal.h"
-Exclude = False
-Project Flags = 0
-Folder = "head"
-Folder Id = 5
-
-[File 0017]
-File Type = "Include"
-Res Id = 17
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "../ansytime/cvi_ansytimer.h"
-Path = "/f/cvi/app/ansytime/cvi_ansytimer.h"
-Exclude = False
-Project Flags = 0
-Folder = "head"
-Folder Id = 5
-
-[File 0018]
-File Type = "Include"
-Res Id = 18
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "../csnc_debug/cvi_bspComm.h"
-Path = "/f/cvi/app/csnc_debug/cvi_bspComm.h"
-Exclude = False
-Project Flags = 0
-Folder = "head"
-Folder Id = 5
-
-[File 0019]
-File Type = "Include"
-Res Id = 19
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "../opencom/source/cvi_com1.h"
-Path = "/f/cvi/app/opencom/source/cvi_com1.h"
-Exclude = False
-Project Flags = 0
-Folder = "head"
-Folder Id = 5
-
 [File 0020]
-File Type = "Include"
+File Type = "CSource"
 Res Id = 20
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "../opencom/source/cvi_com_operate.h"
-Path = "/f/cvi/app/opencom/source/cvi_com_operate.h"
+Path Rel Path = "main.c"
+Path = "/f/cvi/app/NC210/main.c"
 Exclude = False
+Compile Into Object File = False
 Project Flags = 0
-Folder = "head"
-Folder Id = 5
+Folder = "source"
+Folder Id = 1
 
 [File 0021]
 File Type = "Include"
 Res Id = 21
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "../cvi_comm/cvi_comm.h"
-Path = "/f/cvi/app/cvi_comm/cvi_comm.h"
+Path Rel Path = "../opencom/uir/comconfig.h"
+Path = "/f/cvi/app/opencom/uir/comconfig.h"
 Exclude = False
 Project Flags = 0
 Folder = "head"
@@ -308,8 +311,8 @@ File Type = "Include"
 Res Id = 22
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "../config/cvi_config.h"
-Path = "/f/cvi/app/config/cvi_config.h"
+Path Rel Path = "../c_comm/crccheck/CrcCheck.h"
+Path = "/f/cvi/app/c_comm/crccheck/CrcCheck.h"
 Exclude = False
 Project Flags = 0
 Folder = "head"
@@ -320,8 +323,8 @@ File Type = "Include"
 Res Id = 23
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "setpara/cvi_setpara.h"
-Path = "/f/cvi/app/NC210A/setpara/cvi_setpara.h"
+Path Rel Path = "../c_comm/csnr_package_deal/csnr_package_deal.h"
+Path = "/f/cvi/app/c_comm/csnr_package_deal/csnr_package_deal.h"
 Exclude = False
 Project Flags = 0
 Folder = "head"
@@ -332,8 +335,8 @@ File Type = "Include"
 Res Id = 24
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "../c_comm/includes.h"
-Path = "/f/cvi/app/c_comm/includes.h"
+Path Rel Path = "../ansytime/cvi_ansytimer.h"
+Path = "/f/cvi/app/ansytime/cvi_ansytimer.h"
 Exclude = False
 Project Flags = 0
 Folder = "head"
@@ -344,8 +347,8 @@ File Type = "Include"
 Res Id = 25
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "mian.h"
-Path = "/f/cvi/app/NC210A/mian.h"
+Path Rel Path = "../csnc_debug/cvi_bspComm.h"
+Path = "/f/cvi/app/csnc_debug/cvi_bspComm.h"
 Exclude = False
 Project Flags = 0
 Folder = "head"
@@ -356,21 +359,105 @@ File Type = "Include"
 Res Id = 26
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "setpara/setpara.h"
-Path = "/f/cvi/app/NC210A/setpara/setpara.h"
+Path Rel Path = "../opencom/source/cvi_com1.h"
+Path = "/f/cvi/app/opencom/source/cvi_com1.h"
 Exclude = False
 Project Flags = 0
 Folder = "head"
 Folder Id = 5
 
 [File 0027]
-File Type = "Function Panel"
+File Type = "Include"
 Res Id = 27
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../opencom/source/cvi_com_operate.h"
+Path = "/f/cvi/app/opencom/source/cvi_com_operate.h"
+Exclude = False
+Project Flags = 0
+Folder = "head"
+Folder Id = 5
+
+[File 0028]
+File Type = "Include"
+Res Id = 28
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../cvi_comm/cvi_comm.h"
+Path = "/f/cvi/app/cvi_comm/cvi_comm.h"
+Exclude = False
+Project Flags = 0
+Folder = "head"
+Folder Id = 5
+
+[File 0029]
+File Type = "Include"
+Res Id = 29
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../config/cvi_config.h"
+Path = "/f/cvi/app/config/cvi_config.h"
+Exclude = False
+Project Flags = 0
+Folder = "head"
+Folder Id = 5
+
+[File 0030]
+File Type = "Include"
+Res Id = 30
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "setpara/cvi_setpara.h"
+Path = "/f/cvi/app/NC210/setpara/cvi_setpara.h"
+Exclude = False
+Project Flags = 0
+Folder = "head"
+Folder Id = 5
+
+[File 0031]
+File Type = "Include"
+Res Id = 31
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "../c_comm/includes.h"
+Path = "/f/cvi/app/c_comm/includes.h"
+Exclude = False
+Project Flags = 0
+Folder = "head"
+Folder Id = 5
+
+[File 0032]
+File Type = "Include"
+Res Id = 32
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "main.h"
+Path = "/f/cvi/app/NC210/main.h"
+Exclude = False
+Project Flags = 0
+Folder = "head"
+Folder Id = 5
+
+[File 0033]
+File Type = "Include"
+Res Id = 33
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "setpara/setpara.h"
+Path = "/f/cvi/app/NC210/setpara/setpara.h"
+Exclude = False
+Project Flags = 0
+Folder = "head"
+Folder Id = 5
+
+[File 0034]
+File Type = "Function Panel"
+Res Id = 34
 Path Is Rel = True
 Path Rel To = "CVI"
 Path Rel To Override = "CVI"
 Path Rel Path = "toolslib/toolbox/asynctmr.fp"
-Path = "/c/Program Files (x86)/National Instruments/CVI2017/toolslib/toolbox/asynctmr.fp"
+Path = "/c/program files (x86)/national instruments/cvi2017/toolslib/toolbox/asynctmr.fp"
 Exclude = False
 Project Flags = 0
 Folder = "Instrument Files"
@@ -672,24 +759,32 @@ Include Path 2 Is Rel = True
 Include Path 2 Rel To = "Project"
 Include Path 2 Rel Path = "../cvi_model/database"
 Include Path 2 = "/f/cvi/app/cvi_model/database"
+Include Path 3 Is Rel = True
+Include Path 3 Rel To = "Project"
+Include Path 3 Rel Path = "locoCali"
+Include Path 3 = "/f/cvi/app/NC210/locoCali"
+Include Path 4 Is Rel = True
+Include Path 4 Rel To = "Project"
+Include Path 4 Rel Path = "LKJ_test"
+Include Path 4 = "/f/cvi/app/NC210/LKJ_test"
 
 [Create Executable]
 Executable File_Debug Is Rel = True
 Executable File_Debug Rel To = "Project"
 Executable File_Debug Rel Path = "LKJ接口在线监测装置测试软件.exe"
-Executable File_Debug = "/f/cvi/app/NC210A/LKJ接口在线监测装置测试软件.exe"
+Executable File_Debug = "/f/cvi/app/NC210/LKJ接口在线监测装置测试软件.exe"
 Executable File_Release Is Rel = True
 Executable File_Release Rel To = "Project"
 Executable File_Release Rel Path = "csnc_setpara.exe"
-Executable File_Release = "/f/cvi/app/NC210A/csnc_setpara.exe"
+Executable File_Release = "/f/cvi/app/NC210/csnc_setpara.exe"
 Executable File_Debug64 Is Rel = True
 Executable File_Debug64 Rel To = "Project"
 Executable File_Debug64 Rel Path = "csnc_setpara.exe"
-Executable File_Debug64 = "/f/cvi/app/NC210A/csnc_setpara.exe"
+Executable File_Debug64 = "/f/cvi/app/NC210/csnc_setpara.exe"
 Executable File_Release64 Is Rel = True
 Executable File_Release64 Rel To = "Project"
 Executable File_Release64 Rel Path = "csnc_setpara.exe"
-Executable File_Release64 = "/f/cvi/app/NC210A/csnc_setpara.exe"
+Executable File_Release64 = "/f/cvi/app/NC210/csnc_setpara.exe"
 Icon File Is Rel = False
 Icon File = ""
 Application Title = ""

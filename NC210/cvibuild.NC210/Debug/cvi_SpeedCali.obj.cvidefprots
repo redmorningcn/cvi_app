@@ -1,0 +1,128 @@
+[LoadSpeedCaliPanel]
+Class="Function"
+Prototype="void LoadSpeedCaliPanel();"
+
+[OpenSpeedCaliCallback]
+Class="Function"
+Prototype="int OpenSpeedCaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[QuitSpeedCaliPanel]
+Class="Function"
+Prototype="void QuitSpeedCaliPanel();"
+
+[SpeedCaliPanelCB]
+Class="Function"
+Prototype="int SpeedCaliPanelCB(int panel, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SpeedCaliTimerCallback]
+Class="Function"
+Prototype="int SpeedCaliTimerCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G1_VccCaliCallback]
+Class="Function"
+Prototype="int G1_VccCaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G1_Speed1CaliCallback]
+Class="Function"
+Prototype="int G1_Speed1CaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G1_Speed2CaliCallback]
+Class="Function"
+Prototype="int G1_Speed2CaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G1_VccLowCallback]
+Class="Function"
+Prototype="int G1_VccLowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G1_Speed1LowCallback]
+Class="Function"
+Prototype="int G1_Speed1LowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G1_Speed2lowCallback]
+Class="Function"
+Prototype="int G1_Speed2lowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G1_Speed2HigCallback]
+Class="Function"
+Prototype="int G1_Speed2HigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G2_VccCaliCallback]
+Class="Function"
+Prototype="int G2_VccCaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G2_Speed1CaliCallback]
+Class="Function"
+Prototype="int G2_Speed1CaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G2_Speed2CaliCallback]
+Class="Function"
+Prototype="int G2_Speed2CaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G2_VccLowCallback]
+Class="Function"
+Prototype="int G2_VccLowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G2_Speed1LowCallback]
+Class="Function"
+Prototype="int G2_Speed1LowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G2_Speed2lowCallback]
+Class="Function"
+Prototype="int G2_Speed2lowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G1_VccHigCallback]
+Class="Function"
+Prototype="int G1_VccHigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G1_Speed1HigCallback]
+Class="Function"
+Prototype="int G1_Speed1HigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G2_VccHigCallback]
+Class="Function"
+Prototype="int G2_VccHigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G2_Speed1HigCallback]
+Class="Function"
+Prototype="int G2_Speed1HigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G2_Speed2HigCallback]
+Class="Function"
+Prototype="int G2_Speed2HigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G3_Speed1CaliCallback]
+Class="Function"
+Prototype="int G3_Speed1CaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G3_VccCaliCallback]
+Class="Function"
+Prototype="int G3_VccCaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G3_Speed2CaliCallback]
+Class="Function"
+Prototype="int G3_Speed2CaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G3_VccLowCallback]
+Class="Function"
+Prototype="int G3_VccLowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G3_Speed1LowCallback]
+Class="Function"
+Prototype="int G3_Speed1LowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G3_Speed2lowCallback]
+Class="Function"
+Prototype="int G3_Speed2lowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G3_VccHigCallback]
+Class="Function"
+Prototype="int G3_VccHigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G3_Speed1HigCallback]
+Class="Function"
+Prototype="int G3_Speed1HigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G3_Speed2HigCallback]
+Class="Function"
+Prototype="int G3_Speed2HigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

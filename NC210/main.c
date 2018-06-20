@@ -1,4 +1,4 @@
-#include "f:\cvi\project\CSNC\csnc_setpara\mian.h"
+#include "f:\cvi\app\NC210\mian.h"
 
 #include <utility.h>
 #include <ansi_c.h>
@@ -31,7 +31,7 @@ int main (int argc, char *argv[])
 	if (InitCVIRTE (0, argv, 0) == 0)					/* Initialize CVI libraries */
 		return -1;	/* out of memory */
 	
-	gmainPanel = LoadPanel (0, "mian.uir", MAINPANEL); 	//装载主面板
+	gmainPanel = LoadPanel (0, "main.uir", MAINPANEL); 	//装载主面板
 
 	sCtrl.PC.sCom = cvi_initCom1Contrl();				//串口1建立关联（移植需修改）
 
@@ -73,13 +73,23 @@ void CVI_MainPanelHandle(int panel)
 /////////////////////////////////////////////////刷新配置信息
 	if(sCtrl.PC.sCom != NULL && sCtrl.PC.sCom->sConfig.open == 1)	  	//串口打开
 	{				
-		SetCtrlAttribute (panel, MAINPANEL_OPEN_SETPARA, ATTR_DIMMED, 0);
+		SetCtrlAttribute (panel, MAINPANEL_SPEED_CALI	, ATTR_DIMMED, 0);
+		SetCtrlAttribute (panel, MAINPANEL_TEST			, ATTR_DIMMED, 0);
+		SetCtrlAttribute (panel, MAINPANEL_IAP			, ATTR_DIMMED, 0);
+		SetCtrlAttribute (panel, MAINPANEL_LOCO_CALI	, ATTR_DIMMED, 0);
+		SetCtrlAttribute (panel, MAINPANEL_OPEN_SETPARA	, ATTR_DIMMED, 0);
+
 		SetCtrlAttribute (panel, MAINPANEL_OPEN_COM, ATTR_LABEL_TEXT, "关闭串口");
 	}
 
 	if(sCtrl.PC.sCom != NULL && sCtrl.PC.sCom->sConfig.open == 0)	  	//串口关闭
 	{
-		SetCtrlAttribute (panel, MAINPANEL_OPEN_SETPARA, ATTR_DIMMED, 1);
+		SetCtrlAttribute (panel, MAINPANEL_SPEED_CALI	, ATTR_DIMMED, 1);
+		SetCtrlAttribute (panel, MAINPANEL_TEST			, ATTR_DIMMED, 1);
+		SetCtrlAttribute (panel, MAINPANEL_IAP			, ATTR_DIMMED, 1);
+		SetCtrlAttribute (panel, MAINPANEL_LOCO_CALI	, ATTR_DIMMED, 1);
+		SetCtrlAttribute (panel, MAINPANEL_OPEN_SETPARA	, ATTR_DIMMED, 1);		
+		
 		SetCtrlAttribute (panel, MAINPANEL_OPEN_COM, ATTR_LABEL_TEXT, "打开串口");
 	}
 }

@@ -24,7 +24,8 @@
 //  Globals																					
 /********************************************************************************************/
 //面板变量
-int 			gsetpara_panelHandle;
+int 					gsetpara_panelHandle;
+extern		int			gmainPanel;
 
 /********************************************************************************************/
 //local																					
@@ -62,7 +63,7 @@ int CVICALLBACK OpenSetParaPanelCallback (int panel, int control, int event,
 			
 			ReadSetPararomFile();													//调出以前存储的参数
 			
-			//HidePanel(gPanelHandle);												//隐藏主面板
+			HidePanel(gmainPanel);												//隐藏主面板
 			break;
 	}
 	return 0;
@@ -96,6 +97,8 @@ void	QuitSetParaPanel(void)
 	
 	HidePanel (gsetpara_panelHandle);
 	
+	DisplayPanel (gmainPanel);
+
 	gsetpara_panelHandle = 0;	
 }
 
@@ -106,26 +109,6 @@ int CVICALLBACK QuitCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			QuitSetParaPanel();			//退出面板操作
-			break;
-	}
-	return 0;
-}
-
-int CVICALLBACK SetLocoCallBack (int panel, int control, int event,
-		void *callbackData, int eventData1, int eventData2)
-{
-	switch (event)
-	{
-		case EVENT_COMMIT:
-			l_eqiupmentcode = FIX_CARD;
-			
-			GetCtrlVal(panel,SETP_PANEL_LOCOTYPE,&gstrProductInfo.sLocoId.Type);
-			GetCtrlVal(panel,SETP_PANEL_LOCONUM,&gstrProductInfo.sLocoId.Num);
-			
-			if(gstrProductInfo.sLocoId.Num == 0|| gstrProductInfo.sLocoId.Type==0)
-			{
-				MessagePopup ("ErrMessage", "信息内容错误，请重新输入");
-			}
 			break;
 	}
 	return 0;
@@ -143,26 +126,13 @@ int CVICALLBACK SetTimeCallBack (int panel, int control, int event,
 	return 0;
 }
 
-
-
-
-
-
-
-
-
 /********************************************************************************************/
 /* 给控制面板赋值
 /********************************************************************************************/
 void	SetSetParaPanelVal(void)
 {
-	SetCtrlVal(gsetpara_panelHandle,SETP_PANEL_LOCOTYPE,gstrProductInfo.sLocoId.Type);
-	SetCtrlVal(gsetpara_panelHandle,SETP_PANEL_LOCONUM,gstrProductInfo.sLocoId.Num);	
-	
-//	SetCtrlVal(gsetpara_panelHandle,SETP_PANEL_DEN,gsOilPara.Density);
-	SetCtrlVal(gsetpara_panelHandle,SETP_PANEL_HIG,gsOilPara.Hig);
-	SetCtrlVal(gsetpara_panelHandle,SETP_PANEL_SEL,gsOilPara.ModelNum);
-	SetCtrlVal(gsetpara_panelHandle,SETP_PANEL_CALCPARA,gsOilPara.Slope);	
+	SetCtrlVal(gsetpara_panelHandle,SETP_PANEL_LOCOTYPE,gstrProductInfo.LocoId.Type);
+	SetCtrlVal(gsetpara_panelHandle,SETP_PANEL_LOCONUM,gstrProductInfo.LocoId.Num);	
 }
 
 /********************************************************************************************/
@@ -170,13 +140,8 @@ void	SetSetParaPanelVal(void)
 /********************************************************************************************/
 void	GetSetParaPanelVal(void)
 {
-	GetCtrlVal(gsetpara_panelHandle,SETP_PANEL_LOCOTYPE,&gstrProductInfo.sLocoId.Type);
-	GetCtrlVal(gsetpara_panelHandle,SETP_PANEL_LOCONUM,&gstrProductInfo.sLocoId.Num);	
-	
-//	GetCtrlVal(gsetpara_panelHandle,SETP_PANEL_DEN,&gsOilPara.Density);
-	GetCtrlVal(gsetpara_panelHandle,SETP_PANEL_HIG,&gsOilPara.Hig);
-	GetCtrlVal(gsetpara_panelHandle,SETP_PANEL_SEL,&gsOilPara.ModelNum);
-	GetCtrlVal(gsetpara_panelHandle,SETP_PANEL_CALCPARA,&gsOilPara.Slope);	
+	GetCtrlVal(gsetpara_panelHandle,SETP_PANEL_LOCOTYPE,&gstrProductInfo.LocoId.Type);
+	GetCtrlVal(gsetpara_panelHandle,SETP_PANEL_LOCONUM,&gstrProductInfo.LocoId.Num);	
 }
 
 

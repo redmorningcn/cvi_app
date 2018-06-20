@@ -1,0 +1,48 @@
+[LoadCsncSetparaPanel]
+Class="Function"
+Prototype="void LoadCsncSetparaPanel();"
+
+[OpenSetParaPanelCallback]
+Class="Function"
+Prototype="int OpenSetParaPanelCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[DisplayTimeOnSetPanel]
+Class="Function"
+Prototype="void DisplayTimeOnSetPanel();"
+
+[QuitSetParaPanel]
+Class="Function"
+Prototype="void QuitSetParaPanel();"
+
+[QuitCallback]
+Class="Function"
+Prototype="int QuitCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SetTimeCallBack]
+Class="Function"
+Prototype="int SetTimeCallBack(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SetSetParaPanelVal]
+Class="Function"
+Prototype="void SetSetParaPanelVal();"
+
+[GetSetParaPanelVal]
+Class="Function"
+Prototype="void GetSetParaPanelVal();"
+
+[ReadSetPararomFile]
+Class="Function"
+Prototype="int ReadSetPararomFile();"
+
+[WriteSetParaToFile]
+Class="Function"
+Prototype="void WriteSetParaToFile();"
+
+[SetParaPanelCB]
+Class="Function"
+Prototype="int SetParaPanelCB(int panel, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SetParaTimerCallback]
+Class="Function"
+Prototype="int SetParaTimerCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
