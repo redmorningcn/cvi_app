@@ -19,6 +19,7 @@
 #include "cvi_setpara.h"
 
 #include "includes.h"
+#include "app_type.h"
 
 
 
@@ -36,29 +37,16 @@
 #define		MAX_PATHNAME_LEN		512
 #define		SETPRAR_FILE_NAME		"cvi_setpara.ini"
 
+#define		CMD_TIME_SET        0x00000100			//时间卡（IC/无线）
+#define		CMD_LOCO_SET        0x00002000			//装车卡（IC/无线）
+#define		CMD_REC_CLR			0x00080000			//记录清零（无线）
+#define		CMD_SYS_RST	        0x00100000		    //系统复位（无线）
+#define		CMD_PARA_SET        0x00800000		    //写参数（无线）
+#define		CMD_PARA_GET        0x00800001		    //读参数（无线）
+#define		CMD_RECORD_GET      0x01000001		    //读数据记录（无线）
+#define		CMD_DETECT_SET      0x02000000		    //读检测板参数（无线）
+#define		CMD_DETECT_GET      0x02000001		    //写检测板参数（无线）
 
-#define		DATA_CARD			0x0001			//数据卡
-#define		DENSITY_CARD		0x0020			//密度卡
-#define		MODEL_CARD			0x0040			//参数模型卡
-#define		TIME_CARD			0x0100			//时间卡
-#define		HIGHT_CARD			0x0200			//高度调整卡
-#define		COPY_CARD			0x0400			//FLASH复制卡
-#define		MODEL_SELECT_CARD	0x1000			//模型选择卡
-#define		FIX_CARD			0x2000			//装车卡
-#define		COPY_FRAM_CARD		0x4000			//铁电拷贝卡
-
-#define		SET_DATA_CARD		0x0080			//置数卡
-#define		DEBUG_CARD			0x0800			//调试复制卡
-#define		DATA_CARD_DIS		0x10000			//数据卡
-#define		DATA_CARD_FIN		0x20000			//数据卡
-
-#define		EXPAND_CARD			0x8000			//扩展卡
-#define		SYS_RUN_PARA		0x40000	
-#define		CLEAR_ALL			0x80000			//设置运行参数
-
-#define		RST_SYS				0x100000		//系统复位
-#define		CALC_PARA           0x200000		//
-#define		RUN_MODEL_PARA      0x400000		//运算模型卡
 
 
 
@@ -82,35 +70,23 @@ typedef		struct	_stcTime_
 	uint16_t	CrcCheck;
 }stcTime;
  
-//机车信息   车型+车号
-//4 bytes
-typedef struct {     
- 	uint16	Type;				//机车类型	2	参见机车类型代码表
- 	uint16	Num;				//机车号		2	
-} stcLocoId;
+
 
 //产品信息:型号 + 编号
 //12 bytes
-typedef struct _StrProductInfo {
-	u32   		        Type;			            //产品类别
-	u32   		        Id;				            //产品编号	16110002
-	stcLocoId		    LocoId;		                //机车信息	104(DF4B) - 1000
-    u16                 HwVer;                      //硬件版本
-    u16                 SwVer;                      //软件版本
-    u16                 LoadingTime;                //装车时间
-    u16                 LoadingStaff;               //装车人员
-    u16                 RepairTime;                 //维修时间
-    u16                 RepairStaff;                //维修人员
-    u8                  Rsv[12];                    //预留12个
-}StrProductInfo;
-
+typedef struct _StrParaRd {
+    u16         paraaddr;							//地址	
+    u16         paralen;							//长度
+    u16         parabuf[64]; 
+}StrTargetPara;
 
 /********************************************************************************************/
 /* Globals																					*/
 /********************************************************************************************/
 //串口结构体及通讯
-extern	int				l_eqiupmentcode;		//装置命令码，操作面板控制
-extern	StrProductInfo  gstrProductInfo;		//产品参数
+extern	int				l_eqiupmentcode;			//装置命令码，操作面板控制
+extern	StrProductInfo  gstrProductInfo;			//产品参数
+extern	StrTargetPara	gstrTargetPara;				//指定地址参数读
 
 
 /********************************************************************************************/

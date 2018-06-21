@@ -259,3 +259,14 @@ int CVICALLBACK V110CaliCallback (int panel, int control, int event,
 	return 0;
 }
 
+int CVICALLBACK HelpCallback (int panel, int control, int event,
+							  void *callbackData, int eventData1, int eventData2)
+{
+	switch (event)
+	{
+		case EVENT_COMMIT:
+				MessagePopup ("帮助信息", "1、选择“同步校准”，将和110V校准值相同！\r\n2、校准分高、低两点，在输入测量值后，对应测量值自动输入（可手动调整）");
+			break;
+	}
+	return 0;
+}

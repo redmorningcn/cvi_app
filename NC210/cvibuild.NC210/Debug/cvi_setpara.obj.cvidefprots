@@ -22,6 +22,14 @@ Prototype="int QuitCallback(int panel, int control, int event, void *callbackDat
 Class="Function"
 Prototype="int SetTimeCallBack(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
 
+[SetLocoCallBack]
+Class="Function"
+Prototype="int SetLocoCallBack(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SetProductCallBack]
+Class="Function"
+Prototype="int SetProductCallBack(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
 [SetSetParaPanelVal]
 Class="Function"
 Prototype="void SetSetParaPanelVal();"

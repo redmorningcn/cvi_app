@@ -87,6 +87,7 @@
 #define  LOCOCALI_ZD_SYNC                 72      /* control type: radioButton, callback function: (none) */
 #define  LOCOCALI_V110_SYNC               73      /* control type: radioButton, callback function: (none) */
 #define  LOCOCALI_QY_SYNC                 74      /* control type: radioButton, callback function: (none) */
+#define  LOCOCALI_COMMANDBUTTON           75      /* control type: command, callback function: HelpCallback */
 
 
      /* Control Arrays: */
@@ -101,6 +102,7 @@
 
      /* Callback Prototypes: */
 
+int  CVICALLBACK HelpCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK LocoCaliPanelCB(int panel, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK LocoCaliTimerCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK LWCaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);

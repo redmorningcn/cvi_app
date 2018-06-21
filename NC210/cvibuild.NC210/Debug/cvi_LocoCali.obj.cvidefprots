@@ -66,3 +66,7 @@ Prototype="int QYCaliCallback(int panel, int control, int event, void *callbackD
 Class="Function"
 Prototype="int V110CaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
 
+[HelpCallback]
+Class="Function"
+Prototype="int HelpCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

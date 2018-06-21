@@ -120,7 +120,50 @@ int CVICALLBACK SetTimeCallBack (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-		   	l_eqiupmentcode = TIME_CARD; 
+		   	l_eqiupmentcode = CMD_TIME_SET; 
+			break;
+	}
+	return 0;
+}
+
+int CVICALLBACK SetLocoCallBack (int panel, int control, int event,
+		void *callbackData, int eventData1, int eventData2)
+{
+	switch (event)
+	{
+		case EVENT_COMMIT:
+			l_eqiupmentcode = CMD_LOCO_SET;
+			
+			GetCtrlVal(panel,SETP_PANEL_LOCOTYPE,&gstrProductInfo.LocoId.Type);
+			GetCtrlVal(panel,SETP_PANEL_LOCONUM, &gstrProductInfo.LocoId.Nbr);
+			
+			if(gstrProductInfo.LocoId.Nbr == 0|| gstrProductInfo.LocoId.Type==0)
+			{
+				MessagePopup ("ErrMessage", "信息内容错误，请重新输入");
+			}
+			break;
+	}
+	return 0;
+}
+
+int CVICALLBACK SetProductCallBack (int panel, int control, int event,
+		void *callbackData, int eventData1, int eventData2)
+{
+	switch (event)
+	{
+		case EVENT_COMMIT:
+			l_eqiupmentcode = CMD_PARA_SET;				 
+			
+			gstrTargetPara.paraaddr = (u16)((u32)&Ctrl.sProductInfo.LocoId -  (u32)&Ctrl);
+			gstrTargetPara.paralen  = sizeof(Ctrl.sProductInfo.Type) +  sizeof(Ctrl.sProductInfo.Id);
+			
+			GetCtrlVal(panel,SETP_PANEL_PRO_TYPE,(u32*)&gstrTargetPara.parabuf);
+			GetCtrlVal(panel,SETP_PANEL_PRO_NUM, (u32*)&gstrTargetPara.parabuf[2]);
+			
+			if(gstrProductInfo.LocoId.Nbr == 0|| gstrProductInfo.LocoId.Type==0)
+			{
+				MessagePopup ("ErrMessage", "信息内容错误，请重新输入");
+			}
 			break;
 	}
 	return 0;
@@ -132,7 +175,7 @@ int CVICALLBACK SetTimeCallBack (int panel, int control, int event,
 void	SetSetParaPanelVal(void)
 {
 	SetCtrlVal(gsetpara_panelHandle,SETP_PANEL_LOCOTYPE,gstrProductInfo.LocoId.Type);
-	SetCtrlVal(gsetpara_panelHandle,SETP_PANEL_LOCONUM,gstrProductInfo.LocoId.Num);	
+	SetCtrlVal(gsetpara_panelHandle,SETP_PANEL_LOCONUM, gstrProductInfo.LocoId.Nbr);	
 }
 
 /********************************************************************************************/
@@ -141,7 +184,7 @@ void	SetSetParaPanelVal(void)
 void	GetSetParaPanelVal(void)
 {
 	GetCtrlVal(gsetpara_panelHandle,SETP_PANEL_LOCOTYPE,&gstrProductInfo.LocoId.Type);
-	GetCtrlVal(gsetpara_panelHandle,SETP_PANEL_LOCONUM,&gstrProductInfo.LocoId.Num);	
+	GetCtrlVal(gsetpara_panelHandle,SETP_PANEL_LOCONUM,&gstrProductInfo.LocoId.Nbr);	
 }
 
 

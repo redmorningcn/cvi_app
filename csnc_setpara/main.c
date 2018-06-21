@@ -1,4 +1,4 @@
-#include "f:\cvi\project\CSNC\csnc_setpara\mian.h"
+#include "f:\cvi\app\csnc_setpara\mian.h"
 
 #include <utility.h>
 #include <ansi_c.h>

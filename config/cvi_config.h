@@ -12,12 +12,17 @@
 #define	CVI_CONFIG_H
 
 #include 	<cvi_BspComm.h>
+#include 	<app_config.h>
+
+
 
 typedef struct _stcSysCtrl {
 	stcThreadCommCtrl	PC;
 } stcSysCtrl;
 
 extern	stcSysCtrl		sCtrl;
+
+
 
 /*******************************************************************************
  *              end of file                                                    *

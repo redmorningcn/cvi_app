@@ -1,6 +1,7 @@
 CCFLAGS = -g ;
 HDRS = 	"f:\\cvi\\app\\cvi_database\\database"
 	"f:\\cvi\\app\\cvi_model\\database"
+	"f:\\cvi\\app\\csnc_setpara"
 	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\activex\\word"
 	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\activex\\excel"
 	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\custctrl"
