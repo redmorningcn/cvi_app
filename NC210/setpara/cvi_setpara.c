@@ -30,8 +30,8 @@ extern		int			gmainPanel;
 /********************************************************************************************/
 //local																					
 /********************************************************************************************/
-extern	void	WriteSetParaToFile(void);
-extern	int		ReadSetPararomFile(void);
+extern		void		WriteSetParaToFile(void);
+extern		int			ReadSetPararomFile(void);
 
 
 /********************************************************************************************/
@@ -154,7 +154,7 @@ int CVICALLBACK SetProductCallBack (int panel, int control, int event,
 		case EVENT_COMMIT:
 			l_eqiupmentcode = CMD_PARA_SET;				 
 			
-			gstrTargetPara.paraaddr = (u16)((u32)&Ctrl.sProductInfo.LocoId -  (u32)&Ctrl);
+			gstrTargetPara.paraaddr = (u16)((u32)&Ctrl.sProductInfo -  (u32)&Ctrl) ;
 			gstrTargetPara.paralen  = sizeof(Ctrl.sProductInfo.Type) +  sizeof(Ctrl.sProductInfo.Id);
 			
 			GetCtrlVal(panel,SETP_PANEL_PRO_TYPE,(u32*)&gstrTargetPara.parabuf);

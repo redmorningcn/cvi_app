@@ -30,7 +30,7 @@ Save Changes Before Compiling = "Always"
 Hide Windows = False
 Break At First Statement = False
 Sort Type = "File Name"
-Number of Opened Files = 42
+Number of Opened Files = 35
 Window Confinement Region Enabled = True
 MainColumnWidth = 242
 FileDateColumnWidth = 70
@@ -58,8 +58,8 @@ Disk Date = 3607577671
 In Projects = "1,"
 Window Top = 64
 Window Left = 26
-Window Z-Order = 3
-Source Window State = "1,58,58,58,11,30,30,0,0,76,0,0,0,0,0,25,83,0,93,110,531,855,1,0,"
+Window Z-Order = 1
+Source Window State = "1,58,58,58,11,30,30,0,0,151,0,0,0,0,0,18,82,0,94,20,531,855,1,0,"
 
 [File 0003]
 Path = "/f/cvi/app/NC210/setpara/cvi_setpara.uir"
@@ -70,7 +70,7 @@ Window Top = 64
 Window Left = 26
 Window Height = 431
 Window Width = 855
-Window Z-Order = 14
+Window Z-Order = 9
 
 [File 0004]
 Path = "/c/Program Files (x86)/National Instruments/CVI2017/include/utility.h"
@@ -79,7 +79,7 @@ Disk Date = 3573565200
 In Projects = ""
 Window Top = 33
 Window Left = 10
-Window Z-Order = 33
+Window Z-Order = 27
 Source Window State = "1,698,698,698,16,45,45,0,3,76,0,0,0,0,0,19,689,0,698,16,411,855,1,0,"
 
 [File 0005]
@@ -89,7 +89,7 @@ Disk Date = 3573565200
 In Projects = ""
 Window Top = 33
 Window Left = 10
-Window Z-Order = 42
+Window Z-Order = 35
 Source Window State = "1,63,63,63,8,16,16,0,0,80,0,0,0,0,0,25,0,0,58,119,531,895,1,0,"
 
 [File 0006]
@@ -101,7 +101,7 @@ Window Top = 33
 Window Left = 10
 Window Height = 531
 Window Width = 895
-Window Z-Order = 39
+Window Z-Order = 10
 
 [File 0007]
 Path = "/f/cvi/app/c_comm/crccheck/CrcCheck.c"
@@ -110,7 +110,7 @@ Disk Date = 3604032278
 In Projects = "1,"
 Window Top = 95
 Window Left = 42
-Window Z-Order = 41
+Window Z-Order = 34
 Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,25,0,0,0,0,531,895,1,0,"
 
 [File 0008]
@@ -120,7 +120,7 @@ Disk Date = 3596700580
 In Projects = "1,"
 Window Top = 64
 Window Left = 26
-Window Z-Order = 40
+Window Z-Order = 33
 Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,25,102,0,13,35,531,895,1,0,"
 
 [File 0009]
@@ -132,7 +132,7 @@ Window Top = 33
 Window Left = 10
 Window Height = 531
 Window Width = 895
-Window Z-Order = 11
+Window Z-Order = 12
 
 [File 0010]
 Path = "/f/cvi/app/NC210/speedCali/cvi_SpeedCali.uir"
@@ -143,7 +143,7 @@ Window Top = 157
 Window Left = 74
 Window Height = 531
 Window Width = 895
-Window Z-Order = 15
+Window Z-Order = 13
 
 [File 0011]
 Path = "/f/cvi/app/csnc_iap/iap/IAP.uir"
@@ -154,7 +154,7 @@ Window Top = 436
 Window Left = 218
 Window Height = 531
 Window Width = 895
-Window Z-Order = 36
+Window Z-Order = 30
 
 [File 0012]
 Path = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTest.uir"
@@ -165,7 +165,7 @@ Window Top = 95
 Window Left = 42
 Window Height = 531
 Window Width = 895
-Window Z-Order = 12
+Window Z-Order = 11
 
 [File 0013]
 Path = "/f/cvi/app/opencom/source/cvi_com1.c"
@@ -174,18 +174,18 @@ Disk Date = 3607035731
 In Projects = "1,"
 Window Top = 250
 Window Left = 122
-Window Z-Order = 38
+Window Z-Order = 32
 Source Window State = "1,286,286,286,16,32,32,0,3,80,0,0,0,0,0,21,276,0,286,16,451,895,1,0,"
 
 [File 0014]
 Path = "/f/cvi/app/opencom/source/cvi_com_operate.c"
 File Type = "CSource"
-Disk Date = 3607035487
+Disk Date = 3612405392
 In Projects = "1,"
 Window Top = 95
 Window Left = 42
-Window Z-Order = 1
-Source Window State = "1,177,177,177,5,21,21,0,0,151,0,0,0,0,0,33,127,0,137,0,451,895,1,0,"
+Window Z-Order = 4
+Source Window State = "1,164,164,164,12,14,14,0,0,80,0,0,0,0,0,21,127,0,142,49,451,895,1,0,"
 
 [File 0015]
 Path = "/f/cvi/app/cvi_comm/cvi_comm.c"
@@ -194,7 +194,7 @@ Disk Date = 3606953117
 In Projects = "1,"
 Window Top = 126
 Window Left = 58
-Window Z-Order = 22
+Window Z-Order = 14
 Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,21,27,0,61,30,451,895,1,0,"
 
 [File 0016]
@@ -204,18 +204,18 @@ Disk Date = 3612339953
 In Projects = "1,"
 Window Top = 281
 Window Left = 138
-Window Z-Order = 13
-Source Window State = "1,70,70,70,5,6,5,0,0,80,0,0,0,0,0,25,69,0,109,41,531,895,1,0,"
+Window Z-Order = 3
+Source Window State = "1,92,93,92,0,0,0,0,0,80,0,0,0,0,0,25,77,0,100,47,531,895,1,0,"
 
 [File 0017]
 Path = "/f/cvi/app/NC210/setpara/cvi_setpara.c"
 File Type = "CSource"
-Disk Date = 3612340271
+Disk Date = 3612409032
 In Projects = "1,"
 Window Top = 95
 Window Left = 42
-Window Z-Order = 17
-Source Window State = "1,157,157,157,97,101,97,0,0,57,0,0,0,0,0,20,143,0,157,99,431,665,1,0,"
+Window Z-Order = 2
+Source Window State = "1,156,156,156,68,74,74,0,0,57,0,0,0,0,0,20,147,0,156,83,431,665,1,0,"
 
 [File 0018]
 Path = "/f/cvi/app/NC210/main.c"
@@ -224,8 +224,8 @@ Disk Date = 3612321906
 In Projects = "1,"
 Window Top = 157
 Window Left = 74
-Window Z-Order = 20
-Source Window State = "1,23,23,23,0,22,22,0,0,76,0,0,0,0,0,13,76,0,25,90,291,855,1,0,"
+Window Z-Order = 7
+Source Window State = "1,84,84,84,41,45,45,0,0,76,0,0,0,0,0,13,13,0,22,3,291,855,1,0,"
 
 [File 0019]
 Path = "/f/cvi/app/ansytime/cvi_ansytimer.h"
@@ -234,7 +234,7 @@ Disk Date = 3606959998
 In Projects = "1,"
 Window Top = 95
 Window Left = 42
-Window Z-Order = 27
+Window Z-Order = 23
 Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,21,0,0,0,0,451,895,1,0,"
 
 [File 0020]
@@ -244,7 +244,7 @@ Disk Date = 3607037696
 In Projects = "1,"
 Window Top = 126
 Window Left = 58
-Window Z-Order = 26
+Window Z-Order = 22
 Source Window State = "1,65,65,65,4,17,17,0,3,80,0,0,0,0,0,21,33,0,65,4,451,895,1,0,"
 
 [File 0021]
@@ -254,7 +254,7 @@ Disk Date = 3607035615
 In Projects = "1,"
 Window Top = 157
 Window Left = 74
-Window Z-Order = 32
+Window Z-Order = 26
 Source Window State = "1,13,14,14,0,27,27,0,3,80,0,0,0,0,0,21,0,0,13,0,451,895,1,0,"
 
 [File 0022]
@@ -264,8 +264,8 @@ Disk Date = 3612336278
 In Projects = "1,"
 Window Top = 64
 Window Left = 26
-Window Z-Order = 31
-Source Window State = "1,14,14,14,25,26,25,0,0,80,0,0,0,0,0,21,0,0,14,26,451,895,1,0,"
+Window Z-Order = 8
+Source Window State = "1,22,22,22,8,18,18,0,3,80,0,0,0,0,0,21,0,0,22,8,451,895,1,0,"
 
 [File 0023]
 Path = "/f/cvi/app/NC210/setpara/cvi_setpara.h"
@@ -274,7 +274,7 @@ Disk Date = 3612340488
 In Projects = "1,"
 Window Top = 250
 Window Left = 122
-Window Z-Order = 16
+Window Z-Order = 17
 Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,25,21,0,0,0,531,895,1,0,"
 
 [File 0024]
@@ -284,7 +284,7 @@ Disk Date = 3612308685
 In Projects = "1,"
 Window Top = 188
 Window Left = 90
-Window Z-Order = 29
+Window Z-Order = 25
 Source Window State = "1,57,58,57,0,0,0,0,0,80,0,0,0,0,0,21,26,0,57,0,451,895,1,0,"
 
 [File 0025]
@@ -294,7 +294,7 @@ Disk Date = 3612321780
 In Projects = ""
 Window Top = 219
 Window Left = 106
-Window Z-Order = 35
+Window Z-Order = 29
 Source Window State = "1,19,19,19,9,28,28,0,0,80,0,0,0,0,0,21,3,0,33,34,451,895,1,0,"
 
 [File 0026]
@@ -304,7 +304,7 @@ Disk Date = 3612339209
 In Projects = "1,"
 Window Top = 219
 Window Left = 106
-Window Z-Order = 24
+Window Z-Order = 20
 Source Window State = "1,74,80,80,0,17,17,0,0,80,0,0,0,0,0,25,9,0,21,0,531,895,1,0,"
 
 [File 0027]
@@ -314,7 +314,7 @@ Disk Date = 3612317437
 In Projects = "1,"
 Window Top = 188
 Window Left = 90
-Window Z-Order = 25
+Window Z-Order = 21
 Source Window State = "1,118,119,118,0,0,0,0,0,80,0,0,0,0,0,21,58,0,112,20,451,895,1,0,"
 
 [File 0028]
@@ -324,7 +324,7 @@ Disk Date = 3612317712
 In Projects = ""
 Window Top = 219
 Window Left = 106
-Window Z-Order = 37
+Window Z-Order = 31
 Source Window State = "1,77,77,77,17,31,31,0,3,80,0,0,0,0,0,21,63,0,77,17,451,895,1,0,"
 
 [File 0029]
@@ -334,7 +334,7 @@ Disk Date = 3612341862
 In Projects = "1,"
 Window Top = 219
 Window Left = 106
-Window Z-Order = 2
+Window Z-Order = 16
 Source Window State = "1,267,267,267,129,133,129,0,0,80,0,0,0,0,0,21,237,5,259,101,451,895,1,0,"
 
 [File 0030]
@@ -344,7 +344,7 @@ Disk Date = 3612315734
 In Projects = "1,"
 Window Top = 250
 Window Left = 122
-Window Z-Order = 21
+Window Z-Order = 15
 Source Window State = "1,143,153,153,0,17,17,0,0,80,0,0,0,0,0,21,94,0,143,0,451,895,1,0,"
 
 [File 0031]
@@ -356,92 +356,92 @@ Window Top = 33
 Window Left = 10
 Window Height = 451
 Window Width = 895
-Window Z-Order = 34
+Window Z-Order = 28
 
 [File 0032]
-Path = "/f/cvi/app/ansytime/cvi_ansytimer.c"
-File Type = "CSource"
-Disk Date = 3606962973
-In Projects = "1,"
-Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
-
-[File 0033]
 Path = "/f/cvi/app/opencom/uir/comconfig.h"
 File Type = "Include"
 Disk Date = 3611886371
 In Projects = "1,"
 Window Top = 64
 Window Left = 26
-Window Z-Order = 19
+Window Z-Order = 18
 Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,21,0,0,11,49,451,895,1,0,"
 
-[File 0034]
-Path = "/f/cvi/app/c_comm/crccheck/CrcCheck.h"
-File Type = "Include"
-Disk Date = 3604032276
-In Projects = "1,"
-Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
-
-[File 0035]
-Path = "/f/cvi/app/c_comm/csnr_package_deal/csnr_package_deal.h"
-File Type = "Include"
-Disk Date = 3596698998
-In Projects = "1,"
-Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
-
-[File 0036]
+[File 0033]
 Path = "/f/cvi/app/opencom/source/cvi_com_operate.h"
 File Type = "Include"
 Disk Date = 3607035493
 In Projects = "1,"
 Window Top = 95
 Window Left = 42
-Window Z-Order = 28
+Window Z-Order = 24
 Source Window State = "1,74,74,74,1,14,14,0,3,80,0,0,0,0,0,21,46,0,74,1,451,895,1,0,"
 
-[File 0037]
-Path = "/f/cvi/app/cvi_comm/cvi_comm.h"
-File Type = "Include"
-Disk Date = 3596700890
-In Projects = "1,"
-Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
-
-[File 0038]
-Path = "/f/cvi/app/NC210/main.h"
-File Type = "Include"
-Disk Date = 3612315655
-In Projects = "1,"
-Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
-
-[File 0039]
+[File 0034]
 Path = "/f/cvi/app/NC210/app_config.h"
 File Type = "Include"
 Disk Date = 3612335956
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
-Window Z-Order = 30
+Window Z-Order = 6
 Source Window State = "1,11,11,11,12,20,20,0,0,80,0,4,0,4,0,21,0,0,14,37,451,895,1,0,"
 
-[File 0040]
+[File 0035]
 Path = "/f/cvi/app/NC210/app_type.h"
 File Type = "Include"
 Disk Date = 3612339648
 In Projects = "1,"
 Window Top = 126
 Window Left = 58
-Window Z-Order = 18
-Source Window State = "1,216,216,216,28,40,40,0,3,80,0,0,0,0,0,21,198,0,216,28,451,895,1,0,"
+Window Z-Order = 5
+Source Window State = "1,74,74,74,1,15,15,0,0,80,0,0,0,0,0,21,58,0,77,34,451,895,1,0,"
 
-[File 0041]
+[File 0036]
 Path = "/f/cvi/app/NC210/RecDataTypeDef.h"
 File Type = "Include"
 Disk Date = 3612339565
 In Projects = "1,"
 Window Top = 157
 Window Left = 74
-Window Z-Order = 23
+Window Z-Order = 19
 Source Window State = "1,78,78,78,0,8,8,0,0,80,0,0,0,0,0,21,0,0,9,25,451,895,1,0,"
+
+[File 0037]
+Path = "/f/cvi/app/ansytime/cvi_ansytimer.c"
+File Type = "CSource"
+Disk Date = 3606962973
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0038]
+Path = "/f/cvi/app/c_comm/crccheck/CrcCheck.h"
+File Type = "Include"
+Disk Date = 3604032276
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0039]
+Path = "/f/cvi/app/c_comm/csnr_package_deal/csnr_package_deal.h"
+File Type = "Include"
+Disk Date = 3596698998
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0040]
+Path = "/f/cvi/app/cvi_comm/cvi_comm.h"
+File Type = "Include"
+Disk Date = 3596700890
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0041]
+Path = "/f/cvi/app/NC210/main.h"
+File Type = "Include"
+Disk Date = 3612315655
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
 [Tab Order]
 Tab 0001 = "/c/Program Files (x86)/National Instruments/CVI2017/include/utility.h"
@@ -567,4 +567,7 @@ External Process Path = ""
 Command Line Args = ""
 Working Directory = ""
 Environment Options = ""
+
+[Watch 1]
+Watch Expression = "Ctrl"
 
