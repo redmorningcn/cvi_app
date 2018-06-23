@@ -12,11 +12,11 @@ VXIplug&play Framework 64-bit Dir = "/C/Program Files/IVI Foundation/VISA/win64"
 Number of Projects = 1
 Active Project = 1
 Project 0001 = "NC210.prj"
-Drag Bar Left = 261
+Drag Bar Left = 238
 Window Top = 31
-Window Left = 153
+Window Left = 466
 Window Bottom = 687
-Window Right = 1157
+Window Right = 1364
 Maximized = True
 Maximized Children = True
 Max32 Number Of Errors = 20
@@ -32,7 +32,7 @@ Break At First Statement = False
 Sort Type = "File Name"
 Number of Opened Files = 35
 Window Confinement Region Enabled = True
-MainColumnWidth = 244
+MainColumnWidth = 221
 FileDateColumnWidth = 70
 FileSizeColumnWidth = 70
 
@@ -58,8 +58,8 @@ Disk Date = 3612473798
 In Projects = "1,"
 Window Top = 64
 Window Left = 26
-Window Z-Order = 12
-Source Window State = "1,91,92,91,0,0,0,0,0,76,0,0,0,0,0,25,37,0,111,32,531,855,1,0,"
+Window Z-Order = 4
+Source Window State = "1,91,92,91,0,0,0,0,0,76,0,0,0,0,0,25,25,0,90,42,531,855,1,0,"
 
 [File 0003]
 Path = "/f/cvi/app/NC210/setpara/cvi_setpara.uir"
@@ -101,28 +101,19 @@ Window Top = 33
 Window Left = 10
 Window Height = 531
 Window Width = 895
-Window Z-Order = 11
+Window Z-Order = 15
 
 [File 0007]
-Path = "/f/cvi/app/c_comm/crccheck/CrcCheck.c"
-File Type = "CSource"
-Disk Date = 3604032278
-In Projects = "1,"
-Window Top = 95
-Window Left = 42
-Source Window State = "1,273,273,273,9,20,20,0,3,80,0,0,0,0,0,25,261,0,273,9,531,895,1,0,"
-
-[File 0008]
 Path = "/f/cvi/app/c_comm/csnr_package_deal/csnr_package_deal.c"
 File Type = "CSource"
 Disk Date = 3596700580
 In Projects = "1,"
 Window Top = 64
 Window Left = 26
-Window Z-Order = 4
+Window Z-Order = 9
 Source Window State = "1,5,5,5,8,24,24,0,3,80,0,0,0,0,0,25,39,0,5,8,531,895,1,0,"
 
-[File 0009]
+[File 0008]
 Path = "/f/cvi/app/NC210/locoCali/cvi_LocoCali.uir"
 File Type = "User Interface Resource"
 Disk Date = 3612414433
@@ -131,9 +122,9 @@ Window Top = 33
 Window Left = 10
 Window Height = 531
 Window Width = 895
-Window Z-Order = 13
+Window Z-Order = 16
 
-[File 0010]
+[File 0009]
 Path = "/f/cvi/app/NC210/speedCali/cvi_SpeedCali.uir"
 File Type = "User Interface Resource"
 Disk Date = 3612317712
@@ -144,7 +135,7 @@ Window Height = 531
 Window Width = 895
 Window Z-Order = 21
 
-[File 0011]
+[File 0010]
 Path = "/f/cvi/app/csnc_iap/iap/IAP.uir"
 File Type = "User Interface Resource"
 Disk Date = 3611897126
@@ -155,117 +146,72 @@ Window Height = 531
 Window Width = 895
 Window Z-Order = 24
 
-[File 0012]
+[File 0011]
 Path = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTest.uir"
 File Type = "User Interface Resource"
-Disk Date = 3612581108
+Disk Date = 3612594858
 In Projects = "1,"
 Window Top = 95
 Window Left = 42
 Window Height = 531
 Window Width = 895
-Window Z-Order = 1
+Window Z-Order = 2
 
-[File 0013]
+[File 0012]
 Path = "/f/cvi/app/opencom/source/cvi_com1.c"
 File Type = "CSource"
 Disk Date = 3607035731
 In Projects = "1,"
 Window Top = 250
 Window Left = 122
-Window Z-Order = 9
+Window Z-Order = 13
 Source Window State = "1,286,286,286,16,32,32,0,3,80,0,0,0,0,0,21,218,0,286,16,451,895,1,0,"
 
-[File 0014]
+[File 0013]
 Path = "/f/cvi/app/opencom/source/cvi_com_operate.c"
 File Type = "CSource"
 Disk Date = 3612566759
 In Projects = "1,"
 Window Top = 95
 Window Left = 42
-Window Z-Order = 2
-Source Window State = "1,208,218,218,0,6,6,0,0,80,0,0,0,0,0,21,130,0,140,0,451,895,1,0,"
+Window Z-Order = 7
+Source Window State = "1,208,218,218,0,6,6,0,0,80,0,0,0,0,0,21,130,0,137,0,451,895,1,0,"
 
-[File 0015]
-Path = "/f/cvi/app/cvi_comm/cvi_comm.c"
-File Type = "CSource"
-Disk Date = 3606953117
-In Projects = "1,"
-Window Top = 126
-Window Left = 58
-Source Window State = "1,28,30,30,0,92,92,0,3,80,0,0,0,0,0,21,21,0,28,0,451,895,1,0,"
-
-[File 0016]
+[File 0014]
 Path = "/f/cvi/app/NC210/setpara/setpara.c"
 File Type = "CSource"
 Disk Date = 3612578219
 In Projects = "1,"
 Window Top = 281
 Window Left = 138
-Window Z-Order = 18
+Window Z-Order = 19
 Source Window State = "1,234,234,234,16,27,27,0,3,80,0,0,0,0,0,25,222,0,234,16,531,895,1,0,"
 Breakpoint 0001 = "197,0,enabled,"
 Tracepoint 0001 = "0,0,177,1,"
 Breakpoint 0002 = "198,0,enabled,"
 Tracepoint 0002 = "0,0,178,1,"
 
-[File 0017]
+[File 0015]
 Path = "/f/cvi/app/NC210/setpara/cvi_setpara.c"
 File Type = "CSource"
 Disk Date = 3612483868
 In Projects = "1,"
 Window Top = 95
 Window Left = 42
-Window Z-Order = 19
+Window Z-Order = 20
 Source Window State = "1,156,157,157,0,98,98,0,0,57,0,0,0,0,0,20,147,0,156,21,431,665,1,0,"
 
-[File 0018]
+[File 0016]
 Path = "/f/cvi/app/NC210/main.c"
 File Type = "CSource"
 Disk Date = 3612496472
 In Projects = "1,"
 Window Top = 157
 Window Left = 74
-Window Z-Order = 8
+Window Z-Order = 12
 Source Window State = "1,92,92,92,8,83,8,0,3,76,0,0,0,0,0,13,81,0,92,83,291,855,1,0,"
 
-[File 0019]
-Path = "/f/cvi/app/ansytime/cvi_ansytimer.h"
-File Type = "Include"
-Disk Date = 3606959998
-In Projects = "1,"
-Window Top = 95
-Window Left = 42
-Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,21,0,0,0,0,451,895,1,0,"
-
-[File 0020]
-Path = "/f/cvi/app/csnc_debug/cvi_bspComm.h"
-File Type = "Include"
-Disk Date = 3612472781
-In Projects = "1,"
-Window Top = 126
-Window Left = 58
-Source Window State = "1,23,23,23,36,39,39,0,3,80,0,0,0,0,0,21,9,0,23,36,451,895,1,0,"
-
-[File 0021]
-Path = "/f/cvi/app/opencom/source/cvi_com1.h"
-File Type = "Include"
-Disk Date = 3607035615
-In Projects = "1,"
-Window Top = 157
-Window Left = 74
-Source Window State = "1,13,14,14,0,27,27,0,3,80,0,0,0,0,0,21,0,0,13,0,451,895,1,0,"
-
-[File 0022]
-Path = "/f/cvi/app/config/cvi_config.h"
-File Type = "Include"
-Disk Date = 3612336278
-In Projects = "1,"
-Window Top = 64
-Window Left = 26
-Source Window State = "1,22,22,22,8,18,18,0,3,80,0,0,0,0,0,21,0,0,22,8,451,895,1,0,"
-
-[File 0023]
+[File 0017]
 Path = "/f/cvi/app/NC210/setpara/cvi_setpara.h"
 File Type = "Include"
 Disk Date = 3612340488
@@ -275,7 +221,7 @@ Window Left = 122
 Window Z-Order = 30
 Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,25,21,0,0,0,531,895,1,0,"
 
-[File 0024]
+[File 0018]
 Path = "/f/cvi/app/c_comm/includes.h"
 File Type = "Include"
 Disk Date = 3612308685
@@ -285,7 +231,7 @@ Window Left = 90
 Window Z-Order = 31
 Source Window State = "1,57,58,57,0,0,0,0,0,80,0,0,0,0,0,21,26,0,57,0,451,895,1,0,"
 
-[File 0025]
+[File 0019]
 Path = "/f/cvi/app/NC210/mian.h"
 File Type = "Include"
 Disk Date = 3612321780
@@ -295,17 +241,17 @@ Window Left = 106
 Window Z-Order = 33
 Source Window State = "1,19,19,19,9,28,28,0,0,80,0,0,0,0,0,21,3,0,33,34,451,895,1,0,"
 
-[File 0026]
+[File 0020]
 Path = "/f/cvi/app/NC210/setpara/setpara.h"
 File Type = "Include"
 Disk Date = 3612578337
 In Projects = "1,"
 Window Top = 219
 Window Left = 106
-Window Z-Order = 17
-Source Window State = "1,113,113,113,12,22,22,0,3,80,0,0,0,0,0,25,107,0,113,12,531,895,1,0,"
+Window Z-Order = 5
+Source Window State = "1,47,47,47,12,26,26,0,3,80,0,0,0,0,0,25,32,0,47,12,531,895,1,0,"
 
-[File 0027]
+[File 0021]
 Path = "/f/cvi/app/NC210/speedCali/cvi_SpeedCali.c"
 File Type = "CSource"
 Disk Date = 3612317437
@@ -315,7 +261,7 @@ Window Left = 90
 Window Z-Order = 22
 Source Window State = "1,118,119,118,0,0,0,0,0,80,0,0,0,0,0,21,187,0,112,20,451,895,1,0,"
 
-[File 0028]
+[File 0022]
 Path = "/f/cvi/app/NC210/speedCali/cvi_SpeedCali.h"
 File Type = "Include"
 Disk Date = 3612317712
@@ -325,31 +271,29 @@ Window Left = 106
 Window Z-Order = 34
 Source Window State = "1,77,77,77,17,31,31,0,3,80,0,0,0,0,0,21,63,0,77,17,451,895,1,0,"
 
-[File 0029]
+[File 0023]
 Path = "/f/cvi/app/NC210/locoCali/cvi_LocoCali.c"
 File Type = "CSource"
 Disk Date = 3612414517
 In Projects = "1,"
 Window Top = 219
 Window Left = 106
-Window Z-Order = 5
-Source Window State = "1,234,234,234,12,40,40,0,3,80,0,0,0,0,0,21,263,0,234,12,451,895,1,0,"
+Window Z-Order = 6
+Source Window State = "1,234,234,234,12,40,40,0,3,80,0,0,0,0,0,21,331,0,234,12,451,895,1,0,"
 
-[File 0030]
+[File 0024]
 Path = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTest.c"
 File Type = "CSource"
-Disk Date = 3612580980
+Disk Date = 3612606985
 In Projects = "1,"
 Window Top = 250
 Window Left = 122
-Window Z-Order = 3
-Source Window State = "1,160,160,160,43,44,44,0,0,80,0,0,0,0,0,21,333,0,358,4,451,895,1,0,"
-Breakpoint 0001 = "413,0,enabled,"
-Tracepoint 0001 = "0,0,182,1,"
-Breakpoint 0002 = "416,0,enabled,"
-Tracepoint 0002 = "0,0,185,1,"
+Window Z-Order = 1
+Source Window State = "1,448,448,448,83,86,86,0,0,98,0,0,0,0,0,24,210,0,232,31,451,895,1,0,"
+Breakpoint 0001 = "449,0,enabled,"
+Tracepoint 0001 = "0,0,185,1,"
 
-[File 0031]
+[File 0025]
 Path = "/f/cvi/app/NC210/main.uir"
 File Type = "User Interface Resource"
 Disk Date = 3612428066
@@ -358,75 +302,39 @@ Window Top = 33
 Window Left = 10
 Window Height = 451
 Window Width = 895
-Window Z-Order = 10
+Window Z-Order = 14
 
-[File 0032]
-Path = "/f/cvi/app/opencom/uir/comconfig.h"
-File Type = "Include"
-Disk Date = 3611886371
-In Projects = "1,"
-Window Top = 64
-Window Left = 26
-Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,21,0,0,11,49,451,895,1,0,"
-
-[File 0033]
-Path = "/f/cvi/app/opencom/source/cvi_com_operate.h"
-File Type = "Include"
-Disk Date = 3607035493
-In Projects = "1,"
-Window Top = 95
-Window Left = 42
-Source Window State = "1,61,61,61,16,20,20,0,3,80,0,0,0,0,0,21,33,0,61,16,451,895,1,0,"
-
-[File 0034]
-Path = "/f/cvi/app/NC210/app_config.h"
-File Type = "Include"
-Disk Date = 3612416998
-In Projects = "1,"
-Window Top = 33
-Window Left = 10
-Source Window State = "1,13,13,13,12,20,20,0,3,80,0,4,0,4,0,21,0,0,13,12,451,895,1,0,"
-
-[File 0035]
+[File 0026]
 Path = "/f/cvi/app/NC210/app_type.h"
 File Type = "Include"
 Disk Date = 3612496194
 In Projects = "1,"
 Window Top = 126
 Window Left = 58
-Window Z-Order = 15
+Window Z-Order = 18
 Source Window State = "1,230,230,230,28,31,31,0,0,80,0,0,0,0,0,21,218,0,230,14,451,895,1,0,"
 
-[File 0036]
+[File 0027]
 Path = "/f/cvi/app/NC210/RecDataTypeDef.h"
 File Type = "Include"
 Disk Date = 3612496158
 In Projects = "1,"
 Window Top = 157
 Window Left = 74
-Window Z-Order = 14
+Window Z-Order = 17
 Source Window State = "1,87,92,92,0,61,61,0,0,80,0,0,0,0,0,21,79,0,92,37,451,895,1,0,"
 
-[File 0037]
+[File 0028]
 Path = "/f/cvi/app/ansytime/cvi_ansytimer.c"
 File Type = "CSource"
 Disk Date = 3606962973
 In Projects = "1,"
 Window Top = 64
 Window Left = 26
-Window Z-Order = 6
+Window Z-Order = 10
 Source Window State = "1,179,179,179,4,18,18,0,0,80,0,0,0,0,0,19,37,0,43,64,411,895,1,0,"
 
-[File 0038]
-Path = "/f/cvi/app/cvi_comm/cvi_comm.h"
-File Type = "Include"
-Disk Date = 3596700890
-In Projects = "1,"
-Window Top = 33
-Window Left = 10
-Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,19,0,0,0,0,411,895,1,0,"
-
-[File 0039]
+[File 0029]
 Path = "/f/cvi/app/NC210/main.h"
 File Type = "Include"
 Disk Date = 3612428066
@@ -436,17 +344,17 @@ Window Left = 90
 Window Z-Order = 26
 Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,19,0,0,0,0,411,895,1,0,"
 
-[File 0040]
+[File 0030]
 Path = "/f/cvi/app/NC210/locoCali/cvi_LocoCaliType.h"
 File Type = "Include"
 Disk Date = 3612413772
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
-Window Z-Order = 7
+Window Z-Order = 11
 Source Window State = "1,31,31,31,1,12,12,0,0,80,0,0,0,0,0,19,19,0,18,20,411,895,1,0,"
 
-[File 0041]
+[File 0031]
 Path = "/f/cvi/app/csnc_iap/iap/send_IAP.c"
 File Type = "CSource"
 Disk Date = 3612427173
@@ -456,7 +364,7 @@ Window Left = 42
 Window Z-Order = 27
 Source Window State = "1,224,224,224,36,50,50,0,0,80,0,0,0,0,0,19,72,0,96,62,411,895,1,0,"
 
-[File 0042]
+[File 0032]
 Path = "/f/cvi/app/csnc_iap/iap/send_IAP.h"
 File Type = "Include"
 Disk Date = 3612427129
@@ -466,7 +374,7 @@ Window Left = 58
 Window Z-Order = 28
 Source Window State = "1,30,30,30,32,36,36,0,0,80,0,0,0,0,0,19,15,0,31,55,411,895,1,0,"
 
-[File 0043]
+[File 0033]
 Path = "/f/cvi/app/csnc_iap/iap/IAP.h"
 File Type = "Include"
 Disk Date = 3590568795
@@ -476,16 +384,7 @@ Window Left = 74
 Window Z-Order = 29
 Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,19,0,0,0,0,411,895,1,0,"
 
-[File 0044]
-Path = "/f/cvi/app/c_comm/csnr_package_deal/csnr_package_deal.h"
-File Type = "Include"
-Disk Date = 3596698998
-In Projects = "1,"
-Window Top = 126
-Window Left = 58
-Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,24,0,0,0,0,511,895,1,0,"
-
-[File 0045]
+[File 0034]
 Path = "/c/Program Files (x86)/National Instruments/CVI2017/include/rs232.h"
 File Type = "Include"
 Disk Date = 3573565200
@@ -495,17 +394,45 @@ Window Left = 74
 Window Z-Order = 23
 Source Window State = "1,57,57,57,12,18,18,0,3,80,0,0,0,0,0,14,50,0,57,12,311,895,1,0,"
 
-[File 0046]
+[File 0035]
 Path = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTest.h"
 File Type = "Include"
-Disk Date = 3612561248
+Disk Date = 3612594625
 In Projects = ""
 Window Top = 95
 Window Left = 42
-Window Z-Order = 20
+Window Z-Order = 8
 Source Window State = "1,90,90,90,9,25,25,0,3,77,0,0,0,0,0,13,8,0,90,9,291,865,1,0,"
 
-[File 0047]
+[File 0036]
+Path = "/c/Program Files (x86)/National Instruments/CVI2017/include/ansi/stdio.h"
+File Type = "Include"
+Disk Date = 3573565200
+In Projects = ""
+Window Top = 64
+Window Left = 26
+Window Z-Order = 3
+Source Window State = "1,205,205,205,15,23,23,0,0,77,0,0,0,0,0,13,194,0,205,30,291,865,1,0,"
+
+[File 0037]
+Path = "/f/cvi/app/c_comm/crccheck/CrcCheck.c"
+File Type = "CSource"
+Disk Date = 3604032278
+In Projects = "1,"
+Window Top = 95
+Window Left = 42
+Source Window State = "1,273,273,273,9,20,20,0,3,0,0,0,0,0,0,0,261,0,273,9,531,895,1,0,"
+
+[File 0038]
+Path = "/f/cvi/app/cvi_comm/cvi_comm.c"
+File Type = "CSource"
+Disk Date = 3606953117
+In Projects = "1,"
+Window Top = 126
+Window Left = 58
+Source Window State = "1,28,30,30,0,92,92,0,3,0,0,0,0,0,0,0,21,0,28,0,451,895,1,0,"
+
+[File 0039]
 Path = "/f/cvi/app/csnc_iap/openfile/cvi_file.c"
 File Type = "CSource"
 Disk Date = 3607041172
@@ -514,29 +441,100 @@ Window Top = 64
 Window Left = 26
 Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,411,895,0,0,"
 
-[File 0048]
+[File 0040]
+Path = "/f/cvi/app/NC210/app_config.h"
+File Type = "Include"
+Disk Date = 3612416998
+In Projects = "1,"
+Window Top = 33
+Window Left = 10
+Source Window State = "1,13,13,13,12,20,20,0,3,0,0,4,0,4,0,0,0,0,13,12,451,895,1,0,"
+
+[File 0041]
+Path = "/f/cvi/app/opencom/uir/comconfig.h"
+File Type = "Include"
+Disk Date = 3611886371
+In Projects = "1,"
+Window Top = 64
+Window Left = 26
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,49,451,895,1,0,"
+
+[File 0042]
 Path = "/f/cvi/app/c_comm/crccheck/CrcCheck.h"
 File Type = "Include"
 Disk Date = 3604032276
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
+[File 0043]
+Path = "/f/cvi/app/c_comm/csnr_package_deal/csnr_package_deal.h"
+File Type = "Include"
+Disk Date = 3596698998
+In Projects = "1,"
+Window Top = 126
+Window Left = 58
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,511,895,1,0,"
+
+[File 0044]
+Path = "/f/cvi/app/ansytime/cvi_ansytimer.h"
+File Type = "Include"
+Disk Date = 3606959998
+In Projects = "1,"
+Window Top = 95
+Window Left = 42
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,451,895,1,0,"
+
+[File 0045]
+Path = "/f/cvi/app/csnc_debug/cvi_bspComm.h"
+File Type = "Include"
+Disk Date = 3612472781
+In Projects = "1,"
+Window Top = 126
+Window Left = 58
+Source Window State = "1,23,23,23,36,39,39,0,3,0,0,0,0,0,0,0,9,0,23,36,451,895,1,0,"
+
+[File 0046]
+Path = "/f/cvi/app/opencom/source/cvi_com1.h"
+File Type = "Include"
+Disk Date = 3607035615
+In Projects = "1,"
+Window Top = 157
+Window Left = 74
+Source Window State = "1,13,14,14,0,27,27,0,3,0,0,0,0,0,0,0,0,0,13,0,451,895,1,0,"
+
+[File 0047]
+Path = "/f/cvi/app/opencom/source/cvi_com_operate.h"
+File Type = "Include"
+Disk Date = 3607035493
+In Projects = "1,"
+Window Top = 95
+Window Left = 42
+Source Window State = "1,61,61,61,16,20,20,0,3,0,0,0,0,0,0,0,33,0,61,16,451,895,1,0,"
+
+[File 0048]
+Path = "/f/cvi/app/cvi_comm/cvi_comm.h"
+File Type = "Include"
+Disk Date = 3596700890
+In Projects = "1,"
+Window Top = 33
+Window Left = 10
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,411,895,1,0,"
+
 [File 0049]
+Path = "/f/cvi/app/config/cvi_config.h"
+File Type = "Include"
+Disk Date = 3612336278
+In Projects = "1,"
+Window Top = 64
+Window Left = 26
+Source Window State = "1,22,22,22,8,18,18,0,3,0,0,0,0,0,0,0,0,0,22,8,451,895,1,0,"
+
+[File 0050]
 Path = "/f/cvi/app/csnc_iap/openfile/cvi_file.h"
 File Type = "Include"
 Disk Date = 3607040924
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
-
-[File 0050]
-Path = "/c/Program Files (x86)/National Instruments/CVI2017/include/ansi/stdio.h"
-File Type = "Include"
-Disk Date = 3573565200
-In Projects = ""
-Window Top = 64
-Window Left = 26
-Window Z-Order = 16
-Source Window State = "1,205,205,205,15,23,23,0,3,77,0,0,0,0,0,13,194,0,205,15,291,865,1,0,"
 
 [Tab Order]
 Tab 0001 = "/c/Program Files (x86)/National Instruments/CVI2017/include/utility.h"
@@ -565,15 +563,15 @@ Tab 0023 = "/f/cvi/app/csnc_iap/iap/send_IAP.h"
 Tab 0024 = "/f/cvi/app/csnc_iap/iap/IAP.h"
 Tab 0025 = "/f/cvi/app/NC210/main.h"
 Tab 0026 = "/c/Program Files (x86)/National Instruments/CVI2017/include/rs232.h"
-Tab 0027 = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTest.h"
-Tab 0028 = "/c/Program Files (x86)/National Instruments/CVI2017/include/ansi/stdio.h"
-Tab 0029 = "/f/cvi/app/NC210/app_type.h"
-Tab 0030 = "/f/cvi/app/csnc_debug/cvi_bspComm.c"
-Tab 0031 = "/f/cvi/app/opencom/uir/comconfig.uir"
-Tab 0032 = "/f/cvi/app/opencom/source/cvi_com1.c"
-Tab 0033 = "/f/cvi/app/opencom/source/cvi_com_operate.c"
-Tab 0034 = "/f/cvi/app/ansytime/cvi_ansytimer.c"
-Tab 0035 = "/f/cvi/app/c_comm/csnr_package_deal/csnr_package_deal.c"
+Tab 0027 = "/c/Program Files (x86)/National Instruments/CVI2017/include/ansi/stdio.h"
+Tab 0028 = "/f/cvi/app/NC210/app_type.h"
+Tab 0029 = "/f/cvi/app/csnc_debug/cvi_bspComm.c"
+Tab 0030 = "/f/cvi/app/opencom/uir/comconfig.uir"
+Tab 0031 = "/f/cvi/app/opencom/source/cvi_com1.c"
+Tab 0032 = "/f/cvi/app/opencom/source/cvi_com_operate.c"
+Tab 0033 = "/f/cvi/app/ansytime/cvi_ansytimer.c"
+Tab 0034 = "/f/cvi/app/c_comm/csnr_package_deal/csnr_package_deal.c"
+Tab 0035 = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTest.h"
 
 [Default Build Config 0001 Debug]
 Generate Browse Info = True
