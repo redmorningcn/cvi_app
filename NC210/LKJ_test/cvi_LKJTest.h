@@ -36,9 +36,9 @@
 #define  LKJTEST_CH5_RAISE                21      /* control type: numeric, callback function: (none) */
 #define  LKJTEST_CH5_RATIO                22      /* control type: numeric, callback function: (none) */
 #define  LKJTEST_CH5_FREQ                 23      /* control type: numeric, callback function: (none) */
-#define  LKJTEST_G3_STANDARD              24      /* control type: numeric, callback function: (none) */
-#define  LKJTEST_G3_VCC                   25      /* control type: numeric, callback function: (none) */
-#define  LKJTEST_G3_PHASE                 26      /* control type: numeric, callback function: (none) */
+#define  LKJTEST_G2_STANDARD              24      /* control type: numeric, callback function: (none) */
+#define  LKJTEST_G2_VCC                   25      /* control type: numeric, callback function: (none) */
+#define  LKJTEST_G2_PHASE                 26      /* control type: numeric, callback function: (none) */
 #define  LKJTEST_DECORATION_10            27      /* control type: deco, callback function: (none) */
 #define  LKJTEST_DECORATION_11            28      /* control type: deco, callback function: (none) */
 #define  LKJTEST_DECORATION_12            29      /* control type: deco, callback function: (none) */
@@ -62,9 +62,9 @@
 #define  LKJTEST_CH3_RAISE                47      /* control type: numeric, callback function: (none) */
 #define  LKJTEST_CH3_RATIO                48      /* control type: numeric, callback function: (none) */
 #define  LKJTEST_CH3_FREQ                 49      /* control type: numeric, callback function: (none) */
-#define  LKJTEST_G2_STANDARD              50      /* control type: numeric, callback function: (none) */
-#define  LKJTEST_G2_VCC                   51      /* control type: numeric, callback function: (none) */
-#define  LKJTEST_G2_PHASE                 52      /* control type: numeric, callback function: (none) */
+#define  LKJTEST_G1_STANDARD              50      /* control type: numeric, callback function: (none) */
+#define  LKJTEST_G1_VCC                   51      /* control type: numeric, callback function: (none) */
+#define  LKJTEST_G1_PHASE                 52      /* control type: numeric, callback function: (none) */
 #define  LKJTEST_DECORATION_6             53      /* control type: deco, callback function: (none) */
 #define  LKJTEST_DECORATION_7             54      /* control type: deco, callback function: (none) */
 #define  LKJTEST_DECORATION_8             55      /* control type: deco, callback function: (none) */
@@ -86,9 +86,9 @@
 #define  LKJTEST_CH1_RAISE                71      /* control type: numeric, callback function: (none) */
 #define  LKJTEST_CH1_RATIO                72      /* control type: numeric, callback function: (none) */
 #define  LKJTEST_CH1_FREQ                 73      /* control type: numeric, callback function: (none) */
-#define  LKJTEST_G1_STANDARD              74      /* control type: numeric, callback function: (none) */
-#define  LKJTEST_G1_VCC                   75      /* control type: numeric, callback function: (none) */
-#define  LKJTEST_G1_PHASE                 76      /* control type: numeric, callback function: (none) */
+#define  LKJTEST_G0_STANDARD              74      /* control type: numeric, callback function: (none) */
+#define  LKJTEST_G0_VCC                   75      /* control type: numeric, callback function: (none) */
+#define  LKJTEST_G0_PHASE                 76      /* control type: numeric, callback function: (none) */
 #define  LKJTEST_DECORATION_5             77      /* control type: deco, callback function: (none) */
 #define  LKJTEST_DECORATION_3             78      /* control type: deco, callback function: (none) */
 #define  LKJTEST_DECORATION_4             79      /* control type: deco, callback function: (none) */
@@ -96,8 +96,8 @@
 #define  LKJTEST_TEXTMSG_2                81      /* control type: textMsg, callback function: (none) */
 #define  LKJTEST_TEXTMSG_3                82      /* control type: textMsg, callback function: (none) */
 #define  LKJTEST_DECORATION               83      /* control type: deco, callback function: (none) */
-#define  LKJTEST_CLEARREC                 84      /* control type: command, callback function: ClearRecordCallback */
-#define  LKJTEST_READREC                  85      /* control type: command, callback function: ReadRecordCallback */
+#define  LKJTEST_READREC                  84      /* control type: command, callback function: ReadRecordCallback */
+#define  LKJTEST_CLEARREC                 85      /* control type: command, callback function: ClearRecordCallback */
 
 
      /* Control Arrays: */

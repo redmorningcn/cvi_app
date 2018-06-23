@@ -101,13 +101,18 @@ typedef struct{
                 };
             };
         };
+		
+		stcFlshRec  		Rec;				//数据记录
     };
 	
 	
 ////操作标识。接收完后，根据数据置位	
 	u8 		setokflg 	:1	;					//设置成功标识
 	u8		dataokflg	:1	;					//数据接收完成标识
-	u8		recflg		:6	;					//预留
+	u8		recechoflg	:1	;					//数据记录应答，接收数据记录使用（如果该标识置1，接收到数据，应答）
+	u8		recenableflg:1	;					//数据记录应答允许
+	u8		recvrecflg	:1	;					//数据记录接收成功（和app接口，提示可以对数据记录处理）
+	u8		recflg		:3	;					//预留
 	
 	u8		recdatalen;							//接收数据长度
 }strDtuRecData;

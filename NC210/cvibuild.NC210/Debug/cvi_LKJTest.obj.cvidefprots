@@ -26,6 +26,26 @@ Prototype="int ReadRecordCallback(int panel, int control, int event, void *callb
 Class="Function"
 Prototype="int ClearRecordCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
 
+[InitSpeedCtrlID]
+Class="Function"
+Prototype="void InitSpeedCtrlID();"
+
+[SpeedDetectDisplay]
+Class="Function"
+Prototype="void SpeedDetectDisplay();"
+
+[InitLocoCtrlID]
+Class="Function"
+Prototype="void InitLocoCtrlID();"
+
+[LocoDetectDisplay]
+Class="Function"
+Prototype="void LocoDetectDisplay();"
+
+[RecordDisplay]
+Class="Function"
+Prototype="void RecordDisplay();"
+
 [RecDetectInfoReadCode]
 Class="Function"
 Prototype="void RecDetectInfoReadCode();"
