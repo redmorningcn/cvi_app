@@ -29,6 +29,7 @@ HDRS = 	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\activ
 	"c:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\Bin"
 	;
 include Jamfile_instr ;
+LOCATE on "app_config.h" = "f:\\cvi\\app\\csnc_iap" ;
 LOCATE on "comconfig.h" = "f:\\cvi\\app\\opencom\\uir" ;
 LOCATE on "CrcCheck.c" = "f:\\cvi\\app\\c_comm\\crccheck" ;
 LOCATE on "CrcCheck.h" = "f:\\cvi\\app\\c_comm\\crccheck" ;

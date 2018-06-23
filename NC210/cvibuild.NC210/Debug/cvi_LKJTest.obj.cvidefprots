@@ -26,3 +26,11 @@ Prototype="int ReadRecordCallback(int panel, int control, int event, void *callb
 Class="Function"
 Prototype="int ClearRecordCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
 
+[RecDetectInfoReadCode]
+Class="Function"
+Prototype="void RecDetectInfoReadCode();"
+
+[GetRecDetectInfo]
+Class="Function"
+Prototype="void GetRecDetectInfo();"
+

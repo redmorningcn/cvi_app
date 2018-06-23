@@ -17,7 +17,7 @@
 #define  LOCOCALI_DECORATION_21           2       /* control type: deco, callback function: (none) */
 #define  LOCOCALI_LW                      3       /* control type: command, callback function: LWCaliCallback */
 #define  LOCOCALI_LW_HIG_MEASURE          4       /* control type: numeric, callback function: (none) */
-#define  LOCOCALI_LW_HIG_STANDARD         5       /* control type: numeric, callback function: (none) */
+#define  LOCOCALI_LW_HIG_STANDARD         5       /* control type: numeric, callback function: LWHigCallback */
 #define  LOCOCALI_LW_LOW_MEASURE          6       /* control type: numeric, callback function: (none) */
 #define  LOCOCALI_LW_LOW_STANDARD         7       /* control type: numeric, callback function: LWLowCallback */
 #define  LOCOCALI_SPLITTER_6              8       /* control type: splitter, callback function: (none) */
@@ -28,7 +28,7 @@
 #define  LOCOCALI_DECORATION_22           13      /* control type: deco, callback function: (none) */
 #define  LOCOCALI_XH                      14      /* control type: command, callback function: XHCaliCallback */
 #define  LOCOCALI_XH_HIG_MEASURE          15      /* control type: numeric, callback function: (none) */
-#define  LOCOCALI_XH_HIG_STANDARD         16      /* control type: numeric, callback function: (none) */
+#define  LOCOCALI_XH_HIG_STANDARD         16      /* control type: numeric, callback function: XHHigCallback */
 #define  LOCOCALI_XH_LOW_MEASURE          17      /* control type: numeric, callback function: (none) */
 #define  LOCOCALI_XH_LOW_STANDARD         18      /* control type: numeric, callback function: XHLowCallback */
 #define  LOCOCALI_SPLITTER_7              19      /* control type: splitter, callback function: (none) */
@@ -39,7 +39,7 @@
 #define  LOCOCALI_DECORATION_19           24      /* control type: deco, callback function: (none) */
 #define  LOCOCALI_XQ                      25      /* control type: command, callback function: XQCaliCallback */
 #define  LOCOCALI_XQ_HIG_MEASURE          26      /* control type: numeric, callback function: (none) */
-#define  LOCOCALI_XQ_HIG_STANDARD         27      /* control type: numeric, callback function: (none) */
+#define  LOCOCALI_XQ_HIG_STANDARD         27      /* control type: numeric, callback function: XQHigCallback */
 #define  LOCOCALI_XQ_LOW_MEASURE          28      /* control type: numeric, callback function: (none) */
 #define  LOCOCALI_XQ_LOW_STANDARD         29      /* control type: numeric, callback function: XQLowCallback */
 #define  LOCOCALI_SPLITTER_4              30      /* control type: splitter, callback function: (none) */
@@ -51,7 +51,7 @@
 #define  LOCOCALI_ZD                      36      /* control type: command, callback function: ZDCaliCallback */
 #define  LOCOCALI_ZD_HIG_MEASURE          37      /* control type: numeric, callback function: (none) */
 #define  LOCOCALI_TIMER                   38      /* control type: timer, callback function: LocoCaliTimerCallback */
-#define  LOCOCALI_ZD_HIG_STANDARD         39      /* control type: numeric, callback function: (none) */
+#define  LOCOCALI_ZD_HIG_STANDARD         39      /* control type: numeric, callback function: ZDHigCallback */
 #define  LOCOCALI_ZD_LOW_MEASURE          40      /* control type: numeric, callback function: (none) */
 #define  LOCOCALI_ZD_LOW_STANDARD         41      /* control type: numeric, callback function: ZDLowCallback */
 #define  LOCOCALI_SPLITTER_5              42      /* control type: splitter, callback function: (none) */
@@ -62,7 +62,7 @@
 #define  LOCOCALI_DECORATION_18           47      /* control type: deco, callback function: (none) */
 #define  LOCOCALI_QY                      48      /* control type: command, callback function: QYCaliCallback */
 #define  LOCOCALI_QY_HIG_MEASURE          49      /* control type: numeric, callback function: (none) */
-#define  LOCOCALI_QY_HIG_STANDARD         50      /* control type: numeric, callback function: (none) */
+#define  LOCOCALI_QY_HIG_STANDARD         50      /* control type: numeric, callback function: QYHigCallback */
 #define  LOCOCALI_QY_LOW_MEASURE          51      /* control type: numeric, callback function: (none) */
 #define  LOCOCALI_QY_LOW_STANDARD         52      /* control type: numeric, callback function: QYLowCallback */
 #define  LOCOCALI_SPLITTER_3              53      /* control type: splitter, callback function: (none) */
@@ -73,7 +73,7 @@
 #define  LOCOCALI_DECORATION_17           58      /* control type: deco, callback function: (none) */
 #define  LOCOCALI_V110                    59      /* control type: command, callback function: V110CaliCallback */
 #define  LOCOCALI_V110_HIG_MEASURE        60      /* control type: numeric, callback function: (none) */
-#define  LOCOCALI_V110_HIG_STANDARD       61      /* control type: numeric, callback function: (none) */
+#define  LOCOCALI_V110_HIG_STANDARD       61      /* control type: numeric, callback function: V110HigCallback */
 #define  LOCOCALI_V110_LOW_MEASURE        62      /* control type: numeric, callback function: (none) */
 #define  LOCOCALI_V110_LOW_STANDARD       63      /* control type: numeric, callback function: V110LowCallback */
 #define  LOCOCALI_SPLITTER_2              64      /* control type: splitter, callback function: (none) */
@@ -106,16 +106,22 @@ int  CVICALLBACK HelpCallback(int panel, int control, int event, void *callbackD
 int  CVICALLBACK LocoCaliPanelCB(int panel, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK LocoCaliTimerCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK LWCaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK LWHigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK LWLowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK QYCaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK QYHigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK QYLowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK V110CaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK V110HigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK V110LowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK XHCaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK XHHigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK XHLowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK XQCaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK XQHigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK XQLowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK ZDCaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK ZDHigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK ZDLowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 
 

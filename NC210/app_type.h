@@ -8,8 +8,6 @@
 #include  <includes.h>
 #include  <RecDataTypeDef.h>
 
-#define	__packed	/**/
-
 
 #define     SOFT_VERSION                (101)          /* 软件版本         */
 #define     MODBUS_PASSWORD             (6237)          /* modbus通讯密码   */
@@ -20,7 +18,7 @@
 */
 #define     EVT_START                   (0x031)         /* 开机事件         */
 
-__packed
+#pragma pack( 1 )
 typedef struct {     
  	u16     Type;       //机车类型	2	参见机车类型代码表
  	u16     Nbr;        //机车号		2	
@@ -42,7 +40,7 @@ typedef struct {
 // 	u16   	            Nbr;				        //机车号		2	
 //} stcLocoId;
 
-__packed
+ #pragma pack( 1 )
 typedef struct {
     u32                 Head;
     u32                 Tail;
@@ -50,7 +48,7 @@ typedef struct {
 
 //记录号管理:当前记录号，卡已读记录号，无线发送模块记录号
 //16 bytes
-__packed
+ #pragma pack( 1 )
 typedef struct _StrRecNumMgr {
     u32   		        Current;			        //当前记录号	0~0xffffffff(计算地址)
     u32   		        Record;				        //文件号
@@ -60,7 +58,7 @@ typedef struct _StrRecNumMgr {
 
 //产品信息:型号 + 编号
 //12 bytes
-__packed
+ #pragma pack( 1 )
 typedef struct _StrProductInfo {
 	u32   		        Type;			            //产品类别
 	u32   		        Id;				            //产品编号	16110002
@@ -77,16 +75,18 @@ typedef struct _StrProductInfo {
 
 //运行参数，装置运行相关，数据存储周期，显示参数，恢复出厂设置
 //8 bytes
-__packed
+ #pragma pack( 1 )
 typedef struct _stcRunPara_					
 {
 	u16   		        StoreTime;                  // 1    数据记录存储周期
 	//
     u8   		        MtrErr[2];                  // 1    传感器错误代码
+	
     u8   		        SysErr;                     // 1    系统错误代码
 	u8   		        StoreType ;                 // 1    存储类型
 	u8                  AvgCnt;                     // 1    测量平均次数
-
+	u8					rec0;						// 1    预留
+	
     /**************************************************************
     * Description  : 参数保存控制
     * Author       : 2018/5/22 星期二, by redmorningcn
@@ -111,6 +111,28 @@ typedef struct _stcRunPara_
         u16                 Flags;
     } FramFlg;
     
+    union ___u_err_mask_flag {
+        struct  {
+            u16   		        ALFlag          : 1;        //低油位报警禁止
+            u16   		        AHFlag          : 1;        //高油位报警禁止
+            u16   		        Mtr1Flag        : 1;        //测量模块1禁止
+            u16   		        Mtr2Flag        : 1;        //测量模块2禁止
+            
+            u16   		        EngMtrFlag      : 1;        //柴速测量禁止    
+            u16   	            SpdMtrFlag      : 1;        //速度测量禁止
+            u16   		        ExtCommFlag     : 1;        //扩展通讯禁止
+            u16   		        ExtDispFlag     : 1;        //扩展显示禁止
+            
+            u16   		        PwrCommFlag     : 1;        //电量模块模块禁止
+            u16   	            TaxCommFlag     : 1;        //TAX箱测量禁止    
+            u16   	            IcCommFlag      : 1;        //IC卡模块禁止
+            u16   	            DtuCommFlag     : 1;        //无线模块禁止
+            
+            u16   	            Rsv             : 4;        //保留
+        } Flag;
+        u16                 Flags;
+    }Mask;                                          		// 故障屏蔽	
+	
     union ___u_init_flag {
         struct  {
             u32                 ConnIcCardFlag  : 1;        // IC卡模块连接成功标志 成功后清零 
@@ -142,28 +164,6 @@ typedef struct _stcRunPara_
         u32                 Flags;
     } InitFlag;
     
-    union ___u_err_mask_flag {
-        struct  {
-            u16   		        ALFlag          : 1;        //低油位报警禁止
-            u16   		        AHFlag          : 1;        //高油位报警禁止
-            u16   		        Mtr1Flag        : 1;        //测量模块1禁止
-            u16   		        Mtr2Flag        : 1;        //测量模块2禁止
-            
-            u16   		        EngMtrFlag      : 1;        //柴速测量禁止    
-            u16   	            SpdMtrFlag      : 1;        //速度测量禁止
-            u16   		        ExtCommFlag     : 1;        //扩展通讯禁止
-            u16   		        ExtDispFlag     : 1;        //扩展显示禁止
-            
-            u16   		        PwrCommFlag     : 1;        //电量模块模块禁止
-            u16   	            TaxCommFlag     : 1;        //TAX箱测量禁止    
-            u16   	            IcCommFlag      : 1;        //IC卡模块禁止
-            u16   	            DtuCommFlag     : 1;        //无线模块禁止
-            
-            u16   	            Rsv             : 4;        //保留
-        } Flag;
-        u16                 Flags;
-    }Mask;                                          // 故障屏蔽
-    
     union ___u_dev_cfg {
         struct  {
             u8   		        PwrEnFlag       : 1;        //
@@ -178,6 +178,9 @@ typedef struct _stcRunPara_
         } Flag;
         u8                      Flags;                      // 设备配置B0:电量模块;B1:扩展通讯模块；B2:显示模块1；B3显示模块2；B4:GPS模块；B5~B7预留
     } DevCfg; 
+	
+	u8	rec1;												// 预留1
+	
     union ___u_system_sts {
         struct  {
             u16                 DispLevel       : 4;        // 4        显示亮度 1~15 
@@ -195,10 +198,10 @@ typedef struct _stcRunPara_
     
     strDeviceErr            ErrMask;
     
-    u8                  Rsv2[7];                    // 预留16个字节
+    u8                  Rsv2[8];                    // 预留8个字节
 }stcRunPara;
 
-
+#pragma pack( 1 )
 typedef union _Unnctrl_ {
    struct{
         /***************************************************
@@ -225,7 +228,7 @@ typedef union _Unnctrl_ {
         * Description  : 数据记录
         * Author       : 2018/5/16 星期三, by redmorningcn
         */
-        //stcFlshRec          Rec;
+        stcFlshRec          Rec;
         
         /*******************************************************************************
         * Description  : 串口控制字

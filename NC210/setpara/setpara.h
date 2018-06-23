@@ -37,15 +37,15 @@
 #define		MAX_PATHNAME_LEN		512
 #define		SETPRAR_FILE_NAME		"cvi_setpara.ini"
 
-#define		CMD_TIME_SET        0x00000100			//时间卡（IC/无线）
-#define		CMD_LOCO_SET        0x00002000			//装车卡（IC/无线）
-#define		CMD_REC_CLR			0x00080000			//记录清零（无线）
-#define		CMD_SYS_RST	        0x00100000		    //系统复位（无线）
-#define		CMD_PARA_SET        0x00800000		    //写参数（无线）
-#define		CMD_PARA_GET        0x00800001		    //读参数（无线）
-#define		CMD_RECORD_GET      0x01000001		    //读数据记录（无线）
-#define		CMD_DETECT_SET      0x02000000		    //读检测板参数（无线）
-#define		CMD_DETECT_GET      0x02000001		    //写检测板参数（无线）
+#define		CMD_TIME_SET        	0x00000100			//时间卡（IC/无线）
+#define		CMD_LOCO_SET        	0x00002000			//装车卡（IC/无线）
+#define		CMD_REC_CLR				0x00080000			//记录清零（无线）
+#define		CMD_SYS_RST	        	0x00100000		    //系统复位（无线）
+#define		CMD_PARA_SET        	0x00800000		    //写参数（无线）
+#define		CMD_PARA_GET        	0x00800001		    //读参数（无线）
+#define		CMD_RECORD_GET      	0x01000001		    //读数据记录（无线）
+#define		CMD_DETECT_SET      	0x02000000		    //读检测板参数（无线）
+#define		CMD_DETECT_GET      	0x02000001		    //写检测板参数（无线）
 
 
 
@@ -70,15 +70,47 @@ typedef		struct	_stcTime_
 	uint16_t	CrcCheck;
 }stcTime;
  
-
-
 //产品信息:型号 + 编号
 //12 bytes
-typedef struct _StrParaRd {
-    u16         paraaddr;							//地址	
-    u16         paralen;							//长度
-    u16         parabuf[64]; 
-}StrTargetPara;
+
+typedef struct {
+    u8      buf[8];
+    u8      ack;
+} stcParaReply;
+
+/**************************************************************
+* Description  : dtu操作命令
+* Author       : 2018/5/25 星期五, by redmorningcn
+*/
+#pragma pack( 1 )
+typedef struct{
+    union{
+        //strIapdata      iap;
+
+        struct{
+            u32     code;
+            union{
+                stcTime         time;
+                stcLocoId       loco;
+                stcParaReply    reply;
+                u32             recordnum;      //记录号
+                struct{                         //指定地址读取
+                    u16         paraaddr;
+                    u16         paralen;
+                    u16         parabuf[64];       
+                };
+            };
+        };
+    };
+	
+	
+////操作标识。接收完后，根据数据置位	
+	u8 		setokflg 	:1	;					//设置成功标识
+	u8		dataokflg	:1	;					//数据接收完成标识
+	u8		recflg		:6	;					//预留
+	
+	u8		recdatalen;							//接收数据长度
+}strDtuRecData;
 
 /********************************************************************************************/
 /* Globals																					*/
@@ -86,7 +118,7 @@ typedef struct _StrParaRd {
 //串口结构体及通讯
 extern	int				l_eqiupmentcode;			//装置命令码，操作面板控制
 extern	StrProductInfo  gstrProductInfo;			//产品参数
-extern	StrTargetPara	gstrTargetPara;				//指定地址参数读
+extern	strDtuRecData	gstrDtuData;				//
 
 
 /********************************************************************************************/
@@ -98,7 +130,10 @@ extern	StrTargetPara	gstrTargetPara;				//指定地址参数读
 //通过l_eqiupmentcode变量控制设置过程。
 //此函数需要循环执行，且能外部设置 l_eqiupmentcode
 /********************************************************************************************/
-void 	Com_SetParaTask(void);		
+void 	Com_SetParaTask(void);	
+
+void	Com_SetParaRecTask(void);
+
 
 /********************************************************************************************/
 //载并显示面板。	redmoringcn 20170930						            

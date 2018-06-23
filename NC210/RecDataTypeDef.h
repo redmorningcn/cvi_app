@@ -7,7 +7,6 @@
 #define  _RecDataTypeDef_h_
 
 #include <includes.h>
-#define	 __packed   /* */	
 
 /**************************************************************
 * Description  : tax箱通讯-时间格式定义
@@ -76,7 +75,7 @@ typedef union _strDevicErr
 * Description  : 定义空检的flash存储的数据结构（128字节）
 * Author       : 2018/5/15 星期二, by redmorningcn
 *******************************************************************************/
-__packed
+ #pragma pack( 1 )
 typedef  struct _stcFlshRec                 //定义空检记录数据结构
 {
     u8   				CmdTpye		        ;//命令类型       1

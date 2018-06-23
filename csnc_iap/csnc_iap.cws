@@ -14,9 +14,9 @@ Active Project = 1
 Project 0001 = "csnc_iap.prj"
 Drag Bar Left = 259
 Window Top = 59
-Window Left = 248
+Window Left = 441
 Window Bottom = 749
-Window Right = 1179
+Window Right = 1372
 Maximized = True
 Maximized Children = True
 Max32 Number Of Errors = 20
@@ -58,7 +58,7 @@ Disk Date = 3606953117
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
-Window Z-Order = 11
+Window Z-Order = 14
 Source Window State = "1,17,17,17,52,64,64,0,0,76,0,0,0,0,0,24,0,0,9,52,511,855,1,0,"
 
 [File 0003]
@@ -78,17 +78,17 @@ Disk Date = 3607037696
 In Projects = "1,"
 Window Top = 126
 Window Left = 58
-Window Z-Order = 10
+Window Z-Order = 6
 Source Window State = "1,62,62,62,24,26,26,0,3,56,0,0,0,0,0,14,40,0,62,24,323,655,1,0,"
 
 [File 0005]
 Path = "/f/cvi/app/opencom/source/cvi_com_operate.c"
 File Type = "CSource"
-Disk Date = 3607035487
+Disk Date = 3612405392
 In Projects = "1,"
 Window Top = 157
 Window Left = 74
-Window Z-Order = 8
+Window Z-Order = 12
 Source Window State = "1,97,97,97,99,101,101,0,0,76,0,0,0,0,0,24,179,0,148,29,511,855,1,0,"
 
 [File 0006]
@@ -98,13 +98,13 @@ Disk Date = 3607035731
 In Projects = "1,"
 Window Top = 126
 Window Left = 58
-Window Z-Order = 9
+Window Z-Order = 13
 Source Window State = "1,101,102,101,0,0,0,0,0,76,0,0,0,0,0,24,62,0,80,46,511,855,1,0,"
 
 [File 0007]
 Path = "/f/cvi/app/opencom/uir/comconfig.h"
 File Type = "Include"
-Disk Date = 3589595871
+Disk Date = 3611886371
 In Projects = "1,"
 Window Top = 281
 Window Left = 138
@@ -118,7 +118,7 @@ Disk Date = 3596700580
 In Projects = "1,"
 Window Top = 250
 Window Left = 122
-Window Z-Order = 4
+Window Z-Order = 11
 Source Window State = "1,16,17,16,58,58,58,0,0,76,0,0,0,0,0,24,0,0,22,55,511,855,1,0,"
 
 [File 0009]
@@ -138,8 +138,8 @@ Disk Date = 3607577671
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
-Window Z-Order = 2
-Source Window State = "1,123,123,123,16,26,26,0,0,76,0,0,0,0,0,20,103,0,118,32,431,855,1,0,"
+Window Z-Order = 8
+Source Window State = "1,123,123,123,16,26,26,0,0,76,0,0,0,0,0,20,112,0,126,62,431,855,1,0,"
 
 [File 0011]
 Path = "/f/cvi/app/opencom/uir/main.h"
@@ -187,23 +187,23 @@ Disk Date = 3596700890
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
-Window Z-Order = 12
+Window Z-Order = 15
 Source Window State = "1,17,18,17,0,0,0,0,0,76,0,0,0,0,0,20,35,0,44,5,431,855,1,0,"
 
 [File 0016]
 Path = "/f/cvi/app/config/cvi_config.h"
 File Type = "Include"
-Disk Date = 3596699357
+Disk Date = 3612336278
 In Projects = "1,"
 Window Top = 219
 Window Left = 106
-Window Z-Order = 15
+Window Z-Order = 16
 Source Window State = "1,16,16,16,4,21,21,0,3,76,0,0,0,0,0,20,0,0,16,4,431,855,1,0,"
 
 [File 0017]
 Path = "/f/cvi/app/c_comm/includes.h"
 File Type = "Include"
-Disk Date = 3604032409
+Disk Date = 3612308685
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
@@ -213,13 +213,13 @@ Source Window State = "1,0,0,0,0,0,0,0,0,76,0,0,0,0,0,20,5,0,18,40,431,855,1,0,"
 [File 0018]
 Path = "/f/cvi/app/opencom/uir/comconfig.uir"
 File Type = "User Interface Resource"
-Disk Date = 3590361705
+Disk Date = 3611890611
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
 Window Height = 291
 Window Width = 665
-Window Z-Order = 16
+Window Z-Order = 10
 
 [File 0019]
 Path = "/f/cvi/app/c_comm/csnr_package_deal/csnr_package_deal.h"
@@ -250,17 +250,17 @@ Window Top = 188
 Window Left = 90
 Window Height = 323
 Window Width = 655
-Window Z-Order = 14
+Window Z-Order = 4
 
 [File 0022]
 Path = "/f/cvi/app/csnc_iap/main.c"
 File Type = "CSource"
-Disk Date = 3607040174
+Disk Date = 3612415056
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
-Window Z-Order = 3
-Source Window State = "1,39,40,39,0,0,0,0,0,56,0,0,0,0,0,14,11,0,70,25,323,655,1,0,"
+Window Z-Order = 9
+Source Window State = "1,86,86,86,48,55,48,0,0,56,0,0,0,0,0,14,39,0,52,27,323,655,1,0,"
 
 [File 0023]
 Path = "/f/cvi/app/c_comm/crccheck/CrcCheck.h"
@@ -295,13 +295,13 @@ Source Window State = "1,0,0,0,0,0,0,0,0,56,0,0,0,0,0,14,12,0,0,0,323,655,1,0,"
 [File 0026]
 Path = "/f/cvi/app/csnc_iap/iap/IAP.uir"
 File Type = "User Interface Resource"
-Disk Date = 3590568795
+Disk Date = 3611897126
 In Projects = "1,"
 Window Top = 219
 Window Left = 106
 Window Height = 323
 Window Width = 553
-Window Z-Order = 5
+Window Z-Order = 7
 
 [File 0027]
 Path = "/f/cvi/app/csnc_iap/iap/send_IAP.c"
@@ -310,8 +310,8 @@ Disk Date = 3611792813
 In Projects = "1,"
 Window Top = 157
 Window Left = 74
-Window Z-Order = 1
-Source Window State = "1,119,120,119,0,0,0,0,0,151,0,0,0,0,0,33,81,0,96,84,531,855,1,0,"
+Window Z-Order = 2
+Source Window State = "1,204,204,204,20,32,32,0,3,76,0,0,0,0,0,25,188,0,204,20,531,855,1,0,"
 
 [File 0028]
 Path = "/f/cvi/app/csnc_iap/openfile/cvi_file.c"
@@ -320,8 +320,8 @@ Disk Date = 3607041172
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
-Window Z-Order = 6
-Source Window State = "1,284,284,284,16,32,32,0,3,76,0,0,0,0,0,25,263,0,284,16,531,855,1,0,"
+Window Z-Order = 3
+Source Window State = "1,82,82,82,16,36,36,0,3,76,0,0,0,0,0,25,70,0,82,16,531,855,1,0,"
 
 [File 0029]
 Path = "/f/cvi/app/csnc_iap/iap/send_IAP.h"
@@ -330,8 +330,8 @@ Disk Date = 3607045980
 In Projects = "1,"
 Window Top = 188
 Window Left = 90
-Window Z-Order = 7
-Source Window State = "1,30,30,30,12,21,21,0,0,76,0,0,0,0,0,25,71,4,35,32,531,855,1,0,"
+Window Z-Order = 1
+Source Window State = "1,24,24,24,12,26,26,0,3,151,0,0,0,0,0,33,12,4,24,12,531,855,1,0,"
 
 [File 0030]
 Path = "/f/cvi/app/csnc_iap/openfile/cvi_file.h"
@@ -340,7 +340,7 @@ Disk Date = 3607040924
 In Projects = "1,"
 Window Top = 95
 Window Left = 42
-Window Z-Order = 13
+Window Z-Order = 5
 Source Window State = "1,47,47,47,8,22,22,0,3,76,0,0,0,0,0,13,35,0,47,8,291,855,1,0,"
 
 [File 0031]
@@ -351,6 +351,13 @@ In Projects = "1,"
 Window Top = 33
 Window Left = 10
 Source Window State = "1,29,40,40,0,41,41,0,0,0,0,0,0,0,0,0,14,0,20,6,511,855,1,0,"
+
+[File 0032]
+Path = "/f/cvi/app/csnc_iap/app_config.h"
+File Type = "Include"
+Disk Date = 3612335956
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
 [Tab Order]
 Tab 0001 = "/f/cvi/app/opencom/uir/main.h"

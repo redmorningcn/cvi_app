@@ -18,6 +18,7 @@
 #include 	"cvi_LocoCali.h"
 #include 	"includes.h"
 #include  	"cvi_config.h"
+#include  	"cvi_LocoCaliType.h"
 
 
 /********************************************************************************************/
@@ -30,7 +31,7 @@
 //面板变量
 int 					gLocoCali_panelHandle;
 extern		int			gmainPanel;
-
+strLocoCali				gstrLocoCali[6];
 /********************************************************************************************/
 //local
 /********************************************************************************************/
@@ -98,6 +99,8 @@ int CVICALLBACK LocoCaliPanelCB (int panel, int event, void *callbackData,
 }
 
 
+
+
 int CVICALLBACK LocoCaliTimerCallback (int panel, int control, int event,
 									  void *callbackData, int eventData1, int eventData2)
 {
@@ -107,21 +110,21 @@ int CVICALLBACK LocoCaliTimerCallback (int panel, int control, int event,
 
 			if(gLocoCali_panelHandle)			//面板有效，则进行定时器操作
 			{
-				//Com_SetParaTask();				//串口参数设置
+				//Com_SetParaTask();			//串口参数设置
 			}
 			break;
 	}
 	return 0;
 }
 
-
+//读取110v低位值，并在窗口显示。
 int CVICALLBACK V110LowCallback (int panel, int control, int event,
 								 void *callbackData, int eventData1, int eventData2)
 {
 	switch (event)
 	{
 		case EVENT_COMMIT:
-
+			gstrLocoCali[0].lowflg = 1;
 			break;
 	}
 	return 0;
@@ -133,7 +136,7 @@ int CVICALLBACK QYLowCallback (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-
+			gstrLocoCali[1].lowflg = 1; 
 			break;
 	}
 	return 0;
@@ -145,7 +148,7 @@ int CVICALLBACK ZDLowCallback (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-
+			gstrLocoCali[2].lowflg = 1;
 			break;
 	}
 	return 0;
@@ -157,7 +160,7 @@ int CVICALLBACK XQLowCallback (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-
+			gstrLocoCali[3].lowflg = 1;
 			break;
 	}
 	return 0;
@@ -169,7 +172,7 @@ int CVICALLBACK XHLowCallback (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-
+			gstrLocoCali[4].lowflg = 1;
 			break;
 	}
 	return 0;
@@ -181,7 +184,7 @@ int CVICALLBACK LWLowCallback (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-
+			gstrLocoCali[5].lowflg = 1;
 			break;
 	}
 	return 0;
@@ -193,7 +196,7 @@ int CVICALLBACK LWCaliCallback (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-
+			gstrLocoCali[5].califlg = 1;
 			break;
 	}
 	return 0;
@@ -205,7 +208,7 @@ int CVICALLBACK XHCaliCallback (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-
+			gstrLocoCali[4].califlg = 1;
 			break;
 	}
 	return 0;
@@ -217,7 +220,7 @@ int CVICALLBACK XQCaliCallback (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-
+			gstrLocoCali[3].califlg = 1;
 			break;
 	}
 	return 0;
@@ -229,7 +232,7 @@ int CVICALLBACK ZDCaliCallback (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-
+			gstrLocoCali[2].califlg = 1;
 			break;
 	}
 	return 0;
@@ -241,7 +244,7 @@ int CVICALLBACK QYCaliCallback (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-
+			gstrLocoCali[1].califlg = 1;
 			break;
 	}
 	return 0;
@@ -253,7 +256,7 @@ int CVICALLBACK V110CaliCallback (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-
+			gstrLocoCali[0].califlg = 1;
 			break;
 	}
 	return 0;
@@ -270,3 +273,82 @@ int CVICALLBACK HelpCallback (int panel, int control, int event,
 	}
 	return 0;
 }
+
+
+int CVICALLBACK V110HigCallback (int panel, int control, int event,
+								 void *callbackData, int eventData1, int eventData2)
+{
+	switch (event)
+	{
+		case EVENT_COMMIT:
+			gstrLocoCali[0].higflg = 0;
+			break;
+	}
+	return 0;
+}
+
+int CVICALLBACK QYHigCallback (int panel, int control, int event,
+							   void *callbackData, int eventData1, int eventData2)
+{
+	switch (event)
+	{
+		case EVENT_COMMIT:
+			gstrLocoCali[1].higflg = 1;
+			break;
+	}
+	return 0;
+}
+
+int CVICALLBACK ZDHigCallback (int panel, int control, int event,
+							   void *callbackData, int eventData1, int eventData2)
+{
+	switch (event)
+	{
+		case EVENT_COMMIT:
+			gstrLocoCali[2].higflg = 1;
+			break;
+	}
+	return 0;
+}
+
+int CVICALLBACK XQHigCallback (int panel, int control, int event,
+							   void *callbackData, int eventData1, int eventData2)
+{
+	switch (event)
+	{
+		case EVENT_COMMIT:
+			gstrLocoCali[3].higflg = 1;
+			break;
+	}
+	return 0;
+}
+
+int CVICALLBACK XHHigCallback (int panel, int control, int event,
+							   void *callbackData, int eventData1, int eventData2)
+{
+	switch (event)
+	{
+		case EVENT_COMMIT:
+			gstrLocoCali[4].higflg = 1;
+			break;
+	}
+	return 0;
+}
+
+int CVICALLBACK LWHigCallback (int panel, int control, int event,
+							   void *callbackData, int eventData1, int eventData2)
+{
+	switch (event)
+	{
+		case EVENT_COMMIT:
+			gstrLocoCali[5].higflg = 1;
+			break;
+	}
+	return 0;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//author：redmorningcn   20180621
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////
+

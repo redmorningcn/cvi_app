@@ -5,11 +5,13 @@ Depends "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\LKJ接口在线监测装置测试软件
 Depends "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\LKJ接口在线监测装置测试软件.exe" : "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\cvi_com1.obj" ;
 Depends "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\LKJ接口在线监测装置测试软件.exe" : "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\cvi_com_operate.obj" ;
 Depends "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\LKJ接口在线监测装置测试软件.exe" : "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\cvi_comm.obj" ;
+Depends "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\LKJ接口在线监测装置测试软件.exe" : "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\cvi_file.obj" ;
 Depends "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\LKJ接口在线监测装置测试软件.exe" : "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\cvi_LKJTest.obj" ;
 Depends "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\LKJ接口在线监测装置测试软件.exe" : "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\cvi_LocoCali.obj" ;
 Depends "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\LKJ接口在线监测装置测试软件.exe" : "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\cvi_setpara.obj" ;
 Depends "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\LKJ接口在线监测装置测试软件.exe" : "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\cvi_SpeedCali.obj" ;
 Depends "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\LKJ接口在线监测装置测试软件.exe" : "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\main.obj" ;
+Depends "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\LKJ接口在线监测装置测试软件.exe" : "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\send_IAP.obj" ;
 Depends "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\LKJ接口在线监测装置测试软件.exe" : "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\setpara.obj" ;
 Depends "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\LKJ接口在线监测装置测试软件.exe" : "C:\\Program Files (x86)\\Windows Kits\\8.1\\Lib\\winv6.3\\um\\x86\\advapi32.lib" ;
 NoCare "C:\\Program Files (x86)\\Windows Kits\\8.1\\Lib\\winv6.3\\um\\x86\\advapi32.lib" ;

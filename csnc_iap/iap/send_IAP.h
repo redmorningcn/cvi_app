@@ -23,12 +23,12 @@
 /* Constants																					*/
 /********************************************************************************************/
 #define     IAP_FRAME_CODE      10 
-#define		MY_ADDR				0xCA
+#define		MY_ADDR				ADDR_PC
 
 #define		COM_START_CODE		0x55
 #define		PC_ADDR				0xaa
 //#define		HOST_ADDR			0x82
-#define		HOST_ADDR			0x80
+#define		HOST_ADDR			ADDR_FIX
 #define		SLAVE_ADDR			0xA1
 
 /*******************************************************************************************

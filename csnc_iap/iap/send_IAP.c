@@ -94,7 +94,7 @@ void	SendIapTask(void)
 				int readlen = ReadFileData(gsBinFileInfo.deallen,&buf[0],128);//从文件中读取数据
 				gsBinFileInfo.deallen += readlen;
 				
-				crc32   = GetCrc32Chk( crc32, buf, readlen);
+				crc32   = GetCrc32Chk( crc32, (unsigned char *)buf, readlen);
 			}
 			//新增，180326 
 			
