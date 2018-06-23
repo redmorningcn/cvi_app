@@ -16,12 +16,14 @@
 //校准结构体		
 typedef struct _strLocoCali_
 {
-	u16		line;				
-	u16		zero;
+
 	u16		lowstandard;
 	u16		lowmeasure;
 	u16		higstandard;
 	u16		higmeasure;
+	u16		send;
+	u16		rec16;
+	u32		ansyflg;				//同步标识
 	
 	u8		califlg :	1;			//开始校准标识
 	u8		lowflg:		1;			//低位读标识
@@ -29,7 +31,14 @@ typedef struct _strLocoCali_
 	u8		tmpflg:		5;			//预留
 	
 	u8		tmp8[3];				//预留
+	
+	u16		line;				
+	u16		zero;
 }strLocoCali;
+
+
+
+extern	void	InitLocoCaliCtrlId(void)   ;
 
 
 #ifdef __cplusplus

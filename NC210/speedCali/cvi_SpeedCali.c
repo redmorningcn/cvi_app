@@ -1,7 +1,3 @@
-#include "cvi_LKJTest.h"
-#include "cvi_LocoCali.h"
-#include <userint.h>
-
 /*******************************************************************************
  *   Revised:        All copyrights reserved to redmorningcn.
  *   Revision:       v1.0
@@ -16,7 +12,6 @@
 /********************************************************************************************/
 /* Include files																			*/
 /********************************************************************************************/
-
 #include 	"cvi_SpeedCali.h"
 #include 	"includes.h"
 #include  	"cvi_config.h"

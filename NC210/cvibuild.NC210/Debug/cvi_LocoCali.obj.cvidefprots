@@ -1,3 +1,7 @@
+[LocoCaliTimerCallback]
+Class="Function"
+Prototype="int LocoCaliTimerCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
 [LoadLocoCaliPanel]
 Class="Function"
 Prototype="void LoadLocoCaliPanel();"
@@ -10,13 +14,37 @@ Prototype="int OpenLocoCaliCallback(int panel, int control, int event, void *cal
 Class="Function"
 Prototype="void QuitLocoCaliPanel();"
 
+[CtrlDimmedControl]
+Class="Function"
+Prototype="void CtrlDimmedControl(unsigned char id);"
+
+[V110SyncCallback]
+Class="Function"
+Prototype="int V110SyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[QySyncCallback]
+Class="Function"
+Prototype="int QySyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[ZdSyncCallback]
+Class="Function"
+Prototype="int ZdSyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[XqSyncCallback]
+Class="Function"
+Prototype="int XqSyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[XhSyncCallback]
+Class="Function"
+Prototype="int XhSyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[LwSyncCallback]
+Class="Function"
+Prototype="int LwSyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
 [LocoCaliPanelCB]
 Class="Function"
 Prototype="int LocoCaliPanelCB(int panel, int event, void *callbackData, int eventData1, int eventData2);"
-
-[LocoCaliTimerCallback]
-Class="Function"
-Prototype="int LocoCaliTimerCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
 
 [V110LowCallback]
 Class="Function"
@@ -93,4 +121,8 @@ Prototype="int XHHigCallback(int panel, int control, int event, void *callbackDa
 [LWHigCallback]
 Class="Function"
 Prototype="int LWHigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[InitLocoCaliCtrlId]
+Class="Function"
+Prototype="void InitLocoCaliCtrlId();"
 

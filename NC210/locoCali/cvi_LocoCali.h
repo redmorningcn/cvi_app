@@ -81,12 +81,12 @@
 #define  LOCOCALI_TEXTMSG_6               66      /* control type: textMsg, callback function: (none) */
 #define  LOCOCALI_TEXTMSG_7               67      /* control type: textMsg, callback function: (none) */
 #define  LOCOCALI_TEXTMSG_8               68      /* control type: textMsg, callback function: (none) */
-#define  LOCOCALI_LW_SYNC                 69      /* control type: radioButton, callback function: (none) */
-#define  LOCOCALI_XH_SYNC                 70      /* control type: radioButton, callback function: (none) */
-#define  LOCOCALI_XQ_SYNC                 71      /* control type: radioButton, callback function: (none) */
-#define  LOCOCALI_ZD_SYNC                 72      /* control type: radioButton, callback function: (none) */
-#define  LOCOCALI_V110_SYNC               73      /* control type: radioButton, callback function: (none) */
-#define  LOCOCALI_QY_SYNC                 74      /* control type: radioButton, callback function: (none) */
+#define  LOCOCALI_LW_SYNC                 69      /* control type: radioButton, callback function: LwSyncCallback */
+#define  LOCOCALI_XH_SYNC                 70      /* control type: radioButton, callback function: XhSyncCallback */
+#define  LOCOCALI_XQ_SYNC                 71      /* control type: radioButton, callback function: XqSyncCallback */
+#define  LOCOCALI_ZD_SYNC                 72      /* control type: radioButton, callback function: ZdSyncCallback */
+#define  LOCOCALI_V110_SYNC               73      /* control type: radioButton, callback function: V110SyncCallback */
+#define  LOCOCALI_QY_SYNC                 74      /* control type: radioButton, callback function: QySyncCallback */
 #define  LOCOCALI_COMMANDBUTTON           75      /* control type: command, callback function: HelpCallback */
 
 
@@ -108,21 +108,27 @@ int  CVICALLBACK LocoCaliTimerCallback(int panel, int control, int event, void *
 int  CVICALLBACK LWCaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK LWHigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK LWLowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK LwSyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK QYCaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK QYHigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK QYLowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK QySyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK V110CaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK V110HigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK V110LowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK V110SyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK XHCaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK XHHigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK XHLowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK XhSyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK XQCaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK XQHigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK XQLowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK XqSyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK ZDCaliCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK ZDHigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK ZDLowCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK ZdSyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 
 
 #ifdef __cplusplus
