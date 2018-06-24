@@ -18,6 +18,10 @@ Prototype="void QuitLocoCaliPanel();"
 Class="Function"
 Prototype="void CtrlDimmedControl(unsigned char id);"
 
+[CtrlDimmedSendControl]
+Class="Function"
+Prototype="void CtrlDimmedSendControl(unsigned char dimmed);"
+
 [V110SyncCallback]
 Class="Function"
 Prototype="int V110SyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
@@ -125,4 +129,12 @@ Prototype="int LWHigCallback(int panel, int control, int event, void *callbackDa
 [InitLocoCaliCtrlId]
 Class="Function"
 Prototype="void InitLocoCaliCtrlId();"
+
+[LocoCaliDisplay]
+Class="Function"
+Prototype="void LocoCaliDisplay();"
+
+[LocoCaliCommcode]
+Class="Function"
+Prototype="void LocoCaliCommcode();"
 

@@ -33,6 +33,7 @@ HDRS = 	"f:\\cvi\\app\\cvi_database\\database"
 	"c:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\Bin"
 	;
 include Jamfile_instr ;
+TIMESTAMPFILE on "f:\\cvi\\app\\NC210\\locoCali\\cvi_LocoCali.c" = "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\UnsavedChanges\\cvi_LocoCali.c" ;
 LOCATE on "app_config.h" = "f:\\cvi\\app\\NC210" ;
 LOCATE on "app_type.h" = "f:\\cvi\\app\\NC210" ;
 LOCATE on "comconfig.h" = "f:\\cvi\\app\\opencom\\uir" ;

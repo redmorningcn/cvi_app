@@ -73,6 +73,7 @@ void Com_SetParaTask(void)
 	unsigned int   	datalen = 0;
 	u32			   	tmp8;
 	static			u32		sendtime;
+	u8				tmplen;
 	
 	if(		l_eqiupmentcode 				!= 0		// 有设置指令 
 		&&  sCtrl.PC.ConnCtrl.SendTimeFlg 	== 0		// 有数据正在发送（暂停发送）			
@@ -105,8 +106,12 @@ void Com_SetParaTask(void)
 							  memcpy(&buf[datalen],(unsigned char *)&gstrDtuData.paralen,sizeof(gstrDtuData.paralen));
 							  datalen += sizeof(gstrDtuData.paralen);
 							  
-							  memcpy(&buf[datalen],(unsigned char *)&gstrDtuData,gstrDtuData.paralen);
-							  datalen += gstrDtuData.paralen;
+							  tmplen = gstrDtuData.paralen;
+							  if(l_eqiupmentcode == CMD_DETECT_SET)
+								  tmplen = gstrDtuData.paralen>>8;
+							  
+							  memcpy(&buf[datalen],(unsigned char *)&gstrDtuData,tmplen);
+							  datalen += tmplen;
 							  break;
 							  
 			case CMD_PARA_GET: 		// 指定地址读取参数

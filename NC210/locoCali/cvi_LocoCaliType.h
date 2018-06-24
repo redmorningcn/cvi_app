@@ -11,6 +11,8 @@
 #ifdef __cplusplus
     extern "C" {
 #endif
+		
+#define		LOCO_GROUP_NUM  	(6)			/* 有效校准组*/	
 
 		
 //校准结构体		
@@ -28,7 +30,9 @@ typedef struct _strLocoCali_
 	u8		califlg :	1;			//开始校准标识
 	u8		lowflg:		1;			//低位读标识
 	u8		higflg:		1;			//高位读标识
-	u8		tmpflg:		5;			//预留
+	u8		calisend:	1;			//校准发送标识
+
+	u8		tmpflg:		4;			//预留
 	
 	u8		tmp8[3];				//预留
 	
@@ -36,9 +40,40 @@ typedef struct _strLocoCali_
 	u16		zero;
 }strLocoCali;
 
+/**************************************************************
+* Description  : 校准参数
+* Author       : 2018/5/22 星期二, by redmorningcn
+*/
+typedef struct {
+    u32     line;       //修正线性度  
+    int16   Delta;      //修正偏差
+    int16   tmp;        //预留
+
+}strLocoCalibration;
 
 
-extern	void	InitLocoCaliCtrlId(void)   ;
+/**************************************************************
+* Description  : 修正参数表
+* Author       : 2018/5/22 星期二, by redmorningcn
+*/
+typedef struct{
+    union   {
+        struct{
+            strLocoCalibration  VccVol;         //电平
+            strLocoCalibration  QY_Vol;         //
+            strLocoCalibration  ZD_Vol;         //
+            strLocoCalibration  XQ_Vol;         //
+            strLocoCalibration  XH_Vol;         //
+            strLocoCalibration  LW_Vol;         //
+        };
+        strLocoCalibration      CaliBuf[10];
+    };
+}strLocoCaliTable;
+
+
+extern	void	InitLocoCaliCtrlId(void);
+extern	void	LocoCaliCommcode(void)	;
+extern	void	LocoCaliDisplay(void)	;
 
 
 #ifdef __cplusplus
