@@ -12,6 +12,10 @@ VXIplug&play Framework 64-bit Dir = "/C/Program Files/IVI Foundation/VISA/win64"
 Number of Projects = 1
 Active Project = 1
 Project 0001 = "NC210.prj"
+Project 0001 Folder source/globe Collapsed = True
+Project 0001 FolderId 2 Collapsed = True
+Project 0001 Folder head Collapsed = True
+Project 0001 FolderId 5 Collapsed = True
 Drag Bar Left = 238
 Window Top = 31
 Window Left = 466
@@ -30,7 +34,7 @@ Save Changes Before Compiling = "Always"
 Hide Windows = False
 Break At First Statement = False
 Sort Type = "File Name"
-Number of Opened Files = 42
+Number of Opened Files = 50
 Window Confinement Region Enabled = True
 MainColumnWidth = 221
 FileDateColumnWidth = 70
@@ -54,12 +58,12 @@ In Projects = "1,"
 [File 0002]
 Path = "/f/cvi/app/csnc_debug/cvi_bspComm.c"
 File Type = "CSource"
-Disk Date = 3612473798
+Disk Date = 3612820636
 In Projects = "1,"
 Window Top = 64
 Window Left = 26
-Window Z-Order = 1
-Source Window State = "1,90,90,90,43,47,47,0,3,98,0,0,0,0,0,19,84,0,90,43,531,855,1,0,"
+Window Z-Order = 4
+Source Window State = "1,94,94,94,38,45,45,0,0,76,0,0,0,0,0,25,82,0,94,20,531,855,1,0,"
 
 [File 0003]
 Path = "/f/cvi/app/NC210/setpara/cvi_setpara.uir"
@@ -70,7 +74,7 @@ Window Top = 64
 Window Left = 26
 Window Height = 431
 Window Width = 855
-Window Z-Order = 34
+Window Z-Order = 11
 
 [File 0004]
 Path = "/c/Program Files (x86)/National Instruments/CVI2017/include/utility.h"
@@ -79,7 +83,7 @@ Disk Date = 3573565200
 In Projects = ""
 Window Top = 33
 Window Left = 10
-Window Z-Order = 39
+Window Z-Order = 47
 Source Window State = "1,698,698,698,16,45,45,0,3,76,0,0,0,0,0,19,689,0,698,16,411,855,1,0,"
 
 [File 0005]
@@ -89,7 +93,7 @@ Disk Date = 3573565200
 In Projects = ""
 Window Top = 33
 Window Left = 10
-Window Z-Order = 42
+Window Z-Order = 50
 Source Window State = "1,63,63,63,8,16,16,0,0,80,0,0,0,0,0,25,0,0,58,119,531,895,1,0,"
 
 [File 0006]
@@ -101,28 +105,28 @@ Window Top = 33
 Window Left = 10
 Window Height = 531
 Window Width = 895
-Window Z-Order = 29
+Window Z-Order = 42
 
 [File 0007]
 Path = "/f/cvi/app/c_comm/csnr_package_deal/csnr_package_deal.c"
 File Type = "CSource"
-Disk Date = 3596700580
+Disk Date = 3612777622
 In Projects = "1,"
 Window Top = 64
 Window Left = 26
-Window Z-Order = 20
-Source Window State = "1,5,5,5,8,24,24,0,3,80,0,0,0,0,0,25,39,0,5,8,531,895,1,0,"
+Window Z-Order = 19
+Source Window State = "1,137,137,137,31,41,41,0,0,80,0,0,0,0,0,25,115,0,130,36,531,895,1,0,"
 
 [File 0008]
 Path = "/f/cvi/app/NC210/locoCali/cvi_LocoCali.uir"
 File Type = "User Interface Resource"
-Disk Date = 3612609699
+Disk Date = 3612774597
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
 Window Height = 531
 Window Width = 895
-Window Z-Order = 6
+Window Z-Order = 5
 
 [File 0009]
 Path = "/f/cvi/app/NC210/speedCali/cvi_SpeedCali.uir"
@@ -133,7 +137,7 @@ Window Top = 157
 Window Left = 74
 Window Height = 531
 Window Width = 895
-Window Z-Order = 22
+Window Z-Order = 39
 
 [File 0010]
 Path = "/f/cvi/app/csnc_iap/iap/IAP.uir"
@@ -144,7 +148,7 @@ Window Top = 436
 Window Left = 218
 Window Height = 531
 Window Width = 895
-Window Z-Order = 33
+Window Z-Order = 43
 
 [File 0011]
 Path = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTest.uir"
@@ -155,43 +159,39 @@ Window Top = 95
 Window Left = 42
 Window Height = 531
 Window Width = 895
-Window Z-Order = 24
+Window Z-Order = 12
 
 [File 0012]
 Path = "/f/cvi/app/opencom/source/cvi_com1.c"
 File Type = "CSource"
-Disk Date = 3607035731
+Disk Date = 3612777392
 In Projects = "1,"
 Window Top = 250
 Window Left = 122
-Window Z-Order = 27
-Source Window State = "1,286,286,286,16,32,32,0,3,80,0,0,0,0,0,21,218,0,286,16,451,895,1,0,"
+Window Z-Order = 26
+Source Window State = "1,61,61,61,22,27,27,0,0,80,0,0,0,0,0,21,64,0,89,16,451,895,1,0,"
 
 [File 0013]
 Path = "/f/cvi/app/opencom/source/cvi_com_operate.c"
 File Type = "CSource"
-Disk Date = 3612566759
+Disk Date = 3612778552
 In Projects = "1,"
 Window Top = 95
 Window Left = 42
-Window Z-Order = 4
-Source Window State = "1,141,142,141,0,0,0,0,0,80,0,0,0,0,0,21,135,0,139,18,451,895,1,0,"
+Window Z-Order = 6
+Source Window State = "1,130,132,132,8,27,27,0,0,80,0,0,0,0,0,21,127,0,137,0,451,895,1,0,"
 
 [File 0014]
 Path = "/f/cvi/app/NC210/setpara/setpara.c"
 File Type = "CSource"
-Disk Date = 3612657120
+Disk Date = 3612840690
 In Projects = "1,"
 Window Top = 281
 Window Left = 138
-Window Z-Order = 3
-Source Window State = "1,113,113,113,41,60,60,0,0,80,0,0,0,0,0,25,227,0,228,64,531,895,1,0,"
-Breakpoint 0001 = "158,0,enabled,"
+Window Z-Order = 2
+Source Window State = "1,169,170,169,0,0,0,0,0,80,0,0,0,0,0,25,157,0,169,21,531,895,1,0,"
+Breakpoint 0001 = "159,0,enabled,"
 Tracepoint 0001 = "0,0,154,1,"
-Breakpoint 0002 = "202,0,enabled,"
-Tracepoint 0002 = "0,0,177,1,"
-Breakpoint 0003 = "203,0,enabled,"
-Tracepoint 0003 = "0,0,178,1,"
 
 [File 0015]
 Path = "/f/cvi/app/NC210/setpara/cvi_setpara.c"
@@ -200,8 +200,8 @@ Disk Date = 3612483868
 In Projects = "1,"
 Window Top = 95
 Window Left = 42
-Window Z-Order = 10
-Source Window State = "1,60,61,61,0,71,71,0,3,57,0,0,0,0,0,20,45,0,60,0,431,665,1,0,"
+Window Z-Order = 18
+Source Window State = "1,60,61,61,0,71,71,0,0,57,0,0,0,0,0,20,108,0,108,40,431,665,1,0,"
 
 [File 0016]
 Path = "/f/cvi/app/NC210/main.c"
@@ -210,7 +210,7 @@ Disk Date = 3612496472
 In Projects = "1,"
 Window Top = 157
 Window Left = 74
-Window Z-Order = 7
+Window Z-Order = 31
 Source Window State = "1,37,37,37,4,19,19,0,0,76,0,0,0,0,0,13,96,0,103,12,291,855,1,0,"
 
 [File 0017]
@@ -220,7 +220,7 @@ Disk Date = 3612340488
 In Projects = "1,"
 Window Top = 250
 Window Left = 122
-Window Z-Order = 17
+Window Z-Order = 9
 Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,25,21,0,0,0,531,895,1,0,"
 
 [File 0018]
@@ -230,8 +230,8 @@ Disk Date = 3612308685
 In Projects = "1,"
 Window Top = 188
 Window Left = 90
-Window Z-Order = 16
-Source Window State = "1,57,58,57,0,0,0,0,0,80,0,0,0,0,0,21,26,0,57,0,451,895,1,0,"
+Window Z-Order = 37
+Source Window State = "1,26,26,26,21,24,24,0,3,80,0,0,0,0,0,21,20,0,26,21,451,895,1,0,"
 
 [File 0019]
 Path = "/f/cvi/app/NC210/mian.h"
@@ -240,7 +240,7 @@ Disk Date = 3612321780
 In Projects = ""
 Window Top = 219
 Window Left = 106
-Window Z-Order = 40
+Window Z-Order = 48
 Source Window State = "1,19,19,19,9,28,28,0,0,80,0,0,0,0,0,21,3,0,33,34,451,895,1,0,"
 
 [File 0020]
@@ -250,8 +250,8 @@ Disk Date = 3612578337
 In Projects = "1,"
 Window Top = 219
 Window Left = 106
-Window Z-Order = 14
-Source Window State = "1,44,44,44,12,24,24,0,3,80,0,0,0,0,0,25,34,0,44,12,531,895,1,0,"
+Window Z-Order = 13
+Source Window State = "1,116,116,116,12,22,22,0,3,80,0,0,0,0,0,25,104,0,116,12,531,895,1,0,"
 
 [File 0021]
 Path = "/f/cvi/app/NC210/speedCali/cvi_SpeedCali.c"
@@ -260,8 +260,8 @@ Disk Date = 3612607830
 In Projects = "1,"
 Window Top = 188
 Window Left = 90
-Window Z-Order = 8
-Source Window State = "1,14,15,14,0,0,0,0,0,80,0,0,0,0,0,21,57,0,64,0,451,895,1,0,"
+Window Z-Order = 14
+Source Window State = "1,14,15,14,0,0,0,0,0,80,0,0,0,0,0,21,132,0,72,25,451,895,1,0,"
 
 [File 0022]
 Path = "/f/cvi/app/NC210/speedCali/cvi_SpeedCali.h"
@@ -270,28 +270,34 @@ Disk Date = 3612317712
 In Projects = ""
 Window Top = 219
 Window Left = 106
-Window Z-Order = 41
+Window Z-Order = 49
 Source Window State = "1,77,77,77,17,31,31,0,3,80,0,0,0,0,0,21,63,0,77,17,451,895,1,0,"
 
 [File 0023]
 Path = "/f/cvi/app/NC210/locoCali/cvi_LocoCali.c"
 File Type = "CSource"
-Disk Date = 3612657207
+Disk Date = 3612830367
 In Projects = "1,"
 Window Top = 219
 Window Left = 106
-Window Z-Order = 2
-Source Window State = "1,609,610,609,0,0,0,0,0,80,0,0,0,0,0,21,617,0,609,0,451,895,1,0,"
+Window Z-Order = 1
+Source Window State = "1,748,748,748,30,44,44,0,0,153,0,0,0,0,0,27,729,0,747,65,451,895,1,0,"
+Breakpoint 0001 = "296,0,enabled,"
+Tracepoint 0001 = "0,0,297,1,"
+Breakpoint 0002 = "309,0,enabled,"
+Tracepoint 0002 = "0,0,310,1,"
+Breakpoint 0003 = "748,0,enabled,"
+Tracepoint 0003 = "0,0,749,1,"
 
 [File 0024]
 Path = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTest.c"
 File Type = "CSource"
-Disk Date = 3612607748
+Disk Date = 3612679691
 In Projects = "1,"
 Window Top = 250
 Window Left = 122
-Window Z-Order = 9
-Source Window State = "1,353,353,353,4,7,7,0,3,80,0,0,0,0,0,21,45,0,353,4,451,895,1,0,"
+Window Z-Order = 34
+Source Window State = "1,120,121,120,0,0,0,0,3,80,0,0,0,0,0,21,93,0,120,61,451,895,1,0,"
 Breakpoint 0001 = "398,0,enabled,"
 Tracepoint 0001 = "0,0,185,1,"
 
@@ -304,27 +310,27 @@ Window Top = 33
 Window Left = 10
 Window Height = 451
 Window Width = 895
-Window Z-Order = 28
+Window Z-Order = 41
 
 [File 0026]
 Path = "/f/cvi/app/NC210/app_type.h"
 File Type = "Include"
-Disk Date = 3612496194
+Disk Date = 3612774544
 In Projects = "1,"
 Window Top = 126
 Window Left = 58
-Window Z-Order = 31
-Source Window State = "1,230,230,230,28,31,31,0,0,80,0,0,0,0,0,21,218,0,230,14,451,895,1,0,"
+Window Z-Order = 16
+Source Window State = "1,20,20,20,0,23,23,0,0,80,0,0,0,0,0,21,216,0,231,14,451,895,1,0,"
 
 [File 0027]
 Path = "/f/cvi/app/NC210/RecDataTypeDef.h"
 File Type = "Include"
-Disk Date = 3612496158
+Disk Date = 3612823117
 In Projects = "1,"
 Window Top = 157
 Window Left = 74
-Window Z-Order = 30
-Source Window State = "1,87,92,92,0,61,61,0,0,80,0,0,0,0,0,21,79,0,92,37,451,895,1,0,"
+Window Z-Order = 15
+Source Window State = "1,114,114,114,32,33,33,0,0,80,0,0,0,0,0,21,102,0,123,51,451,895,1,0,"
 
 [File 0028]
 Path = "/f/cvi/app/ansytime/cvi_ansytimer.c"
@@ -333,8 +339,8 @@ Disk Date = 3606962973
 In Projects = "1,"
 Window Top = 64
 Window Left = 26
-Window Z-Order = 13
-Source Window State = "1,179,179,179,4,18,18,0,0,80,0,0,0,0,0,19,96,0,73,37,411,895,1,0,"
+Window Z-Order = 28
+Source Window State = "1,32,32,32,30,54,54,0,0,80,0,0,0,0,0,19,66,0,21,18,411,895,1,0,"
 
 [File 0029]
 Path = "/f/cvi/app/NC210/main.h"
@@ -343,28 +349,28 @@ Disk Date = 3612428066
 In Projects = "1,"
 Window Top = 188
 Window Left = 90
-Window Z-Order = 35
+Window Z-Order = 44
 Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,19,0,0,0,0,411,895,1,0,"
 
 [File 0030]
 Path = "/f/cvi/app/NC210/locoCali/cvi_LocoCaliType.h"
 File Type = "Include"
-Disk Date = 3612652494
+Disk Date = 3612824162
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
-Window Z-Order = 11
-Source Window State = "1,70,70,70,1,17,17,0,0,80,0,0,0,0,0,19,51,0,68,41,411,895,1,0,"
+Window Z-Order = 10
+Source Window State = "1,68,68,68,32,39,39,0,0,80,0,0,0,0,0,19,53,0,61,29,411,895,1,0,"
 
 [File 0031]
 Path = "/f/cvi/app/csnc_iap/iap/send_IAP.c"
 File Type = "CSource"
-Disk Date = 3612427173
+Disk Date = 3612778552
 In Projects = "1,"
 Window Top = 95
 Window Left = 42
-Window Z-Order = 36
-Source Window State = "1,224,224,224,36,50,50,0,0,80,0,0,0,0,0,19,72,0,96,62,411,895,1,0,"
+Window Z-Order = 23
+Source Window State = "1,96,96,96,68,75,75,0,0,80,0,0,0,0,0,19,81,0,96,75,411,895,1,0,"
 
 [File 0032]
 Path = "/f/cvi/app/csnc_iap/iap/send_IAP.h"
@@ -373,7 +379,7 @@ Disk Date = 3612427129
 In Projects = "1,"
 Window Top = 126
 Window Left = 58
-Window Z-Order = 37
+Window Z-Order = 45
 Source Window State = "1,30,30,30,32,36,36,0,0,80,0,0,0,0,0,19,15,0,31,55,411,895,1,0,"
 
 [File 0033]
@@ -383,7 +389,7 @@ Disk Date = 3590568795
 In Projects = "1,"
 Window Top = 157
 Window Left = 74
-Window Z-Order = 38
+Window Z-Order = 46
 Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,19,0,0,0,0,411,895,1,0,"
 
 [File 0034]
@@ -393,7 +399,7 @@ Disk Date = 3573565200
 In Projects = ""
 Window Top = 157
 Window Left = 74
-Window Z-Order = 32
+Window Z-Order = 33
 Source Window State = "1,57,57,57,12,18,18,0,3,80,0,0,0,0,0,14,50,0,57,12,311,895,1,0,"
 
 [File 0035]
@@ -403,7 +409,7 @@ Disk Date = 3612594625
 In Projects = "1,"
 Window Top = 95
 Window Left = 42
-Window Z-Order = 18
+Window Z-Order = 8
 Source Window State = "1,90,90,90,9,25,25,0,3,77,0,0,0,0,0,13,23,0,90,9,291,865,1,0,"
 
 [File 0036]
@@ -413,7 +419,7 @@ Disk Date = 3573565200
 In Projects = ""
 Window Top = 64
 Window Left = 26
-Window Z-Order = 26
+Window Z-Order = 40
 Source Window State = "1,205,205,205,15,23,23,0,0,77,0,0,0,0,0,13,194,0,205,30,291,865,1,0,"
 
 [File 0037]
@@ -423,27 +429,27 @@ Disk Date = 3596700890
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
-Window Z-Order = 21
+Window Z-Order = 38
 Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,19,29,0,0,0,411,895,1,0,"
 
 [File 0038]
 Path = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTestType.h"
 File Type = "Include"
-Disk Date = 3612651666
+Disk Date = 3612771995
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
-Window Z-Order = 12
-Source Window State = "1,14,15,14,0,0,0,0,0,79,0,0,0,0,0,15,0,0,14,0,331,885,1,0,"
+Window Z-Order = 3
+Source Window State = "1,65,66,65,0,0,0,0,0,79,0,0,0,0,0,15,46,0,71,19,331,885,1,0,"
 
 [File 0039]
 Path = "/f/cvi/app/NC210/locoCali/cvi_LocoCali.h"
 File Type = "Include"
-Disk Date = 3612609699
+Disk Date = 3612774597
 In Projects = ""
 Window Top = 64
 Window Left = 26
-Window Z-Order = 25
+Window Z-Order = 35
 Source Window State = "1,87,87,87,9,27,27,0,3,79,0,0,0,0,0,13,10,0,87,9,291,885,1,0,"
 
 [File 0040]
@@ -453,7 +459,7 @@ Disk Date = 3573565200
 In Projects = ""
 Window Top = 95
 Window Left = 42
-Window Z-Order = 23
+Window Z-Order = 36
 Source Window State = "1,2168,2168,2168,14,24,24,0,3,79,0,0,0,0,0,13,2162,0,2168,14,291,885,1,0,"
 
 [File 0041]
@@ -463,7 +469,7 @@ Disk Date = 3604032278
 In Projects = "1,"
 Window Top = 95
 Window Left = 42
-Window Z-Order = 19
+Window Z-Order = 24
 Source Window State = "1,273,273,273,9,20,20,0,3,80,0,0,0,0,0,25,261,0,273,9,531,895,1,0,"
 
 [File 0042]
@@ -473,18 +479,18 @@ Disk Date = 3612648529
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
-Window Z-Order = 15
-Source Window State = "1,24,24,24,8,17,17,0,3,80,0,4,0,4,0,21,3,0,24,8,451,895,1,0,"
+Window Z-Order = 17
+Source Window State = "1,18,18,18,8,25,25,0,3,80,0,4,0,4,0,21,3,0,18,8,451,895,1,0,"
 
 [File 0043]
 Path = "/f/cvi/app/csnc_debug/cvi_bspComm.h"
 File Type = "Include"
-Disk Date = 3612472781
+Disk Date = 3612820636
 In Projects = "1,"
 Window Top = 126
 Window Left = 58
-Window Z-Order = 5
-Source Window State = "1,66,66,66,24,26,26,0,3,80,0,0,0,0,0,21,65,0,66,24,451,895,1,0,"
+Window Z-Order = 20
+Source Window State = "1,25,25,25,12,26,26,0,3,80,0,0,0,0,0,21,14,0,25,12,451,895,1,0,"
 
 [File 0044]
 Path = "/f/cvi/app/cvi_comm/cvi_comm.c"
@@ -493,7 +499,8 @@ Disk Date = 3606953117
 In Projects = "1,"
 Window Top = 126
 Window Left = 58
-Source Window State = "1,28,30,30,0,92,92,0,3,0,0,0,0,0,0,0,21,0,28,0,451,895,0,0,"
+Window Z-Order = 21
+Source Window State = "1,28,30,30,0,92,92,0,0,80,0,0,0,0,0,21,0,0,39,46,451,895,1,0,"
 
 [File 0045]
 Path = "/f/cvi/app/csnc_iap/openfile/cvi_file.c"
@@ -502,9 +509,60 @@ Disk Date = 3607041172
 In Projects = "1,"
 Window Top = 64
 Window Left = 26
-Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,411,895,0,0,"
+Window Z-Order = 32
+Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,19,0,0,0,0,411,895,1,0,"
 
 [File 0046]
+Path = "/f/cvi/app/c_comm/csnr_package_deal/csnr_package_deal.h"
+File Type = "Include"
+Disk Date = 3612778603
+In Projects = "1,"
+Window Top = 126
+Window Left = 58
+Window Z-Order = 22
+Source Window State = "1,44,44,44,13,17,17,0,0,80,0,0,0,0,0,24,28,0,46,6,511,895,1,0,"
+
+[File 0047]
+Path = "/f/cvi/app/ansytime/cvi_ansytimer.h"
+File Type = "Include"
+Disk Date = 3612777068
+In Projects = "1,"
+Window Top = 95
+Window Left = 42
+Window Z-Order = 29
+Source Window State = "1,29,29,29,48,49,48,0,0,80,0,0,0,0,0,21,19,0,29,49,451,895,1,0,"
+
+[File 0048]
+Path = "/f/cvi/app/opencom/source/cvi_com1.h"
+File Type = "Include"
+Disk Date = 3607035615
+In Projects = "1,"
+Window Top = 157
+Window Left = 74
+Window Z-Order = 27
+Source Window State = "1,13,14,14,0,27,27,0,0,80,0,0,0,0,0,21,3,0,22,21,451,895,1,0,"
+
+[File 0049]
+Path = "/f/cvi/app/opencom/source/cvi_com_operate.h"
+File Type = "Include"
+Disk Date = 3612778359
+In Projects = "1,"
+Window Top = 95
+Window Left = 42
+Window Z-Order = 25
+Source Window State = "1,114,114,114,16,27,27,0,3,80,0,0,0,0,0,21,99,0,114,16,451,895,1,0,"
+
+[File 0050]
+Path = "/c/Program Files (x86)/National Instruments/CVI2017/toolslib/toolbox/asynctmr.h"
+File Type = "Include"
+Disk Date = 3573565200
+In Projects = ""
+Window Top = 126
+Window Left = 58
+Window Z-Order = 30
+Source Window State = "1,54,54,54,12,122,122,0,3,80,0,0,0,0,0,20,44,0,54,12,431,895,1,0,"
+
+[File 0051]
 Path = "/f/cvi/app/opencom/uir/comconfig.h"
 File Type = "Include"
 Disk Date = 3611886371
@@ -513,50 +571,14 @@ Window Top = 64
 Window Left = 26
 Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,49,451,895,1,0,"
 
-[File 0047]
+[File 0052]
 Path = "/f/cvi/app/c_comm/crccheck/CrcCheck.h"
 File Type = "Include"
 Disk Date = 3604032276
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
-[File 0048]
-Path = "/f/cvi/app/c_comm/csnr_package_deal/csnr_package_deal.h"
-File Type = "Include"
-Disk Date = 3596698998
-In Projects = "1,"
-Window Top = 126
-Window Left = 58
-Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,511,895,1,0,"
-
-[File 0049]
-Path = "/f/cvi/app/ansytime/cvi_ansytimer.h"
-File Type = "Include"
-Disk Date = 3606959998
-In Projects = "1,"
-Window Top = 95
-Window Left = 42
-Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,451,895,1,0,"
-
-[File 0050]
-Path = "/f/cvi/app/opencom/source/cvi_com1.h"
-File Type = "Include"
-Disk Date = 3607035615
-In Projects = "1,"
-Window Top = 157
-Window Left = 74
-Source Window State = "1,13,14,14,0,27,27,0,3,0,0,0,0,0,0,0,0,0,13,0,451,895,1,0,"
-
-[File 0051]
-Path = "/f/cvi/app/opencom/source/cvi_com_operate.h"
-File Type = "Include"
-Disk Date = 3607035493
-In Projects = "1,"
-Window Top = 95
-Window Left = 42
-Source Window State = "1,61,61,61,16,20,20,0,3,0,0,0,0,0,0,0,33,0,61,16,451,895,1,0,"
-
-[File 0052]
+[File 0053]
 Path = "/f/cvi/app/config/cvi_config.h"
 File Type = "Include"
 Disk Date = 3612336278
@@ -565,12 +587,15 @@ Window Top = 64
 Window Left = 26
 Source Window State = "1,22,22,22,8,18,18,0,3,0,0,0,0,0,0,0,0,0,22,8,451,895,1,0,"
 
-[File 0053]
+[File 0054]
 Path = "/f/cvi/app/csnc_iap/openfile/cvi_file.h"
 File Type = "Include"
 Disk Date = 3607040924
 In Projects = "1,"
-Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+Window Top = 33
+Window Left = 10
+Window Z-Order = 7
+Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,17,0,0,0,0,371,895,1,0,"
 
 [Tab Order]
 Tab 0001 = "/c/Program Files (x86)/National Instruments/CVI2017/include/utility.h"
@@ -610,11 +635,19 @@ Tab 0034 = "/f/cvi/app/c_comm/csnr_package_deal/csnr_package_deal.c"
 Tab 0035 = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTest.h"
 Tab 0036 = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTestType.h"
 Tab 0037 = "/f/cvi/app/cvi_comm/cvi_comm.h"
-Tab 0038 = "/f/cvi/app/NC210/locoCali/cvi_LocoCali.h"
-Tab 0039 = "/c/Program Files (x86)/National Instruments/CVI2017/include/userint.h"
-Tab 0040 = "/f/cvi/app/csnc_debug/cvi_bspComm.h"
-Tab 0041 = "/f/cvi/app/c_comm/crccheck/CrcCheck.c"
-Tab 0042 = "/f/cvi/app/NC210/app_config.h"
+Tab 0038 = "/c/Program Files (x86)/National Instruments/CVI2017/include/userint.h"
+Tab 0039 = "/f/cvi/app/csnc_debug/cvi_bspComm.h"
+Tab 0040 = "/f/cvi/app/c_comm/crccheck/CrcCheck.c"
+Tab 0041 = "/f/cvi/app/NC210/app_config.h"
+Tab 0042 = "/f/cvi/app/NC210/locoCali/cvi_LocoCali.h"
+Tab 0043 = "/f/cvi/app/csnc_iap/openfile/cvi_file.c"
+Tab 0044 = "/f/cvi/app/cvi_comm/cvi_comm.c"
+Tab 0045 = "/f/cvi/app/opencom/source/cvi_com_operate.h"
+Tab 0046 = "/f/cvi/app/ansytime/cvi_ansytimer.h"
+Tab 0047 = "/f/cvi/app/opencom/source/cvi_com1.h"
+Tab 0048 = "/f/cvi/app/c_comm/csnr_package_deal/csnr_package_deal.h"
+Tab 0049 = "/c/Program Files (x86)/National Instruments/CVI2017/toolslib/toolbox/asynctmr.h"
+Tab 0050 = "/f/cvi/app/csnc_iap/openfile/cvi_file.h"
 
 [Default Build Config 0001 Debug]
 Generate Browse Info = True
@@ -705,44 +738,461 @@ Working Directory = ""
 Environment Options = ""
 
 [Watch 1]
-Watch Expression = "g_AnsyTime"
+Watch Expression = "sCtrl.PC.ConnCtrl"
 
 [Watch 2]
-Watch Expression = "Ctrl"
+Watch Expression = "sCtrl.PC.sCom"
 
 [Watch 3]
-Watch Expression = "l_eqiupmentcode"
+Watch Expression = "sCtrl.PC.ThreadID"
 
 [Watch 4]
-Watch Expression = "g_AnsyTime"
+Watch Expression = "sCtrl.PC.ThreadExit"
 
 [Watch 5]
-Watch Expression = "buf"
-
-[Watch 6]
-Watch Expression = "sCtrl"
-
-[Watch 7]
 Watch Expression = "lsSpeedCrtID"
 
-[Watch 8]
+[Watch 6]
 Watch Expression = "id"
 
+[Watch 7]
+Watch Expression = "sCtrl"
+
+[Watch 8]
+Watch Expression = "recbuf"
+
 [Watch 9]
-Watch Expression = "ctrlid"
+Watch Expression = "g_AnsyTime"
 
 [Watch 10]
-Watch Expression = "lstcSpeedDetect"
+Watch Expression = "Ctrl"
 
 [Watch 11]
-Watch Expression = "lsstLocoCtrlID"
+Watch Expression = "l_eqiupmentcode"
 
 [Watch 12]
-Watch Expression = "lsstLocoDetect"
+Watch Expression = "g_AnsyTime"
 
 [Watch 13]
-Watch Expression = "lstrLocoCaliCtrlId"
+Watch Expression = "buf"
 
 [Watch 14]
-Watch Expression = "PC"
+Watch Expression = "sCtrl"
+
+[Watch 15]
+Watch Expression = "sCtrl.PC"
+
+[Watch 16]
+Watch Expression = "sCtrl.PC.wr"
+
+[Watch 17]
+Watch Expression = "sCtrl.PC.rd"
+
+[Watch 18]
+Watch Expression = "sCtrl.PC.RxCtrl"
+
+[Watch 19]
+Watch Expression = "sCtrl.PC.ConnCtrl"
+
+[Watch 20]
+Watch Expression = "sCtrl.PC.sCom"
+
+[Watch 21]
+Watch Expression = "sCtrl.PC.ThreadID"
+
+[Watch 22]
+Watch Expression = "sCtrl.PC.ThreadExit"
+
+[Watch 23]
+Watch Expression = "lsSpeedCrtID"
+
+[Watch 24]
+Watch Expression = "id"
+
+[Watch 25]
+Watch Expression = "sCtrl"
+
+[Watch 26]
+Watch Expression = "recbuf"
+
+[Watch 27]
+Watch Expression = "g_AnsyTime"
+
+[Watch 28]
+Watch Expression = "Ctrl"
+
+[Watch 29]
+Watch Expression = "Ctrl.sHeadInfo"
+
+[Watch 30]
+Watch Expression = "Ctrl.sRecNumMgr"
+
+[Watch 31]
+Watch Expression = "Ctrl.sProductInfo"
+
+[Watch 32]
+Watch Expression = "Ctrl.sRunPara"
+
+[Watch 33]
+Watch Expression = "Ctrl.Rec"
+
+[Watch 34]
+Watch Expression = "Ctrl.Rec.CmdTpye"
+
+[Watch 35]
+Watch Expression = "Ctrl.Rec.EvtType"
+
+[Watch 36]
+Watch Expression = "Ctrl.Rec.LocoType"
+
+[Watch 37]
+Watch Expression = "Ctrl.Rec.LocoNbr"
+
+[Watch 38]
+Watch Expression = "Ctrl.Rec.RecordId"
+
+[Watch 39]
+Watch Expression = "Ctrl.Rec.Sec"
+
+[Watch 40]
+Watch Expression = "Ctrl.Rec.Min"
+
+[Watch 41]
+Watch Expression = "Ctrl.Rec.Hour"
+
+[Watch 42]
+Watch Expression = "Ctrl.Rec.Day"
+
+[Watch 43]
+Watch Expression = "Ctrl.Rec.Mon"
+
+[Watch 44]
+Watch Expression = "Ctrl.Rec.Year"
+
+[Watch 45]
+Watch Expression = "Ctrl.Rec.speed"
+
+[Watch 46]
+Watch Expression = "Ctrl.Rec.Vol"
+
+[Watch 47]
+Watch Expression = "Ctrl.Rec.Longitude"
+
+[Watch 48]
+Watch Expression = "Ctrl.Rec.Latitude"
+
+[Watch 49]
+Watch Expression = "Ctrl.Rec.GpsSpeed"
+
+[Watch 50]
+Watch Expression = "Ctrl.Rec.GpsPos"
+
+[Watch 51]
+Watch Expression = "Ctrl.Rec.OffHightFlag"
+
+[Watch 52]
+Watch Expression = "Ctrl.Rec.Rsv"
+
+[Watch 53]
+Watch Expression = "Ctrl.Rec.Rssi"
+
+[Watch 54]
+Watch Expression = "Ctrl.Rec.rsvbyte"
+
+[Watch 55]
+Watch Expression = "Ctrl.Rec.Err"
+
+[Watch 56]
+Watch Expression = "Ctrl.Rec.CrcCheck"
+
+[Watch 57]
+Watch Expression = "Ctrl.buf"
+
+[Watch 58]
+Watch Expression = "l_eqiupmentcode"
+
+[Watch 59]
+Watch Expression = "g_AnsyTime"
+
+[Watch 60]
+Watch Expression = "buf"
+
+[Watch 61]
+Watch Expression = "sCtrl"
+
+[Watch 62]
+Watch Expression = "sCtrl.PC"
+
+[Watch 63]
+Watch Expression = "sCtrl.PC.wr"
+
+[Watch 64]
+Watch Expression = "sCtrl.PC.rd"
+
+[Watch 65]
+Watch Expression = "sCtrl.PC.RxCtrl"
+
+[Watch 66]
+Watch Expression = "sCtrl.PC.ConnCtrl"
+
+[Watch 67]
+Watch Expression = "sCtrl.PC.sCom"
+
+[Watch 68]
+Watch Expression = "sCtrl.PC.ThreadID"
+
+[Watch 69]
+Watch Expression = "sCtrl.PC.ThreadExit"
+
+[Watch 70]
+Watch Expression = "lsSpeedCrtID"
+
+[Watch 71]
+Watch Expression = "id"
+
+[Watch 72]
+Watch Expression = "sCtrl"
+
+[Watch 73]
+Watch Expression = "recbuf"
+
+[Watch 74]
+Watch Expression = "Rec"
+
+[Watch 75]
+Watch Expression = "lstrLocoCaliTable"
+
+[Watch 76]
+Watch Expression = "lstrLocoCaliTable.VccVol"
+
+[Watch 77]
+Watch Expression = "lstrLocoCaliTable.VccVol.line"
+
+[Watch 78]
+Watch Expression = "lstrLocoCaliTable.VccVol.Delta"
+
+[Watch 79]
+Watch Expression = "lstrLocoCaliTable.VccVol.tmp"
+
+[Watch 80]
+Watch Expression = "lstrLocoCaliTable.QY_Vol"
+
+[Watch 81]
+Watch Expression = "lstrLocoCaliTable.QY_Vol.line"
+
+[Watch 82]
+Watch Expression = "lstrLocoCaliTable.QY_Vol.Delta"
+
+[Watch 83]
+Watch Expression = "lstrLocoCaliTable.QY_Vol.tmp"
+
+[Watch 84]
+Watch Expression = "lstrLocoCaliTable.ZD_Vol"
+
+[Watch 85]
+Watch Expression = "lstrLocoCaliTable.ZD_Vol.line"
+
+[Watch 86]
+Watch Expression = "lstrLocoCaliTable.ZD_Vol.Delta"
+
+[Watch 87]
+Watch Expression = "lstrLocoCaliTable.ZD_Vol.tmp"
+
+[Watch 88]
+Watch Expression = "lstrLocoCaliTable.XQ_Vol"
+
+[Watch 89]
+Watch Expression = "lstrLocoCaliTable.XH_Vol"
+
+[Watch 90]
+Watch Expression = "lstrLocoCaliTable.LW_Vol"
+
+[Watch 91]
+Watch Expression = "lstrLocoCaliTable.CaliBuf"
+
+[Watch 92]
+Watch Expression = "cali"
+
+[Watch 93]
+Watch Expression = "buf"
+
+[Watch 94]
+Watch Expression = "sCtrl"
+
+[Watch 95]
+Watch Expression = "sCtrl.PC"
+
+[Watch 96]
+Watch Expression = "sCtrl.PC.wr"
+
+[Watch 97]
+Watch Expression = "sCtrl.PC.rd"
+
+[Watch 98]
+Watch Expression = "sCtrl.PC.RxCtrl"
+
+[Watch 99]
+Watch Expression = "sCtrl.PC.ConnCtrl"
+
+[Watch 100]
+Watch Expression = "sCtrl.PC.sCom"
+
+[Watch 101]
+Watch Expression = "sCtrl.PC.ThreadID"
+
+[Watch 102]
+Watch Expression = "sCtrl.PC.ThreadExit"
+
+[Watch 103]
+Watch Expression = "lsSpeedCrtID"
+
+[Watch 104]
+Watch Expression = "id"
+
+[Watch 105]
+Watch Expression = "sCtrl"
+
+[Watch 106]
+Watch Expression = "recbuf"
+
+[Watch 107]
+Watch Expression = "g_AnsyTime"
+
+[Watch 108]
+Watch Expression = "Ctrl"
+
+[Watch 109]
+Watch Expression = "l_eqiupmentcode"
+
+[Watch 110]
+Watch Expression = "g_AnsyTime"
+
+[Watch 111]
+Watch Expression = "buf"
+
+[Watch 112]
+Watch Expression = "sCtrl"
+
+[Watch 113]
+Watch Expression = "sCtrl.PC"
+
+[Watch 114]
+Watch Expression = "sCtrl.PC.wr"
+
+[Watch 115]
+Watch Expression = "sCtrl.PC.rd"
+
+[Watch 116]
+Watch Expression = "sCtrl.PC.RxCtrl"
+
+[Watch 117]
+Watch Expression = "sCtrl.PC.ConnCtrl"
+
+[Watch 118]
+Watch Expression = "sCtrl.PC.sCom"
+
+[Watch 119]
+Watch Expression = "sCtrl.PC.ThreadID"
+
+[Watch 120]
+Watch Expression = "sCtrl.PC.ThreadExit"
+
+[Watch 121]
+Watch Expression = "lsSpeedCrtID"
+
+[Watch 122]
+Watch Expression = "id"
+
+[Watch 123]
+Watch Expression = "sCtrl"
+
+[Watch 124]
+Watch Expression = "recbuf"
+
+[Watch 125]
+Watch Expression = "g_AnsyTime"
+
+[Watch 126]
+Watch Expression = "Ctrl"
+
+[Watch 127]
+Watch Expression = "Ctrl.sHeadInfo"
+
+[Watch 128]
+Watch Expression = "Ctrl.sRecNumMgr"
+
+[Watch 129]
+Watch Expression = "Ctrl.sProductInfo"
+
+[Watch 130]
+Watch Expression = "Ctrl.sRunPara"
+
+[Watch 131]
+Watch Expression = "Ctrl.Rec"
+
+[Watch 132]
+Watch Expression = "Ctrl.Rec.CmdTpye"
+
+[Watch 133]
+Watch Expression = "Ctrl.Rec.EvtType"
+
+[Watch 134]
+Watch Expression = "Ctrl.Rec.LocoType"
+
+[Watch 135]
+Watch Expression = "Ctrl.Rec.LocoNbr"
+
+[Watch 136]
+Watch Expression = "Ctrl.Rec.RecordId"
+
+[Watch 137]
+Watch Expression = "Ctrl.Rec.Sec"
+
+[Watch 138]
+Watch Expression = "Ctrl.Rec.Min"
+
+[Watch 139]
+Watch Expression = "Ctrl.Rec.Hour"
+
+[Watch 140]
+Watch Expression = "Ctrl.Rec.Day"
+
+[Watch 141]
+Watch Expression = "Ctrl.Rec.Mon"
+
+[Watch 142]
+Watch Expression = "Ctrl.Rec.Year"
+
+[Watch 143]
+Watch Expression = "Ctrl.Rec.speed"
+
+[Watch 144]
+Watch Expression = "Ctrl.Rec.Vol"
+
+[Watch 145]
+Watch Expression = "Ctrl.Rec.Longitude"
+
+[Watch 146]
+Watch Expression = "Ctrl.Rec.Latitude"
+
+[Watch 147]
+Watch Expression = "Ctrl.Rec.GpsSpeed"
+
+[Watch 148]
+Watch Expression = "Ctrl.Rec.GpsPos"
+
+[Watch 149]
+Watch Expression = "Ctrl.Rec.OffHightFlag"
+
+[Watch 150]
+Watch Expression = "Ctrl.Rec.Rsv"
+
+[Watch 151]
+Watch Expression = "Ctrl.Rec.Rssi"
+
+[Watch 152]
+Watch Expression = "Ctrl.Rec.rsvbyte"
+
+[Watch 153]
+Watch Expression = "Ctrl.Rec.Err"
 

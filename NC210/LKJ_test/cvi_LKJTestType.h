@@ -64,6 +64,7 @@ extern	void	InitLocoCtrlID(void);
 extern	void	LocoDetectDisplay(void);
 extern	void	RecordDisplay(void);
 
+
 #ifdef __cplusplus
     }
 #endif

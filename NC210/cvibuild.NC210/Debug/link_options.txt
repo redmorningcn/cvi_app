@@ -11,7 +11,7 @@
 -licensing:f:\cvi\app\NC210\cvibuild.NC210\Debug\linkerlicensing.txt
 -browsedeps:f:\cvi\app\NC210\cvibuild.NC210\Debug\moduledependencies.txt
 -stackreserve:1048576
--stackcommit:32768
+-stackcommit:4096
 -in:f:\cvi\app\NC210\cvibuild.NC210\Debug\CrcCheck.obj
 -in:f:\cvi\app\NC210\cvibuild.NC210\Debug\csnr_package_deal.obj
 -in:f:\cvi\app\NC210\cvibuild.NC210\Debug\cvi_ansytimer.obj

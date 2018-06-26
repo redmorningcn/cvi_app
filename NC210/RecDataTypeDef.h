@@ -98,6 +98,7 @@ typedef  struct _stcFlshRec                 //定义空检记录数据结构
     struct {  
         u16     vcc                         ;//110V电压
         u16     qy                          ;//牵引电压
+		u16		zd							;//制动电压
         u16     xq                          ;//向前电压
         u16     xh                          ;//向后电压
         u16     lw                          ;//零位电压
@@ -111,7 +112,7 @@ typedef  struct _stcFlshRec                 //定义空检记录数据结构
     u16                 OffHightFlag   : 1  ;//高度调整标志
     u16   				Rsv            : 2  ;//保留           2
     u8                  Rssi                ;//信号强度       1
-    u8                  rsvbyte[3]          ;//预留字节
+    u8                  rsvbyte[1]          ;//预留字节
     
     strDeviceErr        Err                 ;//错误标识         4            
 

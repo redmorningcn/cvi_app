@@ -14,14 +14,6 @@ Prototype="int OpenLocoCaliCallback(int panel, int control, int event, void *cal
 Class="Function"
 Prototype="void QuitLocoCaliPanel();"
 
-[CtrlDimmedControl]
-Class="Function"
-Prototype="void CtrlDimmedControl(unsigned char id);"
-
-[CtrlDimmedSendControl]
-Class="Function"
-Prototype="void CtrlDimmedSendControl(unsigned char dimmed);"
-
 [V110SyncCallback]
 Class="Function"
 Prototype="int V110SyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
@@ -130,11 +122,35 @@ Prototype="int LWHigCallback(int panel, int control, int event, void *callbackDa
 Class="Function"
 Prototype="void InitLocoCaliCtrlId();"
 
+[GetLocoCaliCtrlVal]
+Class="Function"
+Prototype="void GetLocoCaliCtrlVal();"
+
+[CtrlDimmedControl]
+Class="Function"
+Prototype="void CtrlDimmedControl(unsigned char id);"
+
+[CtrlDimmedSendControl]
+Class="Function"
+Prototype="void CtrlDimmedSendControl(unsigned char dimmed);"
+
+[MeasureCtrlSetVal]
+Class="Function"
+Prototype="void MeasureCtrlSetVal();"
+
 [LocoCaliDisplay]
 Class="Function"
 Prototype="void LocoCaliDisplay();"
 
+[CalcCaliVal]
+Class="Function"
+Prototype="void CalcCaliVal(struct _strLocoCali_ *cali);"
+
 [LocoCaliCommcode]
 Class="Function"
 Prototype="void LocoCaliCommcode();"
+
+[GetRecLocoCaliInfo]
+Class="Function"
+Prototype="void GetRecLocoCaliInfo();"
 

@@ -12,13 +12,12 @@
     extern "C" {
 #endif
 		
-#define		LOCO_GROUP_NUM  	(6)			/* 有效校准组*/	
-
+#define		LOCO_GROUP_NUM  		(6)			/* 有效校准组			*/	
+#define		LOCO_CALI_BASE_ADDR		(340)		/* 工况校准存储基地址	*/
 		
 //校准结构体		
 typedef struct _strLocoCali_
 {
-
 	u16		lowstandard;
 	u16		lowmeasure;
 	u16		higstandard;
@@ -37,20 +36,21 @@ typedef struct _strLocoCali_
 	u8		tmp8[3];				//预留
 	
 	u16		line;				
-	u16		zero;
+	s16		zero;
 }strLocoCali;
+
 
 /**************************************************************
 * Description  : 校准参数
 * Author       : 2018/5/22 星期二, by redmorningcn
 */
+
 typedef struct {
     u32     line;       //修正线性度  
     int16   Delta;      //修正偏差
     int16   tmp;        //预留
 
 }strLocoCalibration;
-
 
 /**************************************************************
 * Description  : 修正参数表
@@ -71,9 +71,18 @@ typedef struct{
 }strLocoCaliTable;
 
 
+/**************************************************************
+* Description  : 函数声明
+* Author       : 2018/5/24 星期二, by redmorningcn
+*/
 extern	void	InitLocoCaliCtrlId(void);
 extern	void	LocoCaliCommcode(void)	;
 extern	void	LocoCaliDisplay(void)	;
+extern	void	GetLocoCaliCtrlVal(void);   
+extern	void	CtrlDimmedSendControl(u8	dimmed);  
+extern	void	CtrlDimmedControl(u8 id);
+extern	void	MeasureCtrlSetVal(void);  
+extern	void	GetRecLocoCaliInfo(void);
 
 
 #ifdef __cplusplus

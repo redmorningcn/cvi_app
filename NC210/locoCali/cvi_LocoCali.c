@@ -55,6 +55,10 @@ int CVICALLBACK LocoCaliTimerCallback (int panel, int control, int event,
 				
 				Com_SetParaTask();				//串口参数设置
 				
+				Com_SetParaRecTask();			// 串口数据接收
+				
+				GetRecLocoCaliInfo();			//取串接收
+				
 				LocoCaliDisplay();				//显示面板内容
 			}
 			break;
@@ -104,49 +108,6 @@ void	QuitLocoCaliPanel(void)
 	DisplayPanel (gmainPanel);
 
 	gLocoCali_panelHandle = 0;
-}
-
-/********************************************************************************************/
-/*根据面板勾选，显示或关闭对应组控件      																	        */
-/********************************************************************************************/
-void	CtrlDimmedControl(u8 id)
-{
-	u8	j;
-	u16	*p;
-	
-	if(id > LOCO_GROUP_NUM)
-		return;
-	
-	GetCtrlVal(gLocoCali_panelHandle,lstrLocoCaliCtrlId[id].ansyflg,&lstrLocoCali[id].ansyflg);
-	
-	if(lstrLocoCali[id].ansyflg == 1) {
-		p = (u16 *)&lstrLocoCaliCtrlId[id];
-		for(j = 0; j < 5; j++){
-			SetCtrlAttribute (gLocoCali_panelHandle, *p,  ATTR_DIMMED, 1);
-			p++;
-		}	
-	}else{
-		p = (u16 *)&lstrLocoCaliCtrlId[id];
-		for(j = 0; j < 5; j++){
-			SetCtrlAttribute (gLocoCali_panelHandle, *p,  ATTR_DIMMED, 0);
-			p++;
-		}
-	}
-}
-
-/********************************************************************************************/
-/*根据面板勾选，显示或关闭对应组控件      																	        */
-/********************************************************************************************/
-void	CtrlDimmedSendControl(u8	dimmed)
-{
-	u8	j;
-
-	if(dimmed)
-		dimmed = 1;
-	
-	for(j = 0; j < LOCO_GROUP_NUM; j++){
-		SetCtrlAttribute (gLocoCali_panelHandle,lstrLocoCaliCtrlId[j].send,  ATTR_DIMMED, dimmed);
-	}	
 }
 
 int CVICALLBACK V110SyncCallback (int panel, int control, int event,
@@ -278,6 +239,9 @@ int CVICALLBACK V110LowCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[0].lowflg = 1;
+			//读同步信号。同步的相应标识置位
+			
+			MeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -289,7 +253,8 @@ int CVICALLBACK QYLowCallback (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-			lstrLocoCali[1].lowflg = 1; 
+			lstrLocoCali[1].lowflg = 1;
+			MeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -302,6 +267,7 @@ int CVICALLBACK ZDLowCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[2].lowflg = 1;
+			MeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -314,6 +280,7 @@ int CVICALLBACK XQLowCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[3].lowflg = 1;
+			MeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -326,6 +293,7 @@ int CVICALLBACK XHLowCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[4].lowflg = 1;
+			MeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -338,6 +306,7 @@ int CVICALLBACK LWLowCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[5].lowflg = 1;
+			MeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -351,6 +320,7 @@ int CVICALLBACK LWCaliCallback (int panel, int control, int event,
 		case EVENT_COMMIT:
 			lstrLocoCali[5].califlg = 1;
 			CtrlDimmedSendControl(1);	//关闭所有发送
+			GetLocoCaliCtrlVal();		//取面板值  
 			break;
 	}
 	return 0;
@@ -364,6 +334,7 @@ int CVICALLBACK XHCaliCallback (int panel, int control, int event,
 		case EVENT_COMMIT:
 			lstrLocoCali[4].califlg = 1;
 			CtrlDimmedSendControl(1);	//关闭所有发送
+			GetLocoCaliCtrlVal();		//取面板值  
 			break;
 	}
 	return 0;
@@ -377,6 +348,7 @@ int CVICALLBACK XQCaliCallback (int panel, int control, int event,
 		case EVENT_COMMIT:
 			lstrLocoCali[3].califlg = 1;
 			CtrlDimmedSendControl(1);	//关闭所有发送
+			GetLocoCaliCtrlVal();		//取面板值  
 			break;
 	}
 	return 0;
@@ -390,7 +362,7 @@ int CVICALLBACK ZDCaliCallback (int panel, int control, int event,
 		case EVENT_COMMIT:
 			lstrLocoCali[2].califlg = 1;
 			CtrlDimmedSendControl(1);	//关闭所有发送
-
+			GetLocoCaliCtrlVal();		//取面板值  
 			break;
 	}
 	return 0;
@@ -404,6 +376,7 @@ int CVICALLBACK QYCaliCallback (int panel, int control, int event,
 		case EVENT_COMMIT:
 			lstrLocoCali[1].califlg = 1;
 			CtrlDimmedSendControl(1);	//关闭所有发送
+			GetLocoCaliCtrlVal();		//取面板值
 
 			break;
 	}
@@ -418,6 +391,7 @@ int CVICALLBACK V110CaliCallback (int panel, int control, int event,
 		case EVENT_COMMIT:
 			lstrLocoCali[0].califlg = 1;
 			CtrlDimmedSendControl(1);	//关闭所有发送
+			GetLocoCaliCtrlVal();		//取面板值
 			
 			break;
 	}
@@ -443,7 +417,8 @@ int CVICALLBACK V110HigCallback (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-			lstrLocoCali[0].higflg = 0;
+			lstrLocoCali[0].higflg = 1;
+			MeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -456,6 +431,7 @@ int CVICALLBACK QYHigCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[1].higflg = 1;
+			MeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -468,6 +444,7 @@ int CVICALLBACK ZDHigCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[2].higflg = 1;
+			MeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -480,6 +457,7 @@ int CVICALLBACK XQHigCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[3].higflg = 1;
+			MeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -492,6 +470,7 @@ int CVICALLBACK XHHigCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[4].higflg = 1;
+			MeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -504,6 +483,7 @@ int CVICALLBACK LWHigCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[5].higflg = 1;
+			MeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -570,6 +550,85 @@ void	InitLocoCaliCtrlId(void)
 }
 
 /*******************************************************************************
+* Description  : 获取面板控件值
+* Author       : 2018/6/24  by redmorningcn
+*******************************************************************************/
+void	GetLocoCaliCtrlVal(void)   
+{
+	u8	i;
+	
+	for(i = 0; i < LOCO_GROUP_NUM;i++)
+	{
+		GetCtrlVal(gLocoCali_panelHandle,lstrLocoCaliCtrlId[i].lowstandard	,&lstrLocoCali[i].lowstandard	);  
+		GetCtrlVal(gLocoCali_panelHandle,lstrLocoCaliCtrlId[i].lowmeasure	,&lstrLocoCali[i].lowmeasure	); 
+		GetCtrlVal(gLocoCali_panelHandle,lstrLocoCaliCtrlId[i].higstandard	,&lstrLocoCali[i].higstandard	); 
+		GetCtrlVal(gLocoCali_panelHandle,lstrLocoCaliCtrlId[i].higmeasure	,&lstrLocoCali[i].higmeasure	); 
+	}
+}
+
+
+/********************************************************************************************/
+/*根据面板勾选，显示或关闭对应组控件      																	        */
+/********************************************************************************************/
+void	CtrlDimmedControl(u8 id)
+{
+	u8	j;
+	u16	*p;
+	
+	if(id > LOCO_GROUP_NUM)
+		return;
+	
+	GetCtrlVal(gLocoCali_panelHandle,lstrLocoCaliCtrlId[id].ansyflg,&lstrLocoCali[id].ansyflg);
+	
+	if(lstrLocoCali[id].ansyflg == 1) {
+		p = (u16 *)&lstrLocoCaliCtrlId[id];
+		for(j = 0; j < 5; j++){
+			SetCtrlAttribute (gLocoCali_panelHandle, *p,  ATTR_DIMMED, 1);
+			p++;
+		}	
+	}else{
+		p = (u16 *)&lstrLocoCaliCtrlId[id];
+		for(j = 0; j < 5; j++){
+			SetCtrlAttribute (gLocoCali_panelHandle, *p,  ATTR_DIMMED, 0);
+			p++;
+		}
+	}
+}
+
+/********************************************************************************************/
+/*根据面板勾选，显示或关闭对应组控件      																	        */
+/********************************************************************************************/
+void	CtrlDimmedSendControl(u8	dimmed)
+{
+	u8	j;
+
+	if(dimmed)
+		dimmed = 1;
+	
+	for(j = 0; j < LOCO_GROUP_NUM; j++){
+		SetCtrlAttribute (gLocoCali_panelHandle,lstrLocoCaliCtrlId[j].send,  ATTR_DIMMED, dimmed);
+	}	
+}
+
+/********************************************************************************************/
+/*测量控件置值    																	        */
+/********************************************************************************************/
+void	MeasureCtrlSetVal(void)
+{
+	u8		j;
+	//u16		*p = (u16 *)&gstrDtuData.Rec.Vol;
+	u16		*p = (u16 *)&Ctrl.Rec.Vol;
+
+	for(j = 0; j < LOCO_GROUP_NUM; j++){
+		if(lstrLocoCali[j].lowflg ){
+			SetCtrlVal (gLocoCali_panelHandle,lstrLocoCaliCtrlId[j].lowmeasure,*(p+j));
+		}else if(lstrLocoCali[j].higflg){
+			SetCtrlVal (gLocoCali_panelHandle,lstrLocoCaliCtrlId[j].higmeasure,*(p+j));	
+		}
+	}	
+}
+
+/*******************************************************************************
 * Description  : 面板显示
 * Author       : 2018/6/23  by redmorningcn
 *******************************************************************************/
@@ -598,6 +657,51 @@ void	LocoCaliDisplay(void)
 /********************************************************************************************/
 strLocoCaliTable	lstrLocoCaliTable;
 
+
+
+/*******************************************************************************************
+计算校准。根据测量点（measure）和目标点（standard），计算出修正线性（*10000）和偏移。
+*******************************************************************************************/
+void	CalcCaliVal(strLocoCali *cali){
+	
+	double	linemeasure,linecali;
+	double	zeromeasure,zerocali;
+	
+	
+	cali->line 	= 10000;		//默认值
+	cali->zero	= 0;
+	// 计算值异常判断
+	if(		cali->higmeasure  < cali->lowmeasure  
+		||	cali->higstandard < cali->lowstandard
+		|| 	cali->higmeasure  == 0
+		||  cali->higstandard == 0
+		||  cali->higmeasure  == cali->lowmeasure
+		||	cali->higstandard == cali->lowstandard
+	  )	{
+		  // 异常退出
+		  return;
+	  }
+	  
+	 // 计算线性和斜率
+	 linemeasure = (double)(cali->higmeasure - cali->lowmeasure)/(double)(cali->higstandard - cali->lowstandard);
+	 zeromeasure = (double)cali->higmeasure  - (double)linemeasure *  (double)cali->higstandard;
+	 
+	 // 线性度判断
+	 if(linemeasure > 2 || linemeasure < 0.5)
+		 return;
+	 
+	 // 斜率判断
+	 if(zeromeasure > 500 || zeromeasure <-500)
+		 return;
+	 
+	 linecali = 1/linemeasure;
+	 zerocali = -zeromeasure;
+	 
+	 //赋值
+	 cali->line =  linecali *10000;
+	 cali->zero =  (short)zerocali;
+}
+
 /********************************************************************************************
 author：redmorningcn 20180622 
 loco校准通讯信号命令准备。（有校准信号，发送校准指令；否则，读取sctrl.rec的值）
@@ -613,7 +717,7 @@ void	LocoCaliCommcode(void)
 		if(lstrLocoCali[i].calisend ){
 			//超时判断
 			if(time < GetAnsySysTime()){
-				if(time + 1000 < GetAnsySysTime()  ) {	//发送超时（为接收到应答）
+				if(time + 2000 < GetAnsySysTime()  ) {	//发送超时（为接收到应答）
 					lstrLocoCali[i].calisend = 0;
 				}
 			}else{
@@ -628,14 +732,19 @@ void	LocoCaliCommcode(void)
 	for(i =0;i < LOCO_GROUP_NUM;i++){
 		if(lstrLocoCali[i].califlg){
 			lstrLocoCali[i].califlg 	= 0;
-			lstrLocoCali[i].calisend 	= 1;						//校准发送置位
+			lstrLocoCali[i].calisend 	= 1;							//校准发送置位
+			
 			//计算线性度及零点
-			//
+			CalcCaliVal(&lstrLocoCali[i]);						
+			
+			lstrLocoCaliTable.CaliBuf[i].line = lstrLocoCali[i].line;	//赋值给calitable
+			lstrLocoCaliTable.CaliBuf[i].Delta= lstrLocoCali[i].zero; 
 			
 			len = sizeof(strLocoCalibration);	
-			//gstrDtuData.paraaddr =  ;								//读指定地址
+			gstrDtuData.paraaddr =  LOCO_CALI_BASE_ADDR + sizeof(strLocoCalibration)*i;	//读指定地址
 
-			gstrDtuData.paralen  =  (u16)((len <<8) + NODE_LOCO);	//读指定数据 (len << 8 + l_DetectGetNode)
+			//gstrDtuData.paralen  =  (u16)((len <<8) + NODE_LOCO);	//读指定数据 (len << 8 + l_DetectGetNode)
+			gstrDtuData.paralen  =  (u16)((NODE_LOCO << 8) + (u8)len);	//读指定数据 (len << 8 + l_DetectGetNode)   
 			memcpy((u8 *)gstrDtuData.parabuf,(u8 *)&lstrLocoCaliTable.CaliBuf[i],len);
 			l_eqiupmentcode = CMD_DETECT_SET;						// 指定参数读（检测板）
 			
@@ -644,9 +753,31 @@ void	LocoCaliCommcode(void)
 		}
 	}
 	
-	//空闲时，读sctrl.rec记录。
-	//gstrDtuData.paraaddr =  ;								//读指定地址
-	//gstrDtuData.paralen		= sizeof(stcFlshRec);
-	//gstrDtuData.paralen		= 60;
-	//l_eqiupmentcode			= CMD_PARA_GET;					
+	if(l_eqiupmentcode == 0)  {										//
+		//空闲时，读sctrl.rec记录。
+		gstrDtuData.paraaddr 	= (u16)((u32)&Ctrl.Rec - (u32)&Ctrl) ;			//读指定地址
+		gstrDtuData.paralen		= sizeof(stcFlshRec);
+		l_eqiupmentcode			= CMD_PARA_GET;	
+	}
+}
+
+
+/********************************************************************************************
+author：redmorningcn 20180625 
+数据接收准备。（接收应答或数据）
+********************************************************************************************/
+void	GetRecLocoCaliInfo(void)
+{
+	u8	reclen;
+	
+	if(gstrDtuData.dataokflg == 1)								//	接收到数据
+	{														
+		gstrDtuData.dataokflg	= 0;		
+		//reclen  = gstrDtuData.recdatalen >> 8;				//	接收数据长度
+		reclen  = gstrDtuData.recdatalen ;						//	接收数据长度  
+		
+		if(reclen == sizeof(stcFlshRec)){						//接收到数据记录
+			memcpy((u8 *)&Ctrl.Rec,(u8 *)&gstrDtuData.parabuf[0],reclen);	
+		}
+	}
 }

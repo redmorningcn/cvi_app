@@ -42,9 +42,9 @@ typedef	struct _stcCsnrProtocolPara_
 	unsigned char 	framcode;
 	unsigned char *	databuf;	  	//数据区
 	unsigned char *	rxtxbuf;		//收发缓冲区
-	unsigned char 	datalen;
-	unsigned char 	rxtxlen;
-	unsigned char 	tmp[2];
+	unsigned short 	datalen;
+	unsigned short 	rxtxlen;
+	//unsigned char 	tmp[1];
 }stcCsnrProtocolPara;	
 
 /********************************************************************************************/
