@@ -711,13 +711,14 @@ void	LocoCaliCommcode(void)
 	u8					i;
 	u32					len;
 	static	u32			time;
+	static	u8			idletimes;
 	
 	//查询，是否有校准信号正在处理，有则直接退出。
 	for(i =0;i < LOCO_GROUP_NUM;i++){
 		if(lstrLocoCali[i].calisend ){
 			//超时判断
 			if(time < GetAnsySysTime()){
-				if(time + 2000 < GetAnsySysTime()  ) {	//发送超时（为接收到应答）
+				if(time + 1000 < GetAnsySysTime()  ) {	//发送超时（为接收到应答）
 					lstrLocoCali[i].calisend = 0;
 				}
 			}else{
@@ -753,11 +754,23 @@ void	LocoCaliCommcode(void)
 		}
 	}
 	
-	if(l_eqiupmentcode == 0)  {										//
-		//空闲时，读sctrl.rec记录。
-		gstrDtuData.paraaddr 	= (u16)((u32)&Ctrl.Rec - (u32)&Ctrl) ;			//读指定地址
-		gstrDtuData.paralen		= sizeof(stcFlshRec);
-		l_eqiupmentcode			= CMD_PARA_GET;	
+	if(l_eqiupmentcode == 0)  {												//
+											
+		if((idletimes++ %3) == 0){  										//空闲时，读Loco校准。    			 
+		   	
+			gstrDtuData.paraaddr 	= LOCO_CALI_BASE_ADDR ; 
+			//gstrDtuData.paralen		= sizeof(lstrLocoCaliTable);
+			len						= sizeof(lstrLocoCaliTable);
+			gstrDtuData.paralen  	= (u16)((NODE_LOCO << 8) + (u8)len);	//读指定数据 (len << 8 + l_DetectGetNode)   
+			l_eqiupmentcode 		= CMD_DETECT_GET; 
+		}else{
+			gstrDtuData.paraaddr 	= (u16)((u32)&Ctrl.Rec - (u32)&Ctrl) ;	//空闲时，读sctrl.rec记录。
+
+			len  					= sizeof(stcFlshRec);
+			gstrDtuData.paralen		= len;
+
+			l_eqiupmentcode			= CMD_PARA_GET;	
+		}
 	}
 }
 
@@ -778,6 +791,8 @@ void	GetRecLocoCaliInfo(void)
 		
 		if(reclen == sizeof(stcFlshRec)){						//接收到数据记录
 			memcpy((u8 *)&Ctrl.Rec,(u8 *)&gstrDtuData.parabuf[0],reclen);	
+		}else if(reclen == sizeof(lstrLocoCaliTable)){ 
+			memcpy((u8 *)&lstrLocoCaliTable,(u8 *)&gstrDtuData.parabuf[0],reclen);
 		}
 	}
 }

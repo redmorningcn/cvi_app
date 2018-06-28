@@ -230,15 +230,15 @@ void	Com_SetParaRecTask(void)
 				case CMD_DETECT_GET:  								// 读检测板指定地址
 				//case CMD_RECORD_GET:  								// 读数据记录
 					if(sizeof(gstrDtuData) >= reclen){
-						memcpy((u8 *)&gstrDtuData,sCtrl.PC.rd,reclen); //数据复制
-						gstrDtuData.dataokflg 	= 1;					// 数据接收完成
+						memcpy((u8 *)&gstrDtuData,sCtrl.PC.rd,reclen); 	//数据复制
 						
 						headlen	= sizeof(gstrDtuData.code) + sizeof(gstrDtuData.paraaddr) + sizeof(gstrDtuData.paralen);
-						if(headlen > reclen){
-							gstrDtuData.recdatalen = 0;	
+						if(headlen >= reclen){
+									gstrDtuData.recdatalen = 0;	
 							break;
 						}
 						gstrDtuData.recdatalen 	= ((u8)reclen - (u8)headlen);	// (有效)数据长度
+						gstrDtuData.dataokflg 	= 1;					// 数据接收完成
 					}
 					break;				 
 				default:
