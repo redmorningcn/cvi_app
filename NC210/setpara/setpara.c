@@ -119,6 +119,9 @@ void Com_SetParaTask(void)
 							  
 							  memcpy(&buf[datalen],(unsigned char *)&gstrDtuData.paralen,sizeof(gstrDtuData.paralen));
 							  datalen += sizeof(gstrDtuData.paralen);
+							  
+							  memcpy(&buf[datalen],(unsigned char *)&gstrDtuData.node,sizeof(gstrDtuData.node));
+							  datalen += sizeof(gstrDtuData.node);
 							  break;
 							  
 			case  CMD_RECORD_GET:	// 读指定记录号的书记录
@@ -157,23 +160,25 @@ void Com_SetParaTask(void)
 			gstrDtuData.recechoflg = 0;
 			
 			datalen = 0;
-			sCtrl.PC.ConnCtrl.sendlen 		= datalen;	//发送数据区长度
-			sCtrl.PC.ConnCtrl.sourceaddr	= ADDR_SET;	//源地址
+			sCtrl.PC.ConnCtrl.sendlen 		= datalen;	// 发送数据区长度
+			sCtrl.PC.ConnCtrl.sourceaddr	= ADDR_SET;	// 源地址
 		
-			sCtrl.PC.ConnCtrl.DestAddr		= ADDR_FIX; //目的地址
+			sCtrl.PC.ConnCtrl.DestAddr		= ADDR_FIX; // 目的地址
 			sCtrl.PC.ConnCtrl.SendFramNum 	= sCtrl.PC.RxCtrl.FramNum; 	//序号(应答接收的帧序号)
-			sCtrl.PC.ConnCtrl.FrameCode		= 0x00;		//帧命令字	
+			sCtrl.PC.ConnCtrl.FrameCode		= 0x00;		// 帧命令字	
 			
-			sCtrl.PC.ConnCtrl.SendFlg 		= 1;		//启动发送 （CVI_bsComm,多线程）
+			sCtrl.PC.ConnCtrl.SendFlg 		= 1;		// 启动发送 （CVI_bsComm,多线程）
 		}
 	}
 	
 	//超时判断
 	if(sCtrl.PC.ConnCtrl.SendTimeFlg == 1  ) {
 		if(sendtime <= GetAnsySysTime()){
-			if(sendtime + 2000 < GetAnsySysTime()  ) {	//发送超时（为接收到应答）
+			if(sendtime + 2000 < GetAnsySysTime()  ) {	// 发送超时（为接收到应答）
 				sCtrl.PC.ConnCtrl.SendTimeFlg 	= 0;
-				sCtrl.PC.ConnCtrl.ErrFlg 		= 1;	//置错误标识
+				sCtrl.PC.ConnCtrl.ErrFlg 		= 1;	// 置错误标识
+				sCtrl.PC.ConnCtrl.TimeoutFlg	= 1;	// 超时
+				sendtime = GetAnsySysTime();  
 			}
 		} else{
 			sendtime = GetAnsySysTime();
@@ -221,6 +226,9 @@ void	Com_SetParaRecTask(void)
 					if(sizeof(gstrDtuData) > reclen){				//
 						memcpy((u8 *)&gstrDtuData,sCtrl.PC.rd,reclen); //数据拷贝
 					
+						if(gstrDtuData.code != l_sendcode)			//接收的指令和發送不同
+							break;
+						
 						if(gstrDtuData.reply.ack == 1)				// 接收成功，标识应答成功
 							gstrDtuData.setokflg = 1;
 					}
@@ -232,9 +240,10 @@ void	Com_SetParaRecTask(void)
 					if(sizeof(gstrDtuData) >= reclen){
 						memcpy((u8 *)&gstrDtuData,sCtrl.PC.rd,reclen); 	//数据复制
 						
-						headlen	= sizeof(gstrDtuData.code) + sizeof(gstrDtuData.paraaddr) + sizeof(gstrDtuData.paralen);
+						headlen	= sizeof(gstrDtuData.code) + sizeof(gstrDtuData.paraaddr) + sizeof(gstrDtuData.paralen)+sizeof(gstrDtuData.node);
 						if(headlen >= reclen){
-									gstrDtuData.recdatalen = 0;	
+							gstrDtuData.recdatalen 			= 0;
+							sCtrl.PC.ConnCtrl.DataErrFlg	= 1;
 							break;
 						}
 						gstrDtuData.recdatalen 	= ((u8)reclen - (u8)headlen);	// (有效)数据长度

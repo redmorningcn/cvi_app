@@ -12,11 +12,11 @@ VXIplug&play Framework 64-bit Dir = "/C/Program Files/IVI Foundation/VISA/win64"
 Number of Projects = 1
 Active Project = 1
 Project 0001 = "csnc_recordrec.prj"
-Drag Bar Left = 261
+Drag Bar Left = 238
 Window Top = 59
-Window Left = 466
+Window Left = 468
 Window Bottom = 715
-Window Right = 1364
+Window Right = 1366
 Maximized = True
 Maximized Children = True
 Max32 Number Of Errors = 20
@@ -32,7 +32,7 @@ Break At First Statement = False
 Sort Type = "File Name"
 Number of Opened Files = 0
 Window Confinement Region Enabled = True
-MainColumnWidth = 244
+MainColumnWidth = 221
 FileDateColumnWidth = 70
 FileSizeColumnWidth = 70
 
@@ -46,34 +46,16 @@ Batch Build Release = False
 Batch Build Debug = False
 
 [File 0001]
-Path = "/f/cvi/app/csnc_recordrec/recvdata/recvdata.h"
-File Type = "Include"
+Path = "/f/cvi/PC_CSNR/cvi/database/databasesample.uir"
+File Type = "User Interface Resource"
 Disk Date = 0
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
-Source Window State = "1,33,36,36,0,61,61,0,3,0,0,0,0,0,0,0,0,0,33,0,431,655,1,0,"
+Window Height = 431
+Window Width = 815
 
 [File 0002]
-Path = "/f/cvi/app/csnc_recordrec/database/oilmodel_db.uir"
-File Type = "User Interface Resource"
-Disk Date = 3591161249
-In Projects = "1,"
-Window Top = 64
-Window Left = 26
-Window Height = 431
-Window Width = 665
-
-[File 0003]
-Path = "/f/cvi/app/csnc_recordrec/recvdata/recvdata.c"
-File Type = "CSource"
-Disk Date = 0
-In Projects = "1,"
-Window Top = 33
-Window Left = 10
-Source Window State = "1,21,22,21,0,0,0,0,0,0,0,0,0,0,0,0,9,0,28,57,431,665,1,0,"
-
-[File 0004]
 Path = "/f/cvi/app/csnc_recordrec/mian.uir"
 File Type = "User Interface Resource"
 Disk Date = 3590665196
@@ -83,6 +65,25 @@ Window Left = 10
 Window Height = 451
 Window Width = 655
 
+[File 0003]
+Path = "/f/cvi/app/csnc_recordrec/database/oilmodel_db.uir"
+File Type = "User Interface Resource"
+Disk Date = 3591161249
+In Projects = "1,"
+Window Top = 64
+Window Left = 26
+Window Height = 431
+Window Width = 665
+
+[File 0004]
+Path = "/f/cvi/app/csnc_recordrec/database/databaseoperate.c"
+File Type = "CSource"
+Disk Date = 3590985435
+In Projects = "1,"
+Window Top = 126
+Window Left = 58
+Source Window State = "1,51,51,51,4,20,20,0,0,0,0,0,0,0,0,0,42,0,51,65,291,855,1,0,"
+
 [File 0005]
 Path = "/f/cvi/app/csnc_recordrec/main.c"
 File Type = "CSource"
@@ -90,7 +91,7 @@ Disk Date = 3591064489
 In Projects = "1,"
 Window Top = 188
 Window Left = 90
-Source Window State = "1,33,33,33,4,17,17,0,3,76,0,0,0,0,0,20,24,0,33,4,431,855,1,0,"
+Source Window State = "1,33,33,33,4,17,17,0,3,0,0,0,0,0,0,0,24,0,33,4,431,855,1,0,"
 
 [File 0006]
 Path = "/f/cvi/app/csnc_recordrec/database/modeltable.c"
@@ -119,25 +120,15 @@ Window Top = 31
 Source Window State = "1,17,19,19,0,26,26,0,0,0,0,0,0,0,0,0,0,0,16,0,400,600,1,0,"
 
 [File 0009]
-Path = "/f/cvi/PC_CSNR/cvi/database/databasesample.uir"
-File Type = "User Interface Resource"
+Path = "/f/cvi/app/csnc_recordrec/recvdata/recvdata.c"
+File Type = "CSource"
 Disk Date = 0
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
-Window Height = 431
-Window Width = 815
+Source Window State = "1,21,22,21,0,0,0,0,0,0,0,0,0,0,0,0,9,0,28,57,431,665,1,0,"
 
 [File 0010]
-Path = "/f/cvi/app/csnc_recordrec/database/databaseoperate.c"
-File Type = "CSource"
-Disk Date = 3590985435
-In Projects = "1,"
-Window Top = 126
-Window Left = 58
-Source Window State = "1,51,51,51,4,20,20,0,0,0,0,0,0,0,0,0,42,0,51,65,291,855,1,0,"
-
-[File 0011]
 Path = "/f/cvi/app/csnc_recordrec/database/databaseoperate.h"
 File Type = "Include"
 Disk Date = 3590977580
@@ -146,7 +137,7 @@ Window Top = 157
 Window Left = 74
 Source Window State = "1,35,38,35,0,0,0,0,0,0,0,36,0,0,0,0,16,0,38,0,291,855,1,0,"
 
-[File 0012]
+[File 0011]
 Path = "/f/cvi/app/c_comm/includes.h"
 File Type = "Include"
 Disk Date = 3612308685
@@ -155,7 +146,7 @@ Window Top = 33
 Window Left = 10
 Source Window State = "1,14,15,14,0,0,0,0,0,0,0,0,0,0,0,0,5,0,17,28,291,855,1,0,"
 
-[File 0013]
+[File 0012]
 Path = "/f/cvi/app/csnc_recordrec/database/modeltable.h"
 File Type = "Include"
 Disk Date = 0
@@ -164,7 +155,7 @@ Window Top = 126
 Window Left = 58
 Source Window State = "1,61,61,61,20,34,34,0,3,0,0,0,0,0,0,0,81,0,61,20,291,855,1,0,"
 
-[File 0014]
+[File 0013]
 Path = "/f/cvi/app/csnc_recordrec/database/oilmath.h"
 File Type = "Include"
 Disk Date = 3590980870
@@ -172,6 +163,15 @@ In Projects = "1,"
 Window Top = 157
 Window Left = 74
 Source Window State = "1,44,44,44,25,27,27,0,0,0,0,0,0,0,0,0,30,0,47,25,291,855,1,0,"
+
+[File 0014]
+Path = "/f/cvi/app/csnc_recordrec/recvdata/recvdata.h"
+File Type = "Include"
+Disk Date = 0
+In Projects = "1,"
+Window Top = 33
+Window Left = 10
+Source Window State = "1,33,36,36,0,61,61,0,3,0,0,0,0,0,0,0,0,0,33,0,431,655,1,0,"
 
 [Default Build Config 0001 Debug]
 Generate Browse Info = True

@@ -1,23 +1,23 @@
 -nologo
--out:f:\cvi\project\CSNC\csnc_recordrec\cvibuild.csnc_recordrec\Debug\csnc_recordrec.exe
+-out:f:\cvi\app\csnc_recordrec\cvibuild.csnc_recordrec\Debug\csnc_recordrec.exe
 -arch:x86
 -timestamp
 -debug:2
--res:f:\cvi\project\CSNC\csnc_recordrec\cvibuild.csnc_recordrec\Debug\resources.res
+-res:f:\cvi\app\csnc_recordrec\cvibuild.csnc_recordrec\Debug\resources.res
 -entry:_CVIWinMainStartupCodeForDebugging@0
 -base:0x400000
--linked:f:\cvi\project\CSNC\csnc_recordrec\cvibuild.csnc_recordrec\Debug\linkersummary.txt
--dlldeps:f:\cvi\project\CSNC\csnc_recordrec\cvibuild.csnc_recordrec\Debug\dlldependencies.txt
--licensing:f:\cvi\project\CSNC\csnc_recordrec\cvibuild.csnc_recordrec\Debug\linkerlicensing.txt
--browsedeps:f:\cvi\project\CSNC\csnc_recordrec\cvibuild.csnc_recordrec\Debug\moduledependencies.txt
+-linked:f:\cvi\app\csnc_recordrec\cvibuild.csnc_recordrec\Debug\linkersummary.txt
+-dlldeps:f:\cvi\app\csnc_recordrec\cvibuild.csnc_recordrec\Debug\dlldependencies.txt
+-licensing:f:\cvi\app\csnc_recordrec\cvibuild.csnc_recordrec\Debug\linkerlicensing.txt
+-browsedeps:f:\cvi\app\csnc_recordrec\cvibuild.csnc_recordrec\Debug\moduledependencies.txt
 -stackreserve:1048576
 -stackcommit:4096
--in:f:\cvi\project\CSNC\csnc_recordrec\cvibuild.csnc_recordrec\Debug\databaseoperate.obj
--in:f:\cvi\project\CSNC\csnc_recordrec\cvibuild.csnc_recordrec\Debug\main.obj
--in:f:\cvi\project\CSNC\csnc_recordrec\cvibuild.csnc_recordrec\Debug\modeltable.obj
--in:f:\cvi\project\CSNC\csnc_recordrec\cvibuild.csnc_recordrec\Debug\oilmath.obj
--in:f:\cvi\project\CSNC\csnc_recordrec\cvibuild.csnc_recordrec\Debug\oilmodel_db.obj
--in:f:\cvi\project\CSNC\csnc_recordrec\cvibuild.csnc_recordrec\Debug\recvdata.obj
+-in:f:\cvi\app\csnc_recordrec\cvibuild.csnc_recordrec\Debug\databaseoperate.obj
+-in:f:\cvi\app\csnc_recordrec\cvibuild.csnc_recordrec\Debug\main.obj
+-in:f:\cvi\app\csnc_recordrec\cvibuild.csnc_recordrec\Debug\modeltable.obj
+-in:f:\cvi\app\csnc_recordrec\cvibuild.csnc_recordrec\Debug\oilmath.obj
+-in:f:\cvi\app\csnc_recordrec\cvibuild.csnc_recordrec\Debug\oilmodel_db.obj
+-in:f:\cvi\app\csnc_recordrec\cvibuild.csnc_recordrec\Debug\recvdata.obj
 -more:c:\program files (x86)\national instruments\cvi2017\bin\msvc\cvistart.lib
 -more:c:\program files (x86)\national instruments\cvi2017\bin\msvc\cvi.lib
 -more:C:\Program Files (x86)\Windows Kits\8.1\Lib\winv6.3\um\x86\advapi32.lib

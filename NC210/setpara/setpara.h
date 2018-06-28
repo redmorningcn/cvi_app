@@ -96,7 +96,8 @@ typedef struct{
                 u32             recordnum;      //记录号
                 struct{                         //指定地址读取
                     u16         paraaddr;
-                    u16         paralen;
+					u8         	paralen;
+					u8         	node;
                     u16         parabuf[64];       
                 };
             };

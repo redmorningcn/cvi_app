@@ -717,15 +717,15 @@ void	LocoCaliCommcode(void)
 	for(i =0;i < LOCO_GROUP_NUM;i++){
 		if(lstrLocoCali[i].calisend ){
 			//超时判断
-			if(time < GetAnsySysTime()){
-				if(time + 1000 < GetAnsySysTime()  ) {	//发送超时（为接收到应答）
-					lstrLocoCali[i].calisend = 0;
+			if(time <= GetAnsySysTime()){
+				if(time + 1000 > GetAnsySysTime()  ) {	//发送超时（为接收到应答）
+					return;
 				}
 			}else{
 				time = GetAnsySysTime();				//重新计时
+				return;
 			}
-		
-			return;
+			lstrLocoCali[i].calisend = 0;
 		}
 	}
 	

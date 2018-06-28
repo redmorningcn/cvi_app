@@ -1,5 +1,5 @@
 -nologo
--out:f:\cvi\app\NC210\cvibuild.NC210\Debug\LKJ接口在线监测装置测试软件.exe
+-out:f:\cvi\app\NC210\cvibuild.NC210\Debug\csnc_setpara.exe
 -arch:x86
 -timestamp
 -debug:2
@@ -19,13 +19,11 @@
 -in:f:\cvi\app\NC210\cvibuild.NC210\Debug\cvi_com1.obj
 -in:f:\cvi\app\NC210\cvibuild.NC210\Debug\cvi_com_operate.obj
 -in:f:\cvi\app\NC210\cvibuild.NC210\Debug\cvi_comm.obj
--in:f:\cvi\app\NC210\cvibuild.NC210\Debug\cvi_file.obj
 -in:f:\cvi\app\NC210\cvibuild.NC210\Debug\cvi_LKJTest.obj
 -in:f:\cvi\app\NC210\cvibuild.NC210\Debug\cvi_LocoCali.obj
 -in:f:\cvi\app\NC210\cvibuild.NC210\Debug\cvi_setpara.obj
 -in:f:\cvi\app\NC210\cvibuild.NC210\Debug\cvi_SpeedCali.obj
 -in:f:\cvi\app\NC210\cvibuild.NC210\Debug\main.obj
--in:f:\cvi\app\NC210\cvibuild.NC210\Debug\send_IAP.obj
 -in:f:\cvi\app\NC210\cvibuild.NC210\Debug\setpara.obj
 -more:c:\program files (x86)\national instruments\cvi2017\bin\msvc\cvistart.lib
 -more:c:\program files (x86)\national instruments\cvi2017\bin\msvc\cvi.lib

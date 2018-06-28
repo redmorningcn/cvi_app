@@ -1,4 +1,4 @@
-#include "f:\cvi\app\NC210\mian.h"
+#include <main.h>
 
 #include <utility.h>
 #include <ansi_c.h>
