@@ -31,8 +31,8 @@
 //面板变量
 int 					gLocoCali_panelHandle;
 extern		int			gmainPanel;
-strLocoCali				lstrLocoCali[LOCO_GROUP_NUM];			//校验参数
-strLocoCali				lstrLocoCaliCtrlId[LOCO_GROUP_NUM];		//面板ID
+strLineCali				lstrLocoCali[LOCO_GROUP_NUM];			//校验参数
+strLineCali				lstrLocoCaliCtrlId[LOCO_GROUP_NUM];		//面板ID
 /********************************************************************************************/
 //local
 /********************************************************************************************/
@@ -48,7 +48,7 @@ int CVICALLBACK LocoCaliTimerCallback (int panel, int control, int event,
 			if(gLocoCali_panelHandle)			//面板有效，则进行定时器操作
 			{
 				if(tmp == 0){
-					InitLocoCaliCtrlId();
+					LocoInitCaliCtrlId();
 					tmp++;
 				}
 				LocoCaliCommcode();				//校准串口通讯
@@ -57,7 +57,7 @@ int CVICALLBACK LocoCaliTimerCallback (int panel, int control, int event,
 				
 				Com_SetParaRecTask();			// 串口数据接收
 				
-				GetRecLocoCaliInfo();			//取串接收
+				LocoGetRecvCaliInfo();			//取串接收
 				
 				LocoCaliDisplay();				//显示面板内容
 			}
@@ -153,7 +153,7 @@ int CVICALLBACK QySyncCallback (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-			CtrlDimmedControl(1);
+			LocoCtrlDimmedControl(1);
 
 			break;
 	}
@@ -166,7 +166,7 @@ int CVICALLBACK ZdSyncCallback (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-			CtrlDimmedControl(2);
+			LocoCtrlDimmedControl(2);
 
 			break;
 	}
@@ -179,7 +179,7 @@ int CVICALLBACK XqSyncCallback (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-			CtrlDimmedControl(3);
+			LocoCtrlDimmedControl(3);
 
 			break;
 	}
@@ -192,7 +192,7 @@ int CVICALLBACK XhSyncCallback (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-			CtrlDimmedControl(4);
+			LocoCtrlDimmedControl(4);
 
 			break;
 	}
@@ -205,7 +205,7 @@ int CVICALLBACK LwSyncCallback (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-			CtrlDimmedControl(5);
+			LocoCtrlDimmedControl(5);
 
 			break;
 	}
@@ -241,7 +241,7 @@ int CVICALLBACK V110LowCallback (int panel, int control, int event,
 			lstrLocoCali[0].lowflg = 1;
 			//读同步信号。同步的相应标识置位
 			
-			MeasureCtrlSetVal();
+			LocoMeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -254,7 +254,7 @@ int CVICALLBACK QYLowCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[1].lowflg = 1;
-			MeasureCtrlSetVal();
+			LocoMeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -267,7 +267,7 @@ int CVICALLBACK ZDLowCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[2].lowflg = 1;
-			MeasureCtrlSetVal();
+			LocoMeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -280,7 +280,7 @@ int CVICALLBACK XQLowCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[3].lowflg = 1;
-			MeasureCtrlSetVal();
+			LocoMeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -293,7 +293,7 @@ int CVICALLBACK XHLowCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[4].lowflg = 1;
-			MeasureCtrlSetVal();
+			LocoMeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -306,7 +306,7 @@ int CVICALLBACK LWLowCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[5].lowflg = 1;
-			MeasureCtrlSetVal();
+			LocoMeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -319,8 +319,8 @@ int CVICALLBACK LWCaliCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[5].califlg = 1;
-			CtrlDimmedSendControl(1);	//关闭所有发送
-			GetLocoCaliCtrlVal();		//取面板值  
+			LocoCtrlDimmedSendControl(1);	//关闭所有发送
+			LocoGetCaliCtrlVal();		//取面板值  
 			break;
 	}
 	return 0;
@@ -333,8 +333,8 @@ int CVICALLBACK XHCaliCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[4].califlg = 1;
-			CtrlDimmedSendControl(1);	//关闭所有发送
-			GetLocoCaliCtrlVal();		//取面板值  
+			LocoCtrlDimmedSendControl(1);	//关闭所有发送
+			LocoGetCaliCtrlVal();		//取面板值  
 			break;
 	}
 	return 0;
@@ -347,8 +347,8 @@ int CVICALLBACK XQCaliCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[3].califlg = 1;
-			CtrlDimmedSendControl(1);	//关闭所有发送
-			GetLocoCaliCtrlVal();		//取面板值  
+			LocoCtrlDimmedSendControl(1);	//关闭所有发送
+			LocoGetCaliCtrlVal();		//取面板值  
 			break;
 	}
 	return 0;
@@ -361,8 +361,8 @@ int CVICALLBACK ZDCaliCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[2].califlg = 1;
-			CtrlDimmedSendControl(1);	//关闭所有发送
-			GetLocoCaliCtrlVal();		//取面板值  
+			LocoCtrlDimmedSendControl(1);	//关闭所有发送
+			LocoGetCaliCtrlVal();		//取面板值  
 			break;
 	}
 	return 0;
@@ -375,8 +375,8 @@ int CVICALLBACK QYCaliCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[1].califlg = 1;
-			CtrlDimmedSendControl(1);	//关闭所有发送
-			GetLocoCaliCtrlVal();		//取面板值
+			LocoCtrlDimmedSendControl(1);	//关闭所有发送
+			LocoGetCaliCtrlVal();		//取面板值
 
 			break;
 	}
@@ -390,8 +390,8 @@ int CVICALLBACK V110CaliCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[0].califlg = 1;
-			CtrlDimmedSendControl(1);	//关闭所有发送
-			GetLocoCaliCtrlVal();		//取面板值
+			LocoCtrlDimmedSendControl(1);	//关闭所有发送
+			LocoGetCaliCtrlVal();		//取面板值
 			
 			break;
 	}
@@ -418,7 +418,7 @@ int CVICALLBACK V110HigCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[0].higflg = 1;
-			MeasureCtrlSetVal();
+			LocoMeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -431,7 +431,7 @@ int CVICALLBACK QYHigCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[1].higflg = 1;
-			MeasureCtrlSetVal();
+			LocoMeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -444,7 +444,7 @@ int CVICALLBACK ZDHigCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[2].higflg = 1;
-			MeasureCtrlSetVal();
+			LocoMeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -457,7 +457,7 @@ int CVICALLBACK XQHigCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[3].higflg = 1;
-			MeasureCtrlSetVal();
+			LocoMeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -470,7 +470,7 @@ int CVICALLBACK XHHigCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[4].higflg = 1;
-			MeasureCtrlSetVal();
+			LocoMeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -483,7 +483,7 @@ int CVICALLBACK LWHigCallback (int panel, int control, int event,
 	{
 		case EVENT_COMMIT:
 			lstrLocoCali[5].higflg = 1;
-			MeasureCtrlSetVal();
+			LocoMeasureCtrlSetVal();
 			break;
 	}
 	return 0;
@@ -503,7 +503,7 @@ int CVICALLBACK LWHigCallback (int panel, int control, int event,
 * Description  : 初始化工况校准控件ID，和面板控件建立联系
 * Author       : 2018/6/23  by redmorningcn
 *******************************************************************************/
-void	InitLocoCaliCtrlId(void)   
+void	LocoInitCaliCtrlId(void)   
 {
 	lstrLocoCaliCtrlId[0].lowstandard	=	LOCOCALI_V110_LOW_STANDARD	;		
 	lstrLocoCaliCtrlId[0].lowmeasure	=	LOCOCALI_V110_LOW_MEASURE	;
@@ -553,7 +553,7 @@ void	InitLocoCaliCtrlId(void)
 * Description  : 获取面板控件值
 * Author       : 2018/6/24  by redmorningcn
 *******************************************************************************/
-void	GetLocoCaliCtrlVal(void)   
+void	LocoGetCaliCtrlVal(void)   
 {
 	u8	i;
 	
@@ -566,11 +566,10 @@ void	GetLocoCaliCtrlVal(void)
 	}
 }
 
-
 /********************************************************************************************/
-/*根据面板勾选，显示或关闭对应组控件      																	        */
+/* 根据面板勾选，显示或关闭对应组控件      																	        */
 /********************************************************************************************/
-void	CtrlDimmedControl(u8 id)
+void	LocoCtrlDimmedControl(u8 id)
 {
 	u8	j;
 	u16	*p;
@@ -596,9 +595,9 @@ void	CtrlDimmedControl(u8 id)
 }
 
 /********************************************************************************************/
-/*根据面板勾选，显示或关闭对应组控件      																	        */
+/* 根据面板勾选，显示或关闭对应组控件      																	        */
 /********************************************************************************************/
-void	CtrlDimmedSendControl(u8	dimmed)
+void	LocoCtrlDimmedSendControl(u8	dimmed)
 {
 	u8	j;
 
@@ -611,9 +610,9 @@ void	CtrlDimmedSendControl(u8	dimmed)
 }
 
 /********************************************************************************************/
-/*测量控件置值    																	        */
+/* 测量控件置值    																	        */
 /********************************************************************************************/
-void	MeasureCtrlSetVal(void)
+void	LocoMeasureCtrlSetVal(void)
 {
 	u8		j;
 	//u16		*p = (u16 *)&gstrDtuData.Rec.Vol;
@@ -646,7 +645,7 @@ void	LocoCaliDisplay(void)
 		
 		if(i == LOCO_GROUP_NUM - 1 && sta){
 			sta = 0;
-		 	CtrlDimmedSendControl(0);   //打开所有发送控件开关
+		 	LocoCtrlDimmedSendControl(0);   //打开所有发送控件开关
 		}
 	}
 }
@@ -655,21 +654,21 @@ void	LocoCaliDisplay(void)
 /********************************************************************************************/
 /* 和面板无关函数
 /********************************************************************************************/
-strLocoCaliTable	lstrLocoCaliTable;
+strLineCaliTable	lstrLocoCaliTable;
 
 
 
 /*******************************************************************************************
 计算校准。根据测量点（measure）和目标点（standard），计算出修正线性（*10000）和偏移。
 *******************************************************************************************/
-void	CalcCaliVal(strLocoCali *cali){
+void	CalcCaliVal(strLineCali *cali){
 	
 	double	linemeasure,linecali;
 	double	zeromeasure,zerocali;
 	
-	
 	cali->line 	= 10000;		//默认值
 	cali->zero	= 0;
+	
 	// 计算值异常判断
 	if(		cali->higmeasure  < cali->lowmeasure  
 		||	cali->higstandard < cali->lowstandard
@@ -733,21 +732,22 @@ void	LocoCaliCommcode(void)
 	for(i =0;i < LOCO_GROUP_NUM;i++){
 		if(lstrLocoCali[i].califlg){
 			lstrLocoCali[i].califlg 	= 0;
-			lstrLocoCali[i].calisend 	= 1;							//校准发送置位
+			lstrLocoCali[i].calisend 	= 1;								//校准发送置位
 			
 			//计算线性度及零点
 			CalcCaliVal(&lstrLocoCali[i]);						
 			
-			lstrLocoCaliTable.CaliBuf[i].line = lstrLocoCali[i].line;	//赋值给calitable
+			lstrLocoCaliTable.CaliBuf[i].line = lstrLocoCali[i].line;		//赋值给calitable
 			lstrLocoCaliTable.CaliBuf[i].Delta= lstrLocoCali[i].zero; 
 			
-			len = sizeof(strLocoCalibration);	
-			gstrDtuData.paraaddr =  LOCO_CALI_BASE_ADDR + sizeof(strLocoCalibration)*i;	//读指定地址
+			len = sizeof(strLineCalibration);	
+			gstrDtuData.paraaddr =  LOCO_CALI_BASE_ADDR + sizeof(strLineCalibration)*i;	//读指定地址
 
-			//gstrDtuData.paralen  =  (u16)((len <<8) + NODE_LOCO);	//读指定数据 (len << 8 + l_DetectGetNode)
-			gstrDtuData.paralen  =  (u16)((NODE_LOCO << 8) + (u8)len);	//读指定数据 (len << 8 + l_DetectGetNode)   
+			//gstrDtuData.paralen  =  (u16)((len <<8) + NODE_LOCO);			//读指定数据 (len << 8 + l_DetectGetNode)
+			gstrDtuData.paralen  =  (u8)len;								//读指定数据 (len << 8 + l_DetectGetNode)  
+			gstrDtuData.node	 =  NODE_LOCO;
 			memcpy((u8 *)gstrDtuData.parabuf,(u8 *)&lstrLocoCaliTable.CaliBuf[i],len);
-			l_eqiupmentcode = CMD_DETECT_SET;						// 指定参数读（检测板）
+			l_eqiupmentcode = CMD_DETECT_SET;								// 指定参数读（检测板）
 			
 			time = GetAnsySysTime();
 			return;
@@ -761,25 +761,26 @@ void	LocoCaliCommcode(void)
 			gstrDtuData.paraaddr 	= LOCO_CALI_BASE_ADDR ; 
 			//gstrDtuData.paralen		= sizeof(lstrLocoCaliTable);
 			len						= sizeof(lstrLocoCaliTable);
-			gstrDtuData.paralen  	= (u16)((NODE_LOCO << 8) + (u8)len);	//读指定数据 (len << 8 + l_DetectGetNode)   
+			//gstrDtuData.paralen  	= (u16)((NODE_LOCO << 8) + (u8)len);	//读指定数据 (len << 8 + l_DetectGetNode)  
+			gstrDtuData.paralen  	= (u8)len;								//读指定数据 (len << 8 + l_DetectGetNode)  
+			gstrDtuData.node		= NODE_LOCO;
 			l_eqiupmentcode 		= CMD_DETECT_GET; 
 		}else{
 			gstrDtuData.paraaddr 	= (u16)((u32)&Ctrl.Rec - (u32)&Ctrl) ;	//空闲时，读sctrl.rec记录。
 
 			len  					= sizeof(stcFlshRec);
-			gstrDtuData.paralen		= len;
-
+			gstrDtuData.paralen		= (u8)len;
+			gstrDtuData.node		= 0;
 			l_eqiupmentcode			= CMD_PARA_GET;	
 		}
 	}
 }
 
-
 /********************************************************************************************
 author：redmorningcn 20180625 
 数据接收准备。（接收应答或数据）
 ********************************************************************************************/
-void	GetRecLocoCaliInfo(void)
+void	LocoGetRecvCaliInfo(void)
 {
 	u8	reclen;
 	

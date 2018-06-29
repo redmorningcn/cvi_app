@@ -1,3 +1,7 @@
+[SpeedCaliTimerCallback]
+Class="Function"
+Prototype="int SpeedCaliTimerCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
 [LoadSpeedCaliPanel]
 Class="Function"
 Prototype="void LoadSpeedCaliPanel();"
@@ -13,10 +17,6 @@ Prototype="void QuitSpeedCaliPanel();"
 [SpeedCaliPanelCB]
 Class="Function"
 Prototype="int SpeedCaliPanelCB(int panel, int event, void *callbackData, int eventData1, int eventData2);"
-
-[SpeedCaliTimerCallback]
-Class="Function"
-Prototype="int SpeedCaliTimerCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
 
 [G1_VccCaliCallback]
 Class="Function"
@@ -125,4 +125,72 @@ Prototype="int G3_Speed1HigCallback(int panel, int control, int event, void *cal
 [G3_Speed2HigCallback]
 Class="Function"
 Prototype="int G3_Speed2HigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G1VCCSyncCallback]
+Class="Function"
+Prototype="int G1VCCSyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G1Speed1SyncCallback]
+Class="Function"
+Prototype="int G1Speed1SyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G1Speed2SyncCallback]
+Class="Function"
+Prototype="int G1Speed2SyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G2VCCSyncCallback]
+Class="Function"
+Prototype="int G2VCCSyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G2Speed1SyncCallback]
+Class="Function"
+Prototype="int G2Speed1SyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G2Speed2SyncCallback]
+Class="Function"
+Prototype="int G2Speed2SyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G3VCCSyncCallback]
+Class="Function"
+Prototype="int G3VCCSyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G3Speed1SyncCallback]
+Class="Function"
+Prototype="int G3Speed1SyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[G3Speed2SyncCallback]
+Class="Function"
+Prototype="int G3Speed2SyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SpeedInitCaliCtrlId]
+Class="Function"
+Prototype="void SpeedInitCaliCtrlId();"
+
+[SpeedGetCaliCtrlVal]
+Class="Function"
+Prototype="void SpeedGetCaliCtrlVal();"
+
+[SpeedCtrlDimmedControl]
+Class="Function"
+Prototype="void SpeedCtrlDimmedControl(unsigned char id);"
+
+[SpeedCtrlDimmedSendControl]
+Class="Function"
+Prototype="void SpeedCtrlDimmedSendControl(unsigned char dimmed);"
+
+[SpeedMeasureCtrlSetVal]
+Class="Function"
+Prototype="void SpeedMeasureCtrlSetVal();"
+
+[SpeedCaliDisplay]
+Class="Function"
+Prototype="void SpeedCaliDisplay();"
+
+[SpeedCaliCommcode]
+Class="Function"
+Prototype="void SpeedCaliCommcode();"
+
+[SpeedGetRecvCaliInfo]
+Class="Function"
+Prototype="void SpeedGetRecvCaliInfo();"
 

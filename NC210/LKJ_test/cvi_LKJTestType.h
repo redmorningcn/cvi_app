@@ -57,11 +57,8 @@ typedef	struct _strpara_ {
 }strLocoDetect;
 
 
-
-
-
-extern	void	RecDetectInfoReadCode(void) ;
-extern	void	GetRecDetectInfo(void);
+extern	void	SetDetectReadCode(void) ;
+extern	void	GetDetectInfo(void);
 extern	void	SpeedDetectDisplay(void);
 extern	void	InitSpeedCtrlID(void);
 extern	void	InitLocoCtrlID(void);

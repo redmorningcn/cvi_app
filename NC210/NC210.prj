@@ -9,7 +9,7 @@ IVI Standard Root Dir = "/C/Program Files (x86)/IVI Foundation/IVI"
 VXIplug&play Framework Dir = "/C/Program Files (x86)/IVI Foundation/VISA/winnt"
 IVI Standard Root 64-bit Dir = "/C/Program Files/IVI Foundation/IVI"
 VXIplug&play Framework 64-bit Dir = "/C/Program Files/IVI Foundation/VISA/win64"
-Number of Files = 37
+Number of Files = 38
 Target Type = "Executable"
 Flags = 2064
 Copied From Locked InstrDrv Directory = False
@@ -466,8 +466,8 @@ File Type = "Include"
 Res Id = 35
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "../c_comm/includes.h"
-Path = "/f/cvi/app/c_comm/includes.h"
+Path Rel Path = "speedCali/cvi_SpeedCaliType.h"
+Path = "/f/cvi/app/NC210/speedCali/cvi_SpeedCaliType.h"
 Exclude = False
 Project Flags = 0
 Folder = "head"
@@ -478,6 +478,18 @@ File Type = "Include"
 Res Id = 36
 Path Is Rel = True
 Path Rel To = "Project"
+Path Rel Path = "../c_comm/includes.h"
+Path = "/f/cvi/app/c_comm/includes.h"
+Exclude = False
+Project Flags = 0
+Folder = "head"
+Folder Id = 5
+
+[File 0037]
+File Type = "Include"
+Res Id = 37
+Path Is Rel = True
+Path Rel To = "Project"
 Path Rel Path = "setpara/setpara.h"
 Path = "/f/cvi/app/NC210/setpara/setpara.h"
 Exclude = False
@@ -485,9 +497,9 @@ Project Flags = 0
 Folder = "head"
 Folder Id = 5
 
-[File 0037]
+[File 0038]
 File Type = "Function Panel"
-Res Id = 37
+Res Id = 38
 Path Is Rel = True
 Path Rel To = "CVI"
 Path Rel To Override = "CVI"

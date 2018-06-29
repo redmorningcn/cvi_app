@@ -16,7 +16,7 @@
 #define		LOCO_CALI_BASE_ADDR		(340)		/* 工况校准存储基地址	*/
 		
 //校准结构体		
-typedef struct _strLocoCali_
+typedef struct _strLineCali_
 {
 	u16		lowstandard;
 	u16		lowmeasure;
@@ -37,7 +37,7 @@ typedef struct _strLocoCali_
 	
 	u16		line;				
 	s16		zero;
-}strLocoCali;
+}strLineCali;
 
 
 /**************************************************************
@@ -50,7 +50,7 @@ typedef struct {
     int16   Delta;      //修正偏差
     int16   tmp;        //预留
 
-}strLocoCalibration;
+}strLineCalibration;
 
 /**************************************************************
 * Description  : 修正参数表
@@ -59,31 +59,33 @@ typedef struct {
 typedef struct{
     union   {
         struct{
-            strLocoCalibration  VccVol;         //电平
-            strLocoCalibration  QY_Vol;         //
-            strLocoCalibration  ZD_Vol;         //
-            strLocoCalibration  XQ_Vol;         //
-            strLocoCalibration  XH_Vol;         //
-            strLocoCalibration  LW_Vol;         //
+            strLineCalibration  VccVol;         //电平
+            strLineCalibration  QY_Vol;         //
+            strLineCalibration  ZD_Vol;         //
+            strLineCalibration  XQ_Vol;         //
+            strLineCalibration  XH_Vol;         //
+            strLineCalibration  LW_Vol;         //
         };
-        strLocoCalibration      CaliBuf[10];
+        strLineCalibration      CaliBuf[10];
     };
-}strLocoCaliTable;
+}strLineCaliTable;
 
 
 /**************************************************************
 * Description  : 函数声明
 * Author       : 2018/5/24 星期二, by redmorningcn
 */
-extern	void	InitLocoCaliCtrlId(void);
+extern	void	LocoInitCaliCtrlId(void);
 extern	void	LocoCaliCommcode(void)	;
 extern	void	LocoCaliDisplay(void)	;
-extern	void	GetLocoCaliCtrlVal(void);   
-extern	void	CtrlDimmedSendControl(u8	dimmed);  
-extern	void	CtrlDimmedControl(u8 id);
-extern	void	MeasureCtrlSetVal(void);  
-extern	void	GetRecLocoCaliInfo(void);
+extern	void	LocoGetCaliCtrlVal(void);   
+extern	void	LocoCtrlDimmedSendControl(u8	dimmed);  
+extern	void	LocoCtrlDimmedControl(u8 id);
+extern	void	LocoMeasureCtrlSetVal(void);  
+extern	void	LocoGetRecvCaliInfo(void);
 
+//通用校准函数
+extern	void	CalcCaliVal(strLineCali *cali);
 
 #ifdef __cplusplus
     }

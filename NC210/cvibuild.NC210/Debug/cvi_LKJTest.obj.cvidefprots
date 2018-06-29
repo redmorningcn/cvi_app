@@ -46,11 +46,11 @@ Prototype="void LocoDetectDisplay();"
 Class="Function"
 Prototype="void RecordDisplay();"
 
-[RecDetectInfoReadCode]
+[SetDetectReadCode]
 Class="Function"
-Prototype="void RecDetectInfoReadCode();"
+Prototype="void SetDetectReadCode();"
 
-[GetRecDetectInfo]
+[GetDetectInfo]
 Class="Function"
-Prototype="void GetRecDetectInfo();"
+Prototype="void GetDetectInfo();"
 

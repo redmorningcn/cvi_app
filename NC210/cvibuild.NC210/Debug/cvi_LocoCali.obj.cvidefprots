@@ -118,25 +118,25 @@ Prototype="int XHHigCallback(int panel, int control, int event, void *callbackDa
 Class="Function"
 Prototype="int LWHigCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
 
-[InitLocoCaliCtrlId]
+[LocoInitCaliCtrlId]
 Class="Function"
-Prototype="void InitLocoCaliCtrlId();"
+Prototype="void LocoInitCaliCtrlId();"
 
-[GetLocoCaliCtrlVal]
+[LocoGetCaliCtrlVal]
 Class="Function"
-Prototype="void GetLocoCaliCtrlVal();"
+Prototype="void LocoGetCaliCtrlVal();"
 
-[CtrlDimmedControl]
+[LocoCtrlDimmedControl]
 Class="Function"
-Prototype="void CtrlDimmedControl(unsigned char id);"
+Prototype="void LocoCtrlDimmedControl(unsigned char id);"
 
-[CtrlDimmedSendControl]
+[LocoCtrlDimmedSendControl]
 Class="Function"
-Prototype="void CtrlDimmedSendControl(unsigned char dimmed);"
+Prototype="void LocoCtrlDimmedSendControl(unsigned char dimmed);"
 
-[MeasureCtrlSetVal]
+[LocoMeasureCtrlSetVal]
 Class="Function"
-Prototype="void MeasureCtrlSetVal();"
+Prototype="void LocoMeasureCtrlSetVal();"
 
 [LocoCaliDisplay]
 Class="Function"
@@ -144,13 +144,13 @@ Prototype="void LocoCaliDisplay();"
 
 [CalcCaliVal]
 Class="Function"
-Prototype="void CalcCaliVal(struct _strLocoCali_ *cali);"
+Prototype="void CalcCaliVal(struct _strLineCali_ *cali);"
 
 [LocoCaliCommcode]
 Class="Function"
 Prototype="void LocoCaliCommcode();"
 
-[GetRecLocoCaliInfo]
+[LocoGetRecvCaliInfo]
 Class="Function"
-Prototype="void GetRecLocoCaliInfo();"
+Prototype="void LocoGetRecvCaliInfo();"
 

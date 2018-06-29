@@ -114,13 +114,13 @@ int CVICALLBACK LKJTestTimerCallback (int panel, int control, int event,
 					tmp++;
 				}
 				
-				RecDetectInfoReadCode();		// 准备检测数据读取指令
+				SetDetectReadCode();		// 准备检测数据读取指令
 				
 				Com_SetParaTask();				// 串口参数设置
 				
 				Com_SetParaRecTask();			// 串口数据接收
 				
-				GetRecDetectInfo();				// 获取读取得检测数据
+				GetDetectInfo();				// 获取读取得检测数据
 				
 				SpeedDetectDisplay();			// 速度板信号值在面板显示
 				
@@ -159,8 +159,8 @@ int CVICALLBACK ClearRecordCallback (int panel, int control, int event,
 {
 	switch (event)
 	{								
-		case EVENT_COMMIT:					//系统复位
-			l_eqiupmentcode = CMD_SYS_RST;
+		case EVENT_COMMIT:					//系统清零
+			l_eqiupmentcode = CMD_REC_CLR;
 			
 			break;
 	}
@@ -172,7 +172,7 @@ int CVICALLBACK ClearRecordCallback (int panel, int control, int event,
 /********************************************************************************************/
 
 strLocoDetect		lstrLocoDetect;						//工况信号定义
-strLocoDetect		lstrLocoDetectId;						//工况信号ID空检定义
+strLocoDetect		lstrLocoDetectId;					//工况信号ID空检定义
 strSpeedDetect		lstrSpeedDetect[3];					//速度信号检测值
 strSpeedDetect		lstrSpeedCrtID[3];					//速度控件ID值
 
@@ -312,7 +312,7 @@ void	RecordDisplay(void)  {
 		
 		u8	buf[512];
 		//打印时间 
-		snprintf((char *)buf,sizeof(buf)-2,"%2d-%2d-%2d %2d:%2d:%2d"
+			snprintf((char *)buf,sizeof(buf)-2,"%02d-%02d-%02d %02d:%02d:%02d"
 										,gstrDtuData.Rec.Year
 										,gstrDtuData.Rec.Mon 	
 										,gstrDtuData.Rec.Day 
@@ -343,20 +343,25 @@ void	RecordDisplay(void)  {
 /* 和面板无关函数
 /********************************************************************************************/
 
-
-u8	l_DetectGetNode = 1;
+u8		l_DetectGetNode = 1;
 static	u32	lstestcode;     
 /********************************************************************************************
 author：redmorningcn 20180622 
 速度信号及loco信号命令，数据准备。（直接读取 控制板ctrl.rec实时数据（指定地址读））
 ********************************************************************************************/
-void	RecDetectInfoReadCode(void)
+void	SetDetectReadCode(void)
 {
 	u32	len;
 	static	u32	time;
 	
+	if(gstrDtuData.recenableflg == 1){						// 应答数据记录，不查询其他数据
+		l_eqiupmentcode	=	0;
+		lstestcode		=   0;
+		return;
+	}
+	
 	if(time <= GetAnsySysTime()){
-		if(time + 1000 > GetAnsySysTime()  ) {					// 周期发送，控制发送频率
+		if(time + 1000 > GetAnsySysTime()  ) {				// 周期发送，控制发送频率
 			return;
 		} 
 	}
@@ -367,17 +372,17 @@ void	RecDetectInfoReadCode(void)
 	if(l_DetectGetNode == 4){								// 取LKJ工况信号
 		len = sizeof(strLocoDetect);	
 		gstrDtuData.paraaddr =  ADDR_LOCO_DETECT;			// 读指定地址
-		gstrDtuData.paralen  =  (u8)len;						//读指定数据
+		gstrDtuData.paralen  =  (u8)len;					// 读指定数据
 		gstrDtuData.node     =  l_DetectGetNode;
 		
 	}else if(l_DetectGetNode < 4){ 	// 取速度信号
 		len = sizeof(strSpeedDetect);
 		gstrDtuData.paraaddr =  ADDR_SPEED_DETECT;			// 读指定地址
-		gstrDtuData.paralen  =  (u8)len;					//读指定数据
+		gstrDtuData.paralen  =  (u8)len;					// 读指定数据
 		gstrDtuData.node     =  l_DetectGetNode;
 		
 		if(l_DetectGetNode == 0)
-			l_DetectGetNode = 1;							// 默认节点1	
+			l_DetectGetNode  = 1;							// 默认节点1	
 	}
 	
 	l_eqiupmentcode = CMD_DETECT_GET;						// 指定参数读（检测板）
@@ -388,14 +393,14 @@ void	RecDetectInfoReadCode(void)
 author：redmorningcn 20180622 
 取速度信号及loco信号命令，数据准备。（通过接收标识，判断是接收到数据）
 ********************************************************************************************/
-void	GetRecDetectInfo(void)
+void	GetDetectInfo(void)
 {
 	u32		len;
 	u8		reclen;
 	u8		node;
    	static	u32	time;
 
-	if(		(gstrDtuData.dataokflg 	== 1 
+	if(	   (gstrDtuData.dataokflg 	== 1 
 		&&  gstrDtuData.code 		== lstestcode)
 	  )															//	接收到数据
 	{														
@@ -411,7 +416,7 @@ void	GetRecDetectInfo(void)
 			if(reclen == len){									// 数据长度相符，幅值数据
 				memcpy((u8 *)&lstrLocoDetect,gstrDtuData.parabuf,len);	// 复制数据	
 			}
-		}else if(node < 4 && node > 0){ 	// 取速度信号
+		}else if(node < 4 && node > 0){ 						// 取速度信号
 			len =  sizeof(strSpeedDetect);						//	detect 数据（检测板数据）
 			 
 			memcpy((u8 *)&lstrSpeedDetect[node - 1],gstrDtuData.parabuf,len);	// 复制数据

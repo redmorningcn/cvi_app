@@ -58,6 +58,7 @@ LOCATE on "cvi_setpara.c" = "f:\\cvi\\app\\NC210\\setpara" ;
 LOCATE on "cvi_setpara.h" = "f:\\cvi\\app\\NC210\\setpara" ;
 LOCATE on "cvi_SpeedCali.c" = "f:\\cvi\\app\\NC210\\speedCali" ;
 LOCATE on "cvi_SpeedCali.h" = "f:\\cvi\\app\\NC210\\speedCali" ;
+LOCATE on "cvi_SpeedCaliType.h" = "f:\\cvi\\app\\NC210\\speedCali" ;
 LOCATE on "includes.h" = "f:\\cvi\\app\\c_comm" ;
 LOCATE on "main.c" = "f:\\cvi\\app\\NC210" ;
 LOCATE on "setpara.c" = "f:\\cvi\\app\\NC210\\setpara" ;

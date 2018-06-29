@@ -156,6 +156,7 @@ int CVICALLBACK SetProductCallBack (int panel, int control, int event,
 			
 			gstrDtuData.paraaddr = (u16)((u32)&Ctrl.sProductInfo -  (u32)&Ctrl) ;
 			gstrDtuData.paralen  = sizeof(Ctrl.sProductInfo.Type) +  sizeof(Ctrl.sProductInfo.Id);
+			gstrDtuData.node	 = 0;
 			
 			GetCtrlVal(panel,SETP_PANEL_PRO_TYPE,(u32*)&gstrDtuData.parabuf);
 			GetCtrlVal(panel,SETP_PANEL_PRO_NUM, (u32*)&gstrDtuData.parabuf[2]);

@@ -84,12 +84,12 @@ void Com_SetParaTask(void)
 		memcpy(&buf[datalen],(unsigned char *)&l_eqiupmentcode,sizeof(l_eqiupmentcode));
 		datalen += sizeof(l_eqiupmentcode);
 		
-		switch (l_eqiupmentcode)				//根据指令操作，祥见统计模块通讯协议
+		switch (l_eqiupmentcode)						// 根据指令操作，祥见统计模块通讯协议
 		{
 			stcTime			sTime;  
 
 			case CMD_TIME_SET:   
-	 						  ReadTime((stcTime *)&sTime);											//取时钟   
+	 						  ReadTime((stcTime *)&sTime);	//取时钟   
 							  memcpy(&buf[datalen],(unsigned char *)&sTime,sizeof(sTime));
 							  datalen += sizeof(sTime);
 							  break; 
@@ -98,22 +98,25 @@ void Com_SetParaTask(void)
 							  memcpy(&buf[datalen],(unsigned char *)&gstrProductInfo.LocoId,sizeof(gstrProductInfo.LocoId));
 							  datalen += sizeof(gstrProductInfo.LocoId);
 							  break; 
-			case CMD_PARA_SET: 		// 指定地址设置参数 
-			case CMD_DETECT_SET:   	// 写检测板指定地址			
+			case CMD_PARA_SET: 									// 指定地址设置参数 
+			case CMD_DETECT_SET:   								// 写检测板指定地址			
 							  memcpy(&buf[datalen],(unsigned char *)&gstrDtuData.paraaddr,sizeof(gstrDtuData.paraaddr));  
 							  datalen += sizeof(gstrDtuData.paraaddr);
 							  
 							  memcpy(&buf[datalen],(unsigned char *)&gstrDtuData.paralen,sizeof(gstrDtuData.paralen));
 							  datalen += sizeof(gstrDtuData.paralen);
 							  
-							  tmplen = (u8)gstrDtuData.paralen;	   	//取数据长度
+							  memcpy(&buf[datalen],(unsigned char *)&gstrDtuData.node,sizeof(gstrDtuData.node));
+							  datalen += sizeof(gstrDtuData.node);
 							  
+							  tmplen = (u8)gstrDtuData.paralen;// 取数据长度
+							  									  
 							  memcpy(&buf[datalen],(unsigned char *)&gstrDtuData.parabuf[0],tmplen);
 							  datalen += tmplen;
 							  break;
 							  
-			case CMD_PARA_GET: 		// 指定地址读取参数
-			case CMD_DETECT_GET:  	// 读检测板指定地址
+			case CMD_PARA_GET: 									// 指定地址读取参数
+			case CMD_DETECT_GET:  								// 读检测板指定地址
 							  memcpy(&buf[datalen],(unsigned char *)&gstrDtuData.paraaddr,sizeof(gstrDtuData.paraaddr));  
 							  datalen += sizeof(gstrDtuData.paraaddr);
 							  
@@ -131,7 +134,7 @@ void Com_SetParaTask(void)
 							  break;	
 			case CMD_REC_CLR:  	
 			case CMD_SYS_RST:  	
-							  break;		
+							  	break;		
 							  
 			default:
 				break;
@@ -161,9 +164,9 @@ void Com_SetParaTask(void)
 			
 			datalen = 0;
 			sCtrl.PC.ConnCtrl.sendlen 		= datalen;	// 发送数据区长度
-			sCtrl.PC.ConnCtrl.sourceaddr	= ADDR_SET;	// 源地址
+			sCtrl.PC.ConnCtrl.sourceaddr	= sCtrl.PC.RxCtrl.DestAddr;	// 源地址
 		
-			sCtrl.PC.ConnCtrl.DestAddr		= ADDR_FIX; // 目的地址
+			sCtrl.PC.ConnCtrl.DestAddr		= sCtrl.PC.RxCtrl.SourceAddr; // 目的地址
 			sCtrl.PC.ConnCtrl.SendFramNum 	= sCtrl.PC.RxCtrl.FramNum; 	//序号(应答接收的帧序号)
 			sCtrl.PC.ConnCtrl.FrameCode		= 0x00;		// 帧命令字	
 			
@@ -194,6 +197,7 @@ void	Com_SetParaRecTask(void)
 {
 	u16	reclen 	=  sCtrl.PC.RxCtrl.Len; //
 	u16	headlen = 0;
+	u32	code;
 	
 	if(		sCtrl.PC.RxCtrl.recvflg 	== 1		&&			// 有数据接收
 		   (sCtrl.PC.RxCtrl.DestAddr 	== ADDR_PC 	||
@@ -210,10 +214,12 @@ void	Com_SetParaRecTask(void)
 		sCtrl.PC.ConnCtrl.SendTimeFlg	= 0;					// 数据接收成功，取消发送计时
 		sCtrl.PC.ConnCtrl.ErrFlg 		= 0;					// 错误清除
 		
-		if(			reclen < sizeof(stcFlshRec) 
-				||	l_sendcode ==  CMD_DETECT_GET
+		memcpy((u32 *)&code,sCtrl.PC.rd,sizeof(code));
+		
+		if(	   (	l_sendcode ==  CMD_DETECT_GET
 				||  l_sendcode ==  CMD_PARA_GET
-				||  l_sendcode ==  CMD_RECORD_GET   
+				||  l_sendcode ==  CMD_RECORD_GET  
+			   )&&	(l_sendcode ==  code) 
 		  ){
 			switch(l_sendcode){										// 根据发送命令代码，应答数据（设置指令，只确认应答位）
 				case  CMD_TIME_SET:
@@ -258,7 +264,9 @@ void	Com_SetParaRecTask(void)
 		}else if(reclen == sizeof(stcFlshRec)){
 			if(gstrDtuData.recenableflg == 1)						// 应答允许
 			{
+				memcpy((u8 *)&gstrDtuData,sCtrl.PC.rd,reclen); 		//数据复制
 				gstrDtuData.recechoflg  = 1;						// 数据应答	
+				gstrDtuData.recvrecflg  = 1;
 			}
 		}
 	}
