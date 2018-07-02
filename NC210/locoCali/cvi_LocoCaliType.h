@@ -30,13 +30,14 @@ typedef struct _strLineCali_
 	u8		lowflg:		1;			//低位读标识
 	u8		higflg:		1;			//高位读标识
 	u8		calisend:	1;			//校准发送标识
-
-	u8		tmpflg:		4;			//预留
+	u8		caliErr:	1;			//校准值异常
+	u8		tmpflg:		3;			//预留
 	
 	u8		tmp8[3];				//预留
 	
 	u16		line;				
 	s16		zero;
+	u16		info;
 }strLineCali;
 
 
@@ -83,6 +84,7 @@ extern	void	LocoCtrlDimmedSendControl(u8	dimmed);
 extern	void	LocoCtrlDimmedControl(u8 id);
 extern	void	LocoMeasureCtrlSetVal(void);  
 extern	void	LocoGetRecvCaliInfo(void);
+extern	void	LocoStandCtrlSetVal(void);    
 
 //通用校准函数
 extern	void	CalcCaliVal(strLineCali *cali);

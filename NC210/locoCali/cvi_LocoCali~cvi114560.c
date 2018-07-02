@@ -33,11 +33,6 @@ int 					gLocoCali_panelHandle;
 extern		int			gmainPanel;
 strLineCali				lstrLocoCali[LOCO_GROUP_NUM];			//校验参数
 strLineCali				lstrLocoCaliCtrlId[LOCO_GROUP_NUM];		//面板ID
-
-strLineCaliTable		lstrLocoCaliTable;						//校准系数			
-
-
-#define		CALI_LINE_MUTIPLY		(10000)
 /********************************************************************************************/
 //local
 /********************************************************************************************/
@@ -547,7 +542,7 @@ void	LocoInitCaliCtrlId(void)
 	lstrLocoCaliCtrlId[0].higmeasure	=	LOCOCALI_V110_HIG_MEASURE	;
 	lstrLocoCaliCtrlId[0].ansyflg		=	LOCOCALI_V110_SYNC			;
 	lstrLocoCaliCtrlId[0].send			=	LOCOCALI_V110				;
-	lstrLocoCaliCtrlId[0].info			=	LOCOCALI_V110_CUR_INFO		;
+
 
 	lstrLocoCaliCtrlId[1].lowstandard	=	LOCOCALI_QY_LOW_STANDARD	;		
 	lstrLocoCaliCtrlId[1].lowmeasure	=	LOCOCALI_QY_LOW_MEASURE		;
@@ -555,39 +550,34 @@ void	LocoInitCaliCtrlId(void)
 	lstrLocoCaliCtrlId[1].higmeasure	=	LOCOCALI_QY_HIG_MEASURE		;
 	lstrLocoCaliCtrlId[1].ansyflg		=	LOCOCALI_QY_SYNC			;
 	lstrLocoCaliCtrlId[1].send			=	LOCOCALI_QY					;  
-	lstrLocoCaliCtrlId[1].info			=	LOCOCALI_QY_CUR_INFO		;
 
 	lstrLocoCaliCtrlId[2].lowstandard	=	LOCOCALI_ZD_LOW_STANDARD	;		
 	lstrLocoCaliCtrlId[2].lowmeasure	=	LOCOCALI_ZD_LOW_MEASURE		;
 	lstrLocoCaliCtrlId[2].higstandard	=	LOCOCALI_ZD_HIG_STANDARD	;
 	lstrLocoCaliCtrlId[2].higmeasure	=	LOCOCALI_ZD_HIG_MEASURE		;
 	lstrLocoCaliCtrlId[2].ansyflg		=	LOCOCALI_ZD_SYNC			;
-	lstrLocoCaliCtrlId[2].send			=	LOCOCALI_ZD					; 
-	lstrLocoCaliCtrlId[2].info			=	LOCOCALI_ZD_CUR_INFO		;
+	lstrLocoCaliCtrlId[2].send			=	LOCOCALI_ZD					;  	
 	
 	lstrLocoCaliCtrlId[3].lowstandard	=	LOCOCALI_XQ_LOW_STANDARD	;		
 	lstrLocoCaliCtrlId[3].lowmeasure	=	LOCOCALI_XQ_LOW_MEASURE		;
 	lstrLocoCaliCtrlId[3].higstandard	=	LOCOCALI_XQ_HIG_STANDARD	;
 	lstrLocoCaliCtrlId[3].higmeasure	=	LOCOCALI_XQ_HIG_MEASURE		;
 	lstrLocoCaliCtrlId[3].ansyflg		=	LOCOCALI_XQ_SYNC			;
-	lstrLocoCaliCtrlId[3].send			=	LOCOCALI_XQ					;
-	lstrLocoCaliCtrlId[3].info			=	LOCOCALI_XQ_CUR_INFO		;
+	lstrLocoCaliCtrlId[3].send			=	LOCOCALI_XQ					;  	
 
 	lstrLocoCaliCtrlId[4].lowstandard	=	LOCOCALI_XH_LOW_STANDARD	;		
 	lstrLocoCaliCtrlId[4].lowmeasure	=	LOCOCALI_XH_LOW_MEASURE		;
 	lstrLocoCaliCtrlId[4].higstandard	=	LOCOCALI_XH_HIG_STANDARD	;
 	lstrLocoCaliCtrlId[4].higmeasure	=	LOCOCALI_XH_HIG_MEASURE		;
 	lstrLocoCaliCtrlId[4].ansyflg		=	LOCOCALI_XH_SYNC			;
-	lstrLocoCaliCtrlId[4].send			=	LOCOCALI_XH					;
-	lstrLocoCaliCtrlId[4].info			=	LOCOCALI_XH_CUR_INFO		;
+	lstrLocoCaliCtrlId[4].send			=	LOCOCALI_XH					;  	
 
 	lstrLocoCaliCtrlId[5].lowstandard	=	LOCOCALI_LW_LOW_STANDARD	;		
 	lstrLocoCaliCtrlId[5].lowmeasure	=	LOCOCALI_LW_LOW_MEASURE		;
 	lstrLocoCaliCtrlId[5].higstandard	=	LOCOCALI_LW_HIG_STANDARD	;
 	lstrLocoCaliCtrlId[5].higmeasure	=	LOCOCALI_LW_HIG_MEASURE		;  
 	lstrLocoCaliCtrlId[5].ansyflg		=	LOCOCALI_LW_SYNC			;
-	lstrLocoCaliCtrlId[5].send			=	LOCOCALI_LW					; 
-	lstrLocoCaliCtrlId[5].info			=	LOCOCALI_LW_CUR_INFO		;
+	lstrLocoCaliCtrlId[5].send			=	LOCOCALI_LW					;  	
 }
 
 /*******************************************************************************
@@ -658,31 +648,33 @@ void	LocoMeasureCtrlSetVal(void)
 	u8		j;
 	//u16		*p = (u16 *)&gstrDtuData.Rec.Vol;
 	u16		*p = (u16 *)&Ctrl.Rec.Vol;
-	u16		lowstandard,higstandard;
-	
-	GetCtrlVal(gLocoCali_panelHandle,lstrLocoCaliCtrlId[0].lowstandard,&lowstandard);
-	GetCtrlVal(gLocoCali_panelHandle,lstrLocoCaliCtrlId[0].higstandard,&higstandard);
-	
 
 	for(j = 0; j < LOCO_GROUP_NUM; j++){
 		if(lstrLocoCali[j].lowflg ){
 			SetCtrlVal (gLocoCali_panelHandle,lstrLocoCaliCtrlId[j].lowmeasure,*(p+j));
-			
-			if(lstrLocoCali[j].ansyflg == 1) //同步校准
-				SetCtrlVal (gLocoCali_panelHandle,lstrLocoCaliCtrlId[j].lowstandard,lowstandard);
-			
-			lstrLocoCali[j].lowflg = 0;
 		}else if(lstrLocoCali[j].higflg){
-			SetCtrlVal (gLocoCali_panelHandle,lstrLocoCaliCtrlId[j].higmeasure,*(p+j));
-			
-			if(lstrLocoCali[j].ansyflg == 1)//同步校准
-				SetCtrlVal (gLocoCali_panelHandle,lstrLocoCaliCtrlId[j].higstandard,higstandard);
-			
-			lstrLocoCali[j].higflg = 0;    
+			SetCtrlVal (gLocoCali_panelHandle,lstrLocoCaliCtrlId[j].higmeasure,*(p+j));	
 		}
 	}	
 }
 
+/********************************************************************************************/
+/* 测量控件置值    																	        */
+/********************************************************************************************/
+void	LocoStandCtrlSetVal(void)
+{
+	u8		j;
+	//u16		*p = (u16 *)&gstrDtuData.Rec.Vol;
+	u16		*p = &lstrLocoCali[0].lowstandard;
+
+	for(j = 1; j < LOCO_GROUP_NUM; j++){
+		if(lstrLocoCali[j].lowflg ){
+			SetCtrlVal (gLocoCali_panelHandle,lstrLocoCaliCtrlId[j].lowstandard,*(p));
+		}else if(lstrLocoCali[j].higflg){
+			SetCtrlVal (gLocoCali_panelHandle,lstrLocoCaliCtrlId[j].higstandard,*(p));	
+		}
+	}	
+}
 
 /*******************************************************************************
 * Description  : 面板显示
@@ -692,9 +684,6 @@ void	LocoCaliDisplay(void)
 {
 	u8			i;
 	static	u8 	sta = 0;
-	u8		infobuf[256];
-	u16		*p = (u16 *)&Ctrl.Rec.Vol;
-
 	
 	//判断校准是否发送完成
 	for(i = 0;i < LOCO_GROUP_NUM;i++){
@@ -707,14 +696,6 @@ void	LocoCaliDisplay(void)
 			sta = 0;
 		 	LocoCtrlDimmedSendControl(0);   //打开所有发送控件开关
 		}
-		
-		snprintf((char *)infobuf,100," 电压：%-5d (10mV)\r\n 线性：%-5d (/10000)\r\n 偏移：%-5d (mV)",
-				 									*(p+i),lstrLocoCaliTable.CaliBuf[i].line,lstrLocoCaliTable.CaliBuf[i].Delta);
-		
-		SetCtrlVal(gLocoCali_panelHandle,lstrLocoCaliCtrlId[i].info,infobuf);
-		
-		lstrLocoCali[i].line = lstrLocoCaliTable.CaliBuf[i].line;
-		lstrLocoCali[i].zero = lstrLocoCaliTable.CaliBuf[i].Delta;
 	}
 }
 
@@ -722,7 +703,10 @@ void	LocoCaliDisplay(void)
 /********************************************************************************************/
 /* 和面板无关函数
 /********************************************************************************************/
+strLineCaliTable	lstrLocoCaliTable;
 
+
+#define		CALI_LINE_MUTIPLY		(10000)
 /*******************************************************************************************
 计算校准。根据测量点（measure）和目标点（standard），计算出修正线性（*10000）和偏移。
 *******************************************************************************************/
@@ -733,8 +717,8 @@ void	CalcCaliVal(strLineCali *cali){
 
 	double	lstline,lstzero;
 
-//	cali->line 	= CALI_LINE_MUTIPLY;		//默认值
-//	cali->zero	= 0;
+	cali->line 	= CALI_LINE_MUTIPLY;		//默认值
+	cali->zero	= 0;
 
 	// 计算值异常判断
 	if(		cali->higmeasure  < cali->lowmeasure  
@@ -745,8 +729,7 @@ void	CalcCaliVal(strLineCali *cali){
 		||	cali->higstandard == cali->lowstandard
 	 )	{
 		  // 异常退出
-		cali->caliErr  = 1;
-		return;
+		  return;
 	 }
   
 	 // 计算线性和斜率
@@ -802,7 +785,7 @@ void	LocoCaliCommcode(void)
 	static	u32			time;
 	static	u8			idletimes;
 	
-	if(time <= GetAnsySysTime()){
+		if(time <= GetAnsySysTime()){
 		if(time + 200 > GetAnsySysTime()  ) {				// 周期发送，控制发送频率
 			return;
 		} 
@@ -837,12 +820,12 @@ void	LocoCaliCommcode(void)
 			lstrLocoCaliTable.CaliBuf[i].Delta= lstrLocoCali[i].zero; 
 			
 			len = sizeof(strLineCalibration);	
-			gstrSendDtuData.paraaddr =  LOCO_CALI_BASE_ADDR + sizeof(strLineCalibration)*i;	//读指定地址
+			gstrDtuData.paraaddr =  LOCO_CALI_BASE_ADDR + sizeof(strLineCalibration)*i;	//读指定地址
 
-			//gstrSendDtuData.paralen  =  (u16)((len <<8) + NODE_LOCO);			//读指定数据 (len << 8 + l_DetectGetNode)
-			gstrSendDtuData.paralen  =  (u8)len;								//读指定数据 (len << 8 + l_DetectGetNode)  
-			gstrSendDtuData.node	 =  NODE_LOCO;
-			memcpy((u8 *)gstrSendDtuData.parabuf,(u8 *)&lstrLocoCaliTable.CaliBuf[i],len);
+			//gstrDtuData.paralen  =  (u16)((len <<8) + NODE_LOCO);			//读指定数据 (len << 8 + l_DetectGetNode)
+			gstrDtuData.paralen  =  (u8)len;								//读指定数据 (len << 8 + l_DetectGetNode)  
+			gstrDtuData.node	 =  NODE_LOCO;
+			memcpy((u8 *)gstrDtuData.parabuf,(u8 *)&lstrLocoCaliTable.CaliBuf[i],len);
 			l_eqiupmentcode = CMD_DETECT_SET;								// 指定参数读（检测板）
 			
 			time = GetAnsySysTime();
@@ -854,23 +837,21 @@ void	LocoCaliCommcode(void)
 											
 		if((idletimes++ %3) == 0){  										//空闲时，读Loco校准。    			 
 		   	
-			gstrSendDtuData.paraaddr 	= LOCO_CALI_BASE_ADDR ; 
+			gstrDtuData.paraaddr 	= LOCO_CALI_BASE_ADDR ; 
 			//gstrDtuData.paralen		= sizeof(lstrLocoCaliTable);
-			len							= sizeof(lstrLocoCaliTable);
+			len						= sizeof(lstrLocoCaliTable);
 			//gstrDtuData.paralen  	= (u16)((NODE_LOCO << 8) + (u8)len);	//读指定数据 (len << 8 + l_DetectGetNode)  
-			gstrSendDtuData.paralen  	= (u8)len;								//读指定数据 (len << 8 + l_DetectGetNode)  
-			gstrSendDtuData.node		= NODE_LOCO;
-			l_eqiupmentcode 			= CMD_DETECT_GET; 
+			gstrDtuData.paralen  	= (u8)len;								//读指定数据 (len << 8 + l_DetectGetNode)  
+			gstrDtuData.node		= NODE_LOCO;
+			l_eqiupmentcode 		= CMD_DETECT_GET; 
 		}else{
-			gstrSendDtuData.paraaddr 	= (u16)((u32)&Ctrl.Rec - (u32)&Ctrl) ;	//空闲时，读sctrl.rec记录。
+			gstrDtuData.paraaddr 	= (u16)((u32)&Ctrl.Rec - (u32)&Ctrl) ;	//空闲时，读sctrl.rec记录。
 
-			len  						= sizeof(stcFlshRec);
-			gstrSendDtuData.paralen		= (u8)len;
-			gstrSendDtuData.node		= 0;
-			l_eqiupmentcode				= CMD_PARA_GET;	
+			len  					= sizeof(stcFlshRec);
+			gstrDtuData.paralen		= (u8)len;
+			gstrDtuData.node		= 0;
+			l_eqiupmentcode			= CMD_PARA_GET;	
 		}
-		
-		time = GetAnsySysTime();
 	}
 }
 
@@ -882,16 +863,16 @@ void	LocoGetRecvCaliInfo(void)
 {
 	u8	reclen;
 	
-	if(gstrRecDtuData.dataokflg == 1)								//	接收到数据
+	if(gstrDtuData.dataokflg == 1)								//	接收到数据
 	{														
-		gstrRecDtuData.dataokflg	= 0;		
-		//reclen  = gstrRecDtuData.recdatalen >> 8;				//	接收数据长度
-		reclen  = gstrRecDtuData.recdatalen ;						//	接收数据长度  
+		gstrDtuData.dataokflg	= 0;		
+		//reclen  = gstrDtuData.recdatalen >> 8;				//	接收数据长度
+		reclen  = gstrDtuData.recdatalen ;						//	接收数据长度  
 		
 		if(reclen == sizeof(stcFlshRec)){						//接收到数据记录
-			memcpy((u8 *)&Ctrl.Rec,(u8 *)&gstrRecDtuData.parabuf[0],reclen);	
+			memcpy((u8 *)&Ctrl.Rec,(u8 *)&gstrDtuData.parabuf[0],reclen);	
 		}else if(reclen == sizeof(lstrLocoCaliTable)){ 
-			memcpy((u8 *)&lstrLocoCaliTable,(u8 *)&gstrRecDtuData.parabuf[0],reclen);
+			memcpy((u8 *)&lstrLocoCaliTable,(u8 *)&gstrDtuData.parabuf[0],reclen);
 		}
 	}
 }

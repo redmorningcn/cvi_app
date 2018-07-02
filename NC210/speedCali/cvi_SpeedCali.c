@@ -910,12 +910,12 @@ void	SpeedCaliCommcode(void)
 			lstrSpeedCaliTable.CaliBuf[i].Delta= lstrSpeedCali[i].zero; 
 			
 			len = sizeof(strLineCalibration);	
-			gstrDtuData.paraaddr =  SPEED_CALI_BASE_ADDR + sizeof(strLineCalibration)*i;	//读指定地址
+			gstrSendDtuData.paraaddr =  SPEED_CALI_BASE_ADDR + sizeof(strLineCalibration)*i;	//读指定地址
 
-			//gstrDtuData.paralen  =  (u16)((len <<8) + NODE_LOCO);			//读指定数据 (len << 8 + l_DetectGetNode)
-			gstrDtuData.paralen  =  (u8)len;								//读指定数据 (len << 8 + l_DetectGetNode)  
-			gstrDtuData.node	 =  NODE_LOCO;
-			memcpy((u8 *)gstrDtuData.parabuf,(u8 *)&lstrSpeedCaliTable.CaliBuf[i],len);
+			//gstrSendDtuData.paralen  =  (u16)((len <<8) + NODE_LOCO);			//读指定数据 (len << 8 + l_DetectGetNode)
+			gstrSendDtuData.paralen  =  (u8)len;								//读指定数据 (len << 8 + l_DetectGetNode)  
+			gstrSendDtuData.node	 =  NODE_LOCO;
+			memcpy((u8 *)gstrSendDtuData.parabuf,(u8 *)&lstrSpeedCaliTable.CaliBuf[i],len);
 			l_eqiupmentcode = CMD_DETECT_SET;								// 指定参数读（检测板）
 			
 			time = GetAnsySysTime();
@@ -927,19 +927,19 @@ void	SpeedCaliCommcode(void)
 											
 		if((idletimes++ %3) == 0){  										//空闲时，读Loco校准。    			 
 		   	
-			gstrDtuData.paraaddr 	= SPEED_CALI_BASE_ADDR ; 
-			//gstrDtuData.paralen		= sizeof(lstrLocoCaliTable);
+			gstrSendDtuData.paraaddr 	= SPEED_CALI_BASE_ADDR ; 
+			//gstrSendDtuData.paralen		= sizeof(lstrLocoCaliTable);
 			len						= sizeof(lstrSpeedCaliTable);
-			//gstrDtuData.paralen  	= (u16)((NODE_LOCO << 8) + (u8)len);	//读指定数据 (len << 8 + l_DetectGetNode)  
-			gstrDtuData.paralen  	= (u8)len;								//读指定数据 (len << 8 + l_DetectGetNode)  
-			gstrDtuData.node		= NODE_LOCO;
+			//gstrSendDtuData.paralen  	= (u16)((NODE_LOCO << 8) + (u8)len);	//读指定数据 (len << 8 + l_DetectGetNode)  
+			gstrSendDtuData.paralen  	= (u8)len;								//读指定数据 (len << 8 + l_DetectGetNode)  
+			gstrSendDtuData.node		= NODE_LOCO;
 			l_eqiupmentcode 		= CMD_DETECT_GET; 
 		}else{
-			gstrDtuData.paraaddr 	= (u16)((u32)&Ctrl.Rec - (u32)&Ctrl) ;	//空闲时，读sctrl.rec记录。
+			gstrSendDtuData.paraaddr 	= (u16)((u32)&Ctrl.Rec - (u32)&Ctrl) ;	//空闲时，读sctrl.rec记录。
 
 			len  					= sizeof(stcFlshRec);
-			gstrDtuData.paralen		= (u8)len;
-			gstrDtuData.node		= 0;
+			gstrSendDtuData.paralen		= (u8)len;
+			gstrSendDtuData.node		= 0;
 			l_eqiupmentcode			= CMD_PARA_GET;	
 		}
 	}
@@ -953,16 +953,16 @@ void	SpeedGetRecvCaliInfo(void)
 {
 	u8	reclen;
 	
-	if(gstrDtuData.dataokflg == 1)								//	接收到数据
+	if(gstrRecDtuData.dataokflg == 1)							//	接收到数据
 	{														
-		gstrDtuData.dataokflg	= 0;		
+		gstrRecDtuData.dataokflg	= 0;		
 		//reclen  = gstrDtuData.recdatalen >> 8;				//	接收数据长度
-		reclen  = gstrDtuData.recdatalen ;						//	接收数据长度  
+		reclen  = gstrRecDtuData.recdatalen ;					//	接收数据长度  
 		
 		if(reclen == sizeof(stcFlshRec)){						//接收到数据记录
-			memcpy((u8 *)&Ctrl.Rec,(u8 *)&gstrDtuData.parabuf[0],reclen);	
+			memcpy((u8 *)&Ctrl.Rec,(u8 *)&gstrRecDtuData.parabuf[0],reclen);	
 		}else if(reclen == sizeof(lstrSpeedCaliTable)){ 
-			memcpy((u8 *)&lstrSpeedCaliTable,(u8 *)&gstrDtuData.parabuf[0],reclen);
+			memcpy((u8 *)&lstrSpeedCaliTable,(u8 *)&gstrRecDtuData.parabuf[0],reclen);
 		}
 	}
 }

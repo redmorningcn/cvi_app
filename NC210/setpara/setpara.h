@@ -37,6 +37,7 @@
 #define		MAX_PATHNAME_LEN		512
 #define		SETPRAR_FILE_NAME		"cvi_setpara.ini"
 
+#define		CMD_REC_START       	0x00000001			//记录马上启动发送
 #define		CMD_TIME_SET        	0x00000100			//时间卡（IC/无线）
 #define		CMD_LOCO_SET        	0x00002000			//装车卡（IC/无线）
 #define		CMD_REC_CLR				0x00080000			//记录清零（无线）
@@ -124,7 +125,9 @@ typedef struct{
 //串口结构体及通讯
 extern	int				l_eqiupmentcode;			//装置命令码，操作面板控制
 extern	StrProductInfo  gstrProductInfo;			//产品参数
-extern	strDtuRecData	gstrDtuData;				//
+extern	strDtuRecData	gstrSendDtuData;			//发送
+extern	strDtuRecData	gstrRecDtuData;				//接收
+
 
 
 /********************************************************************************************/

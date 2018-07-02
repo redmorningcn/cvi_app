@@ -33,7 +33,9 @@ int					l_sendcode			= 0;	// 装置发送命令码，应答时使用
 
 StrProductInfo  	gstrProductInfo;			// 产品参数
 Unnctrl     		Ctrl;						// 系统参数（虚拟）
-strDtuRecData		gstrDtuData;				// DTU通讯数据
+strDtuRecData		gstrSendDtuData;			// DTU通讯数据
+strDtuRecData		gstrRecDtuData;			// DTU通讯数据
+
 
 /********************************************************************************************/
 /* local Prototypes																			*/
@@ -83,7 +85,7 @@ void Com_SetParaTask(void)
 		
 		memcpy(&buf[datalen],(unsigned char *)&l_eqiupmentcode,sizeof(l_eqiupmentcode));
 		datalen += sizeof(l_eqiupmentcode);
-		
+					
 		switch (l_eqiupmentcode)						// 根据指令操作，祥见统计模块通讯协议
 		{
 			stcTime			sTime;  
@@ -100,40 +102,41 @@ void Com_SetParaTask(void)
 							  break; 
 			case CMD_PARA_SET: 									// 指定地址设置参数 
 			case CMD_DETECT_SET:   								// 写检测板指定地址			
-							  memcpy(&buf[datalen],(unsigned char *)&gstrDtuData.paraaddr,sizeof(gstrDtuData.paraaddr));  
-							  datalen += sizeof(gstrDtuData.paraaddr);
+							  memcpy(&buf[datalen],(unsigned char *)&gstrSendDtuData.paraaddr,sizeof(gstrSendDtuData.paraaddr));  
+							  datalen += sizeof(gstrSendDtuData.paraaddr);
 							  
-							  memcpy(&buf[datalen],(unsigned char *)&gstrDtuData.paralen,sizeof(gstrDtuData.paralen));
-							  datalen += sizeof(gstrDtuData.paralen);
+							  memcpy(&buf[datalen],(unsigned char *)&gstrSendDtuData.paralen,sizeof(gstrSendDtuData.paralen));
+							  datalen += sizeof(gstrSendDtuData.paralen);
 							  
-							  memcpy(&buf[datalen],(unsigned char *)&gstrDtuData.node,sizeof(gstrDtuData.node));
-							  datalen += sizeof(gstrDtuData.node);
+							  memcpy(&buf[datalen],(unsigned char *)&gstrSendDtuData.node,sizeof(gstrSendDtuData.node));
+							  datalen += sizeof(gstrSendDtuData.node);
 							  
-							  tmplen = (u8)gstrDtuData.paralen;// 取数据长度
+							  tmplen = (u8)gstrSendDtuData.paralen;// 取数据长度
 							  									  
-							  memcpy(&buf[datalen],(unsigned char *)&gstrDtuData.parabuf[0],tmplen);
+							  memcpy(&buf[datalen],(unsigned char *)&gstrSendDtuData.parabuf[0],tmplen);
 							  datalen += tmplen;
 							  break;
 							  
 			case CMD_PARA_GET: 									// 指定地址读取参数
 			case CMD_DETECT_GET:  								// 读检测板指定地址
-							  memcpy(&buf[datalen],(unsigned char *)&gstrDtuData.paraaddr,sizeof(gstrDtuData.paraaddr));  
-							  datalen += sizeof(gstrDtuData.paraaddr);
+							  memcpy(&buf[datalen],(unsigned char *)&gstrSendDtuData.paraaddr,sizeof(gstrSendDtuData.paraaddr));  
+							  datalen += sizeof(gstrSendDtuData.paraaddr);
 							  
-							  memcpy(&buf[datalen],(unsigned char *)&gstrDtuData.paralen,sizeof(gstrDtuData.paralen));
-							  datalen += sizeof(gstrDtuData.paralen);
+							  memcpy(&buf[datalen],(unsigned char *)&gstrSendDtuData.paralen,sizeof(gstrSendDtuData.paralen));
+							  datalen += sizeof(gstrSendDtuData.paralen);
 							  
-							  memcpy(&buf[datalen],(unsigned char *)&gstrDtuData.node,sizeof(gstrDtuData.node));
-							  datalen += sizeof(gstrDtuData.node);
+							  memcpy(&buf[datalen],(unsigned char *)&gstrSendDtuData.node,sizeof(gstrSendDtuData.node));
+							  datalen += sizeof(gstrSendDtuData.node);
 							  break;
 							  
 			case  CMD_RECORD_GET:	// 读指定记录号的书记录
-							  tmp8 = sizeof(gstrDtuData.recordnum);
-							  memcpy(&buf[datalen],(unsigned char *)&gstrDtuData.recordnum,tmp8);
+							  tmp8 = sizeof(gstrSendDtuData.recordnum);
+							  memcpy(&buf[datalen],(unsigned char *)&gstrSendDtuData.recordnum,tmp8);
 						      datalen += tmp8;
 							  break;	
 			case CMD_REC_CLR:  	
-			case CMD_SYS_RST:  	
+			case CMD_SYS_RST:
+			case CMD_REC_START:
 							  	break;		
 							  
 			default:
@@ -159,8 +162,8 @@ void Com_SetParaTask(void)
 
 	} else{ 		//没功能通讯时，确认是否进行数据通讯（应答数据）
 	
-		if(gstrDtuData.recechoflg == 1){
-			gstrDtuData.recechoflg = 0;
+		if(gstrRecDtuData.recechoflg == 1){
+			gstrRecDtuData.recechoflg = 0;
 			
 			datalen = 0;
 			sCtrl.PC.ConnCtrl.sendlen 		= datalen;	// 发送数据区长度
@@ -177,7 +180,7 @@ void Com_SetParaTask(void)
 	//超时判断
 	if(sCtrl.PC.ConnCtrl.SendTimeFlg == 1  ) {
 		if(sendtime <= GetAnsySysTime()){
-			if(sendtime + 2000 < GetAnsySysTime()  ) {	// 发送超时（为接收到应答）
+			if(sendtime + 500 < GetAnsySysTime()  ) {	// 发送超时（为接收到应答）
 				sCtrl.PC.ConnCtrl.SendTimeFlg 	= 0;
 				sCtrl.PC.ConnCtrl.ErrFlg 		= 1;	// 置错误标识
 				sCtrl.PC.ConnCtrl.TimeoutFlg	= 1;	// 超时
@@ -229,31 +232,31 @@ void	Com_SetParaRecTask(void)
 				case  CMD_REC_CLR:
 				case  CMD_SYS_RST:
 				
-					if(sizeof(gstrDtuData) > reclen){				//
-						memcpy((u8 *)&gstrDtuData,sCtrl.PC.rd,reclen); //数据拷贝
+					if(sizeof(gstrRecDtuData) > reclen){				//
+						memcpy((u8 *)&gstrRecDtuData,sCtrl.PC.rd,reclen); //数据拷贝
 					
-						if(gstrDtuData.code != l_sendcode)			//接收的指令和發送不同
+						if(gstrRecDtuData.code != l_sendcode)			//接收的指令和發送不同
 							break;
 						
-						if(gstrDtuData.reply.ack == 1)				// 接收成功，标识应答成功
-							gstrDtuData.setokflg = 1;
+						if(gstrRecDtuData.reply.ack == 1)				// 接收成功，标识应答成功
+							gstrRecDtuData.setokflg = 1;
 					}
 					break;
 				
-				case CMD_PARA_GET: 									// 指定地址读取参数
-				case CMD_DETECT_GET:  								// 读检测板指定地址
+				case CMD_PARA_GET: 										// 指定地址读取参数
+				case CMD_DETECT_GET:  									// 读检测板指定地址
 				//case CMD_RECORD_GET:  								// 读数据记录
-					if(sizeof(gstrDtuData) >= reclen){
-						memcpy((u8 *)&gstrDtuData,sCtrl.PC.rd,reclen); 	//数据复制
+					if(sizeof(gstrRecDtuData) >= reclen){
+						memcpy((u8 *)&gstrRecDtuData,sCtrl.PC.rd,reclen); 	//数据复制
 						
-						headlen	= sizeof(gstrDtuData.code) + sizeof(gstrDtuData.paraaddr) + sizeof(gstrDtuData.paralen)+sizeof(gstrDtuData.node);
+						headlen	= sizeof(gstrRecDtuData.code) + sizeof(gstrRecDtuData.paraaddr) + sizeof(gstrRecDtuData.paralen)+sizeof(gstrRecDtuData.node);
 						if(headlen >= reclen){
-							gstrDtuData.recdatalen 			= 0;
+							gstrRecDtuData.recdatalen 			= 0;
 							sCtrl.PC.ConnCtrl.DataErrFlg	= 1;
 							break;
 						}
-						gstrDtuData.recdatalen 	= ((u8)reclen - (u8)headlen);	// (有效)数据长度
-						gstrDtuData.dataokflg 	= 1;					// 数据接收完成
+						gstrRecDtuData.recdatalen 	= ((u8)reclen - (u8)headlen);	// (有效)数据长度
+						gstrRecDtuData.dataokflg 	= 1;			// 数据接收完成
 					}
 					break;				 
 				default:
@@ -262,11 +265,11 @@ void	Com_SetParaRecTask(void)
 		
 			l_sendcode = 0;											// 发送命令字清零
 		}else if(reclen == sizeof(stcFlshRec)){
-			if(gstrDtuData.recenableflg == 1)						// 应答允许
+			if(gstrSendDtuData.recenableflg == 1)					// 应答允许
 			{
-				memcpy((u8 *)&gstrDtuData,sCtrl.PC.rd,reclen); 		//数据复制
-				gstrDtuData.recechoflg  = 1;						// 数据应答	
-				gstrDtuData.recvrecflg  = 1;
+				memcpy((u8 *)&gstrRecDtuData,sCtrl.PC.rd,reclen); 	//数据复制
+				gstrRecDtuData.recechoflg  = 1;						// 数据应答	
+				gstrRecDtuData.recvrecflg  = 1;
 			}
 		}
 	}

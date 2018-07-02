@@ -140,14 +140,17 @@ int CVICALLBACK ReadRecordCallback (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:				//取数据记录
-			//l_eqiupmentcode = CMD_RECORD_GET;
-			if(gstrDtuData.recenableflg == 0){
-				gstrDtuData.recenableflg = 1;
+			
+			if(gstrSendDtuData.recenableflg == 0){
+				gstrSendDtuData.recenableflg = 1;
+				l_eqiupmentcode = CMD_REC_START;
+
 				SetCtrlAttribute (panel, LKJTEST_READREC, ATTR_LABEL_TEXT, "结束数据读取"); 
 			}else
 			{
-				gstrDtuData.recenableflg = 0;
-				SetCtrlAttribute (panel, LKJTEST_READREC, ATTR_LABEL_TEXT, "开始数据读取"); 	
+				gstrSendDtuData.recenableflg = 0;
+				SetCtrlAttribute (panel, LKJTEST_READREC, ATTR_LABEL_TEXT, "开始数据读取"); 
+				l_eqiupmentcode = 0;
 			}
 			break;
 	}
@@ -166,6 +169,7 @@ int CVICALLBACK ClearRecordCallback (int panel, int control, int event,
 	}
 	return 0;
 }
+
 //////////////////////////////////////////////////////////////////////////////////////////////
 /********************************************************************************************/
 /* 和面板显示函数，和面板控件操作无关
@@ -306,27 +310,27 @@ void	LocoDetectDisplay(void)
 * Author       : 2018/6/23  by redmorningcn
 *******************************************************************************/
 void	RecordDisplay(void)  {
-	if(gstrDtuData.recvrecflg == 1)	
+	if(gstrRecDtuData.recvrecflg == 1)	
 	{
-		gstrDtuData.recvrecflg = 0;		// 	
+		gstrRecDtuData.recvrecflg = 0;		// 	
 		
 		u8	buf[512];
 		//打印时间 
 			snprintf((char *)buf,sizeof(buf)-2,"%02d-%02d-%02d %02d:%02d:%02d"
-										,gstrDtuData.Rec.Year
-										,gstrDtuData.Rec.Mon 	
-										,gstrDtuData.Rec.Day 
-										,gstrDtuData.Rec.Hour
-										,gstrDtuData.Rec.Min 	
-										,gstrDtuData.Rec.Sec 
+										,gstrRecDtuData.Rec.Year
+										,gstrRecDtuData.Rec.Mon 	
+										,gstrRecDtuData.Rec.Day 
+										,gstrRecDtuData.Rec.Hour
+										,gstrRecDtuData.Rec.Min 	
+										,gstrRecDtuData.Rec.Sec 
 				);	
 		SetCtrlVal(gLKJTest_panelHandle,LKJTEST_INFOTEXTBOX	 ,buf);
 		
 		//打印机车、记录号 
 		snprintf((char *)buf,sizeof(buf)-2,", 机车:%3d-%4d, 记录号:%6d"
-										,gstrDtuData.Rec.LocoType
-										,gstrDtuData.Rec.LocoNbr
-										,gstrDtuData.Rec.RecordId
+										,gstrRecDtuData.Rec.LocoType
+										,gstrRecDtuData.Rec.LocoNbr
+										,gstrRecDtuData.Rec.RecordId
 				);	
 		SetCtrlVal(gLKJTest_panelHandle,LKJTEST_INFOTEXTBOX	 ,buf);		
 
@@ -354,39 +358,44 @@ void	SetDetectReadCode(void)
 	u32	len;
 	static	u32	time;
 	
-	if(gstrDtuData.recenableflg == 1){						// 应答数据记录，不查询其他数据
-		l_eqiupmentcode	=	0;
-		lstestcode		=   0;
+	if(gstrSendDtuData.recenableflg == 1){					// 应答数据记录，不查询其他数据
+		if(l_eqiupmentcode != CMD_REC_START){
+			l_eqiupmentcode	=	0;
+			lstestcode		=   0;
+		}
 		return;
 	}
 	
 	if(time <= GetAnsySysTime()){
-		if(time + 1000 > GetAnsySysTime()  ) {				// 周期发送，控制发送频率
+		if(time + 200 > GetAnsySysTime()  ) {				// 周期发送，控制发送频率
 			return;
 		} 
 	}
 	
-	time = GetAnsySysTime();								// 时间信息
-	len	 = sizeof(Ctrl.Rec);
+	if(l_eqiupmentcode == 0){
+		len	 = sizeof(Ctrl.Rec);
 
-	if(l_DetectGetNode == 4){								// 取LKJ工况信号
-		len = sizeof(strLocoDetect);	
-		gstrDtuData.paraaddr =  ADDR_LOCO_DETECT;			// 读指定地址
-		gstrDtuData.paralen  =  (u8)len;					// 读指定数据
-		gstrDtuData.node     =  l_DetectGetNode;
+		if(l_DetectGetNode == 4){								// 取LKJ工况信号
+			len = sizeof(strLocoDetect);	
+			gstrSendDtuData.paraaddr =  ADDR_LOCO_DETECT;			// 读指定地址
+			gstrSendDtuData.paralen  =  (u8)len;					// 读指定数据
+			gstrSendDtuData.node     =  l_DetectGetNode;
+
+		}else if(l_DetectGetNode < 4){ 	// 取速度信号
+			len = sizeof(strSpeedDetect);
+			gstrSendDtuData.paraaddr =  ADDR_SPEED_DETECT;			// 读指定地址
+			gstrSendDtuData.paralen  =  (u8)len;					// 读指定数据
+			gstrSendDtuData.node     =  l_DetectGetNode;
+
+			if(l_DetectGetNode == 0)
+				l_DetectGetNode  = 1;							// 默认节点1	
+		}
+
+		l_eqiupmentcode = CMD_DETECT_GET;						// 指定参数读（检测板）
+		lstestcode		= CMD_DETECT_GET;
 		
-	}else if(l_DetectGetNode < 4){ 	// 取速度信号
-		len = sizeof(strSpeedDetect);
-		gstrDtuData.paraaddr =  ADDR_SPEED_DETECT;			// 读指定地址
-		gstrDtuData.paralen  =  (u8)len;					// 读指定数据
-		gstrDtuData.node     =  l_DetectGetNode;
-		
-		if(l_DetectGetNode == 0)
-			l_DetectGetNode  = 1;							// 默认节点1	
+		time = GetAnsySysTime();								// 时间信息
 	}
-	
-	l_eqiupmentcode = CMD_DETECT_GET;						// 指定参数读（检测板）
-	lstestcode		= CMD_DETECT_GET;
 }
 
 /********************************************************************************************
@@ -400,26 +409,26 @@ void	GetDetectInfo(void)
 	u8		node;
    	static	u32	time;
 
-	if(	   (gstrDtuData.dataokflg 	== 1 
-		&&  gstrDtuData.code 		== lstestcode)
+	if(	   (gstrRecDtuData.dataokflg 	== 1 
+		&&  gstrRecDtuData.code 		== lstestcode)
 	  )															//	接收到数据
 	{														
-		gstrDtuData.dataokflg  = 0;
+		gstrRecDtuData.dataokflg  = 0;
 		
-		reclen  = (u8)gstrDtuData.recdatalen ;					//	接收数据长度
-		node	= (u8)gstrDtuData.node;							//  
+		reclen  = (u8)gstrRecDtuData.recdatalen ;					//	接收数据长度
+		node	= (u8)gstrRecDtuData.node;							//  
 		
 		if(node == 4){											// 	取LKJ工况信号
 		
 			len =  sizeof(strLocoDetect);						//	detect 数据（检测板数据）
 
 			if(reclen == len){									// 数据长度相符，幅值数据
-				memcpy((u8 *)&lstrLocoDetect,gstrDtuData.parabuf,len);	// 复制数据	
+				memcpy((u8 *)&lstrLocoDetect,gstrRecDtuData.parabuf,len);	// 复制数据	
 			}
 		}else if(node < 4 && node > 0){ 						// 取速度信号
 			len =  sizeof(strSpeedDetect);						//	detect 数据（检测板数据）
 			 
-			memcpy((u8 *)&lstrSpeedDetect[node - 1],gstrDtuData.parabuf,len);	// 复制数据
+			memcpy((u8 *)&lstrSpeedDetect[node - 1],gstrRecDtuData.parabuf,len);	// 复制数据
 		}
 		
 		//l_DetectGetNode++;
