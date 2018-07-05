@@ -15,7 +15,8 @@
 #define		ADDR_LOCO_DETECT		(328)
 //速度信号地址		
 #define		ADDR_SPEED_DETECT		(2752)
-		
+
+
 		
 /*******************************************************************************
 * Description  : 通道具体检测指标
@@ -64,6 +65,9 @@ extern	void	InitSpeedCtrlID(void);
 extern	void	InitLocoCtrlID(void);
 extern	void	LocoDetectDisplay(void);
 extern	void	RecordDisplay(void);
+
+
+extern	strSpeedDetect		lstrSpeedDetect[3];					//速度信号检测值
 
 
 #ifdef __cplusplus

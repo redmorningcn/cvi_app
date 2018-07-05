@@ -9,6 +9,7 @@
 #include <includes.h>
 //线性定义
 #include <cvi_LocoCaliType.h>   
+#include <cvi_LKJTestType.h>   
 
 
 #ifdef __cplusplus
@@ -18,7 +19,9 @@
 #define		SPEED_GROUP_NUM  			(9)			/* 速度信号校准组数			*/
 #define		SPEED_TYPE_NUM  			(3)			/* 每组信号校准类型			*/	
 
-#define		SPEED_CALI_BASE_ADDR		(340)		/* 速度信号校准存储基地址	*/
+#define		SPEED_CALI_BASE_ADDR		(2800)		/* 速度信号校准存储基地址	*/
+#define		SPEED_PARA_BASE_ADDR		(ADDR_SPEED_DETECT)		/* 速度信号参数存储基地址	*/
+
 		
 
 /**************************************************************

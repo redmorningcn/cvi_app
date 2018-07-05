@@ -316,7 +316,7 @@ void	RecordDisplay(void)  {
 		
 		u8	buf[512];
 		//打印时间 
-			snprintf((char *)buf,sizeof(buf)-2,"%02d-%02d-%02d %02d:%02d:%02d"
+			snprintf((char *)buf,sizeof(buf)-2,"时间:%02d-%02d-%02d %02d:%02d:%02d"
 										,gstrRecDtuData.Rec.Year
 										,gstrRecDtuData.Rec.Mon 	
 										,gstrRecDtuData.Rec.Day 
@@ -375,6 +375,8 @@ void	SetDetectReadCode(void)
 	if(l_eqiupmentcode == 0){
 		len	 = sizeof(Ctrl.Rec);
 
+		l_DetectGetNode = (l_DetectGetNode % 4) + 1;			// 计算下一个通讯节点
+
 		if(l_DetectGetNode == 4){								// 取LKJ工况信号
 			len = sizeof(strLocoDetect);	
 			gstrSendDtuData.paraaddr =  ADDR_LOCO_DETECT;			// 读指定地址
@@ -415,8 +417,8 @@ void	GetDetectInfo(void)
 	{														
 		gstrRecDtuData.dataokflg  = 0;
 		
-		reclen  = (u8)gstrRecDtuData.recdatalen ;					//	接收数据长度
-		node	= (u8)gstrRecDtuData.node;							//  
+		reclen  = (u8)gstrRecDtuData.recdatalen ;				//	接收数据长度
+		node	= (u8)gstrRecDtuData.node;						//  
 		
 		if(node == 4){											// 	取LKJ工况信号
 		
@@ -427,17 +429,14 @@ void	GetDetectInfo(void)
 			}
 		}else if(node < 4 && node > 0){ 						// 取速度信号
 			len =  sizeof(strSpeedDetect);						//	detect 数据（检测板数据）
-			 
-			memcpy((u8 *)&lstrSpeedDetect[node - 1],gstrRecDtuData.parabuf,len);	// 复制数据
+			if(reclen == len){ 
+				memcpy((u8 *)&lstrSpeedDetect[node - 1],gstrRecDtuData.parabuf,len);	// 复制数据
+			}
 		}
-		
-		//l_DetectGetNode++;
-		l_DetectGetNode = (l_DetectGetNode % 4) + 1;			// 计算下一个通讯节点
 		
 		time 			= GetAnsySysTime();						
 	}else{				//超时处理
 		if(sCtrl.PC.ConnCtrl.TimeoutFlg == 1 ||sCtrl.PC.ConnCtrl.DataErrFlg == 1) {
-			l_DetectGetNode = (l_DetectGetNode % 4) + 1;		// 计算下一个通讯节点
 			sCtrl.PC.ConnCtrl.TimeoutFlg	=	0;
 			sCtrl.PC.ConnCtrl.DataErrFlg  	=   0;
 		}

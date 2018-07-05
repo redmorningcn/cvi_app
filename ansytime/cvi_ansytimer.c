@@ -63,7 +63,7 @@ int  CVICALLBACK AnsyTimerCallback (	int reserved, int theTimerId, int event,
 				(*sTimerMgr[i].ptimeout)++;
 
 			if( 	
-					(* (sTimerMgr[i].ptimeout)) > sTimerMgr[i].Settime //超时值有效 
+			   	(* (sTimerMgr[i].ptimeout)) > sTimerMgr[i].Settime //超时值有效 
 				&&  sTimerMgr[i].startflg == 1
 			  )	
 			{
