@@ -12,11 +12,11 @@ VXIplug&play Framework 64-bit Dir = "/C/Program Files/IVI Foundation/VISA/win64"
 Number of Projects = 1
 Active Project = 1
 Project 0001 = "csnc_setpara.prj"
-Drag Bar Left = 238
-Window Top = 190
-Window Left = 468
-Window Bottom = 846
-Window Right = 1366
+Drag Bar Left = 278
+Window Top = 59
+Window Left = 126
+Window Bottom = 715
+Window Right = 1372
 Maximized = True
 Maximized Children = True
 Max32 Number Of Errors = 20
@@ -30,9 +30,9 @@ Save Changes Before Compiling = "Always"
 Hide Windows = False
 Break At First Statement = False
 Sort Type = "File Name"
-Number of Opened Files = 12
+Number of Opened Files = 14
 Window Confinement Region Enabled = True
-MainColumnWidth = 221
+MainColumnWidth = 261
 FileDateColumnWidth = 70
 FileSizeColumnWidth = 70
 
@@ -58,7 +58,7 @@ Disk Date = 3606953117
 In Projects = "1,"
 Window Top = 188
 Window Left = 90
-Window Z-Order = 9
+Window Z-Order = 11
 Source Window State = "1,31,50,50,0,18,18,0,0,76,0,0,0,0,0,24,13,0,37,43,511,855,1,0,"
 
 [File 0003]
@@ -68,7 +68,7 @@ Disk Date = 3596700890
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
-Window Z-Order = 10
+Window Z-Order = 12
 Source Window State = "1,50,51,51,0,11,11,0,0,76,0,0,0,0,0,20,24,0,44,11,431,855,1,0,"
 
 [File 0004]
@@ -78,7 +78,7 @@ Disk Date = 3573565200
 In Projects = ""
 Window Top = 33
 Window Left = 10
-Window Z-Order = 12
+Window Z-Order = 14
 Source Window State = "1,698,698,698,16,45,45,0,3,76,0,0,0,0,0,19,689,0,698,16,411,855,1,0,"
 
 [File 0005]
@@ -88,38 +88,40 @@ Disk Date = 3573565200
 In Projects = ""
 Window Top = 33
 Window Left = 10
-Window Z-Order = 11
+Window Z-Order = 13
 Source Window State = "1,63,63,63,8,16,16,0,0,80,0,0,0,0,0,25,6,0,19,42,531,895,1,0,"
 
 [File 0006]
 Path = "/f/cvi/app/csnc_debug/cvi_bspComm.c"
 File Type = "CSource"
-Disk Date = 3612820636
+Disk Date = 3613021239
 In Projects = "1,"
 Window Top = 64
 Window Left = 26
-Window Z-Order = 7
-Source Window State = "1,51,52,51,0,0,0,0,0,76,0,0,0,0,0,25,82,0,94,20,531,855,1,0,"
+Window Z-Order = 3
+Source Window State = "1,135,135,135,4,19,19,0,3,76,0,0,0,0,0,25,119,0,135,4,531,855,1,0,"
 
 [File 0007]
 Path = "/f/cvi/app/opencom/source/cvi_com_operate.c"
 File Type = "CSource"
-Disk Date = 3612778552
+Disk Date = 3613617748
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
-Window Z-Order = 8
-Source Window State = "1,74,119,74,0,9,0,0,0,56,0,110,0,0,0,18,81,0,87,8,391,655,1,21,"
+Window Z-Order = 4
+Source Window State = "1,63,63,63,5,16,16,0,3,56,0,110,0,0,0,18,47,0,63,5,391,655,1,21,"
+Breakpoint 0001 = "52,0,enabled,"
+Tracepoint 0001 = "0,0,53,1,"
 
 [File 0008]
 Path = "/f/cvi/app/csnc_setpara/setpara/cvi_setpara.c"
 File Type = "CSource"
-Disk Date = 3596700175
+Disk Date = 3613689781
 In Projects = "1,"
 Window Top = 95
 Window Left = 42
-Window Z-Order = 1
-Source Window State = "1,113,131,131,0,2,2,0,0,153,0,0,0,0,0,37,103,0,126,78,431,665,1,0,"
+Window Z-Order = 7
+Source Window State = "1,92,92,92,8,24,24,0,0,57,0,0,0,0,0,20,12,18,22,60,431,665,1,0,"
 
 [File 0009]
 Path = "/f/cvi/app/csnc_setpara/setpara/cvi_setpara.uir"
@@ -130,7 +132,7 @@ Window Top = 64
 Window Left = 26
 Window Height = 431
 Window Width = 855
-Window Z-Order = 2
+Window Z-Order = 8
 
 [File 0010]
 Path = "/f/cvi/app/csnc_setpara/setpara/setpara.c"
@@ -139,7 +141,7 @@ Disk Date = 3607038382
 In Projects = "1,"
 Window Top = 126
 Window Left = 58
-Window Z-Order = 6
+Window Z-Order = 10
 Source Window State = "1,25,26,25,0,0,0,0,0,76,0,0,0,0,0,20,177,0,176,41,431,855,1,0,"
 
 [File 0011]
@@ -151,7 +153,7 @@ Window Top = 157
 Window Left = 74
 Window Height = 291
 Window Width = 855
-Window Z-Order = 3
+Window Z-Order = 6
 
 [File 0012]
 Path = "/f/cvi/app/csnc_setpara/main.c"
@@ -160,8 +162,8 @@ Disk Date = 3612336500
 In Projects = "1,"
 Window Top = 157
 Window Left = 74
-Window Z-Order = 5
-Source Window State = "1,64,98,98,2,0,21,0,0,76,0,0,0,0,0,13,50,0,68,37,291,855,1,0,"
+Window Z-Order = 1
+Source Window State = "1,35,35,35,58,85,58,0,3,149,0,0,0,0,0,32,19,0,35,85,291,855,1,0,"
 
 [File 0013]
 Path = "/f/cvi/app/csnc_setpara/mian.h"
@@ -170,7 +172,7 @@ Disk Date = 3589605093
 In Projects = "1,"
 Window Top = 126
 Window Left = 58
-Window Z-Order = 4
+Window Z-Order = 9
 Source Window State = "1,0,0,0,0,0,0,0,0,76,0,0,0,0,0,13,12,0,20,27,291,855,1,0,"
 
 [File 0014]
@@ -182,8 +184,19 @@ Window Top = 33
 Window Left = 10
 Window Height = 291
 Window Width = 665
+Window Z-Order = 5
 
 [File 0015]
+Path = "/f/cvi/app/opencom/source/cvi_com1.c"
+File Type = "CSource"
+Disk Date = 3613689231
+In Projects = "1,"
+Window Top = 126
+Window Left = 58
+Window Z-Order = 2
+Source Window State = "1,104,104,104,32,47,47,0,3,76,0,0,0,0,0,24,84,0,104,32,511,855,1,0,"
+
+[File 0016]
 Path = "/f/cvi/app/c_comm/crccheck/CrcCheck.c"
 File Type = "CSource"
 Disk Date = 3604032278
@@ -192,7 +205,7 @@ Window Top = 219
 Window Left = 106
 Source Window State = "1,56,56,56,21,25,25,0,0,0,0,0,0,0,0,0,41,0,53,50,511,855,1,0,"
 
-[File 0016]
+[File 0017]
 Path = "/f/cvi/app/c_comm/csnr_package_deal/csnr_package_deal.c"
 File Type = "CSource"
 Disk Date = 3612777622
@@ -201,23 +214,14 @@ Window Top = 250
 Window Left = 122
 Source Window State = "1,22,22,22,125,126,125,0,0,0,0,0,0,0,0,0,15,0,21,110,511,855,1,0,"
 
-[File 0017]
+[File 0018]
 Path = "/f/cvi/app/ansytime/cvi_ansytimer.c"
 File Type = "CSource"
-Disk Date = 3606962973
+Disk Date = 3613615420
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
 Source Window State = "1,6,12,12,0,68,68,0,0,0,0,0,0,0,0,0,0,0,15,62,431,855,1,0,"
-
-[File 0018]
-Path = "/f/cvi/app/opencom/source/cvi_com1.c"
-File Type = "CSource"
-Disk Date = 3612777392
-In Projects = "1,"
-Window Top = 126
-Window Left = 58
-Source Window State = "1,205,223,223,0,6,6,0,0,0,0,0,0,0,0,0,185,0,220,12,511,855,1,0,"
 
 [File 0019]
 Path = "/f/cvi/app/opencom/uir/comconfig.h"
@@ -258,7 +262,7 @@ Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,15,28,411,855,1,0,"
 [File 0023]
 Path = "/f/cvi/app/csnc_debug/cvi_bspComm.h"
 File Type = "Include"
-Disk Date = 3613000879
+Disk Date = 3613021215
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
@@ -330,6 +334,8 @@ Tab 0009 = "/f/cvi/app/csnc_setpara/setpara/cvi_setpara.uir"
 Tab 0010 = "/f/cvi/app/csnc_setpara/mian.uir"
 Tab 0011 = "/f/cvi/app/csnc_setpara/main.c"
 Tab 0012 = "/f/cvi/app/csnc_setpara/mian.h"
+Tab 0013 = "/f/cvi/app/opencom/source/cvi_com1.c"
+Tab 0014 = "/f/cvi/app/opencom/uir/comconfig.uir"
 
 [Default Build Config 0001 Debug]
 Generate Browse Info = True

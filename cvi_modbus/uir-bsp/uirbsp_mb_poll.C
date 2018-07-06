@@ -12,7 +12,7 @@
 
 //全局变量
 int	    	gPollPanelHandle = 0;
-extern	 	int panelHandle;						//主
+extern	 	int gmainPanel;							//主面板
 
 //定义从机控制字。
 strMBPoll	gsMBPoll;								//主机控制字
@@ -28,7 +28,7 @@ int CVICALLBACK OpenPollCallback (int panel, int control, int event,
 		case EVENT_COMMIT:
 				gPollPanelHandle	= LoadPanel (0,UIR_POLL_NAME, MB_POLL);
 				DisplayPanel (gPollPanelHandle);						//显示主机面板	
-				HidePanel (panelHandle);								//隐藏设置面板			
+				HidePanel (gmainPanel);								//隐藏设置面板			
 		break;
 	}
 	return 0;
@@ -48,7 +48,7 @@ int CVICALLBACK mb_PollPanelCB (int panel, int event, void *callbackData,
 			HidePanel(gPollPanelHandle);								//退出窗口
 			gPollPanelHandle = 0;										//
 			
-			DisplayPanel(panelHandle);
+			DisplayPanel(gmainPanel);
 
 			break;
 		}

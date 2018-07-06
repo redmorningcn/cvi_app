@@ -119,7 +119,7 @@ In Projects = "1,"
 Window Top = 64
 Window Left = 26
 Window Z-Order = 1
-Source Window State = "1,110,110,110,30,37,37,0,0,149,0,0,0,0,0,32,42,0,54,11,531,855,1,0,"
+Source Window State = "1,110,110,110,30,37,37,0,0,149,0,0,0,0,0,32,42,0,50,8,531,855,1,0,"
 
 [File 0009]
 Path = "/f/cvi/app/opencom/source/cvi_com_operate.c"

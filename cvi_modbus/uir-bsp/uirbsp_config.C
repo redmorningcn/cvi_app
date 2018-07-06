@@ -10,12 +10,11 @@
 #include <mb_salve.h>
 #include <cvi_comm.h>
 
-
-
-extern	stcUartConfig		mb_com1config;
-extern	int					gCom1PanelHandle;
 #define		UIR_COM1CONFIG_NAME		"comconfig.uir"
 
+extern		stcUartConfig			mb_com1config;
+extern		int						gCom1PanelHandle;
+extern		int						gmainPanel;
 
 /********************************************************************************************/
 /* PanelCB ():  Quits panel.														*/
@@ -65,6 +64,8 @@ void	QuitCom1Panel(int	panel)
 	}
 	
 	HidePanel(gCom1PanelHandle);											//退出窗口
+	
+	DisplayPanel( gmainPanel);												//显示主面板
 }
 
 int CVICALLBACK OpenCom1Callback (int panel, int control, int event,
@@ -177,11 +178,13 @@ int CVICALLBACK OpenCom1Callback (int panel, int control, int event,
 				gCom1PanelHandle	= LoadPanel (0,UIR_COM1CONFIG_NAME, COM1_PANEL);
 				DisplayPanel (gCom1PanelHandle);								//显示设置面板
 
-				ReadMbComConfigFromFile(&mb_com1config);							//从文件中取出配置信息
+				ReadMbComConfigFromFile(&mb_com1config);						//从文件中取出配置信息
 				
-				SetCviCtrlMbComConfig(&mb_com1config);								//参数值面板显示
+				SetCviCtrlMbComConfig(&mb_com1config);							//参数值面板显示
+				
+				HidePanel(gmainPanel);											//显示主面板
 			}else{
-				if( mb_com1config.open )											//串口为打开状态，关闭串口
+				if( mb_com1config.open )										//串口为打开状态，关闭串口
 				{
 					mb_com1config.open = 0;										//置关闭标识
 					CloseCom (mb_com1config.port);								//关闭串口

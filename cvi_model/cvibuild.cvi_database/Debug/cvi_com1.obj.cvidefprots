@@ -2,6 +2,10 @@
 Class="Function"
 Prototype="void Com1RecvAndSend(int portNo, int eventMask, void *callbackData);"
 
+[cvi_initCom1Contrl]
+Class="Function"
+Prototype="struct _stcUartContrl_ *cvi_initCom1Contrl();"
+
 [ReadCom1ConfigFromFile]
 Class="Function"
 Prototype="int ReadCom1ConfigFromFile(struct _stcUartConfig_ *sUartConfig);"
@@ -12,7 +16,7 @@ Prototype="void WriteCom1ConfigToFile(struct _stcUartConfig_ *sUartConfig);"
 
 [Com1Config]
 Class="Function"
-Prototype="void Com1Config(struct _stcUartConfig_ *sComConfig);"
+Prototype="void Com1Config();"
 
 [QuitCom1Panel]
 Class="Function"

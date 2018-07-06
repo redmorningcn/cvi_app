@@ -13,7 +13,7 @@
 
 //全局变量
 int	    	gSlavePanelHandle = 0;
-extern	 	int panelHandle;						//主
+extern	 	int gmainPanel;							//主面板
 
 //定义从机控制字。
 strMBSlave	gsMBSlave;								//从机控制字
@@ -27,7 +27,7 @@ int CVICALLBACK OpenSlaveCallback (int panel, int control, int event,
 		case EVENT_COMMIT:
 				gSlavePanelHandle	= LoadPanel (0,UIR_SLAVE_NAME, MB_SLAVE);
 				DisplayPanel (gSlavePanelHandle);						//显示从机面板	
-				HidePanel (panelHandle);								//隐藏设置面板			
+				HidePanel (gmainPanel);								//隐藏设置面板			
 		break;
 	}
 	return 0;
@@ -46,7 +46,7 @@ int CVICALLBACK mb_SlavePanelCB (int panel, int event, void *callbackData,
 			HidePanel(gSlavePanelHandle);								//退出窗口
 			gSlavePanelHandle = 0;										//
 			
-			DisplayPanel(panelHandle);
+			DisplayPanel(gmainPanel);
 
 			break;
 		}

@@ -40,7 +40,7 @@
 
 
 
-int panelHandle;
+int gmainPanel;
 
 
 
@@ -72,9 +72,9 @@ int main (int argc, char *argv[])
 	if (InitCVIRTE (0, argv, 0) == 0)					/* Initialize CVI libraries */
 		return -1;	/* out of memory */
 
-	if ((panelHandle = LoadPanel (0, "modbus_poll.uir", MAIN)) < 0)
+	if ((gmainPanel = LoadPanel (0, "modbus_poll.uir", MAIN)) < 0)
 		return -1;
-	DisplayPanel (panelHandle);
+	DisplayPanel (gmainPanel);
 	
 	ConfigMbComWithFile();						//通过文件配置串口
 	

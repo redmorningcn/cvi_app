@@ -12,15 +12,11 @@ VXIplug&play Framework 64-bit Dir = "/C/Program Files/IVI Foundation/VISA/win64"
 Number of Projects = 1
 Active Project = 1
 Project 0001 = "cvi_modbus.prj"
-Project 0001 Folder source/uir_bsp Collapsed = True
-Project 0001 FolderId 9 Collapsed = True
-Project 0001 Folder source/bsp_comm Collapsed = True
-Project 0001 FolderId 10 Collapsed = True
-Drag Bar Left = 259
+Drag Bar Left = 278
 Window Top = 133
-Window Left = 200
-Window Bottom = 823
-Window Right = 1131
+Window Left = 126
+Window Bottom = 789
+Window Right = 1372
 Maximized = True
 Maximized Children = True
 Max32 Number Of Errors = 20
@@ -34,9 +30,9 @@ Save Changes Before Compiling = "Always"
 Hide Windows = False
 Break At First Statement = False
 Sort Type = "File Name"
-Number of Opened Files = 26
+Number of Opened Files = 30
 Window Confinement Region Enabled = True
-MainColumnWidth = 242
+MainColumnWidth = 261
 FileDateColumnWidth = 70
 FileSizeColumnWidth = 70
 
@@ -62,8 +58,8 @@ Disk Date = 3606953117
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
-Window Z-Order = 18
-Source Window State = "1,48,49,48,0,0,0,0,3,80,0,0,0,0,0,25,27,0,48,10,531,895,1,0,"
+Window Z-Order = 11
+Source Window State = "1,48,49,48,0,0,0,0,3,80,0,0,0,0,0,25,50,0,48,10,531,895,1,0,"
 
 [File 0003]
 Path = "/f/cvi/app/cvi_modbus/uir/mb_poll.uir"
@@ -74,7 +70,7 @@ Window Top = 64
 Window Left = 26
 Window Height = 531
 Window Width = 895
-Window Z-Order = 15
+Window Z-Order = 14
 
 [File 0004]
 Path = "/f/cvi/app/cvi_modbus/uir/mb_salve.uir"
@@ -90,12 +86,12 @@ Window Z-Order = 13
 [File 0005]
 Path = "/f/cvi/app/cvi_modbus/uir-bsp/uirbsp_mb_poll.C"
 File Type = "CSource"
-Disk Date = 3608180406
+Disk Date = 3613690850
 In Projects = "1,"
 Window Top = 250
 Window Left = 122
-Window Z-Order = 20
-Source Window State = "1,47,47,47,22,38,38,0,3,80,0,1,0,1,0,23,20,0,47,22,491,895,1,0,"
+Window Z-Order = 6
+Source Window State = "1,50,50,50,25,35,35,0,0,80,0,1,0,1,0,23,34,0,50,25,491,895,1,0,"
 
 [File 0006]
 Path = "/c/Program Files (x86)/National Instruments/CVI2017/include/rs232.h"
@@ -104,7 +100,7 @@ Disk Date = 3573565200
 In Projects = ""
 Window Top = 95
 Window Left = 42
-Window Z-Order = 25
+Window Z-Order = 30
 Source Window State = "1,54,54,54,12,21,21,0,3,80,0,0,0,0,0,19,45,0,54,12,411,895,1,0,"
 
 [File 0007]
@@ -114,8 +110,8 @@ Disk Date = 3573565200
 In Projects = ""
 Window Top = 33
 Window Left = 10
-Window Z-Order = 26
-Source Window State = "1,2321,2321,2321,12,29,29,0,0,80,0,0,0,0,0,18,2296,0,2316,114,391,895,1,0,"
+Window Z-Order = 12
+Source Window State = "1,2137,2137,2137,12,24,24,0,3,80,0,0,0,0,0,18,2128,0,2137,12,391,895,1,0,"
 
 [File 0008]
 Path = "/c/Program Files (x86)/National Instruments/CVI2017/toolslib/toolbox/asynctmr.h"
@@ -124,7 +120,7 @@ Disk Date = 3573565200
 In Projects = ""
 Window Top = 64
 Window Left = 26
-Window Z-Order = 24
+Window Z-Order = 29
 Source Window State = "1,57,57,57,12,29,29,0,0,80,0,0,0,0,0,17,49,0,68,44,371,895,1,0,"
 
 [File 0009]
@@ -134,8 +130,8 @@ Disk Date = 3608244305
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
-Window Z-Order = 7
-Source Window State = "1,127,127,127,34,36,34,0,0,80,0,0,0,0,0,25,112,0,125,48,531,895,1,0,"
+Window Z-Order = 8
+Source Window State = "1,526,526,526,4,27,27,0,0,80,0,0,0,0,0,25,164,0,179,34,531,895,1,0,"
 
 [File 0010]
 Path = "/f/cvi/app/cvi_modbus/uC-MB/OS/uCOS-III/NO_MB_OS.C"
@@ -144,18 +140,18 @@ Disk Date = 3608244491
 In Projects = "1,"
 Window Top = 126
 Window Left = 58
-Window Z-Order = 2
-Source Window State = "1,374,380,380,0,9,9,0,0,80,0,0,0,0,0,19,382,0,395,63,411,895,1,0,"
+Window Z-Order = 5
+Source Window State = "1,374,380,380,0,9,9,0,0,80,0,0,0,0,0,19,363,0,372,8,411,895,1,0,"
 
 [File 0011]
 Path = "/f/cvi/app/cvi_modbus/uir-bsp/uirbsp_config.C"
 File Type = "CSource"
-Disk Date = 3608243440
+Disk Date = 3613690994
 In Projects = "1,"
 Window Top = 219
 Window Left = 106
-Window Z-Order = 16
-Source Window State = "1,208,208,208,50,54,54,0,0,80,0,3,0,3,0,19,194,0,212,34,411,895,1,0,"
+Window Z-Order = 1
+Source Window State = "1,21,21,21,8,21,21,0,0,149,0,3,0,3,0,32,0,0,14,58,411,895,1,0,"
 
 [File 0012]
 Path = "/f/cvi/app/cvi_modbus/uir-bsp/uirbsp_config.h"
@@ -164,7 +160,7 @@ Disk Date = 3608241962
 In Projects = "1,"
 Window Top = 188
 Window Left = 90
-Window Z-Order = 17
+Window Z-Order = 25
 Source Window State = "1,4,5,4,0,0,0,0,3,80,0,0,0,0,0,19,0,0,4,19,411,895,1,0,"
 
 [File 0013]
@@ -174,18 +170,18 @@ Disk Date = 3608180028
 In Projects = "1,"
 Window Top = 157
 Window Left = 74
-Window Z-Order = 21
+Window Z-Order = 26
 Source Window State = "1,21,22,21,0,0,0,0,3,80,0,0,0,0,0,19,0,0,21,6,411,895,1,0,"
 
 [File 0014]
 Path = "/f/cvi/app/cvi_modbus/uir-bsp/uirbsp_mb_salve.C"
 File Type = "CSource"
-Disk Date = 3608096725
+Disk Date = 3613690850
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
-Window Z-Order = 19
-Source Window State = "1,62,62,62,7,24,24,0,0,60,0,0,0,0,0,18,0,0,76,42,391,695,1,0,"
+Window Z-Order = 7
+Source Window State = "1,48,48,48,25,35,35,0,0,60,0,0,0,0,0,18,0,0,14,39,391,695,1,0,"
 
 [File 0015]
 Path = "/f/cvi/app/cvi_modbus/uir-bsp/uirbsp_mb_salve.h"
@@ -194,7 +190,7 @@ Disk Date = 3608179997
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
-Window Z-Order = 22
+Window Z-Order = 27
 Source Window State = "1,0,1,1,0,36,36,0,3,80,0,0,0,0,0,25,0,0,0,0,531,895,1,0,"
 
 [File 0016]
@@ -204,7 +200,7 @@ Disk Date = 3608096678
 In Projects = "1,"
 Window Top = 157
 Window Left = 74
-Window Z-Order = 23
+Window Z-Order = 28
 Source Window State = "1,0,1,1,0,28,28,0,3,80,0,0,0,0,0,19,0,0,0,0,411,895,1,0,"
 
 [File 0017]
@@ -214,7 +210,7 @@ Disk Date = 3608244625
 In Projects = "1,"
 Window Top = 157
 Window Left = 74
-Window Z-Order = 14
+Window Z-Order = 24
 Source Window State = "1,17,17,17,9,22,22,0,3,80,0,0,0,0,0,21,0,0,17,9,451,895,1,0,"
 
 [File 0018]
@@ -224,7 +220,7 @@ Disk Date = 3607654020
 In Projects = "1,"
 Window Top = 157
 Window Left = 74
-Window Z-Order = 10
+Window Z-Order = 21
 Source Window State = "1,0,731,0,0,0,0,0,0,58,0,0,0,0,0,14,687,0,696,19,323,667,1,0,"
 
 [File 0019]
@@ -234,7 +230,7 @@ Disk Date = 3607471936
 In Projects = "1,"
 Window Top = 95
 Window Left = 42
-Window Z-Order = 4
+Window Z-Order = 16
 Source Window State = "1,764,764,764,6,19,19,0,0,58,0,993,0,993,0,14,760,0,764,6,323,667,1,0,"
 
 [File 0020]
@@ -244,7 +240,7 @@ Disk Date = 3607461435
 In Projects = "1,"
 Window Top = 126
 Window Left = 58
-Window Z-Order = 5
+Window Z-Order = 17
 Source Window State = "1,169,175,175,0,13,13,0,0,58,0,732,0,732,0,14,223,0,235,18,323,667,1,0,"
 
 [File 0021]
@@ -254,7 +250,7 @@ Disk Date = 3608177202
 In Projects = "1,"
 Window Top = 219
 Window Left = 106
-Window Z-Order = 11
+Window Z-Order = 22
 Source Window State = "1,716,716,716,27,37,37,0,0,58,0,0,0,0,0,14,683,0,703,63,323,667,1,0,"
 
 [File 0022]
@@ -264,7 +260,7 @@ Disk Date = 3607403026
 In Projects = "1,"
 Window Top = 188
 Window Left = 90
-Window Z-Order = 12
+Window Z-Order = 23
 Source Window State = "1,63,63,63,53,54,54,0,0,80,0,0,0,0,0,19,9,0,63,53,411,895,1,0,"
 
 [File 0023]
@@ -274,17 +270,17 @@ Disk Date = 3607635766
 In Projects = "1,"
 Window Top = 188
 Window Left = 90
-Window Z-Order = 8
+Window Z-Order = 19
 Source Window State = "1,0,1893,0,0,0,0,0,0,58,0,0,0,0,0,14,1864,0,1878,55,323,667,1,0,"
 
 [File 0024]
 Path = "/f/cvi/app/cvi_modbus/main.c"
 File Type = "CSource"
-Disk Date = 3608869348
+Disk Date = 3613690850
 In Projects = "1,"
 Window Top = 31
-Window Z-Order = 3
-Source Window State = "1,83,83,83,31,36,36,0,0,51,0,0,0,0,0,18,77,0,83,36,400,600,1,0,"
+Window Z-Order = 4
+Source Window State = "1,42,42,42,4,14,14,0,3,51,0,0,0,0,0,18,26,0,42,4,400,600,1,0,"
 
 [File 0025]
 Path = "/f/cvi/app/cvi_modbus/main.h"
@@ -293,7 +289,7 @@ Disk Date = 3608154553
 In Projects = "1,"
 Window Top = 64
 Window Left = 26
-Window Z-Order = 9
+Window Z-Order = 20
 Source Window State = "1,12,13,12,0,0,0,0,3,80,0,0,0,0,0,25,0,0,12,21,531,895,1,0,"
 
 [File 0026]
@@ -303,10 +299,20 @@ Disk Date = 3607307234
 In Projects = "1,"
 Window Top = 64
 Window Left = 26
-Window Z-Order = 6
+Window Z-Order = 18
 Source Window State = "1,50,50,50,9,21,21,0,3,58,0,206,0,206,0,14,43,0,50,9,323,667,1,0,"
 
 [File 0027]
+Path = "/f/cvi/app/cvi_modbus/uC-MB/Cfg/Template/mb_cfg.h"
+File Type = "Include"
+Disk Date = 3607487970
+In Projects = "1,"
+Window Top = 33
+Window Left = 10
+Window Z-Order = 15
+Source Window State = "1,0,106,0,0,0,0,0,0,60,0,0,0,0,0,18,56,0,86,48,391,695,1,0,"
+
+[File 0028]
 Path = "/f/cvi/app/cvi_modbus/readme.md"
 File Type = "Unknown"
 Disk Date = 3608179919
@@ -314,17 +320,18 @@ In Projects = "1,"
 Window Top = 64
 Window Left = 26
 
-[File 0028]
+[File 0029]
 Path = "/f/cvi/app/opencom/uir/comconfig.uir"
 File Type = "User Interface Resource"
-Disk Date = 3590361705
+Disk Date = 3611890611
 In Projects = "1,"
 Window Top = 126
 Window Left = 58
 Window Height = 531
 Window Width = 895
+Window Z-Order = 2
 
-[File 0029]
+[File 0030]
 Path = "/f/cvi/app/cvi_modbus/uir/modbus_poll.uir"
 File Type = "User Interface Resource"
 Disk Date = 3608086561
@@ -333,16 +340,7 @@ Window Top = 64
 Window Left = 26
 Window Height = 291
 Window Width = 895
-
-[File 0030]
-Path = "/f/cvi/app/cvi_modbus/uC-MB/Cfg/Template/mb_cfg.h"
-File Type = "Include"
-Disk Date = 3607487970
-In Projects = "1,"
-Window Top = 33
-Window Left = 10
-Window Z-Order = 1
-Source Window State = "1,0,106,0,0,0,0,0,0,151,0,0,0,0,0,46,62,0,73,9,391,695,1,0,"
+Window Z-Order = 3
 
 [File 0031]
 Path = "/f/cvi/app/cvi_modbus/uC-MB/OS/uCOS-III/NO_MB_OS.H"
@@ -383,7 +381,7 @@ Source Window State = "1,74,81,81,0,36,36,0,0,0,0,1,0,1,0,0,42,0,83,71,411,895,1
 [File 0035]
 Path = "/f/cvi/app/ansytime/cvi_ansytimer.c"
 File Type = "CSource"
-Disk Date = 3606962973
+Disk Date = 3613615420
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
@@ -392,7 +390,7 @@ Source Window State = "1,43,45,45,0,50,50,0,0,0,0,0,0,0,0,0,12,0,60,56,323,667,1
 [File 0036]
 Path = "/f/cvi/app/opencom/uir/comconfig.h"
 File Type = "Include"
-Disk Date = 3589595871
+Disk Date = 3611886371
 In Projects = "1,"
 Window Top = 126
 Window Left = 58
@@ -424,7 +422,7 @@ Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 [File 0040]
 Path = "/f/cvi/app/ansytime/cvi_ansytimer.h"
 File Type = "Include"
-Disk Date = 3606959998
+Disk Date = 3612777068
 In Projects = "1,"
 Window Top = 95
 Window Left = 42
@@ -437,12 +435,13 @@ Disk Date = 3607035615
 In Projects = "1,"
 Window Top = 64
 Window Left = 26
-Source Window State = "1,13,14,14,0,33,33,0,3,0,0,0,0,0,0,0,0,0,13,0,411,855,1,0,"
+Window Z-Order = 10
+Source Window State = "1,13,14,14,0,33,33,0,3,76,0,0,0,0,0,19,50,0,13,0,411,855,1,0,"
 
 [File 0042]
 Path = "/f/cvi/app/opencom/source/cvi_com_operate.h"
 File Type = "Include"
-Disk Date = 3607035493
+Disk Date = 3612778359
 In Projects = "1,"
 Window Top = 126
 Window Left = 58
@@ -482,7 +481,8 @@ Disk Date = 3607578264
 In Projects = "1,"
 Window Top = 157
 Window Left = 74
-Source Window State = "1,66,66,66,1,14,14,0,3,0,0,0,0,0,0,0,48,0,66,1,411,895,1,0,"
+Window Z-Order = 9
+Source Window State = "1,66,66,66,1,14,14,0,3,80,0,0,0,0,0,19,48,0,66,1,411,895,1,0,"
 
 [File 0047]
 Path = "/f/cvi/app/cvi_modbus/uir/mb_poll.h"
@@ -529,6 +529,10 @@ Tab 0023 = "/f/cvi/app/cvi_modbus/main.h"
 Tab 0024 = "/f/cvi/app/cvi_modbus/uC-MB/Source/MBS_CORE.C"
 Tab 0025 = "/f/cvi/app/cvi_modbus/uC-MB/Source/MB_DEF.H"
 Tab 0026 = "/f/cvi/app/cvi_modbus/uC-MB/Cfg/Template/mb_cfg.h"
+Tab 0027 = "/f/cvi/app/cvi_modbus/uir/modbus_poll.uir"
+Tab 0028 = "/f/cvi/app/opencom/uir/comconfig.uir"
+Tab 0029 = "/f/cvi/app/opencom/source/cvi_com1.h"
+Tab 0030 = "/f/cvi/app/cvi_modbus/uC-MB/Ports/pc/MB_BSP.H"
 
 [Default Build Config 0001 Debug]
 Generate Browse Info = True

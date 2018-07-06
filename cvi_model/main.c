@@ -35,6 +35,7 @@ int main (int argc, char *argv[])
 	
 	gmainPanel = LoadPanel (0, "mian.uir", MAINPANEL); //装载主面板
 
+	sCtrl.PC.sCom = cvi_initCom1Contrl();				//和串口1建立联系，移植需要修改
 	cvi_InitBspComm(&sCtrl.PC);
 
 	cvi_InitBspDB(&gsThreadModel);

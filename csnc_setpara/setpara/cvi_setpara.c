@@ -31,6 +31,7 @@ int 			gsetpara_panelHandle;
 /********************************************************************************************/
 extern	void	WriteSetParaToFile(void);
 extern	int		ReadSetPararomFile(void);
+extern	int 	gmainPanel;
 
 
 /********************************************************************************************/
@@ -62,7 +63,7 @@ int CVICALLBACK OpenSetParaPanelCallback (int panel, int control, int event,
 			
 			ReadSetPararomFile();													//调出以前存储的参数
 			
-			//HidePanel(gPanelHandle);												//隐藏主面板
+			HidePanel(gmainPanel);												//隐藏主面板
 			break;
 	}
 	return 0;
@@ -92,11 +93,13 @@ void	DisplayTimeOnSetPanel(void)
 /********************************************************************************************/
 void	QuitSetParaPanel(void)
 {
-	WriteSetParaToFile();			//退出，保存参数
+	WriteSetParaToFile();				//退出，保存参数
 	
 	HidePanel (gsetpara_panelHandle);
 	
-	gsetpara_panelHandle = 0;	
+	gsetpara_panelHandle = 0;
+	
+	DisplayPanel(gmainPanel);			//显示主面板
 }
 
 int CVICALLBACK QuitCallback (int panel, int control, int event,

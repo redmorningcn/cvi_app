@@ -12,11 +12,11 @@ VXIplug&play Framework 64-bit Dir = "/C/Program Files/IVI Foundation/VISA/win64"
 Number of Projects = 1
 Active Project = 1
 Project 0001 = "csnc_recordrec.prj"
-Drag Bar Left = 238
+Drag Bar Left = 278
 Window Top = 59
-Window Left = 468
+Window Left = 126
 Window Bottom = 715
-Window Right = 1366
+Window Right = 1372
 Maximized = True
 Maximized Children = True
 Max32 Number Of Errors = 20
@@ -30,9 +30,9 @@ Save Changes Before Compiling = "Always"
 Hide Windows = False
 Break At First Statement = False
 Sort Type = "File Name"
-Number of Opened Files = 0
+Number of Opened Files = 2
 Window Confinement Region Enabled = True
-MainColumnWidth = 221
+MainColumnWidth = 261
 FileDateColumnWidth = 70
 FileSizeColumnWidth = 70
 
@@ -64,6 +64,7 @@ Window Top = 33
 Window Left = 10
 Window Height = 451
 Window Width = 655
+Window Z-Order = 1
 
 [File 0003]
 Path = "/f/cvi/app/csnc_recordrec/database/oilmodel_db.uir"
@@ -74,6 +75,7 @@ Window Top = 64
 Window Left = 26
 Window Height = 431
 Window Width = 665
+Window Z-Order = 2
 
 [File 0004]
 Path = "/f/cvi/app/csnc_recordrec/database/databaseoperate.c"
@@ -172,6 +174,10 @@ In Projects = "1,"
 Window Top = 33
 Window Left = 10
 Source Window State = "1,33,36,36,0,61,61,0,3,0,0,0,0,0,0,0,0,0,33,0,431,655,1,0,"
+
+[Tab Order]
+Tab 0001 = "/f/cvi/app/csnc_recordrec/database/oilmodel_db.uir"
+Tab 0002 = "/f/cvi/app/csnc_recordrec/mian.uir"
 
 [Default Build Config 0001 Debug]
 Generate Browse Info = True

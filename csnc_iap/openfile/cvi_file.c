@@ -28,9 +28,11 @@
 /* Globals																					*/
 /********************************************************************************************/
 //面板变量
-int		l_binfilehandle = 0;		//文件控件
-int		gBinFilePanelHandle = 0;
-int 	g_sysIaptime = 0;
+int					l_binfilehandle = 0;		//文件控件
+int					gBinFilePanelHandle = 0;
+int 				g_sysIaptime = 0;
+
+extern	int			gmainPanel;
 
 /********************************************************************************************/
 /* local Prototypes																				*/
@@ -59,7 +61,7 @@ int CVICALLBACK BinFilePanelCB (int panel, int event, void *callbackData,
 			
 			gBinFilePanelHandle = 0;
 			
-			//DisplayPanel (gPanelHandle);										//显示设置面板
+			DisplayPanel (gmainPanel);											//显示设置面板
 
 			break;
 		}
@@ -91,6 +93,8 @@ int CVICALLBACK OpenIapPanelCallback (int panel, int control, int event,
 			
 			/* Schedule two thread functions */				//多线程，创建新线程函数
 			cvi_InitBspComm(&sCtrl.PC);						//串口
+			
+			HidePanel(gmainPanel);							//隐藏主面板
 			
 			break;
 	}
