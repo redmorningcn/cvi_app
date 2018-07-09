@@ -96,8 +96,8 @@
 #define  LKJTEST_DECORATION_22            81      /* control type: deco, callback function: (none) */
 #define  LKJTEST_DECORATION_18            82      /* control type: deco, callback function: (none) */
 #define  LKJTEST_DECORATION               83      /* control type: deco, callback function: (none) */
-#define  LKJTEST_CLEARREC                 84      /* control type: command, callback function: ClearRecordCallback */
-#define  LKJTEST_READREC                  85      /* control type: command, callback function: ReadRecordCallback */
+#define  LKJTEST_READREC                  84      /* control type: command, callback function: ReadRecordCallback */
+#define  LKJTEST_CLEARREC                 85      /* control type: command, callback function: ClearRecordCallback */
 
 
      /* Control Arrays: */

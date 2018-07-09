@@ -1,3 +1,7 @@
+#include "cvi_LocoCali.h"
+#include <userint.h>
+#include "cvi_setpara.h"
+
 /*******************************************************************************
  *   Revised:        All copyrights reserved to redmorningcn.
  *   Revision:       v1.0
@@ -14,6 +18,7 @@
 /********************************************************************************************/
 
 #include "setpara.h"
+#include "cvi_comm.h"
 
 
 /********************************************************************************************/
@@ -32,6 +37,8 @@ extern		int			gmainPanel;
 /********************************************************************************************/
 extern		void		WriteSetParaToFile(void);
 extern		int			ReadSetPararomFile(void);
+
+extern	void	GetSetParaRecvInfo(void);
 
 
 /********************************************************************************************/
@@ -132,7 +139,6 @@ int CVICALLBACK SetLocoCallBack (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-			l_eqiupmentcode = CMD_LOCO_SET;
 			
 			GetCtrlVal(panel,SETP_PANEL_LOCOTYPE,&gstrProductInfo.LocoId.Type);
 			GetCtrlVal(panel,SETP_PANEL_LOCONUM, &gstrProductInfo.LocoId.Nbr);
@@ -141,6 +147,9 @@ int CVICALLBACK SetLocoCallBack (int panel, int control, int event,
 			{
 				MessagePopup ("ErrMessage", "信息内容错误，请重新输入");
 			}
+			
+			l_eqiupmentcode = CMD_LOCO_SET;
+
 			break;
 	}
 	return 0;
@@ -152,7 +161,6 @@ int CVICALLBACK SetProductCallBack (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-			l_eqiupmentcode = CMD_PARA_SET;				 
 			
 			gstrSendDtuData.paraaddr = (u16)((u32)&Ctrl.sProductInfo -  (u32)&Ctrl) ;
 			gstrSendDtuData.paralen  = sizeof(Ctrl.sProductInfo.Type) +  sizeof(Ctrl.sProductInfo.Id);
@@ -165,6 +173,95 @@ int CVICALLBACK SetProductCallBack (int panel, int control, int event,
 			{
 				MessagePopup ("ErrMessage", "信息内容错误，请重新输入");
 			}
+			
+			l_eqiupmentcode = CMD_PARA_SET;				 
+
+			break;
+	}
+	return 0;
+}
+
+
+int CVICALLBACK ParaReadCallback (int panel, int control, int event,
+								  void *callbackData, int eventData1, int eventData2)
+{
+	switch (event)
+	{
+		case EVENT_COMMIT:
+
+			GetCtrlVal(panel,SETP_PANEL_PARA_ADDR,&gstrSendDtuData.paraaddr); 		//地址
+			GetCtrlVal(panel,SETP_PANEL_PARA_LEN, &gstrSendDtuData.paralen);  		//长度
+			gstrSendDtuData.node	 = 0;									
+
+			l_eqiupmentcode = CMD_PARA_GET;				 
+			break;
+	}
+	return 0;
+}
+
+int CVICALLBACK ParaWriteCallback (int panel, int control, int event,
+								   void *callbackData, int eventData1, int eventData2)
+{
+	u8	buf[512];
+	switch (event)
+	{
+		case EVENT_COMMIT:
+
+			GetCtrlVal(panel,SETP_PANEL_PARA_ADDR,&gstrSendDtuData.paraaddr); 				//地址
+			//GetCtrlVal(panel,SETP_PANEL_PARA_LEN, &gstrSendDtuData.paralen);  			//长度
+			gstrSendDtuData.node	 = 0;									
+
+			GetCtrlVal(panel,SETP_PANEL_PARA_BUF,buf); 										//数据区
+			
+			gstrSendDtuData.paralen = (u8)strtohex(buf,(uint8 *)gstrSendDtuData.parabuf);	//装换成HEX
+
+			SetCtrlVal(panel,SETP_PANEL_PARA_LEN,gstrSendDtuData.paralen);					//设置 数据长度
+			
+			l_eqiupmentcode = CMD_PARA_SET;				 
+
+			break;
+	}
+	return 0;
+	
+}
+
+int CVICALLBACK DetectReadCallback (int panel, int control, int event,
+									void *callbackData, int eventData1, int eventData2)
+{
+	switch (event)
+	{
+		case EVENT_COMMIT:
+			GetCtrlVal(panel,SETP_PANEL_DETECT_ADDR, &gstrSendDtuData.paraaddr); 		//地址
+			GetCtrlVal(panel,SETP_PANEL_DETECT_LEN,  &gstrSendDtuData.paralen);  		//长度
+			GetCtrlVal(panel,SETP_PANEL_DETECT_NODE, &gstrSendDtuData.node);  		//长度
+
+			l_eqiupmentcode = CMD_DETECT_GET;				
+			break;
+	}
+	return 0;
+}
+
+int CVICALLBACK DetectWriteCallback (int panel, int control, int event,
+									 void *callbackData, int eventData1, int eventData2)
+{
+	u8	buf[512];
+	
+	switch (event)
+	{
+		case EVENT_COMMIT:
+
+			GetCtrlVal(panel,SETP_PANEL_DETECT_ADDR,&gstrSendDtuData.paraaddr); 				//地址
+			//GetCtrlVal(panel,SETP_PANEL_PARA_LEN, &gstrSendDtuData.paralen);  			//长度
+			gstrSendDtuData.node	 = 0;									
+
+			GetCtrlVal(panel,SETP_PANEL_DETECT_BUF,buf); 										//数据区
+			
+			gstrSendDtuData.paralen = (u8)strtohex(buf,(uint8 *)gstrSendDtuData.parabuf);	//装换成HEX
+
+			SetCtrlVal(panel,SETP_PANEL_DETECT_LEN,gstrSendDtuData.paralen);					//设置 数据长度
+			
+			l_eqiupmentcode = CMD_DETECT_SET;				
+			
 			break;
 	}
 	return 0;
@@ -284,8 +381,43 @@ int CVICALLBACK SetParaTimerCallback (int panel, int control, int event,
 				DisplayTimeOnSetPanel();	  	//面板显示
 			
 				Com_SetParaTask();				//串口参数设置
+				
+				Com_SetParaRecTask();			//参数读
+				
+				GetSetParaRecvInfo();			//解析应答数据
 			}
 			break;
 	}
 	return 0;
+}
+
+/********************************************************************************************
+author：redmorningcn 20180706
+数据接收准备。（接收应答或数据）
+********************************************************************************************/
+void	GetSetParaRecvInfo(void)
+{
+	u8	reclen;
+	u8	buf[1024];
+	u8	stringtmp[10];
+	u8	i;
+	u8  *p = (u8 *)gstrRecDtuData.parabuf;
+	
+	if(gstrRecDtuData.dataokflg == 1)								//	接收到数据
+	{														
+		gstrRecDtuData.dataokflg	= 0;		
+		
+		reclen  = gstrRecDtuData.recdatalen ;						//	接收数据长度  
+		
+		for(i = 0; i < reclen;i++){
+			snprintf((char *)&stringtmp,5,"%02x ",*(p+i));
+			strcat(buf,stringtmp);
+		}
+		
+		if(gstrRecDtuData.code == CMD_PARA_GET)
+			SetCtrlVal(gsetpara_panelHandle,SETP_PANEL_PARA_BUF,buf);
+		
+		if(gstrRecDtuData.code == CMD_DETECT_GET)
+			SetCtrlVal(gsetpara_panelHandle,SETP_PANEL_DETECT_BUF,buf);
+	}
 }

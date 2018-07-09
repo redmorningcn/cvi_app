@@ -114,7 +114,7 @@ int CVICALLBACK LKJTestTimerCallback (int panel, int control, int event,
 					tmp++;
 				}
 				
-				SetDetectReadCode();		// 准备检测数据读取指令
+				SetDetectReadCode();			// 准备检测数据读取指令
 				
 				Com_SetParaTask();				// 串口参数设置
 				
@@ -260,7 +260,7 @@ void	SpeedDetectDisplay(void)
 
 	for(i = 0;i< 3;i++ )
 	{
-	   SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].ch1_2phase ,lstrSpeedDetect[i].ch1_2phase	);
+	   SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].ch1_2phase ,((float)lstrSpeedDetect[i].ch1_2phase)/100	);
 	   SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].vcc_vol    ,lstrSpeedDetect[i].vcc_vol		);
 	   SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].stand_vol  ,lstrSpeedDetect[i].stand_vol	);
 				  
@@ -270,7 +270,7 @@ void	SpeedDetectDisplay(void)
 	   		SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].para[j].Voh		,lstrSpeedDetect[i].para[j].Voh		);
 	   		SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].para[j].Vol		,lstrSpeedDetect[i].para[j].Vol		);
 	   		SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].para[j].raise  	,lstrSpeedDetect[i].para[j].raise	);
-	   		SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].para[j].ratio     ,lstrSpeedDetect[i].para[j].ratio	);
+	   		SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].para[j].ratio     ,((float)lstrSpeedDetect[i].para[j].ratio)/100	);
 	   		SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].para[j].freq	  	,lstrSpeedDetect[i].para[j].freq	);
 	   		SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].para[j].status    ,lstrSpeedDetect[i].para[j].status	);
 	   }

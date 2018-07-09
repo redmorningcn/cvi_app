@@ -30,6 +30,22 @@ Prototype="int SetLocoCallBack(int panel, int control, int event, void *callback
 Class="Function"
 Prototype="int SetProductCallBack(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
 
+[ParaReadCallback]
+Class="Function"
+Prototype="int ParaReadCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[ParaWriteCallback]
+Class="Function"
+Prototype="int ParaWriteCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[DetectReadCallback]
+Class="Function"
+Prototype="int DetectReadCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[DetectWriteCallback]
+Class="Function"
+Prototype="int DetectWriteCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
 [SetSetParaPanelVal]
 Class="Function"
 Prototype="void SetSetParaPanelVal();"
@@ -53,4 +69,8 @@ Prototype="int SetParaPanelCB(int panel, int event, void *callbackData, int even
 [SetParaTimerCallback]
 Class="Function"
 Prototype="int SetParaTimerCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[GetSetParaRecvInfo]
+Class="Function"
+Prototype="void GetSetParaRecvInfo();"
 
