@@ -129,8 +129,8 @@ void Com_SetParaTask(void)
 							  datalen += sizeof(gstrSendDtuData.node);
 							  break;
 							  
-			case  CMD_RECORD_GET:	// 读指定记录号的书记录
-							  tmp8 = sizeof(gstrSendDtuData.recordnum);
+			case  CMD_RECORD_GET:								// 读指定记录号的书记录
+							  	tmp8 = sizeof(gstrSendDtuData.recordnum);
 							  memcpy(&buf[datalen],(unsigned char *)&gstrSendDtuData.recordnum,tmp8);
 						      datalen += tmp8;
 							  break;	
@@ -143,20 +143,20 @@ void Com_SetParaTask(void)
 				break;
 		}
 
-		memcpy(sCtrl.PC.wr,buf,datalen);			//数据拷贝到控制字符	
+		memcpy(sCtrl.PC.wr,buf,datalen);						//数据拷贝到控制字符	
 		
-		sCtrl.PC.ConnCtrl.sendlen 		= datalen;	//发送数据区长度
-		sCtrl.PC.ConnCtrl.sourceaddr	= ADDR_SET;	//源地址
+		sCtrl.PC.ConnCtrl.sendlen 		= datalen;				//发送数据区长度
+		sCtrl.PC.ConnCtrl.sourceaddr	= ADDR_SET;				//源地址
 		
-		sCtrl.PC.ConnCtrl.DestAddr		= ADDR_FIX; //目的地址
-		sCtrl.PC.ConnCtrl.SendFramNum 	= 0x00; 	//序号
-		sCtrl.PC.ConnCtrl.FrameCode		= 0x00;		//帧命令字	
+		sCtrl.PC.ConnCtrl.DestAddr		= ADDR_FIX; 			//目的地址
+		sCtrl.PC.ConnCtrl.SendFramNum 	= 0x00; 				//序号
+		sCtrl.PC.ConnCtrl.FrameCode		= 0x00;					//帧命令字	
 	 
-		sCtrl.PC.ConnCtrl.SendFlg 		= 1;		//启动发送 （CVI_bsComm,多线程）
-		sCtrl.PC.ConnCtrl.SendTimeFlg 	= 1;		//启动发送计时（超时判断）
+		sCtrl.PC.ConnCtrl.SendFlg 		= 1;					//启动发送 （CVI_bsComm,多线程）
+		sCtrl.PC.ConnCtrl.SendTimeFlg 	= 1;					//启动发送计时（超时判断）
 		
-		l_sendcode = l_eqiupmentcode;				// 应答时使用（确认是哪个指令的命令）
-		sendtime = GetAnsySysTime();				// 开始发送时间
+		l_sendcode = l_eqiupmentcode;							// 应答时使用（确认是哪个指令的命令）
+		sendtime = GetAnsySysTime();							// 开始发送时间
 		
 		l_eqiupmentcode = 0;
 
@@ -245,7 +245,6 @@ void	Com_SetParaRecTask(void)
 				
 				case CMD_PARA_GET: 										// 指定地址读取参数
 				case CMD_DETECT_GET:  									// 读检测板指定地址
-				//case CMD_RECORD_GET:  								// 读数据记录
 					if(sizeof(gstrRecDtuData) >= reclen){
 						memcpy((u8 *)&gstrRecDtuData,sCtrl.PC.rd,reclen); 	//数据复制
 						
@@ -258,7 +257,10 @@ void	Com_SetParaRecTask(void)
 						gstrRecDtuData.recdatalen 	= ((u8)reclen - (u8)headlen);	// (有效)数据长度
 						gstrRecDtuData.dataokflg 	= 1;			// 数据接收完成
 					}
-					break;				 
+					break;	
+					
+				//case CMD_RECORD_GET:  								// 读数据记录
+
 				default:
 					break;			
 			}

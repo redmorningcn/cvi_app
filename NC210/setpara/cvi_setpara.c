@@ -158,6 +158,8 @@ int CVICALLBACK SetLocoCallBack (int panel, int control, int event,
 int CVICALLBACK SetProductCallBack (int panel, int control, int event,
 		void *callbackData, int eventData1, int eventData2)
 {
+	u32		*num;
+
 	switch (event)
 	{
 		case EVENT_COMMIT:
@@ -169,7 +171,8 @@ int CVICALLBACK SetProductCallBack (int panel, int control, int event,
 			GetCtrlVal(panel,SETP_PANEL_PRO_TYPE,(u32*)&gstrSendDtuData.parabuf);
 			GetCtrlVal(panel,SETP_PANEL_PRO_NUM, (u32*)&gstrSendDtuData.parabuf[2]);
 			
-			if(gstrProductInfo.LocoId.Nbr == 0|| gstrProductInfo.LocoId.Type==0)
+			num = (u32*)&gstrSendDtuData.parabuf[2];
+			if( *num < 18070001  ||  *num  > 28070001 )
 			{
 				MessagePopup ("ErrMessage", "信息内容错误，请重新输入");
 			}

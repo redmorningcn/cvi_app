@@ -58,6 +58,7 @@ typedef	struct _strpara_ {
 }strLocoDetect;
 
 
+//函数声明
 extern	void	SetDetectReadCode(void) ;
 extern	void	GetDetectInfo(void);
 extern	void	SpeedDetectDisplay(void);
@@ -65,6 +66,7 @@ extern	void	InitSpeedCtrlID(void);
 extern	void	InitLocoCtrlID(void);
 extern	void	LocoDetectDisplay(void);
 extern	void	RecordDisplay(void);
+extern	void	InitDetectVal(void);
 
 
 extern	strSpeedDetect		lstrSpeedDetect[3];					//速度信号检测值

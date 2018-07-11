@@ -34,6 +34,10 @@ Prototype="void InitSpeedCtrlID();"
 Class="Function"
 Prototype="void SpeedDetectDisplay();"
 
+[InitDetectVal]
+Class="Function"
+Prototype="void InitDetectVal();"
+
 [InitLocoCtrlID]
 Class="Function"
 Prototype="void InitLocoCtrlID();"
@@ -53,4 +57,12 @@ Prototype="void SetDetectReadCode();"
 [GetDetectInfo]
 Class="Function"
 Prototype="void GetDetectInfo();"
+
+[ResetSysCallback]
+Class="Function"
+Prototype="int ResetSysCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SpecialRecordCallback]
+Class="Function"
+Prototype="int SpecialRecordCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
 

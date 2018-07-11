@@ -1,3 +1,5 @@
+#include <userint.h>
+
 /*******************************************************************************
  *   Revised:        All copyrights reserved to redmorningcn.
  *   Revision:       v1.0
@@ -31,6 +33,9 @@ int 					gLKJTest_panelHandle;
 extern		int			gmainPanel;
 extern		int			l_eqiupmentcode;
 
+static		u8			lspecialrecord = 0;
+
+
 /********************************************************************************************/
 //local
 /********************************************************************************************/
@@ -44,6 +49,8 @@ void LoadLKJTestPanel(void)
 	gLKJTest_panelHandle = LoadPanel (0, "cvi_LKJTest.uir", LKJTEST);
 	/* 	Display the panel and run the UI */
 	DisplayPanel (gLKJTest_panelHandle);
+	
+	InitDetectVal();						//初始化检测值变量
 }
 
 /********************************************************************************************/
@@ -127,6 +134,12 @@ int CVICALLBACK LKJTestTimerCallback (int panel, int control, int event,
 				LocoDetectDisplay();			// 工况板信号值在面板上显示
 				
 				RecordDisplay();				// 数据记录在面板上显示
+				
+				if(lspecialrecord){				// 指定数据记录读
+					lspecialrecord--;
+					if(lspecialrecord == 0)
+						gstrSendDtuData.recenableflg = 0;
+				}
 			}
 			break;
 	}
@@ -146,10 +159,14 @@ int CVICALLBACK ReadRecordCallback (int panel, int control, int event,
 				l_eqiupmentcode = CMD_REC_START;
 
 				SetCtrlAttribute (panel, LKJTEST_READREC, ATTR_LABEL_TEXT, "结束数据读取"); 
-			}else
+				SetCtrlAttribute (panel, LKJTEST_CLEARREC,ATTR_DIMMED,1);  
+			}
+			else
 			{
 				gstrSendDtuData.recenableflg = 0;
 				SetCtrlAttribute (panel, LKJTEST_READREC, ATTR_LABEL_TEXT, "开始数据读取"); 
+				SetCtrlAttribute (panel, LKJTEST_CLEARREC,ATTR_DIMMED,0);  
+
 				l_eqiupmentcode = 0;
 			}
 			break;
@@ -260,21 +277,39 @@ void	SpeedDetectDisplay(void)
 
 	for(i = 0;i< 3;i++ )
 	{
-	   SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].ch1_2phase ,((float)lstrSpeedDetect[i].ch1_2phase)/100	);
-	   SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].vcc_vol    ,lstrSpeedDetect[i].vcc_vol		);
-	   SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].stand_vol  ,lstrSpeedDetect[i].stand_vol	);
+	   SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].ch1_2phase ,((float)lstrSpeedDetect[i].ch1_2phase)/100		);
+	   SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].vcc_vol    ,((float)lstrSpeedDetect[i].vcc_vol)/100		);
+	   SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].stand_vol  ,((float)lstrSpeedDetect[i].stand_vol)/100		);
 				  
-		for(j = 0; j < 2;j++  )
+	   for(j = 0; j < 2;j++  )
 	   {
-	   		SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].para[j].fail	  	,lstrSpeedDetect[i].para[j].fail	);
-	   		SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].para[j].Voh		,lstrSpeedDetect[i].para[j].Voh		);
-	   		SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].para[j].Vol		,lstrSpeedDetect[i].para[j].Vol		);
-	   		SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].para[j].raise  	,lstrSpeedDetect[i].para[j].raise	);
+	   		SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].para[j].fail	  	,((float)lstrSpeedDetect[i].para[j].fail)/100	);
+	   		SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].para[j].Voh		,((float)lstrSpeedDetect[i].para[j].Voh)/100 	);
+	   		SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].para[j].Vol		,((float)lstrSpeedDetect[i].para[j].Vol)/100 	);
+	   		SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].para[j].raise  	,((float)lstrSpeedDetect[i].para[j].raise)/100	);
 	   		SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].para[j].ratio     ,((float)lstrSpeedDetect[i].para[j].ratio)/100	);
 	   		SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].para[j].freq	  	,lstrSpeedDetect[i].para[j].freq	);
 	   		SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].para[j].status    ,lstrSpeedDetect[i].para[j].status	);
 	   }
 	}
+}
+
+/*******************************************************************************
+* Description  : 速度信号检测值初始化
+* Author       : 2018/07/11  by redmorningcn
+*******************************************************************************/
+void	InitDetectVal(void)
+{
+	u16	i;
+
+	//初始化速度信号值
+	for(i = 0;i< 3;i++ )
+	{
+	   memset((u8 *)&lstrSpeedDetect[i],0,sizeof(strSpeedDetect));				//初始化为0
+	}
+	
+	//初始化工况信号
+	memset((u8 *)&lstrLocoDetect,0,sizeof(lstrLocoDetect));						//初始化为0
 }
 
 /*******************************************************************************
@@ -297,12 +332,12 @@ void	InitLocoCtrlID(void)
 *******************************************************************************/
 void	LocoDetectDisplay(void)
 {
-   SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.vcc	 ,lstrLocoDetect.vcc	);
-   SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.qy	 ,lstrLocoDetect.qy		);
-   SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.zd	 ,lstrLocoDetect.zd		);
-   SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.xq	 ,lstrLocoDetect.xq		);
-   SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.xh	 ,lstrLocoDetect.xh		);
-   SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.lw	 ,lstrLocoDetect.lw		);
+   SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.vcc	 ,((float)lstrLocoDetect.vcc)/10);
+   SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.qy	 ,((float)lstrLocoDetect.qy)/10	);
+   SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.zd	 ,((float)lstrLocoDetect.zd)/10	);
+   SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.xq	 ,((float)lstrLocoDetect.xq)/10	);
+   SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.xh	 ,((float)lstrLocoDetect.xh)/10	);
+   SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.lw	 ,((float)lstrLocoDetect.lw)/10	);
 }
 
 /*******************************************************************************
@@ -333,7 +368,13 @@ void	RecordDisplay(void)  {
 										,gstrRecDtuData.Rec.RecordId
 				);	
 		SetCtrlVal(gLKJTest_panelHandle,LKJTEST_INFOTEXTBOX	 ,buf);		
-
+		
+		//打印部分检测内容
+		snprintf((char *)buf,sizeof(buf)-2,",  电源:%3.2f"
+										,(float)gstrRecDtuData.Rec.Vol.vcc/10
+				);	
+		SetCtrlVal(gLKJTest_panelHandle,LKJTEST_INFOTEXTBOX	 ,buf);	
+		
 		//打印行结束 
 		snprintf((char *)buf,sizeof(buf)-2," \r\n" );	
 		
@@ -358,16 +399,18 @@ void	SetDetectReadCode(void)
 	u32	len;
 	static	u32	time;
 	
-	if(gstrSendDtuData.recenableflg == 1){					// 应答数据记录，不查询其他数据
-		if(l_eqiupmentcode != CMD_REC_START){
-			l_eqiupmentcode	=	0;
-			lstestcode		=   0;
+	if(gstrSendDtuData.recenableflg == 1){						// 应答数据记录，不查询其他数据
+		if(l_eqiupmentcode != CMD_REC_START  ){
+			if(l_eqiupmentcode != CMD_RECORD_GET){
+				l_eqiupmentcode	=	0;
+				lstestcode		=   0;
+			}
 		}
 		return;
 	}
 	
 	if(time <= GetAnsySysTime()){
-		if(time + 200 > GetAnsySysTime()  ) {				// 周期发送，控制发送频率
+		if(time + 200 > GetAnsySysTime()  ) {					// 周期发送，控制发送频率
 			return;
 		} 
 	}
@@ -379,14 +422,14 @@ void	SetDetectReadCode(void)
 
 		if(l_DetectGetNode == 4){								// 取LKJ工况信号
 			len = sizeof(strLocoDetect);	
-			gstrSendDtuData.paraaddr =  ADDR_LOCO_DETECT;			// 读指定地址
-			gstrSendDtuData.paralen  =  (u8)len;					// 读指定数据
+			gstrSendDtuData.paraaddr =  ADDR_LOCO_DETECT;		// 读指定地址
+			gstrSendDtuData.paralen  =  (u8)len;				// 读指定数据
 			gstrSendDtuData.node     =  l_DetectGetNode;
 
 		}else if(l_DetectGetNode < 4){ 	// 取速度信号
 			len = sizeof(strSpeedDetect);
-			gstrSendDtuData.paraaddr =  ADDR_SPEED_DETECT;			// 读指定地址
-			gstrSendDtuData.paralen  =  (u8)len;					// 读指定数据
+			gstrSendDtuData.paraaddr =  ADDR_SPEED_DETECT;		// 读指定地址
+			gstrSendDtuData.paralen  =  (u8)len;				// 读指定数据
 			gstrSendDtuData.node     =  l_DetectGetNode;
 
 			if(l_DetectGetNode == 0)
@@ -441,4 +484,36 @@ void	GetDetectInfo(void)
 			sCtrl.PC.ConnCtrl.DataErrFlg  	=   0;
 		}
 	}
+}
+
+int CVICALLBACK ResetSysCallback (int panel, int control, int event,
+								  void *callbackData, int eventData1, int eventData2)
+{
+	switch (event)
+	{
+		case EVENT_COMMIT:
+			l_eqiupmentcode = CMD_SYS_RST;					// 装置重启
+			break;
+	}
+	return 0;
+}
+
+int CVICALLBACK SpecialRecordCallback (int panel, int control, int event,
+									   void *callbackData, int eventData1, int eventData2)
+{
+	switch (event)
+	{
+		case EVENT_COMMIT:
+			
+			gstrSendDtuData.recenableflg = 1;				// 允许数据应答
+			
+			GetCtrlVal(panel,LKJTEST_RECORDNUM  ,&gstrSendDtuData.recordnum);  // 取读取记录号
+			
+			lspecialrecord = 12;							// 3s后，恢复数据接收
+
+			l_eqiupmentcode = CMD_RECORD_GET;				// 指定数据记录读
+			
+			break;
+	}
+	return 0;
 }

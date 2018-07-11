@@ -39,8 +39,10 @@
 #define  SETP_PANEL_PRO_NUM               24      /* control type: numeric, callback function: (none) */
 #define  SETP_PANEL_SPLITTER              25      /* control type: splitter, callback function: (none) */
 #define  SETP_PANEL_TIMER                 26      /* control type: timer, callback function: SetParaTimerCallback */
-#define  SETP_PANEL_DATEANDTIME           27      /* control type: textMsg, callback function: (none) */
-#define  SETP_PANEL_PARA_BUF              28      /* control type: string, callback function: (none) */
+#define  SETP_PANEL_PARA_BUF              27      /* control type: string, callback function: (none) */
+#define  SETP_PANEL_DECORATION_20         28      /* control type: deco, callback function: (none) */
+#define  SETP_PANEL_DECORATION            29      /* control type: deco, callback function: (none) */
+#define  SETP_PANEL_DATEANDTIME           30      /* control type: textMsg, callback function: (none) */
 
 
      /* Control Arrays: */
