@@ -82,7 +82,7 @@ void LoadCsncIapPanel(void)
 /********************************************************************************************/
 /*打开参数设置面板																	        */
 /********************************************************************************************/
-int CVICALLBACK 	 (int panel, int control, int event,
+int CVICALLBACK 	 OpenIapPanelCallback(int panel, int control, int event,
 								  void *callbackData, int eventData1, int eventData2)
 {
 	switch (event)

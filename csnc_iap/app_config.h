@@ -11,7 +11,7 @@
 //定义csnc设备地址
 #define		ADDR_SET		(0xC2)		//设置设备地址
 #define		ADDR_PC			(0xCA)		//pc机地址
-#define		ADDR_FIX		(0x84)	    //装置地址	
+#define		ADDR_FIX		(0x82)	    //装置地址	
 		
 		
 #ifdef __cplusplus

@@ -1,5 +1,5 @@
 -nologo
--out:f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\app_iap.exe
+-out:f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\IAP程序升级工具.exe
 -arch:x86
 -timestamp
 -loadextmod

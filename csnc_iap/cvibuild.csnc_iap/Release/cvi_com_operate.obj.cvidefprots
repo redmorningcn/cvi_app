@@ -24,7 +24,7 @@ Prototype="void cvi_ClearComRecEndFlg(struct _stcUartContrl_ *sCom);"
 
 [cvi_ReadCom]
 Class="Function"
-Prototype="unsigned char cvi_ReadCom(struct _stcUartContrl_ *sCom, unsigned char *buf, int len);"
+Prototype="unsigned short cvi_ReadCom(struct _stcUartContrl_ *sCom, unsigned char *buf, int len);"
 
 [cvi_StartSendCom]
 Class="Function"
@@ -32,5 +32,5 @@ Prototype="void cvi_StartSendCom(struct _stcUartContrl_ *sCom);"
 
 [cvi_SendCom]
 Class="Function"
-Prototype="unsigned char cvi_SendCom(struct _stcUartContrl_ *sCom, unsigned char *buf, unsigned char len);"
+Prototype="unsigned short cvi_SendCom(struct _stcUartContrl_ *sCom, unsigned char *buf, unsigned short len);"
 

@@ -1,3 +1,4 @@
+#include "mian.h"
 #include "f:\cvi\app\csnc_iap\mian.h"
 
 #include <utility.h>
@@ -26,7 +27,8 @@ stcSysCtrl	sCtrl;
 
 
 int			gmainPanel  = 0;						//全局面板变量
-
+extern	unsigned char g_iaphostaddr;				//
+ 
 
 
 /********************************************************************************************/
@@ -97,6 +99,18 @@ int CVICALLBACK MainTimerCallback (int panel, int control, int event,
 		case EVENT_TIMER_TICK:
 
 			CVI_MainPanelHandle(panel);
+			break;
+	}
+	return 0;
+}
+
+int CVICALLBACK FixChooseCallback (int panel, int control, int event,
+								   void *callbackData, int eventData1, int eventData2)
+{
+	switch (event)
+	{
+		case EVENT_COMMIT:
+			GetCtrlVal(panel,MAINPANEL_FIX,&g_iaphostaddr);
 			break;
 	}
 	return 0;

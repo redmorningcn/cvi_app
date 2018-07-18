@@ -279,7 +279,7 @@ void	SpeedDetectDisplay(void)
 	{
 	   SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].ch1_2phase ,((float)lstrSpeedDetect[i].ch1_2phase)/100		);
 	   SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].vcc_vol    ,((float)lstrSpeedDetect[i].vcc_vol)/100		);
-	   SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].stand_vol  ,((float)lstrSpeedDetect[i].stand_vol)/100		);
+	   SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].stand_vol  ,((float)lstrSpeedDetect[i].stand_vol)/1000		);
 				  
 	   for(j = 0; j < 2;j++  )
 	   {

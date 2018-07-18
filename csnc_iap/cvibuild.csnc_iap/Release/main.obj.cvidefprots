@@ -14,3 +14,7 @@ Prototype="void CVI_MainPanelHandle(int panel);"
 Class="Function"
 Prototype="int MainTimerCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
 
+[FixChooseCallback]
+Class="Function"
+Prototype="int FixChooseCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

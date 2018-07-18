@@ -6,27 +6,30 @@
 		<workingdir>workspacedir</workingdir>
 		<actions></actions></postbuild>
 	<msi GUID="{2C50DEC5-3B40-46CE-8A3C-B49292AF7900}">
-		<general appName="Csnc_iap" outputLocation="f:\cvi\project\CSNC\csnc_iap\cvidistkit.Csnc_iap" relOutputLocation="cvidistkit.Csnc_iap" outputLocationWithVars="f:\cvi\project\CSNC\csnc_iap\cvidistkit.%name" relOutputLocationWithVars="cvidistkit.%name" upgradeBehavior="1" autoIncrement="true" version="1.0.9">
+		<general appName="IAP程序升级工具" outputLocation="f:\cvi\app\csnc_iap\cvidistkit.IAP程序升级工具" relOutputLocation="cvidistkit.IAP程序升级工具" outputLocationWithVars="f:\cvi\app\csnc_iap\cvidistkit.%name" relOutputLocationWithVars="cvidistkit.%name" upgradeBehavior="1" autoIncrement="true" version="1.0.10">
 			<arp company="" companyURL="" supportURL="" contact="" phone="" comments=""/>
 			<summary title="" subject="" keyWords="" comments="" author=""/></general>
 		<userinterface language="Chinese (Simplified)" showPaths="true" showRuntimeOnly="true" readMe="" license="">
-			<dlgstrings welcomeTitle="Csnc_iap" welcomeText=""/></userinterface>
+			<dlgstrings welcomeTitle="IAP程序升级工具" welcomeText=""/></userinterface>
 		<dirs appDirID="101">
-			<installDir name="[Program Files]" dirID="2" parentID="-1" isMSIDir="true" visible="true" unlock="false"/>
+			<installDir name="IAP程序升级工具" dirID="100" parentID="7" isMSIDir="false" visible="true" unlock="false"/>
+			<installDir name="IAP程序升级工具" dirID="101" parentID="2" isMSIDir="false" visible="true" unlock="false"/>
 			<installDir name="[Start&gt;&gt;Programs]" dirID="7" parentID="-1" isMSIDir="true" visible="true" unlock="false"/>
-			<installDir name="Csnc_iap" dirID="100" parentID="7" isMSIDir="false" visible="true" unlock="false"/>
-			<installDir name="Csnc_iap" dirID="101" parentID="2" isMSIDir="false" visible="true" unlock="false"/></dirs>
+			<installDir name="[Program Files]" dirID="2" parentID="-1" isMSIDir="true" visible="true" unlock="false"/></dirs>
 		<files>
-			<simpleFile fileID="0" sourcePath="f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\app_iap.exe" targetDir="101" readonly="false" hidden="false" system="false" regActiveX="false" runAfterInstallStyle="IMMEDIATELY_RESUME_INSTALL" cmdLineArgs="" runAfterInstall="false" uninstCmdLnArgs="" runUninst="false"/>
-			<simpleFile fileID="1" sourcePath="f:\cvi\project\CSNC\csnc_iap\..\opencom\uir\comconfig.uir" relSourcePath="..\opencom\uir\comconfig.uir" relSourceBase="0" targetDir="101" readonly="false" hidden="false" system="false" regActiveX="false" runAfterInstallStyle="IMMEDIATELY_RESUME_INSTALL" cmdLineArgs="" runAfterInstall="false" uninstCmdLnArgs="" runUninst="false"/>
-			<simpleFile fileID="2" sourcePath="f:\cvi\project\CSNC\csnc_iap\mian.uir" relSourcePath="mian.uir" relSourceBase="0" targetDir="101" readonly="false" hidden="false" system="false" regActiveX="false" runAfterInstallStyle="IMMEDIATELY_RESUME_INSTALL" cmdLineArgs="" runAfterInstall="false" uninstCmdLnArgs="" runUninst="false"/>
-			<simpleFile fileID="3" sourcePath="f:\cvi\project\CSNC\csnc_iap\iap\IAP.uir" relSourcePath="iap\IAP.uir" relSourceBase="0" targetDir="101" readonly="false" hidden="false" system="false" regActiveX="false" runAfterInstallStyle="IMMEDIATELY_RESUME_INSTALL" cmdLineArgs="" runAfterInstall="false" uninstCmdLnArgs="" runUninst="false"/></files>
+			<simpleFile fileID="0" sourcePath="f:\cvi\app\csnc_iap\..\opencom\uir\comconfig.uir" relSourcePath="..\opencom\uir\comconfig.uir" relSourceBase="0" targetDir="101" readonly="false" hidden="false" system="false" regActiveX="false" runAfterInstallStyle="IMMEDIATELY_RESUME_INSTALL" cmdLineArgs="" runAfterInstall="false" uninstCmdLnArgs="" runUninst="false"/>
+			<simpleFile fileID="1" sourcePath="f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\IAP程序升级工具.exe" targetDir="101" readonly="false" hidden="false" system="false" regActiveX="false" runAfterInstallStyle="IMMEDIATELY_RESUME_INSTALL" cmdLineArgs="" runAfterInstall="false" uninstCmdLnArgs="" runUninst="false"/>
+			<simpleFile fileID="2" sourcePath="f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\IAP程序升级工具.exe" targetDir="100" readonly="false" hidden="false" system="false" regActiveX="false" runAfterInstallStyle="IMMEDIATELY_RESUME_INSTALL" cmdLineArgs="" runAfterInstall="false" uninstCmdLnArgs="" runUninst="false"/>
+			<simpleFile fileID="3" sourcePath="f:\cvi\app\csnc_iap\mian.uir" relSourcePath="mian.uir" relSourceBase="0" targetDir="101" readonly="false" hidden="false" system="false" regActiveX="false" runAfterInstallStyle="IMMEDIATELY_RESUME_INSTALL" cmdLineArgs="" runAfterInstall="false" uninstCmdLnArgs="" runUninst="false"/>
+			<simpleFile fileID="4" sourcePath="f:\cvi\app\csnc_iap\iap\IAP.uir" relSourcePath="iap\IAP.uir" relSourceBase="0" targetDir="101" readonly="false" hidden="false" system="false" regActiveX="false" runAfterInstallStyle="IMMEDIATELY_RESUME_INSTALL" cmdLineArgs="" runAfterInstall="false" uninstCmdLnArgs="" runUninst="false"/></files>
 		<fileGroups>
+			<projectOutput targetType="0" dirID="100" projectID="0">
+				<fileID>2</fileID></projectOutput>
 			<projectOutput targetType="0" dirID="101" projectID="0">
-				<fileID>0</fileID></projectOutput>
+				<fileID>1</fileID></projectOutput>
 			<projectDependencies dirID="101" projectID="0"/></fileGroups>
 		<shortcuts>
-			<shortcut name="Csnc_iap" targetFileID="0" destDirID="100" cmdLineArgs="" description="" runStyle="NORMAL"/></shortcuts>
+			<shortcut name="IAP程序升级工具" targetFileID="1" destDirID="100" cmdLineArgs="" description="" runStyle="NORMAL"/></shortcuts>
 		<mergemodules/>
 		<products/>
 		<runtimeEngine installToAppDir="false" activeXsup="false" analysis="true" cvirte="true" dotnetsup="true" instrsup="true" lowlevelsup="true" lvrt="true" netvarsup="true" rtutilsup="false">
@@ -97,15 +100,15 @@
 					<productID>{FF35E2A2-9214-4B76-91AE-5567076AAE8C}</productID>
 					<productID>{FF56A0C1-3413-4024-89A6-0FB565B2E78C}</productID></dependencies></product></baselineProducts>
 		<Projects NumProjects="1">
-			<Project000 ProjectID="0" ProjectAbsolutePath="f:\cvi\project\CSNC\csnc_iap\csnc_iap.prj" ProjectRelativePath="csnc_iap.prj"/></Projects>
-		<buildData progressBarRate="3.247601172238637">
+			<Project000 ProjectID="0" ProjectAbsolutePath="f:\cvi\app\csnc_iap\csnc_iap.prj" ProjectRelativePath="csnc_iap.prj"/></Projects>
+		<buildData progressBarRate="2.597287158450283">
 			<progressTimes>
 				<Begin>0.000000000000000</Begin>
-				<ProductsAdded>0.125749398437479</ProductsAdded>
-				<DPConfigured>0.588286328124927</DPConfigured>
-				<DPMergeModulesAdded>1.076667845703145</DPMergeModulesAdded>
-				<DPClosed>2.275396097656214</DPClosed>
-				<DistributionsCopied>2.450118882812534</DistributionsCopied>
-				<End>30.791958339843802</End></progressTimes></buildData>
+				<ProductsAdded>0.218326699218740</ProductsAdded>
+				<DPConfigured>0.949594164062463</DPConfigured>
+				<DPMergeModulesAdded>1.543783922851572</DPMergeModulesAdded>
+				<DPClosed>2.843148548828107</DPClosed>
+				<DistributionsCopied>3.005555441406267</DistributionsCopied>
+				<End>38.501711169921904</End></progressTimes></buildData>
 	</msi>
 </distribution>

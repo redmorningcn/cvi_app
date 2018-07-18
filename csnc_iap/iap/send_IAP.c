@@ -28,6 +28,8 @@ stcIAPPara	gsIapPara =
 	0
 };
 
+unsigned char g_iaphostaddr = HOST_ADDR;
+
 /*******************************************************************************************
 数据发送： 	SendCsnrIapDataDeal
 将数据按照协议格式发送。
@@ -38,7 +40,7 @@ void	SendCsnrIapDataDeal(char *buf,int len)
 	sCtrl.PC.ConnCtrl.sendlen 		= len;					//发送数据区长度
 
 	sCtrl.PC.ConnCtrl.sourceaddr	= 0xcA;					//源地址
-	sCtrl.PC.ConnCtrl.DestAddr		= HOST_ADDR; 				//目的地址
+	sCtrl.PC.ConnCtrl.DestAddr		= g_iaphostaddr; 			//目的地址
 	sCtrl.PC.ConnCtrl.SendFramNum 	= 0x00; 				//序号
 	sCtrl.PC.ConnCtrl.FrameCode		= IAP_FRAME_CODE;		//帧命令字	
 

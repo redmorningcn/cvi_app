@@ -1,3 +1,7 @@
+[InitCommContrlStatus]
+Class="Function"
+Prototype="void InitCommContrlStatus(struct _stcThreadCommCtrl_ *T_Ctrl);"
+
 [cvi_InitBspComm]
 Class="Function"
 Prototype="int cvi_InitBspComm(struct _stcThreadCommCtrl_ *T_Ctrl);"

@@ -1,14 +1,22 @@
 
-CallCC.bat 4 "f:\cvi\project\CSNC\csnc_debug\cvi_bspComm.c" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_bspComm.obj" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_bspComm.obj.cvidefprots" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_bspComm.obj.out" 
+CallCC.bat 1 "f:\cvi\app\c_comm\crccheck\CrcCheck.c" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\CrcCheck.obj" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\CrcCheck.obj.cvidefprots" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\CrcCheck.obj.out" 
 
-CallCC.bat 5 "f:\cvi\project\CSNC\opencom\source\cvi_com1.c" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_com1.obj" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_com1.obj.cvidefprots" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_com1.obj.out" 
+CallCC.bat 2 "f:\cvi\app\c_comm\csnr_package_deal\csnr_package_deal.c" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\csnr_package_deal.obj" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\csnr_package_deal.obj.cvidefprots" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\csnr_package_deal.obj.out" 
 
-CallCC.bat 6 "f:\cvi\project\CSNC\opencom\source\cvi_com_operate.c" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_com_operate.obj" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_com_operate.obj.cvidefprots" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_com_operate.obj.out" 
+CallCC.bat 3 "f:\cvi\app\ansytime\cvi_ansytimer.c" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\cvi_ansytimer.obj" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\cvi_ansytimer.obj.cvidefprots" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\cvi_ansytimer.obj.out" 
 
-CallCC.bat 8 "f:\cvi\project\CSNC\csnc_iap\openfile\cvi_file.c" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_file.obj" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_file.obj.cvidefprots" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\cvi_file.obj.out" 
+CallCC.bat 4 "f:\cvi\app\csnc_debug\cvi_bspComm.c" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\cvi_bspComm.obj" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\cvi_bspComm.obj.cvidefprots" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\cvi_bspComm.obj.out" 
 
-CallCC.bat 10 "f:\cvi\project\CSNC\csnc_iap\iap\send_IAP.c" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\send_IAP.obj" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\send_IAP.obj.cvidefprots" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\send_IAP.obj.out" 
+CallCC.bat 5 "f:\cvi\app\opencom\source\cvi_com1.c" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\cvi_com1.obj" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\cvi_com1.obj.cvidefprots" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\cvi_com1.obj.out" 
 
-CallRC.bat "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\resources.in.rc" "f:\cvi\project\CSNC\csnc_iap\cvibuild.csnc_iap\Release\resources.res"
+CallCC.bat 6 "f:\cvi\app\opencom\source\cvi_com_operate.c" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\cvi_com_operate.obj" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\cvi_com_operate.obj.cvidefprots" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\cvi_com_operate.obj.out" 
+
+CallCC.bat 8 "f:\cvi\app\csnc_iap\openfile\cvi_file.c" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\cvi_file.obj" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\cvi_file.obj.cvidefprots" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\cvi_file.obj.out" 
+
+CallCC.bat 9 "f:\cvi\app\csnc_iap\main.c" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\main.obj" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\main.obj.cvidefprots" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\main.obj.out" 
+
+CallCC.bat 10 "f:\cvi\app\csnc_iap\iap\send_IAP.c" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\send_IAP.obj" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\send_IAP.obj.cvidefprots" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\send_IAP.obj.out" 
+
+CallRC.bat "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\resources.in.rc" "f:\cvi\app\csnc_iap\cvibuild.csnc_iap\Release\resources.res"
 
 CallLink.bat -cmd:link_options.txt
