@@ -13,10 +13,10 @@ Number of Projects = 1
 Active Project = 1
 Project 0001 = "NC210.prj"
 Drag Bar Left = 283
-Window Top = 68
-Window Left = 126
-Window Bottom = 724
-Window Right = 1372
+Window Top = 245
+Window Left = 90
+Window Bottom = 901
+Window Right = 1336
 Maximized = True
 Maximized Children = True
 Max32 Number Of Errors = 20
@@ -30,7 +30,7 @@ Save Changes Before Compiling = "Always"
 Hide Windows = False
 Break At First Statement = False
 Sort Type = "File Name"
-Number of Opened Files = 45
+Number of Opened Files = 21
 Window Confinement Region Enabled = True
 MainColumnWidth = 266
 FileDateColumnWidth = 70
@@ -40,7 +40,7 @@ FileSizeColumnWidth = 70
 Version = 1700
 Don't Update DistKit = False
 Platform Code = 4
-Build Configuration = "Release"
+Build Configuration = "Debug"
 Warn User If Debugging Release = 1
 Batch Build Release = False
 Batch Build Debug = False
@@ -52,548 +52,391 @@ Disk Date = 3573565200
 In Projects = "1,"
 
 [File 0002]
+Path = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTest.uir"
+File Type = "User Interface Resource"
+Disk Date = 3615517515
+In Projects = "1,"
+Window Top = 126
+Window Left = 58
+Window Height = 299
+Window Width = 541
+Window Z-Order = 5
+
+[File 0003]
+Path = "/f/cvi/app/NC210/setpara/cvi_setpara.uir"
+File Type = "User Interface Resource"
+Disk Date = 3615516757
+In Projects = "1,"
+Window Top = 126
+Window Left = 58
+Window Height = 299
+Window Width = 541
+Window Z-Order = 13
+
+[File 0004]
+Path = "/f/cvi/app/NC210/main.uir"
+File Type = "User Interface Resource"
+Disk Date = 3615517617
+In Projects = "1,"
+Window Top = 33
+Window Left = 10
+Window Height = 299
+Window Width = 541
+Window Z-Order = 20
+
+[File 0005]
 Path = "/f/cvi/app/ansytime/cvi_ansytimer.c"
 File Type = "CSource"
 Disk Date = 3613615420
 In Projects = "1,"
-Window Top = 33
-Window Left = 10
-Window Z-Order = 10
-Source Window State = "1,65,65,65,59,66,66,0,0,124,0,0,0,0,0,29,64,0,69,16,371,805,1,0,"
-
-[File 0003]
-Path = "/f/cvi/app/NC210/locoCali/cvi_LocoCali.c"
-File Type = "CSource"
-Disk Date = 3613604489
-In Projects = "1,"
-Window Top = 33
-Window Left = 10
-Window Z-Order = 19
-Source Window State = "1,876,896,896,0,2,2,0,0,106,0,0,0,0,0,29,866,0,888,11,371,695,1,0,"
-
-[File 0004]
-Path = "/f/cvi/app/cvi_comm/cvi_comm.c"
-File Type = "CSource"
-Disk Date = 3606953117
-In Projects = "1,"
-Window Top = 188
-Window Left = 90
-Window Z-Order = 38
-Source Window State = "1,54,54,54,4,12,12,0,3,133,0,0,0,0,0,40,27,0,54,4,511,855,1,0,"
-
-[File 0005]
-Path = "/f/cvi/app/cvi_comm/cvi_comm.h"
-File Type = "Include"
-Disk Date = 3596700890
-In Projects = "1,"
-Window Top = 33
-Window Left = 10
-Window Z-Order = 30
-Source Window State = "1,50,51,51,0,11,11,0,0,133,0,0,0,0,0,34,18,0,44,11,431,855,1,0,"
+Window Top = 64
+Window Left = 26
+Window Z-Order = 21
+Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,23,162,0,182,0,299,541,1,0,"
 
 [File 0006]
-Path = "/c/Program Files (x86)/National Instruments/CVI2017/include/utility.h"
-File Type = "Include"
-Disk Date = 3573565200
-In Projects = ""
-Window Top = 33
-Window Left = 10
-Window Z-Order = 45
-Source Window State = "1,698,698,698,16,45,45,0,3,133,0,0,0,0,0,32,689,0,698,16,411,855,1,0,"
-
-[File 0007]
-Path = "/c/Program Files (x86)/National Instruments/CVI2017/include/formatio.h"
-File Type = "Include"
-Disk Date = 3573565200
-In Projects = ""
-Window Top = 33
-Window Left = 10
-Window Z-Order = 44
-Source Window State = "1,63,63,63,8,16,16,0,0,139,0,0,0,0,0,42,6,0,19,42,531,895,1,0,"
-
-[File 0008]
 Path = "/f/cvi/app/csnc_debug/cvi_bspComm.c"
 File Type = "CSource"
 Disk Date = 3613021239
 In Projects = "1,"
-Window Top = 64
-Window Left = 26
-Window Z-Order = 11
-Source Window State = "1,110,110,110,18,20,20,0,0,133,0,0,0,0,0,42,88,0,112,4,531,855,1,0,"
+Window Top = 95
+Window Left = 42
+Window Z-Order = 8
+Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,23,40,0,51,12,299,541,1,0,"
 
-[File 0009]
+[File 0007]
 Path = "/f/cvi/app/opencom/source/cvi_com_operate.c"
 File Type = "CSource"
 Disk Date = 3613617748
 In Projects = "1,"
+Window Top = 64
+Window Left = 26
+Window Z-Order = 2
+Source Window State = "1,49,49,49,116,117,116,0,3,80,0,0,0,0,0,23,31,0,49,117,299,541,1,0,"
+
+[File 0008]
+Path = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTest.c"
+File Type = "CSource"
+Disk Date = 3615524785
+In Projects = "1,"
 Window Top = 33
 Window Left = 10
 Window Z-Order = 4
-Source Window State = "1,181,182,181,0,0,0,0,0,99,0,110,0,0,0,30,72,0,88,122,391,655,1,21,"
+Source Window State = "1,551,552,551,0,0,0,0,0,80,0,0,0,0,0,24,516,0,538,96,311,541,1,0,"
+Breakpoint 0001 = "421,0,enabled,"
+Tracepoint 0001 = "0,0,421,1,"
 
-[File 0010]
-Path = "/f/cvi/app/NC210/setpara/cvi_setpara.c"
+[File 0009]
+Path = "/f/cvi/app/NC210/setpara/setpara.c"
 File Type = "CSource"
-Disk Date = 3614052120
+Disk Date = 3615496050
 In Projects = "1,"
 Window Top = 95
 Window Left = 42
-Window Z-Order = 23
-Source Window State = "1,65,65,65,12,32,32,0,3,101,0,0,0,0,0,34,149,0,65,12,431,665,1,0,"
+Window Z-Order = 19
+Source Window State = "1,273,273,273,31,41,41,0,3,80,0,0,0,0,0,23,247,0,273,31,299,541,1,0,"
 
-[File 0011]
-Path = "/f/cvi/app/NC210/setpara/cvi_setpara.uir"
-File Type = "User Interface Resource"
-Disk Date = 3614043952
-In Projects = "1,"
-Window Top = 64
-Window Left = 26
-Window Height = 431
-Window Width = 855
-Window Z-Order = 15
-
-[File 0012]
-Path = "/f/cvi/app/NC210/setpara/setpara.c"
-File Type = "CSource"
-Disk Date = 3614149090
-In Projects = "1,"
-Window Top = 126
-Window Left = 58
-Window Z-Order = 8
-Source Window State = "1,123,123,123,81,82,81,0,0,133,0,0,0,0,0,34,209,0,138,78,431,855,1,0,"
-
-[File 0013]
-Path = "/f/cvi/app/NC210/main.c"
-File Type = "CSource"
-Disk Date = 3613017593
-In Projects = "1,"
-Window Top = 157
-Window Left = 74
-Window Z-Order = 13
-Source Window State = "1,75,75,75,58,69,69,0,0,133,0,0,0,0,0,22,19,0,33,17,291,855,1,0,"
-
-[File 0014]
+[File 0010]
 Path = "/f/cvi/app/opencom/uir/comconfig.uir"
 File Type = "User Interface Resource"
 Disk Date = 3614638848
 In Projects = "1,"
-Window Top = 33
-Window Left = 10
-Window Height = 291
-Window Width = 665
-Window Z-Order = 17
 
-[File 0015]
-Path = "/f/cvi/app/csnc_debug/cvi_bspComm.h"
-File Type = "Include"
-Disk Date = 3613021215
-In Projects = "1,"
-Window Top = 33
-Window Left = 10
-Window Z-Order = 27
-Source Window State = "1,32,32,32,7,18,18,0,3,133,0,0,0,0,0,34,22,0,32,7,431,855,1,0,"
-
-[File 0016]
-Path = "/f/cvi/app/NC210/setpara/setpara.h"
-File Type = "Include"
-Disk Date = 3613352314
-In Projects = "1,"
-Window Top = 157
-Window Left = 74
-Window Z-Order = 14
-Source Window State = "1,46,46,46,12,26,26,0,3,133,0,0,0,0,0,34,101,0,46,12,431,855,1,0,"
-
-[File 0017]
-Path = "/f/cvi/app/NC210/app_config.h"
-File Type = "Include"
-Disk Date = 3612648529
-In Projects = ""
-Window Top = 126
-Window Left = 58
-Window Z-Order = 42
-Source Window State = "1,24,24,24,8,17,17,0,3,139,0,0,0,0,0,32,14,0,24,8,411,895,1,0,"
-
-[File 0018]
-Path = "/f/cvi/app/NC210/main.uir"
-File Type = "User Interface Resource"
-Disk Date = 3614142383
-In Projects = "1,"
-Window Top = 33
-Window Left = 10
-Window Height = 511
-Window Width = 895
-Window Z-Order = 6
-
-[File 0019]
-Path = "/f/cvi/app/NC210/speedCali/cvi_SpeedCali.uir"
-File Type = "User Interface Resource"
-Disk Date = 3614038735
-In Projects = "1,"
-Window Top = 64
-Window Left = 26
-Window Height = 511
-Window Width = 895
-Window Z-Order = 16
-
-[File 0020]
-Path = "/f/cvi/app/NC210/speedCali/cvi_SpeedCali.c"
-File Type = "CSource"
-Disk Date = 3613619790
-In Projects = "1,"
-Window Top = 95
-Window Left = 42
-Window Z-Order = 18
-Source Window State = "1,465,465,465,16,37,37,0,3,139,0,0,0,0,0,32,456,0,465,16,411,895,1,0,"
-
-[File 0021]
-Path = "/f/cvi/app/NC210/speedCali/cvi_SpeedCali.h"
-File Type = "Include"
-Disk Date = 3614038735
-In Projects = "1,"
-Window Top = 219
-Window Left = 106
-Window Z-Order = 33
-Source Window State = "1,124,124,124,9,33,33,0,3,139,0,0,0,0,0,32,115,0,124,9,411,895,1,0,"
-
-[File 0022]
-Path = "/f/cvi/app/NC210/locoCali/cvi_LocoCali.h"
-File Type = "Include"
-Disk Date = 3614038736
-In Projects = "1,"
-Window Top = 281
-Window Left = 138
-Window Z-Order = 31
-Source Window State = "1,107,107,107,9,31,31,0,3,139,0,0,0,0,0,40,0,0,107,9,511,895,1,0,"
-
-[File 0023]
-Path = "/f/cvi/app/NC210/locoCali/cvi_LocoCaliType.h"
-File Type = "Include"
-Disk Date = 3613367058
-In Projects = "1,"
-Window Top = 250
-Window Left = 122
-Window Z-Order = 41
-Source Window State = "1,15,15,15,12,31,31,0,3,139,0,0,0,0,0,40,3,0,15,12,511,895,1,0,"
-
-[File 0024]
+[File 0011]
 Path = "/f/cvi/app/NC210/locoCali/cvi_LocoCali.uir"
 File Type = "User Interface Resource"
 Disk Date = 3614038736
 In Projects = "1,"
-Window Top = 157
-Window Left = 74
-Window Height = 331
-Window Width = 895
-Window Z-Order = 9
-
-[File 0025]
-Path = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTest.uir"
-File Type = "User Interface Resource"
-Disk Date = 3614230177
-In Projects = "1,"
-Window Top = 95
-Window Left = 42
-Window Height = 511
-Window Width = 895
-Window Z-Order = 2
-
-[File 0026]
-Path = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTest.c"
-File Type = "CSource"
-Disk Date = 3614752454
-In Projects = "1,"
-Window Top = 126
-Window Left = 58
-Window Z-Order = 1
-Source Window State = "1,511,511,511,30,31,31,0,0,160,0,0,0,0,0,34,256,0,281,111,511,895,1,0,"
-
-[File 0027]
-Path = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTest.h"
-File Type = "Include"
-Disk Date = 3614230177
-In Projects = "1,"
 Window Top = 64
 Window Left = 26
+Window Height = 275
+Window Width = 541
 Window Z-Order = 3
-Source Window State = "1,27,27,27,9,26,26,0,3,139,0,0,0,0,0,40,66,0,27,9,511,895,1,0,"
 
-[File 0028]
-Path = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTestType.h"
-File Type = "Include"
-Disk Date = 3614139145
+[File 0012]
+Path = "/f/cvi/app/NC210/speedCali/cvi_SpeedCali.uir"
+File Type = "User Interface Resource"
+Disk Date = 3615529199
 In Projects = "1,"
-Window Top = 33
-Window Left = 10
-Window Z-Order = 22
-Source Window State = "1,14,14,14,12,28,28,0,0,139,0,0,0,0,0,40,27,0,60,10,511,895,1,0,"
-
-[File 0029]
-Path = "/f/cvi/app/NC210/speedCali/cvi_SpeedCaliType.h"
-File Type = "Include"
-Disk Date = 3613379623
-In Projects = "1,"
-Window Top = 188
-Window Left = 90
-Window Z-Order = 34
-Source Window State = "1,19,19,19,12,26,26,0,3,139,0,0,0,0,0,32,0,0,19,12,411,895,1,0,"
-
-[File 0030]
-Path = "/f/cvi/app/NC210/app_type.h"
-File Type = "Include"
-Disk Date = 3612774544
-In Projects = ""
-Window Top = 95
-Window Left = 42
-Window Z-Order = 36
-Source Window State = "1,64,64,64,24,26,26,0,3,139,0,0,0,0,0,32,55,0,64,24,411,895,1,0,"
-
-[File 0031]
-Path = "/f/cvi/app/NC210/RecDataTypeDef.h"
-File Type = "Include"
-Disk Date = 3612823117
-In Projects = ""
-Window Top = 126
-Window Left = 58
-Window Z-Order = 43
-Source Window State = "1,119,119,119,2,12,12,0,0,139,0,0,0,0,0,32,94,0,110,55,411,895,1,0,"
-
-[File 0032]
-Path = "/f/cvi/app/opencom/source/cvi_com1.c"
-File Type = "CSource"
-Disk Date = 3613689231
-In Projects = "1,"
-Window Top = 126
-Window Left = 58
-Window Z-Order = 12
-Source Window State = "1,293,293,293,16,32,32,0,3,133,0,0,0,0,0,40,277,0,293,16,511,855,1,0,"
-Breakpoint 0001 = "90,0,enabled,"
-Tracepoint 0001 = "0,0,91,1,"
-
-[File 0033]
-Path = "/f/cvi/app/c_comm/csnr_package_deal/csnr_package_deal.c"
-File Type = "CSource"
-Disk Date = 3612777622
-In Projects = "1,"
-Window Top = 250
-Window Left = 122
-Window Z-Order = 39
-Source Window State = "1,22,22,22,125,126,125,0,0,133,0,0,0,0,0,40,91,0,78,16,511,855,1,0,"
-
-[File 0034]
-Path = "/f/cvi/app/ansytime/cvi_ansytimer.h"
-File Type = "Include"
-Disk Date = 3612777068
-In Projects = "1,"
-Window Top = 95
-Window Left = 42
-Window Z-Order = 26
-Source Window State = "1,0,0,0,0,0,0,0,0,133,0,0,0,0,0,32,35,0,66,27,411,855,1,0,"
-
-[File 0035]
-Path = "/f/cvi/app/opencom/source/cvi_com_operate.h"
-File Type = "Include"
-Disk Date = 3612778359
-In Projects = "1,"
-Window Top = 31
-Window Z-Order = 29
-Source Window State = "1,72,72,72,20,32,32,0,0,90,0,0,0,0,0,31,22,0,29,16,400,600,1,0,"
-
-[File 0036]
-Path = "/c/Program Files (x86)/National Instruments/CVI2017/include/rs232.h"
-File Type = "Include"
-Disk Date = 3573565200
-In Projects = ""
 Window Top = 64
 Window Left = 26
-Window Z-Order = 40
-Source Window State = "1,57,57,57,12,18,18,0,3,139,0,0,0,0,0,35,47,0,57,12,451,895,1,0,"
+Window Height = 275
+Window Width = 541
+Window Z-Order = 1
 
-[File 0037]
-Path = "/f/cvi/app/NC210/setpara/cvi_setpara.h"
-File Type = "Include"
-Disk Date = 3614039138
-In Projects = "1,"
-Window Top = 188
-Window Left = 90
-Window Z-Order = 32
-Source Window State = "1,42,42,42,9,28,28,0,3,133,0,0,0,0,0,34,8,0,42,9,431,855,1,0,"
-
-[File 0038]
-Path = "/c/Program Files (x86)/National Instruments/CVI2017/include/ansi/stdio.h"
-File Type = "Include"
-Disk Date = 3573565200
-In Projects = ""
-Window Top = 33
-Window Left = 10
-Window Z-Order = 37
-Source Window State = "1,0,0,0,0,0,0,0,0,139,0,0,0,0,0,35,195,0,205,30,451,895,1,0,"
-
-[File 0039]
-Path = "/f/cvi/app/c_comm/crccheck/CrcCheck.c"
-File Type = "CSource"
-Disk Date = 3604032278
-In Projects = "1,"
-Window Top = 219
-Window Left = 106
-Window Z-Order = 24
-Source Window State = "1,56,56,56,21,25,25,0,0,133,0,0,0,0,0,40,107,0,120,10,511,855,1,0,"
-
-[File 0040]
-Path = "/f/cvi/app/opencom/uir/comconfig.h"
-File Type = "Include"
-Disk Date = 3614638848
-In Projects = "1,"
-Window Top = 281
-Window Left = 138
-Window Z-Order = 25
-Source Window State = "1,0,0,0,0,0,0,0,0,133,0,0,0,0,0,40,0,0,13,28,511,855,1,0,"
-
-[File 0041]
-Path = "/f/cvi/app/opencom/source/cvi_com1.h"
-File Type = "Include"
-Disk Date = 3607035615
-In Projects = "1,"
-Window Top = 33
-Window Left = 10
-Window Z-Order = 28
-Source Window State = "1,28,29,28,0,0,0,0,0,133,0,0,0,0,0,42,21,0,39,15,531,855,1,0,"
-
-[File 0042]
-Path = "/f/cvi/app/config/cvi_config.h"
-File Type = "Include"
-Disk Date = 3612336278
-In Projects = "1,"
-Window Top = 219
-Window Left = 106
-Window Z-Order = 21
-Source Window State = "1,16,16,16,24,26,26,0,0,133,0,0,0,0,0,34,0,0,16,14,431,855,1,0,"
-
-[File 0043]
-Path = "/f/cvi/app/c_comm/includes.h"
-File Type = "Include"
-Disk Date = 3612308685
-In Projects = "1,"
-Window Top = 33
-Window Left = 10
-Window Z-Order = 35
-Source Window State = "1,0,0,0,0,0,0,0,0,133,0,0,0,0,0,34,34,0,0,0,431,855,1,0,"
-
-[File 0044]
+[File 0013]
 Path = "/f/cvi/app/csnc_iap/iap/IAP.uir"
 File Type = "User Interface Resource"
 Disk Date = 3611897126
 In Projects = "1,"
-Window Top = 250
-Window Left = 122
-Window Height = 323
-Window Width = 541
-Window Z-Order = 7
 
-[File 0045]
-Path = "/f/cvi/app/csnc_iap/iap/send_IAP.c"
+[File 0014]
+Path = "/f/cvi/app/c_comm/crccheck/CrcCheck.c"
 File Type = "CSource"
-Disk Date = 3614637435
+Disk Date = 3604032278
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0015]
+Path = "/f/cvi/app/c_comm/csnr_package_deal/csnr_package_deal.c"
+File Type = "CSource"
+Disk Date = 3612777622
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0016]
+Path = "/f/cvi/app/opencom/source/cvi_com1.c"
+File Type = "CSource"
+Disk Date = 3613689231
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
-Window Z-Order = 20
-Source Window State = "1,14,15,14,0,0,0,0,0,80,0,0,0,0,0,25,0,0,19,58,323,541,1,0,"
+Window Z-Order = 9
+Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,21,0,0,0,0,275,541,1,0,"
 
-[File 0046]
+[File 0017]
+Path = "/f/cvi/app/cvi_comm/cvi_comm.c"
+File Type = "CSource"
+Disk Date = 3606953117
+In Projects = "1,"
+Window Top = 157
+Window Left = 74
+Window Z-Order = 10
+Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,21,0,0,0,0,275,541,1,0,"
+
+[File 0018]
 Path = "/f/cvi/app/csnc_iap/openfile/cvi_file.c"
 File Type = "CSource"
 Disk Date = 3614637435
 In Projects = "1,"
-Window Top = 64
-Window Left = 26
-Window Z-Order = 5
-Source Window State = "1,84,84,84,16,36,36,0,0,80,0,0,0,0,0,25,66,0,79,52,323,541,1,0,"
+Window Top = 126
+Window Left = 58
+Window Z-Order = 12
+Source Window State = "1,112,113,112,0,0,0,0,3,80,0,0,0,0,0,21,96,0,112,35,275,541,1,0,"
 
-[File 0047]
+[File 0019]
+Path = "/f/cvi/app/NC210/locoCali/cvi_LocoCali.c"
+File Type = "CSource"
+Disk Date = 3615524446
+In Projects = "1,"
+Window Top = 95
+Window Left = 42
+Window Z-Order = 6
+Source Window State = "1,451,451,451,32,43,43,0,0,80,0,0,0,0,0,21,427,0,453,57,275,541,1,0,"
+
+[File 0020]
+Path = "/f/cvi/app/NC210/speedCali/cvi_SpeedCali.c"
+File Type = "CSource"
+Disk Date = 3614754933
+In Projects = "1,"
+Window Top = 126
+Window Left = 58
+Window Z-Order = 17
+Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,21,0,0,0,0,275,541,1,0,"
+
+[File 0021]
+Path = "/f/cvi/app/csnc_iap/iap/send_IAP.c"
+File Type = "CSource"
+Disk Date = 3614637435
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0022]
+Path = "/f/cvi/app/NC210/setpara/cvi_setpara.c"
+File Type = "CSource"
+Disk Date = 3615523933
+In Projects = "1,"
+Window Top = 33
+Window Left = 10
+Window Z-Order = 7
+Source Window State = "1,292,293,292,0,0,0,0,0,80,0,0,0,0,0,21,268,0,291,80,275,541,1,0,"
+
+[File 0023]
+Path = "/f/cvi/app/NC210/main.c"
+File Type = "CSource"
+Disk Date = 3613017593
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0024]
+Path = "/f/cvi/app/opencom/uir/comconfig.h"
+File Type = "Include"
+Disk Date = 3614638848
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0025]
 Path = "/f/cvi/app/c_comm/crccheck/CrcCheck.h"
 File Type = "Include"
 Disk Date = 3604032276
 In Projects = "1,"
-Window Top = 64
-Window Left = 26
-Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,411,855,1,0,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
-[File 0048]
+[File 0026]
 Path = "/f/cvi/app/c_comm/csnr_package_deal/csnr_package_deal.h"
 File Type = "Include"
 Disk Date = 3612778603
 In Projects = "1,"
-Window Top = 64
-Window Left = 26
-Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,291,855,1,0,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
-[File 0049]
+[File 0027]
+Path = "/f/cvi/app/ansytime/cvi_ansytimer.h"
+File Type = "Include"
+Disk Date = 3612777068
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0028]
+Path = "/f/cvi/app/csnc_debug/cvi_bspComm.h"
+File Type = "Include"
+Disk Date = 3613021215
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0029]
+Path = "/f/cvi/app/opencom/source/cvi_com1.h"
+File Type = "Include"
+Disk Date = 3607035615
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0030]
+Path = "/f/cvi/app/opencom/source/cvi_com_operate.h"
+File Type = "Include"
+Disk Date = 3612778359
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0031]
+Path = "/f/cvi/app/cvi_comm/cvi_comm.h"
+File Type = "Include"
+Disk Date = 3596700890
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0032]
+Path = "/f/cvi/app/config/cvi_config.h"
+File Type = "Include"
+Disk Date = 3612336278
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0033]
 Path = "/f/cvi/app/csnc_iap/openfile/cvi_file.h"
 File Type = "Include"
 Disk Date = 3607040924
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
-[File 0050]
+[File 0034]
+Path = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTest.h"
+File Type = "Include"
+Disk Date = 3615497232
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0035]
+Path = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTestType.h"
+File Type = "Include"
+Disk Date = 3614139145
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0036]
+Path = "/f/cvi/app/NC210/locoCali/cvi_LocoCali.h"
+File Type = "Include"
+Disk Date = 3614038736
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0037]
+Path = "/f/cvi/app/NC210/locoCali/cvi_LocoCaliType.h"
+File Type = "Include"
+Disk Date = 3613367058
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0038]
+Path = "/f/cvi/app/NC210/setpara/cvi_setpara.h"
+File Type = "Include"
+Disk Date = 3614039138
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0039]
+Path = "/f/cvi/app/NC210/speedCali/cvi_SpeedCali.h"
+File Type = "Include"
+Disk Date = 3615529124
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0040]
+Path = "/f/cvi/app/NC210/speedCali/cvi_SpeedCaliType.h"
+File Type = "Include"
+Disk Date = 3613379623
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0041]
 Path = "/f/cvi/app/csnc_iap/iap/IAP.h"
 File Type = "Include"
 Disk Date = 3590568795
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
-[File 0051]
+[File 0042]
+Path = "/f/cvi/app/c_comm/includes.h"
+File Type = "Include"
+Disk Date = 3612308685
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0043]
 Path = "/f/cvi/app/csnc_iap/iap/send_IAP.h"
 File Type = "Include"
 Disk Date = 3612427129
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
+[File 0044]
+Path = "/f/cvi/app/NC210/setpara/setpara.h"
+File Type = "Include"
+Disk Date = 3613352314
+In Projects = "1,"
+Window Top = 64
+Window Left = 26
+Window Z-Order = 11
+Source Window State = "1,37,38,37,0,0,0,0,3,80,0,0,0,0,0,21,113,0,37,58,275,541,1,0,"
+
+[File 0045]
+Path = "/f/cvi/app/NC210/app_type.h"
+File Type = "Include"
+Disk Date = 3612774544
+In Projects = ""
+Window Top = 95
+Window Left = 42
+Window Z-Order = 18
+Source Window State = "1,65,65,65,4,13,13,0,3,80,0,0,0,0,0,21,51,0,65,4,275,541,1,0,"
+
 [Tab Order]
-Tab 0001 = "/c/Program Files (x86)/National Instruments/CVI2017/include/utility.h"
-Tab 0002 = "/c/Program Files (x86)/National Instruments/CVI2017/include/formatio.h"
-Tab 0003 = "/f/cvi/app/cvi_comm/cvi_comm.h"
-Tab 0004 = "/f/cvi/app/cvi_comm/cvi_comm.c"
+Tab 0001 = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTest.c"
+Tab 0002 = "/f/cvi/app/ansytime/cvi_ansytimer.c"
+Tab 0003 = "/f/cvi/app/NC210/setpara/setpara.c"
+Tab 0004 = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTest.uir"
 Tab 0005 = "/f/cvi/app/opencom/source/cvi_com_operate.c"
 Tab 0006 = "/f/cvi/app/csnc_debug/cvi_bspComm.c"
-Tab 0007 = "/f/cvi/app/NC210/main.c"
+Tab 0007 = "/f/cvi/app/NC210/setpara/cvi_setpara.uir"
 Tab 0008 = "/f/cvi/app/NC210/main.uir"
-Tab 0009 = "/f/cvi/app/opencom/uir/comconfig.uir"
-Tab 0010 = "/f/cvi/app/NC210/setpara/cvi_setpara.uir"
-Tab 0011 = "/f/cvi/app/NC210/setpara/setpara.c"
-Tab 0012 = "/f/cvi/app/NC210/speedCali/cvi_SpeedCali.uir"
-Tab 0013 = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTest.uir"
-Tab 0014 = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTest.c"
-Tab 0015 = "/f/cvi/app/NC210/locoCali/cvi_LocoCali.c"
-Tab 0016 = "/f/cvi/app/NC210/locoCali/cvi_LocoCaliType.h"
-Tab 0017 = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTestType.h"
-Tab 0018 = "/f/cvi/app/csnc_debug/cvi_bspComm.h"
-Tab 0019 = "/f/cvi/app/NC210/setpara/cvi_setpara.c"
-Tab 0020 = "/f/cvi/app/NC210/speedCali/cvi_SpeedCali.c"
-Tab 0021 = "/f/cvi/app/NC210/app_config.h"
-Tab 0022 = "/f/cvi/app/NC210/setpara/setpara.h"
-Tab 0023 = "/f/cvi/app/NC210/locoCali/cvi_LocoCali.uir"
-Tab 0024 = "/f/cvi/app/NC210/speedCali/cvi_SpeedCaliType.h"
-Tab 0025 = "/f/cvi/app/NC210/app_type.h"
-Tab 0026 = "/f/cvi/app/NC210/RecDataTypeDef.h"
-Tab 0027 = "/f/cvi/app/opencom/source/cvi_com1.c"
-Tab 0028 = "/f/cvi/app/ansytime/cvi_ansytimer.c"
-Tab 0029 = "/f/cvi/app/c_comm/csnr_package_deal/csnr_package_deal.c"
-Tab 0030 = "/f/cvi/app/opencom/source/cvi_com_operate.h"
-Tab 0031 = "/f/cvi/app/ansytime/cvi_ansytimer.h"
-Tab 0032 = "/c/Program Files (x86)/National Instruments/CVI2017/include/rs232.h"
-Tab 0033 = "/c/Program Files (x86)/National Instruments/CVI2017/include/ansi/stdio.h"
-Tab 0034 = "/f/cvi/app/NC210/speedCali/cvi_SpeedCali.h"
-Tab 0035 = "/f/cvi/app/NC210/locoCali/cvi_LocoCali.h"
-Tab 0036 = "/f/cvi/app/NC210/setpara/cvi_setpara.h"
-Tab 0037 = "/f/cvi/app/opencom/uir/comconfig.h"
-Tab 0038 = "/f/cvi/app/config/cvi_config.h"
-Tab 0039 = "/f/cvi/app/c_comm/includes.h"
-Tab 0040 = "/f/cvi/app/opencom/source/cvi_com1.h"
-Tab 0041 = "/f/cvi/app/c_comm/crccheck/CrcCheck.c"
-Tab 0042 = "/f/cvi/app/csnc_iap/iap/IAP.uir"
-Tab 0043 = "/f/cvi/app/csnc_iap/iap/send_IAP.c"
-Tab 0044 = "/f/cvi/app/csnc_iap/openfile/cvi_file.c"
-Tab 0045 = "/f/cvi/app/NC210/LKJ_test/cvi_LKJTest.h"
+Tab 0009 = "/f/cvi/app/NC210/setpara/cvi_setpara.c"
+Tab 0010 = "/f/cvi/app/NC210/setpara/setpara.h"
+Tab 0011 = "/f/cvi/app/NC210/app_type.h"
+Tab 0012 = "/f/cvi/app/NC210/speedCali/cvi_SpeedCali.c"
+Tab 0013 = "/f/cvi/app/NC210/locoCali/cvi_LocoCali.uir"
+Tab 0014 = "/f/cvi/app/NC210/locoCali/cvi_LocoCali.c"
+Tab 0015 = "/f/cvi/app/csnc_iap/openfile/cvi_file.c"
+Tab 0016 = "/f/cvi/app/cvi_comm/cvi_comm.c"
+Tab 0017 = "/f/cvi/app/opencom/source/cvi_com1.c"
+Tab 0018 = "/f/cvi/app/NC210/speedCali/cvi_SpeedCali.uir"
 
 [Default Build Config 0001 Debug]
 Generate Browse Info = True
@@ -683,1097 +526,8 @@ Command Line Args = ""
 Working Directory = ""
 Environment Options = ""
 
-[Watch 1]
-Watch Expression = "gstrDtuData"
-
-[Watch 2]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 3]
-Watch Expression = "gstrDtuData"
-
-[Watch 4]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 5]
-Watch Expression = "gstrDtuData"
-
-[Watch 6]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 7]
-Watch Expression = "gstrDtuData"
-
-[Watch 8]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 9]
-Watch Expression = "gstrDtuData"
-
-[Watch 10]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 11]
-Watch Expression = "gstrDtuData"
-
-[Watch 12]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 13]
-Watch Expression = "gstrDtuData"
-
-[Watch 14]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 15]
-Watch Expression = "gstrDtuData"
-
-[Watch 16]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 17]
-Watch Expression = "gstrDtuData"
-
-[Watch 18]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 19]
-Watch Expression = "gstrDtuData"
-
-[Watch 20]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 21]
-Watch Expression = "gstrDtuData"
-
-[Watch 22]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 23]
-Watch Expression = "gstrDtuData"
-
-[Watch 24]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 25]
-Watch Expression = "gstrDtuData"
-
-[Watch 26]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 27]
-Watch Expression = "gstrDtuData"
-
-[Watch 28]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 29]
-Watch Expression = "gstrDtuData"
-
-[Watch 30]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 31]
-Watch Expression = "gstrDtuData"
-
-[Watch 32]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 33]
-Watch Expression = "gstrDtuData"
-
-[Watch 34]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 35]
-Watch Expression = "gstrDtuData"
-
-[Watch 36]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 37]
-Watch Expression = "gstrDtuData"
-
-[Watch 38]
-Watch Expression = "sCtrl"
-
-[Watch 39]
-Watch Expression = "lstrSpeedCali"
-
-[Watch 40]
-Watch Expression = "lstrSpeedCali[0]"
-
-[Watch 41]
-Watch Expression = "lstrSpeedCali[1]"
-
-[Watch 42]
-Watch Expression = "lstrSpeedCali[2]"
-
-[Watch 43]
-Watch Expression = "lstrSpeedCali[2].lowstandard"
-
-[Watch 44]
-Watch Expression = "lstrSpeedCali[2].lowmeasure"
-
-[Watch 45]
-Watch Expression = "lstrSpeedCali[2].higstandard"
-
-[Watch 46]
-Watch Expression = "lstrSpeedCali[2].higmeasure"
-
-[Watch 47]
-Watch Expression = "lstrSpeedCali[2].send"
-
-[Watch 48]
-Watch Expression = "lstrSpeedCali[2].rec16"
-
-[Watch 49]
-Watch Expression = "lstrSpeedCali[2].ansyflg"
-
-[Watch 50]
-Watch Expression = "lstrSpeedCali[2].califlg"
-
-[Watch 51]
-Watch Expression = "lstrSpeedCali[2].lowflg"
-
-[Watch 52]
-Watch Expression = "lstrSpeedCali[2].higflg"
-
-[Watch 53]
-Watch Expression = "lstrSpeedCali[2].calisend"
-
-[Watch 54]
-Watch Expression = "lstrSpeedCali[2].caliErr"
-
-[Watch 55]
-Watch Expression = "lstrSpeedCali[2].tmpflg"
-
-[Watch 56]
-Watch Expression = "lstrSpeedCali[2].tmp8"
-
-[Watch 57]
-Watch Expression = "lstrSpeedCali[2].line"
-
-[Watch 58]
-Watch Expression = "lstrSpeedCali[2].zero"
-
-[Watch 59]
-Watch Expression = "lstrSpeedCali[2].info"
-
-[Watch 60]
-Watch Expression = "lstrSpeedCali[3]"
-
-[Watch 61]
-Watch Expression = "lstrSpeedCali[3].lowstandard"
-
-[Watch 62]
-Watch Expression = "lstrSpeedCali[3].lowmeasure"
-
-[Watch 63]
-Watch Expression = "lstrSpeedCali[3].higstandard"
-
-[Watch 64]
-Watch Expression = "lstrSpeedCali[3].higmeasure"
-
-[Watch 65]
-Watch Expression = "lstrSpeedCali[3].send"
-
-[Watch 66]
-Watch Expression = "lstrSpeedCali[3].rec16"
-
-[Watch 67]
-Watch Expression = "lstrSpeedCali[3].ansyflg"
-
-[Watch 68]
-Watch Expression = "lstrSpeedCali[3].califlg"
-
-[Watch 69]
-Watch Expression = "lstrSpeedCali[3].lowflg"
-
-[Watch 70]
-Watch Expression = "lstrSpeedCali[3].higflg"
-
-[Watch 71]
-Watch Expression = "lstrSpeedCali[3].calisend"
-
-[Watch 72]
-Watch Expression = "lstrSpeedCali[3].caliErr"
-
-[Watch 73]
-Watch Expression = "lstrSpeedCali[3].tmpflg"
-
-[Watch 74]
-Watch Expression = "lstrSpeedCali[3].tmp8"
-
-[Watch 75]
-Watch Expression = "lstrSpeedCali[3].line"
-
-[Watch 76]
-Watch Expression = "lstrSpeedCali[3].zero"
-
-[Watch 77]
-Watch Expression = "lstrSpeedCali[3].info"
-
-[Watch 78]
-Watch Expression = "lstrSpeedCali[4]"
-
-[Watch 79]
-Watch Expression = "lstrSpeedCali[4].lowstandard"
-
-[Watch 80]
-Watch Expression = "lstrSpeedCali[4].lowmeasure"
-
-[Watch 81]
-Watch Expression = "lstrSpeedCali[4].higstandard"
-
-[Watch 82]
-Watch Expression = "lstrSpeedCali[4].higmeasure"
-
-[Watch 83]
-Watch Expression = "lstrSpeedCali[4].send"
-
-[Watch 84]
-Watch Expression = "lstrSpeedCali[4].rec16"
-
-[Watch 85]
-Watch Expression = "lstrSpeedCali[4].ansyflg"
-
-[Watch 86]
-Watch Expression = "lstrSpeedCali[4].califlg"
-
-[Watch 87]
-Watch Expression = "lstrSpeedCali[4].lowflg"
-
-[Watch 88]
-Watch Expression = "lstrSpeedCali[4].higflg"
-
-[Watch 89]
-Watch Expression = "lstrSpeedCali[4].calisend"
-
-[Watch 90]
-Watch Expression = "lstrSpeedCali[4].caliErr"
-
-[Watch 91]
-Watch Expression = "lstrSpeedCali[4].tmpflg"
-
-[Watch 92]
-Watch Expression = "lstrSpeedCali[4].tmp8"
-
-[Watch 93]
-Watch Expression = "lstrSpeedCali[4].line"
-
-[Watch 94]
-Watch Expression = "lstrSpeedCali[4].zero"
-
-[Watch 95]
-Watch Expression = "lstrSpeedCali[4].info"
-
-[Watch 96]
-Watch Expression = "lstrSpeedCali[5]"
-
-[Watch 97]
-Watch Expression = "lstrSpeedCali[5].lowstandard"
-
-[Watch 98]
-Watch Expression = "lstrSpeedCali[5].lowmeasure"
-
-[Watch 99]
-Watch Expression = "lstrSpeedCali[5].higstandard"
-
-[Watch 100]
-Watch Expression = "lstrSpeedCali[5].higmeasure"
-
-[Watch 101]
-Watch Expression = "lstrSpeedCali[5].send"
-
-[Watch 102]
-Watch Expression = "lstrSpeedCali[5].rec16"
-
-[Watch 103]
-Watch Expression = "lstrSpeedCali[5].ansyflg"
-
-[Watch 104]
-Watch Expression = "lstrSpeedCali[5].califlg"
-
-[Watch 105]
-Watch Expression = "lstrSpeedCali[5].lowflg"
-
-[Watch 106]
-Watch Expression = "lstrSpeedCali[5].higflg"
-
-[Watch 107]
-Watch Expression = "lstrSpeedCali[5].calisend"
-
-[Watch 108]
-Watch Expression = "lstrSpeedCali[5].caliErr"
-
-[Watch 109]
-Watch Expression = "lstrSpeedCali[5].tmpflg"
-
-[Watch 110]
-Watch Expression = "lstrSpeedCali[5].tmp8"
-
-[Watch 111]
-Watch Expression = "lstrSpeedCali[5].line"
-
-[Watch 112]
-Watch Expression = "lstrSpeedCali[5].zero"
-
-[Watch 113]
-Watch Expression = "lstrSpeedCali[5].info"
-
-[Watch 114]
-Watch Expression = "lstrSpeedCali[6]"
-
-[Watch 115]
-Watch Expression = "lstrSpeedCali[6].lowstandard"
-
-[Watch 116]
-Watch Expression = "lstrSpeedCali[6].lowmeasure"
-
-[Watch 117]
-Watch Expression = "lstrSpeedCali[6].higstandard"
-
-[Watch 118]
-Watch Expression = "lstrSpeedCali[6].higmeasure"
-
-[Watch 119]
-Watch Expression = "lstrSpeedCali[6].send"
-
-[Watch 120]
-Watch Expression = "lstrSpeedCali[6].rec16"
-
-[Watch 121]
-Watch Expression = "lstrSpeedCali[6].ansyflg"
-
-[Watch 122]
-Watch Expression = "lstrSpeedCali[6].califlg"
-
-[Watch 123]
-Watch Expression = "lstrSpeedCali[6].lowflg"
-
-[Watch 124]
-Watch Expression = "lstrSpeedCali[6].higflg"
-
-[Watch 125]
-Watch Expression = "lstrSpeedCali[6].calisend"
-
-[Watch 126]
-Watch Expression = "lstrSpeedCali[6].caliErr"
-
-[Watch 127]
-Watch Expression = "lstrSpeedCali[6].tmpflg"
-
-[Watch 128]
-Watch Expression = "lstrSpeedCali[6].tmp8"
-
-[Watch 129]
-Watch Expression = "lstrSpeedCali[6].line"
-
-[Watch 130]
-Watch Expression = "lstrSpeedCali[6].zero"
-
-[Watch 131]
-Watch Expression = "lstrSpeedCali[6].info"
-
-[Watch 132]
-Watch Expression = "lstrSpeedCali[7]"
-
-[Watch 133]
-Watch Expression = "lstrSpeedCali[7].lowstandard"
-
-[Watch 134]
-Watch Expression = "lstrSpeedCali[7].lowmeasure"
-
-[Watch 135]
-Watch Expression = "lstrSpeedCali[7].higstandard"
-
-[Watch 136]
-Watch Expression = "lstrSpeedCali[7].higmeasure"
-
-[Watch 137]
-Watch Expression = "lstrSpeedCali[7].send"
-
-[Watch 138]
-Watch Expression = "lstrSpeedCali[7].rec16"
-
-[Watch 139]
-Watch Expression = "lstrSpeedCali[7].ansyflg"
-
-[Watch 140]
-Watch Expression = "lstrSpeedCali[7].califlg"
-
-[Watch 141]
-Watch Expression = "lstrSpeedCali[7].lowflg"
-
-[Watch 142]
-Watch Expression = "lstrSpeedCali[7].higflg"
-
-[Watch 143]
-Watch Expression = "lstrSpeedCali[7].calisend"
-
-[Watch 144]
-Watch Expression = "lstrSpeedCali[7].caliErr"
-
-[Watch 145]
-Watch Expression = "lstrSpeedCali[7].tmpflg"
-
-[Watch 146]
-Watch Expression = "lstrSpeedCali[7].tmp8"
-
-[Watch 147]
-Watch Expression = "lstrSpeedCali[7].line"
-
-[Watch 148]
-Watch Expression = "lstrSpeedCali[7].zero"
-
-[Watch 149]
-Watch Expression = "lstrSpeedCali[7].info"
-
-[Watch 150]
-Watch Expression = "lstrSpeedCali[8]"
-
-[Watch 151]
-Watch Expression = "lstrSpeedCali[8].lowstandard"
-
-[Watch 152]
-Watch Expression = "lstrSpeedCali[8].lowmeasure"
-
-[Watch 153]
-Watch Expression = "lstrSpeedCali[8].higstandard"
-
-[Watch 154]
-Watch Expression = "lstrSpeedCali[8].higmeasure"
-
-[Watch 155]
-Watch Expression = "lstrSpeedCali[8].send"
-
-[Watch 156]
-Watch Expression = "lstrSpeedCali[8].rec16"
-
-[Watch 157]
-Watch Expression = "lstrSpeedCali[8].ansyflg"
-
-[Watch 158]
-Watch Expression = "lstrSpeedCali[8].califlg"
-
-[Watch 159]
-Watch Expression = "lstrSpeedCali[8].lowflg"
-
-[Watch 160]
-Watch Expression = "lstrSpeedCali[8].higflg"
-
-[Watch 161]
-Watch Expression = "lstrSpeedCali[8].calisend"
-
-[Watch 162]
-Watch Expression = "lstrSpeedCali[8].caliErr"
-
-[Watch 163]
-Watch Expression = "lstrSpeedCali[8].tmpflg"
-
-[Watch 164]
-Watch Expression = "lstrSpeedCali[8].tmp8"
-
-[Watch 165]
-Watch Expression = "lstrSpeedCali[8].line"
-
-[Watch 166]
-Watch Expression = "lstrSpeedCali[8].zero"
-
-[Watch 167]
-Watch Expression = "lstrSpeedCali[8].info"
-
-[Watch 168]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 169]
-Watch Expression = "gstrDtuData"
-
-[Watch 170]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 171]
-Watch Expression = "gstrDtuData"
-
-[Watch 172]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 173]
-Watch Expression = "gstrDtuData"
-
-[Watch 174]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 175]
-Watch Expression = "gstrDtuData"
-
-[Watch 176]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 177]
-Watch Expression = "gstrDtuData"
-
-[Watch 178]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 179]
-Watch Expression = "gstrDtuData"
-
-[Watch 180]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 181]
-Watch Expression = "gstrDtuData"
-
-[Watch 182]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 183]
-Watch Expression = "gstrDtuData"
-
-[Watch 184]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 185]
-Watch Expression = "gstrDtuData"
-
-[Watch 186]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 187]
-Watch Expression = "gstrDtuData"
-
-[Watch 188]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 189]
-Watch Expression = "gstrDtuData"
-
-[Watch 190]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 191]
-Watch Expression = "gstrDtuData"
-
-[Watch 192]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 193]
-Watch Expression = "gstrDtuData"
-
-[Watch 194]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 195]
-Watch Expression = "gstrDtuData"
-
-[Watch 196]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 197]
-Watch Expression = "gstrDtuData"
-
-[Watch 198]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 199]
-Watch Expression = "gstrDtuData"
-
-[Watch 200]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 201]
-Watch Expression = "gstrDtuData"
-
-[Watch 202]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 203]
-Watch Expression = "gstrDtuData"
-
-[Watch 204]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 205]
-Watch Expression = "gstrDtuData"
-
-[Watch 206]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 207]
-Watch Expression = "gstrDtuData"
-
-[Watch 208]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 209]
-Watch Expression = "gstrDtuData"
-
-[Watch 210]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 211]
-Watch Expression = "gstrDtuData"
-
-[Watch 212]
-Watch Expression = "sCtrl"
-
-[Watch 213]
-Watch Expression = "lstrSpeedCali"
-
-[Watch 214]
-Watch Expression = "lstrSpeedCali[0]"
-
-[Watch 215]
-Watch Expression = "lstrSpeedCali[1]"
-
-[Watch 216]
-Watch Expression = "lstrSpeedCali[2]"
-
-[Watch 217]
-Watch Expression = "lstrSpeedCali[2].lowstandard"
-
-[Watch 218]
-Watch Expression = "lstrSpeedCali[2].lowmeasure"
-
-[Watch 219]
-Watch Expression = "lstrSpeedCali[2].higstandard"
-
-[Watch 220]
-Watch Expression = "lstrSpeedCali[2].higmeasure"
-
-[Watch 221]
-Watch Expression = "lstrSpeedCali[2].send"
-
-[Watch 222]
-Watch Expression = "lstrSpeedCali[2].rec16"
-
-[Watch 223]
-Watch Expression = "lstrSpeedCali[2].ansyflg"
-
-[Watch 224]
-Watch Expression = "lstrSpeedCali[2].califlg"
-
-[Watch 225]
-Watch Expression = "lstrSpeedCali[2].lowflg"
-
-[Watch 226]
-Watch Expression = "lstrSpeedCali[2].higflg"
-
-[Watch 227]
-Watch Expression = "lstrSpeedCali[2].calisend"
-
-[Watch 228]
-Watch Expression = "lstrSpeedCali[2].caliErr"
-
-[Watch 229]
-Watch Expression = "lstrSpeedCali[2].tmpflg"
-
-[Watch 230]
-Watch Expression = "lstrSpeedCali[2].tmp8"
-
-[Watch 231]
-Watch Expression = "lstrSpeedCali[2].line"
-
-[Watch 232]
-Watch Expression = "lstrSpeedCali[2].zero"
-
-[Watch 233]
-Watch Expression = "lstrSpeedCali[2].info"
-
-[Watch 234]
-Watch Expression = "lstrSpeedCali[3]"
-
-[Watch 235]
-Watch Expression = "lstrSpeedCali[3].lowstandard"
-
-[Watch 236]
-Watch Expression = "lstrSpeedCali[3].lowmeasure"
-
-[Watch 237]
-Watch Expression = "lstrSpeedCali[3].higstandard"
-
-[Watch 238]
-Watch Expression = "lstrSpeedCali[3].higmeasure"
-
-[Watch 239]
-Watch Expression = "lstrSpeedCali[3].send"
-
-[Watch 240]
-Watch Expression = "lstrSpeedCali[3].rec16"
-
-[Watch 241]
-Watch Expression = "lstrSpeedCali[3].ansyflg"
-
-[Watch 242]
-Watch Expression = "lstrSpeedCali[3].califlg"
-
-[Watch 243]
-Watch Expression = "lstrSpeedCali[3].lowflg"
-
-[Watch 244]
-Watch Expression = "lstrSpeedCali[3].higflg"
-
-[Watch 245]
-Watch Expression = "lstrSpeedCali[3].calisend"
-
-[Watch 246]
-Watch Expression = "lstrSpeedCali[3].caliErr"
-
-[Watch 247]
-Watch Expression = "lstrSpeedCali[3].tmpflg"
-
-[Watch 248]
-Watch Expression = "lstrSpeedCali[3].tmp8"
-
-[Watch 249]
-Watch Expression = "lstrSpeedCali[3].line"
-
-[Watch 250]
-Watch Expression = "lstrSpeedCali[3].zero"
-
-[Watch 251]
-Watch Expression = "lstrSpeedCali[3].info"
-
-[Watch 252]
-Watch Expression = "lstrSpeedCali[4]"
-
-[Watch 253]
-Watch Expression = "lstrSpeedCali[4].lowstandard"
-
-[Watch 254]
-Watch Expression = "lstrSpeedCali[4].lowmeasure"
-
-[Watch 255]
-Watch Expression = "lstrSpeedCali[4].higstandard"
-
-[Watch 256]
-Watch Expression = "lstrSpeedCali[4].higmeasure"
-
-[Watch 257]
-Watch Expression = "lstrSpeedCali[4].send"
-
-[Watch 258]
-Watch Expression = "lstrSpeedCali[4].rec16"
-
-[Watch 259]
-Watch Expression = "lstrSpeedCali[4].ansyflg"
-
-[Watch 260]
-Watch Expression = "lstrSpeedCali[4].califlg"
-
-[Watch 261]
-Watch Expression = "lstrSpeedCali[4].lowflg"
-
-[Watch 262]
-Watch Expression = "lstrSpeedCali[4].higflg"
-
-[Watch 263]
-Watch Expression = "lstrSpeedCali[4].calisend"
-
-[Watch 264]
-Watch Expression = "lstrSpeedCali[4].caliErr"
-
-[Watch 265]
-Watch Expression = "lstrSpeedCali[4].tmpflg"
-
-[Watch 266]
-Watch Expression = "lstrSpeedCali[4].tmp8"
-
-[Watch 267]
-Watch Expression = "lstrSpeedCali[4].line"
-
-[Watch 268]
-Watch Expression = "lstrSpeedCali[4].zero"
-
-[Watch 269]
-Watch Expression = "lstrSpeedCali[4].info"
-
-[Watch 270]
-Watch Expression = "lstrSpeedCali[5]"
-
-[Watch 271]
-Watch Expression = "lstrSpeedCali[5].lowstandard"
-
-[Watch 272]
-Watch Expression = "lstrSpeedCali[5].lowmeasure"
-
-[Watch 273]
-Watch Expression = "lstrSpeedCali[5].higstandard"
-
-[Watch 274]
-Watch Expression = "lstrSpeedCali[5].higmeasure"
-
-[Watch 275]
-Watch Expression = "lstrSpeedCali[5].send"
-
-[Watch 276]
-Watch Expression = "lstrSpeedCali[5].rec16"
-
-[Watch 277]
-Watch Expression = "lstrSpeedCali[5].ansyflg"
-
-[Watch 278]
-Watch Expression = "lstrSpeedCali[5].califlg"
-
-[Watch 279]
-Watch Expression = "lstrSpeedCali[5].lowflg"
-
-[Watch 280]
-Watch Expression = "lstrSpeedCali[5].higflg"
-
-[Watch 281]
-Watch Expression = "lstrSpeedCali[5].calisend"
-
-[Watch 282]
-Watch Expression = "lstrSpeedCali[5].caliErr"
-
-[Watch 283]
-Watch Expression = "lstrSpeedCali[5].tmpflg"
-
-[Watch 284]
-Watch Expression = "lstrSpeedCali[5].tmp8"
-
-[Watch 285]
-Watch Expression = "lstrSpeedCali[5].line"
-
-[Watch 286]
-Watch Expression = "lstrSpeedCali[5].zero"
-
-[Watch 287]
-Watch Expression = "lstrSpeedCali[5].info"
-
-[Watch 288]
-Watch Expression = "lstrSpeedCali[6]"
-
-[Watch 289]
-Watch Expression = "lstrSpeedCali[6].lowstandard"
-
-[Watch 290]
-Watch Expression = "lstrSpeedCali[6].lowmeasure"
-
-[Watch 291]
-Watch Expression = "lstrSpeedCali[6].higstandard"
-
-[Watch 292]
-Watch Expression = "lstrSpeedCali[6].higmeasure"
-
-[Watch 293]
-Watch Expression = "lstrSpeedCali[6].send"
-
-[Watch 294]
-Watch Expression = "lstrSpeedCali[6].rec16"
-
-[Watch 295]
-Watch Expression = "lstrSpeedCali[6].ansyflg"
-
-[Watch 296]
-Watch Expression = "lstrSpeedCali[6].califlg"
-
-[Watch 297]
-Watch Expression = "lstrSpeedCali[6].lowflg"
-
-[Watch 298]
-Watch Expression = "lstrSpeedCali[6].higflg"
-
-[Watch 299]
-Watch Expression = "lstrSpeedCali[6].calisend"
-
-[Watch 300]
-Watch Expression = "lstrSpeedCali[6].caliErr"
-
-[Watch 301]
-Watch Expression = "lstrSpeedCali[6].tmpflg"
-
-[Watch 302]
-Watch Expression = "lstrSpeedCali[6].tmp8"
-
-[Watch 303]
-Watch Expression = "lstrSpeedCali[6].line"
-
-[Watch 304]
-Watch Expression = "lstrSpeedCali[6].zero"
-
-[Watch 305]
-Watch Expression = "lstrSpeedCali[6].info"
-
-[Watch 306]
-Watch Expression = "lstrSpeedCali[7]"
-
-[Watch 307]
-Watch Expression = "lstrSpeedCali[7].lowstandard"
-
-[Watch 308]
-Watch Expression = "lstrSpeedCali[7].lowmeasure"
-
-[Watch 309]
-Watch Expression = "lstrSpeedCali[7].higstandard"
-
-[Watch 310]
-Watch Expression = "lstrSpeedCali[7].higmeasure"
-
-[Watch 311]
-Watch Expression = "lstrSpeedCali[7].send"
-
-[Watch 312]
-Watch Expression = "lstrSpeedCali[7].rec16"
-
-[Watch 313]
-Watch Expression = "lstrSpeedCali[7].ansyflg"
-
-[Watch 314]
-Watch Expression = "lstrSpeedCali[7].califlg"
-
-[Watch 315]
-Watch Expression = "lstrSpeedCali[7].lowflg"
-
-[Watch 316]
-Watch Expression = "lstrSpeedCali[7].higflg"
-
-[Watch 317]
-Watch Expression = "lstrSpeedCali[7].calisend"
-
-[Watch 318]
-Watch Expression = "lstrSpeedCali[7].caliErr"
-
-[Watch 319]
-Watch Expression = "lstrSpeedCali[7].tmpflg"
-
-[Watch 320]
-Watch Expression = "lstrSpeedCali[7].tmp8"
-
-[Watch 321]
-Watch Expression = "lstrSpeedCali[7].line"
-
-[Watch 322]
-Watch Expression = "lstrSpeedCali[7].zero"
-
-[Watch 323]
-Watch Expression = "lstrSpeedCali[7].info"
-
-[Watch 324]
-Watch Expression = "lstrSpeedCali[8]"
-
-[Watch 325]
-Watch Expression = "lstrSpeedCali[8].lowstandard"
-
-[Watch 326]
-Watch Expression = "lstrSpeedCali[8].lowmeasure"
-
-[Watch 327]
-Watch Expression = "lstrSpeedCali[8].higstandard"
-
-[Watch 328]
-Watch Expression = "lstrSpeedCali[8].higmeasure"
-
-[Watch 329]
-Watch Expression = "lstrSpeedCali[8].send"
-
-[Watch 330]
-Watch Expression = "lstrSpeedCali[8].rec16"
-
-[Watch 331]
-Watch Expression = "lstrSpeedCali[8].ansyflg"
-
-[Watch 332]
-Watch Expression = "lstrSpeedCali[8].califlg"
-
-[Watch 333]
-Watch Expression = "lstrSpeedCali[8].lowflg"
-
-[Watch 334]
-Watch Expression = "lstrSpeedCali[8].higflg"
-
-[Watch 335]
-Watch Expression = "lstrSpeedCali[8].calisend"
-
-[Watch 336]
-Watch Expression = "lstrSpeedCali[8].caliErr"
-
-[Watch 337]
-Watch Expression = "lstrSpeedCali[8].tmpflg"
-
-[Watch 338]
-Watch Expression = "lstrSpeedCali[8].tmp8"
-
-[Watch 339]
-Watch Expression = "lstrSpeedCali[8].line"
-
-[Watch 340]
-Watch Expression = "lstrSpeedCali[8].zero"
-
-[Watch 341]
-Watch Expression = "lstrSpeedCali[8].info"
-
-[Watch 342]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 343]
-Watch Expression = "gstrDtuData"
-
-[Watch 344]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 345]
-Watch Expression = "gstrDtuData"
-
-[Watch 346]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 347]
-Watch Expression = "gstrDtuData"
-
-[Watch 348]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 349]
-Watch Expression = "gstrDtuData"
-
-[Watch 350]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 351]
-Watch Expression = "gstrDtuData"
-
-[Watch 352]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 353]
-Watch Expression = "gstrDtuData"
-
-[Watch 354]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 355]
-Watch Expression = "gstrDtuData"
-
-[Watch 356]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 357]
-Watch Expression = "gstrDtuData"
-
-[Watch 358]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 359]
-Watch Expression = "gstrDtuData"
-
-[Watch 360]
-Watch Expression = "lstrSpeedDetect"
-
-[Watch 361]
-Watch Expression = "gstrDtuData"
-
-[Watch 362]
-Watch Expression = "sCtrl"
-
-[Watch 363]
-Watch Expression = "gstrSendDtuData"
-
 [Distributions]
 Active Index = 1
-AbsCDSPath 0001 = "/f/cvi/app/NC210/NC210.cds"
-RelCDSPath 0001 = "NC210.cds"
+AbsCDSPath 0001 = "/f/cvi/app/NC210/LKJ接口信息在线监测装置测试软件.cds"
+RelCDSPath 0001 = "LKJ接口信息在线监测装置测试软件.cds"
 

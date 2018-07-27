@@ -69,7 +69,7 @@ extern	int   	g_com1systictimes;
 //通过l_eqiupmentcode变量控制设置过程。
 //此函数需要循环执行，且能外部设置 l_eqiupmentcode
 /********************************************************************************************/
-void Com_SetParaTask(void)		
+void 	Com_SetParaTask	(void)		
 {
 	unsigned char  	buf[256];
 	unsigned int   	datalen = 0;
@@ -214,7 +214,7 @@ void	Com_SetParaRecTask(void)
 	  )   														// 接收到数据
 	{
 		sCtrl.PC.RxCtrl.recvflg 		= 0;					// 接收完成标识
-		sCtrl.PC.ConnCtrl.SendTimeFlg	= 0;					// 数据接收成功，取消发送计时
+			sCtrl.PC.ConnCtrl.SendTimeFlg	= 0;					// 数据接收成功，取消发送计时
 		sCtrl.PC.ConnCtrl.ErrFlg 		= 0;					// 错误清除
 		
 		memcpy((u32 *)&code,sCtrl.PC.rd,sizeof(code));
@@ -250,7 +250,7 @@ void	Com_SetParaRecTask(void)
 						
 						headlen	= sizeof(gstrRecDtuData.code) + sizeof(gstrRecDtuData.paraaddr) + sizeof(gstrRecDtuData.paralen)+sizeof(gstrRecDtuData.node);
 						if(headlen >= reclen){
-							gstrRecDtuData.recdatalen 			= 0;
+							gstrRecDtuData.recdatalen 		= 0;
 							sCtrl.PC.ConnCtrl.DataErrFlg	= 1;
 							break;
 						}

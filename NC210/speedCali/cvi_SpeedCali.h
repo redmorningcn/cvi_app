@@ -104,58 +104,59 @@
 #define  SPEEDCALI_G2SPEED1_SYNC          89      /* control type: radioButton, callback function: G2Speed1SyncCallback */
 #define  SPEEDCALI_DECORATION_20          90      /* control type: deco, callback function: (none) */
 #define  SPEEDCALI_SPLITTER_18            91      /* control type: splitter, callback function: (none) */
-#define  SPEEDCALI_DECORATION_24          92      /* control type: deco, callback function: (none) */
-#define  SPEEDCALI_G1SPEED2               93      /* control type: command, callback function: G1_Speed2CaliCallback */
-#define  SPEEDCALI_G3SPEED2_CUR_INFO      94      /* control type: textMsg, callback function: (none) */
-#define  SPEEDCALI_G1SPEED2_HIG_MEASURE   95      /* control type: numeric, callback function: (none) */
-#define  SPEEDCALI_G3SPEED1_CUR_INFO      96      /* control type: textMsg, callback function: (none) */
-#define  SPEEDCALI_G1SPEED2_HIG_STAND     97      /* control type: numeric, callback function: G1_Speed2HigCallback */
-#define  SPEEDCALI_G3VCC_CUR_INFO         98      /* control type: textMsg, callback function: (none) */
-#define  SPEEDCALI_G1SPEED2_LOW_MEASURE   99      /* control type: numeric, callback function: (none) */
-#define  SPEEDCALI_G2SPEED2_CUR_INFO      100     /* control type: textMsg, callback function: (none) */
-#define  SPEEDCALI_G1SPEED2_LOW_STAND     101     /* control type: numeric, callback function: G1_Speed2lowCallback */
-#define  SPEEDCALI_G2SPEED1_CUR_INFO      102     /* control type: textMsg, callback function: (none) */
-#define  SPEEDCALI_SPLITTER_5             103     /* control type: splitter, callback function: (none) */
-#define  SPEEDCALI_G2VCC_CUR_INFO         104     /* control type: textMsg, callback function: (none) */
-#define  SPEEDCALI_TEXTMSG_17             105     /* control type: textMsg, callback function: (none) */
-#define  SPEEDCALI_G1SPEED2_CUR_INFO      106     /* control type: textMsg, callback function: (none) */
-#define  SPEEDCALI_TEXTMSG_18             107     /* control type: textMsg, callback function: (none) */
-#define  SPEEDCALI_G1SPEED1_CUR_INFO      108     /* control type: textMsg, callback function: (none) */
-#define  SPEEDCALI_TEXTMSG_19             109     /* control type: textMsg, callback function: (none) */
-#define  SPEEDCALI_G1VCC_CUR_INFO         110     /* control type: textMsg, callback function: (none) */
-#define  SPEEDCALI_SPLITTER_19            111     /* control type: splitter, callback function: (none) */
-#define  SPEEDCALI_TEXTMSG_20             112     /* control type: textMsg, callback function: (none) */
-#define  SPEEDCALI_DECORATION_18          113     /* control type: deco, callback function: (none) */
-#define  SPEEDCALI_G1SPEED1               114     /* control type: command, callback function: G1_Speed1CaliCallback */
-#define  SPEEDCALI_G1SPEED1_HIG_MEASURE   115     /* control type: numeric, callback function: (none) */
-#define  SPEEDCALI_G1SPEED1_HIG_STAND     116     /* control type: numeric, callback function: G1_Speed1HigCallback */
-#define  SPEEDCALI_G1SPEED1_LOW_MEASURE   117     /* control type: numeric, callback function: (none) */
-#define  SPEEDCALI_G1SPEED1_LOW_STAND     118     /* control type: numeric, callback function: G1_Speed1LowCallback */
-#define  SPEEDCALI_SPLITTER_3             119     /* control type: splitter, callback function: (none) */
-#define  SPEEDCALI_TEXTMSG_9              120     /* control type: textMsg, callback function: (none) */
-#define  SPEEDCALI_TEXTMSG_10             121     /* control type: textMsg, callback function: (none) */
-#define  SPEEDCALI_SPLITTER_20            122     /* control type: splitter, callback function: (none) */
-#define  SPEEDCALI_TEXTMSG_11             123     /* control type: textMsg, callback function: (none) */
-#define  SPEEDCALI_TEXTMSG_12             124     /* control type: textMsg, callback function: (none) */
-#define  SPEEDCALI_DECORATION_17          125     /* control type: deco, callback function: (none) */
-#define  SPEEDCALI_G1VCC                  126     /* control type: command, callback function: G1_VccCaliCallback */
-#define  SPEEDCALI_G1VCC_HIG_MEASURE      127     /* control type: numeric, callback function: (none) */
-#define  SPEEDCALI_G1VCC_HIG_STAND        128     /* control type: numeric, callback function: G1_VccHigCallback */
-#define  SPEEDCALI_G1VCC_LOW_MEASURE      129     /* control type: numeric, callback function: (none) */
-#define  SPEEDCALI_G1VCC_LOW_STAND        130     /* control type: numeric, callback function: G1_VccLowCallback */
-#define  SPEEDCALI_SPLITTER_2             131     /* control type: splitter, callback function: (none) */
-#define  SPEEDCALI_TEXTMSG_5              132     /* control type: textMsg, callback function: (none) */
-#define  SPEEDCALI_TEXTMSG_6              133     /* control type: textMsg, callback function: (none) */
-#define  SPEEDCALI_TEXTMSG_7              134     /* control type: textMsg, callback function: (none) */
-#define  SPEEDCALI_TEXTMSG_8              135     /* control type: textMsg, callback function: (none) */
-#define  SPEEDCALI_G1SPEED2_SYNC          136     /* control type: radioButton, callback function: G1Speed2SyncCallback */
-#define  SPEEDCALI_G1VCC_SYNC             137     /* control type: radioButton, callback function: G1VCCSyncCallback */
-#define  SPEEDCALI_G1SPEED1_SYNC          138     /* control type: radioButton, callback function: G1Speed1SyncCallback */
-#define  SPEEDCALI_TIMER                  139     /* control type: timer, callback function: SpeedCaliTimerCallback */
-#define  SPEEDCALI_DECORATION             140     /* control type: deco, callback function: (none) */
-#define  SPEEDCALI_TEXTMSG                141     /* control type: textMsg, callback function: (none) */
-#define  SPEEDCALI_TEXTMSG_46             142     /* control type: textMsg, callback function: (none) */
-#define  SPEEDCALI_TEXTMSG_45             143     /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_COMMANDBUTTON          92      /* control type: command, callback function: HelpCallback */
+#define  SPEEDCALI_DECORATION_24          93      /* control type: deco, callback function: (none) */
+#define  SPEEDCALI_G1SPEED2               94      /* control type: command, callback function: G1_Speed2CaliCallback */
+#define  SPEEDCALI_G3SPEED2_CUR_INFO      95      /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_G1SPEED2_HIG_MEASURE   96      /* control type: numeric, callback function: (none) */
+#define  SPEEDCALI_G3SPEED1_CUR_INFO      97      /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_G1SPEED2_HIG_STAND     98      /* control type: numeric, callback function: G1_Speed2HigCallback */
+#define  SPEEDCALI_G3VCC_CUR_INFO         99      /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_G1SPEED2_LOW_MEASURE   100     /* control type: numeric, callback function: (none) */
+#define  SPEEDCALI_G2SPEED2_CUR_INFO      101     /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_G1SPEED2_LOW_STAND     102     /* control type: numeric, callback function: G1_Speed2lowCallback */
+#define  SPEEDCALI_G2SPEED1_CUR_INFO      103     /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_SPLITTER_5             104     /* control type: splitter, callback function: (none) */
+#define  SPEEDCALI_G2VCC_CUR_INFO         105     /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_TEXTMSG_17             106     /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_G1SPEED2_CUR_INFO      107     /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_TEXTMSG_18             108     /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_G1SPEED1_CUR_INFO      109     /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_TEXTMSG_19             110     /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_G1VCC_CUR_INFO         111     /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_SPLITTER_19            112     /* control type: splitter, callback function: (none) */
+#define  SPEEDCALI_TEXTMSG_20             113     /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_DECORATION_18          114     /* control type: deco, callback function: (none) */
+#define  SPEEDCALI_G1SPEED1               115     /* control type: command, callback function: G1_Speed1CaliCallback */
+#define  SPEEDCALI_G1SPEED1_HIG_MEASURE   116     /* control type: numeric, callback function: (none) */
+#define  SPEEDCALI_G1SPEED1_HIG_STAND     117     /* control type: numeric, callback function: G1_Speed1HigCallback */
+#define  SPEEDCALI_G1SPEED1_LOW_MEASURE   118     /* control type: numeric, callback function: (none) */
+#define  SPEEDCALI_G1SPEED1_LOW_STAND     119     /* control type: numeric, callback function: G1_Speed1LowCallback */
+#define  SPEEDCALI_SPLITTER_3             120     /* control type: splitter, callback function: (none) */
+#define  SPEEDCALI_TEXTMSG_9              121     /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_TEXTMSG_10             122     /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_SPLITTER_20            123     /* control type: splitter, callback function: (none) */
+#define  SPEEDCALI_TEXTMSG_11             124     /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_TEXTMSG_12             125     /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_DECORATION_17          126     /* control type: deco, callback function: (none) */
+#define  SPEEDCALI_G1VCC                  127     /* control type: command, callback function: G1_VccCaliCallback */
+#define  SPEEDCALI_G1VCC_HIG_MEASURE      128     /* control type: numeric, callback function: (none) */
+#define  SPEEDCALI_G1VCC_HIG_STAND        129     /* control type: numeric, callback function: G1_VccHigCallback */
+#define  SPEEDCALI_G1VCC_LOW_MEASURE      130     /* control type: numeric, callback function: (none) */
+#define  SPEEDCALI_G1VCC_LOW_STAND        131     /* control type: numeric, callback function: G1_VccLowCallback */
+#define  SPEEDCALI_SPLITTER_2             132     /* control type: splitter, callback function: (none) */
+#define  SPEEDCALI_TEXTMSG_5              133     /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_TEXTMSG_6              134     /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_TEXTMSG_7              135     /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_TEXTMSG_8              136     /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_G1SPEED2_SYNC          137     /* control type: radioButton, callback function: G1Speed2SyncCallback */
+#define  SPEEDCALI_G1VCC_SYNC             138     /* control type: radioButton, callback function: G1VCCSyncCallback */
+#define  SPEEDCALI_G1SPEED1_SYNC          139     /* control type: radioButton, callback function: G1Speed1SyncCallback */
+#define  SPEEDCALI_TIMER                  140     /* control type: timer, callback function: SpeedCaliTimerCallback */
+#define  SPEEDCALI_DECORATION             141     /* control type: deco, callback function: (none) */
+#define  SPEEDCALI_TEXTMSG                142     /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_TEXTMSG_46             143     /* control type: textMsg, callback function: (none) */
+#define  SPEEDCALI_TEXTMSG_45             144     /* control type: textMsg, callback function: (none) */
 
 
      /* Control Arrays: */
@@ -206,6 +207,7 @@ int  CVICALLBACK G3_VccLowCallback(int panel, int control, int event, void *call
 int  CVICALLBACK G3Speed1SyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK G3Speed2SyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK G3VCCSyncCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK HelpCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK SpeedCaliPanelCB(int panel, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK SpeedCaliTimerCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 

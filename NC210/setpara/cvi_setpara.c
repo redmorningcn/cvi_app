@@ -276,7 +276,10 @@ int CVICALLBACK DetectWriteCallback (int panel, int control, int event,
 void	SetSetParaPanelVal(void)
 {
 	SetCtrlVal(gsetpara_panelHandle,SETP_PANEL_LOCOTYPE,gstrProductInfo.LocoId.Type);
-	SetCtrlVal(gsetpara_panelHandle,SETP_PANEL_LOCONUM, gstrProductInfo.LocoId.Nbr);	
+	SetCtrlVal(gsetpara_panelHandle,SETP_PANEL_LOCONUM, gstrProductInfo.LocoId.Nbr);
+	SetCtrlVal(gsetpara_panelHandle,SETP_PANEL_PRO_TYPE, gstrProductInfo.Type);	
+	SetCtrlVal(gsetpara_panelHandle,SETP_PANEL_PRO_NUM, gstrProductInfo.Id);	
+
 }
 
 /********************************************************************************************/
@@ -285,7 +288,9 @@ void	SetSetParaPanelVal(void)
 void	GetSetParaPanelVal(void)
 {
 	GetCtrlVal(gsetpara_panelHandle,SETP_PANEL_LOCOTYPE,&gstrProductInfo.LocoId.Type);
-	GetCtrlVal(gsetpara_panelHandle,SETP_PANEL_LOCONUM,&gstrProductInfo.LocoId.Nbr);	
+	GetCtrlVal(gsetpara_panelHandle,SETP_PANEL_LOCONUM,	&gstrProductInfo.LocoId.Nbr);
+	GetCtrlVal(gsetpara_panelHandle,SETP_PANEL_PRO_TYPE,&gstrProductInfo.Type);
+	GetCtrlVal(gsetpara_panelHandle,SETP_PANEL_PRO_NUM,	&gstrProductInfo.Id);
 }
 
 
@@ -414,7 +419,7 @@ void	GetSetParaRecvInfo(void)
 		
 		for(i = 0; i < reclen;i++){
 			snprintf((char *)&stringtmp,5,"%02x ",*(p+i));
-			strcat(buf,stringtmp);
+			strcat((char *)buf,(char *)stringtmp);
 		}
 		
 		if(gstrRecDtuData.code == CMD_PARA_GET)

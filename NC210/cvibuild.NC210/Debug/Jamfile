@@ -145,7 +145,7 @@ OUTFILE on "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\setpara.obj" = "f:\\cvi\
 PrjObjects += "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\setpara.obj" ;
 Object "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\resources.res" : "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\resources.in.rc" ;
 Depends "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\resources.res" : "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\manifest.xml" ;
-MainFromObjects "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\LKJ接口信息在线监测装置测试软件（生产）.exe" : $(PrjObjects) $(InstrObjects) ;
-Depends "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\LKJ接口信息在线监测装置测试软件（生产）.exe" : "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\link_options.txt" ;
-Depends "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\LKJ接口信息在线监测装置测试软件（生产）.exe" : "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\resources.res" ;
-Depends all : "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\LKJ接口信息在线监测装置测试软件（生产）.exe" ;
+MainFromObjects "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\LKJ接口信息在线监测装置测试软件(生产).exe" : $(PrjObjects) $(InstrObjects) ;
+Depends "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\LKJ接口信息在线监测装置测试软件(生产).exe" : "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\link_options.txt" ;
+Depends "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\LKJ接口信息在线监测装置测试软件(生产).exe" : "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\resources.res" ;
+Depends all : "f:\\cvi\\app\\NC210\\cvibuild.NC210\\Debug\\LKJ接口信息在线监测装置测试软件(生产).exe" ;

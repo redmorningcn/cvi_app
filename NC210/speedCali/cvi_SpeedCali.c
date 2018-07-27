@@ -1097,7 +1097,7 @@ void	SpeedCaliCommcode(void)
 			len = sizeof(strLineCalibration);	
 			gstrSendDtuData.paraaddr =  SPEED_CALI_BASE_ADDR + sizeof(strLineCalibration)*(i % SPEED_TYPE_NUM) ;	//读指定地址
 
-			gstrSendDtuData.paralen  =  (u8)len;								//读指定数据 (len << 8 + l_DetectGetNode)  
+			gstrSendDtuData.paralen  =  (u8)len;						   //读指定数据 (len << 8 + l_DetectGetNode)  
 			gstrSendDtuData.node	 =  (i / SPEED_TYPE_NUM) + 1;		   // node 地址1-3
 			memcpy((u8 *)gstrSendDtuData.parabuf,(u8 *)&lstrSpeedCaliTable.CaliBuf[i],len);
 			l_eqiupmentcode = CMD_DETECT_SET;								// 指定参数读（检测板）

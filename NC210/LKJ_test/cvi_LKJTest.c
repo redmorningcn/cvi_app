@@ -33,7 +33,10 @@ int 					gLKJTest_panelHandle;
 extern		int			gmainPanel;
 extern		int			l_eqiupmentcode;
 
-static		u8			lspecialrecord = 0;
+static		u8			lspecialrecord 	= 0;
+int						l_openlkjtestflg = 0;			//打开测试界面标识
+
+static		u32			lstestcode;   					//上次发送命令  
 
 
 /********************************************************************************************/
@@ -46,6 +49,7 @@ static		u8			lspecialrecord = 0;
 /********************************************************************************************/
 void LoadLKJTestPanel(void)
 {
+	l_openlkjtestflg = 0;
 	gLKJTest_panelHandle = LoadPanel (0, "cvi_LKJTest.uir", LKJTEST);
 	/* 	Display the panel and run the UI */
 	DisplayPanel (gLKJTest_panelHandle);
@@ -108,17 +112,16 @@ int CVICALLBACK LKJTestPanelCB (int panel, int event, void *callbackData,
 int CVICALLBACK LKJTestTimerCallback (int panel, int control, int event,
 									  void *callbackData, int eventData1, int eventData2)
 {
-	static	u8  tmp = 0;
 	switch (event)
 	{
 		case EVENT_TIMER_TICK:
 
 			if(gLKJTest_panelHandle)			// 面板有效，则进行定时器操作
 			{
-				if(tmp == 0){
-					InitSpeedCtrlID();			// 初始化面板ID
-					InitLocoCtrlID();			
-					tmp++;
+				if(l_openlkjtestflg < 1){
+					InitSpeedCtrlID();		// 初始化面板ID
+					InitLocoCtrlID();
+					l_openlkjtestflg++;
 				}
 				
 				SetDetectReadCode();			// 准备检测数据读取指令
@@ -318,7 +321,7 @@ void	InitDetectVal(void)
 *******************************************************************************/
 void	InitLocoCtrlID(void)   
 {
-	lstrLocoDetectId.vcc	 = LKJTEST_V110;
+	lstrLocoDetectId.vcc = LKJTEST_V110;
 	lstrLocoDetectId.qy	 = LKJTEST_QY  ;
 	lstrLocoDetectId.zd	 = LKJTEST_ZD  ;
 	lstrLocoDetectId.xq	 = LKJTEST_XQ  ;
@@ -332,12 +335,21 @@ void	InitLocoCtrlID(void)
 *******************************************************************************/
 void	LocoDetectDisplay(void)
 {
-   SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.vcc	 ,((float)lstrLocoDetect.vcc)/10);
-   SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.qy	 ,((float)lstrLocoDetect.qy)/10	);
-   SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.zd	 ,((float)lstrLocoDetect.zd)/10	);
-   SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.xq	 ,((float)lstrLocoDetect.xq)/10	);
-   SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.xh	 ,((float)lstrLocoDetect.xh)/10	);
-   SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.lw	 ,((float)lstrLocoDetect.lw)/10	);
+	SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.vcc ,((float)lstrLocoDetect.vcc)/10);
+	SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.qy	 ,((float)lstrLocoDetect.qy)/10	);
+	SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.zd	 ,((float)lstrLocoDetect.zd)/10	);
+	SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.xq	 ,((float)lstrLocoDetect.xq)/10	);
+	SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.xh	 ,((float)lstrLocoDetect.xh)/10	);
+	SetCtrlVal(gLKJTest_panelHandle,lstrLocoDetectId.lw	 ,((float)lstrLocoDetect.lw)/10	);
+   
+	
+	//显示机车信息
+   	u8	buf[512];  
+	snprintf((char *)buf,sizeof(buf)-2,"%03d-%08d"
+								,Ctrl.sProductInfo.Type
+								,Ctrl.sProductInfo.Id 
+		);	
+	SetCtrlVal(gLKJTest_panelHandle,LKJTEST_PRODUCTINFO	 ,buf);
 }
 
 /*******************************************************************************
@@ -347,7 +359,10 @@ void	LocoDetectDisplay(void)
 void	RecordDisplay(void)  {
 	if(gstrRecDtuData.recvrecflg == 1)	
 	{
-		gstrRecDtuData.recvrecflg = 0;		// 	
+		gstrRecDtuData.recvrecflg = 0;				// 	
+		
+		if(lstestcode == CMD_RECORD_GET)			//成功接收到查询应答后，停止数据接收
+			gstrSendDtuData.recenableflg = 0;		
 		
 		u8	buf[512];
 		//打印时间 
@@ -389,7 +404,6 @@ void	RecordDisplay(void)  {
 /********************************************************************************************/
 
 u8		l_DetectGetNode = 1;
-static	u32	lstestcode;     
 /********************************************************************************************
 author：redmorningcn 20180622 
 速度信号及loco信号命令，数据准备。（直接读取 控制板ctrl.rec实时数据（指定地址读））
@@ -400,8 +414,9 @@ void	SetDetectReadCode(void)
 	static	u32	time;
 	
 	if(gstrSendDtuData.recenableflg == 1){						// 应答数据记录，不查询其他数据
-		if(l_eqiupmentcode != CMD_REC_START  ){
+		if(l_eqiupmentcode != CMD_REC_START && l_eqiupmentcode ){
 			if(l_eqiupmentcode != CMD_RECORD_GET){
+				
 				l_eqiupmentcode	=	0;
 				lstestcode		=   0;
 			}
@@ -413,6 +428,19 @@ void	SetDetectReadCode(void)
 		if(time + 200 > GetAnsySysTime()  ) {					// 周期发送，控制发送频率
 			return;
 		} 
+	}
+	
+	// 开机 发送 读取 装置信息指令
+	if(l_openlkjtestflg < 3){
+		gstrSendDtuData.paraaddr	= (u16)((u32)&Ctrl.sProductInfo -  (u32)&Ctrl) ;
+		gstrSendDtuData.paralen 	= sizeof(Ctrl.sProductInfo.Type) +  sizeof(Ctrl.sProductInfo.Id);
+		gstrSendDtuData.node		= 0;
+
+		l_eqiupmentcode 			= CMD_PARA_GET;	
+		lstestcode					= l_eqiupmentcode;
+		time = GetAnsySysTime();								// 时间信息
+		l_openlkjtestflg++;
+		return;
 	}
 	
 	if(l_eqiupmentcode == 0){
@@ -452,16 +480,30 @@ void	GetDetectInfo(void)
 	u32		len;
 	u8		reclen;
 	u8		node;
+	u16		addr;
    	static	u32	time;
+	u32		code;
 
+	code = gstrRecDtuData.code;
+	
 	if(	   (gstrRecDtuData.dataokflg 	== 1 
-		&&  gstrRecDtuData.code 		== lstestcode)
+		&&  code 						== lstestcode)
 	  )															//	接收到数据
-	{														
+	{																																					
 		gstrRecDtuData.dataokflg  = 0;
-		
 		reclen  = (u8)gstrRecDtuData.recdatalen ;				//	接收数据长度
-		node	= (u8)gstrRecDtuData.node;						//  
+		node	= (u8)gstrRecDtuData.node;						//  	
+		addr 	= gstrRecDtuData.paraaddr;
+
+		//取产品信息
+		if(		code 	== CMD_PARA_GET  
+			&& 	addr	== (u16)((u32)&Ctrl.sProductInfo -  (u32)&Ctrl) 
+		  	&&  reclen	== (sizeof(Ctrl.sProductInfo.Type) +  sizeof(Ctrl.sProductInfo.Id)) ) {
+				
+				memcpy((u8 *)&Ctrl.sProductInfo,gstrRecDtuData.parabuf,reclen);		//复制数据
+				
+				l_openlkjtestflg = 10;						   // 接收到正确数据查询，退出查询
+		}
 		
 		if(node == 4){											// 	取LKJ工况信号
 		
@@ -509,10 +551,10 @@ int CVICALLBACK SpecialRecordCallback (int panel, int control, int event,
 			
 			GetCtrlVal(panel,LKJTEST_RECORDNUM  ,&gstrSendDtuData.recordnum);  // 取读取记录号
 			
-			lspecialrecord = 12;							// 3s后，恢复数据接收
+			lspecialrecord = 20;							// 3s后，恢复数据接收
 
 			l_eqiupmentcode = CMD_RECORD_GET;				// 指定数据记录读
-			
+			lstestcode 		= CMD_RECORD_GET;
 			break;
 	}
 	return 0;

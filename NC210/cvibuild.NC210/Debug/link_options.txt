@@ -1,5 +1,5 @@
 -nologo
--out:f:\cvi\app\NC210\cvibuild.NC210\Debug\LKJ接口信息在线监测装置测试软件（生产）.exe
+-out:f:\cvi\app\NC210\cvibuild.NC210\Debug\LKJ接口信息在线监测装置测试软件(生产).exe
 -arch:x86
 -timestamp
 -debug:2

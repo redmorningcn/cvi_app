@@ -426,12 +426,35 @@ int CVICALLBACK V110CaliCallback (int panel, int control, int event,
 int CVICALLBACK HelpCallback (int panel, int control, int event,
 							  void *callbackData, int eventData1, int eventData2)
 {
+	char 	*fileName;									//文件指针
+	char 	projectDir[MAX_PATHNAME_LEN];				//工程路径
+	char 	fullPath[MAX_PATHNAME_LEN];					//文件全路径
+	int		filecom1hand;								//文件句柄
+	char	infobuf[1024*8];							
+	
+	fileName = "calihelp.txt";							//校准帮助文件
+	
+	GetProjectDir (projectDir) ;						//取项目路径
+
+	MakePathname (projectDir, fileName, fullPath);		//文件路劲 where fullPath has the following format: c:\myproject\myfile.dat
+	
+	filecom1hand = OpenFile (fullPath, VAL_READ_WRITE, VAL_OPEN_AS_IS, VAL_BINARY);		//打开文件
+		
+	SetFilePtr (filecom1hand, 0, 0);								//文件从头开始
+	
+	ReadFile (filecom1hand, infobuf, sizeof(infobuf)-10);			//读帮助信息			
+	
+	CloseFile(filecom1hand);															//关闭文件     				
+	
 	switch (event)
 	{
 		case EVENT_COMMIT:
-				MessagePopup ("帮助信息", "1、选择“同步校准”，将和110V校准值相同！\r\n2、校准分高、低两点，在输入测量值后，对应测量值自动输入（可手动调整）");
+				//MessagePopup ("帮助信息", "1、选择“同步校准”，将和110V校准值相同！\r\n2、校准分高、低两点，在输入测量值后，对应测量值自动输入（可手动调整）");
+				MessagePopup ("帮助信息",infobuf);
 			break;
 	}
+	
+
 	return 0;
 }
 
