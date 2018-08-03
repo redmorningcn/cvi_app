@@ -94,7 +94,7 @@
 #define  LKJTEST_DECORATION_18            79      /* control type: deco, callback function: (none) */
 #define  LKJTEST_DECORATION               80      /* control type: deco, callback function: (none) */
 #define  LKJTEST_READREC                  81      /* control type: command, callback function: ReadRecordCallback */
-#define  LKJTEST_CLEARREC_2               82      /* control type: command, callback function: ResetSysCallback */
+#define  LKJTEST_RESETSYS                 82      /* control type: command, callback function: ResetSysCallback */
 #define  LKJTEST_CLEARREC                 83      /* control type: command, callback function: ClearRecordCallback */
 #define  LKJTEST_DECORATION_2             84      /* control type: deco, callback function: (none) */
 #define  LKJTEST_DECORATION_6             85      /* control type: deco, callback function: (none) */
@@ -103,8 +103,8 @@
 #define  LKJTEST_CH4_STATUS               88      /* control type: ring, callback function: (none) */
 #define  LKJTEST_CH3_STATUS               89      /* control type: ring, callback function: (none) */
 #define  LKJTEST_CH1_STATUS               90      /* control type: ring, callback function: (none) */
-#define  LKJTEST_SPLITTER                 91      /* control type: splitter, callback function: (none) */
-#define  LKJTEST_CH2_STATUS               92      /* control type: ring, callback function: (none) */
+#define  LKJTEST_CH2_STATUS               91      /* control type: ring, callback function: (none) */
+#define  LKJTEST_SPLITTER                 92      /* control type: splitter, callback function: (none) */
 
 
      /* Control Arrays: */

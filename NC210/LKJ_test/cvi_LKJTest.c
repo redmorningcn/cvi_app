@@ -163,12 +163,18 @@ int CVICALLBACK ReadRecordCallback (int panel, int control, int event,
 
 				SetCtrlAttribute (panel, LKJTEST_READREC, ATTR_LABEL_TEXT, "结束数据读取"); 
 				SetCtrlAttribute (panel, LKJTEST_CLEARREC,ATTR_DIMMED,1);  
+				SetCtrlAttribute (panel, LKJTEST_RESETSYS,ATTR_DIMMED,1);  
+				SetCtrlAttribute (panel, LKJTEST_RECORDNUM,ATTR_DIMMED,1);  
+				
 			}
 			else
 			{
 				gstrSendDtuData.recenableflg = 0;
 				SetCtrlAttribute (panel, LKJTEST_READREC, ATTR_LABEL_TEXT, "开始数据读取"); 
 				SetCtrlAttribute (panel, LKJTEST_CLEARREC,ATTR_DIMMED,0);  
+				SetCtrlAttribute (panel, LKJTEST_RESETSYS,ATTR_DIMMED,0);  
+				SetCtrlAttribute (panel, LKJTEST_RECORDNUM,ATTR_DIMMED,0);  
+				
 
 				l_eqiupmentcode = 0;
 			}
@@ -292,7 +298,7 @@ void	SpeedDetectDisplay(void)
 	   		SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].para[j].raise  	,((float)lstrSpeedDetect[i].para[j].raise)/100	);
 	   		SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].para[j].ratio     ,((float)lstrSpeedDetect[i].para[j].ratio)/100	);
 	   		SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].para[j].freq	  	,lstrSpeedDetect[i].para[j].freq	);
-	   		SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].para[j].status    ,lstrSpeedDetect[i].para[j].status	);
+	   		SetCtrlVal(gLKJTest_panelHandle,lstrSpeedCrtID[i].para[j].status    ,lstrSpeedDetect[i].para[j].status &0x03	);
 	   }
 	}
 }
@@ -390,6 +396,12 @@ void	RecordDisplay(void)  {
 				);	
 		SetCtrlVal(gLKJTest_panelHandle,LKJTEST_INFOTEXTBOX	 ,buf);	
 		
+		//打印装置状态
+		snprintf((char *)buf,sizeof(buf)-2,",  状态:%08x"
+										,gstrRecDtuData.Rec.Err.Flags
+				);	
+		SetCtrlVal(gLKJTest_panelHandle,LKJTEST_INFOTEXTBOX	 ,buf);	
+				
 		//打印行结束 
 		snprintf((char *)buf,sizeof(buf)-2," \r\n" );	
 		
